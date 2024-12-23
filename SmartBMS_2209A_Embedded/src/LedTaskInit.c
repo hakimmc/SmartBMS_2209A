@@ -25,17 +25,13 @@ void gpio_init(uint8_t gpio_pin){
 
 void led_init(void* pvParameter)
 {
-	int delay_ms = *((int *)pvParameter);
-    free(pvParameter);
-
 	gpio_init(LED_PIN);
-
     while (1)
     {
         gpio_set_level(LED_PIN, 1);
-        vTaskDelay(pdMS_TO_TICKS(delay_ms));
+        vTaskDelay(pdMS_TO_TICKS(500));
         gpio_set_level(LED_PIN, 0);
-        vTaskDelay(pdMS_TO_TICKS(delay_ms));
+        vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
     
