@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acalg\\OneDrive\\Belgeler\\GitHub\\SMARTBMS_2209A\\SmartBMS_2209A_Monitoring\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor.csproj": {}
+    "C:\\Users\\fvzdr\\OneDrive\\Belgeler\\Github\\SmartBMS_2209A\\SmartBMS_2209A_Monitoring\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acalg\\OneDrive\\Belgeler\\GitHub\\SMARTBMS_2209A\\SmartBMS_2209A_Monitoring\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor.csproj": {
+    "C:\\Users\\fvzdr\\OneDrive\\Belgeler\\Github\\SmartBMS_2209A\\SmartBMS_2209A_Monitoring\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acalg\\OneDrive\\Belgeler\\GitHub\\SMARTBMS_2209A\\SmartBMS_2209A_Monitoring\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor.csproj",
+        "projectUniqueName": "C:\\Users\\fvzdr\\OneDrive\\Belgeler\\Github\\SmartBMS_2209A\\SmartBMS_2209A_Monitoring\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor.csproj",
         "projectName": "SmartBMS_2209A_Monitor",
-        "projectPath": "C:\\Users\\acalg\\OneDrive\\Belgeler\\GitHub\\SMARTBMS_2209A\\SmartBMS_2209A_Monitoring\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor.csproj",
-        "packagesPath": "C:\\Users\\acalg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acalg\\OneDrive\\Belgeler\\GitHub\\SMARTBMS_2209A\\SmartBMS_2209A_Monitoring\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor\\obj\\",
+        "projectPath": "C:\\Users\\fvzdr\\OneDrive\\Belgeler\\Github\\SmartBMS_2209A\\SmartBMS_2209A_Monitoring\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor.csproj",
+        "packagesPath": "C:\\Users\\fvzdr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fvzdr\\OneDrive\\Belgeler\\Github\\SmartBMS_2209A\\SmartBMS_2209A_Monitoring\\SmartBMS_2209A_Monitor\\SmartBMS_2209A_Monitor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\acalg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fvzdr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -38,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -62,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

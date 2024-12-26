@@ -37,11 +37,13 @@
             // progressBar1
             // 
             progressBar1.Location = new Point(40, 334);
+            progressBar1.MarqueeAnimationSpeed = 10;
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(521, 26);
+            progressBar1.Step = 25;
             progressBar1.Style = ProgressBarStyle.Marquee;
             progressBar1.TabIndex = 0;
-            progressBar1.Value = 70;
+            progressBar1.Value = 100;
             // 
             // timer1
             // 
