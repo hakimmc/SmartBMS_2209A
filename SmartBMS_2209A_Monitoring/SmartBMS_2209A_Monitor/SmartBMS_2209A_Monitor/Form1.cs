@@ -39,6 +39,7 @@ namespace SmartBMS_2209A_Monitor
 
         void auth2()
         {
+<<<<<<< HEAD
             try
             {
 
@@ -68,6 +69,28 @@ namespace SmartBMS_2209A_Monitor
                 }
             }
             catch (Exception ex)
+=======
+            bms_class.tcpClient = new TcpClient();
+            bms_class.tcpClient.Connect("127.0.0.1", 5166);
+            bms_class.stream = bms_class.tcpClient.GetStream();
+            if (get_Admin_Role(bms_class.stream))
+            {
+                //MessageBox.Show("INFO : Validation Success, Login with Username & Password!");
+                login login_w_credentials = new login();
+                DialogResult dr = login_w_credentials.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    get_monitor();   
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username Or Password, Closing Application!");
+                    Thread.Sleep(2000);
+                    Environment.Exit(0);
+                }
+            }
+            else
+>>>>>>> 634ecb67d581167757fbcd5339b41dd532ce2191
             {
                 MessageBox.Show("Turn on the Bms, Closing Application!");
                 Environment.Exit(0);
