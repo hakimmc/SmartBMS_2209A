@@ -11,10 +11,11 @@ namespace SmartBMS_2209A_Monitor
         {
             InitializeComponent();
         }
-        double opacity_value = 100;
+        double opacity_max;
         private void Form1_Load(object sender, EventArgs e)
         {
-            timer1.Interval = 1;
+            opacity_max = this.Opacity;
+            timer1.Interval = 10;
             this.Opacity = 0;
             timer1.Enabled = true;
             this.Visible = true;
@@ -23,15 +24,61 @@ namespace SmartBMS_2209A_Monitor
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (this.Opacity < opacity_value * 100)
+            if (this.Opacity < opacity_max)
             {
-                this.Opacity += .010;
+                this.Opacity += .01;
             }
             else
             {
                 timer1.Enabled = false;
-                AUTH();
+                Control.CheckForIllegalCrossThreadCalls = false;
+                Thread th = new Thread(auth2);
+                th.Start();
             }
+        }
+
+        void auth2()
+        {
+            try
+            {
+
+                bms_class.tcpClient = new TcpClient();
+                bms_class.tcpClient.Connect("127.0.0.1", 5166);
+                bms_class.stream = bms_class.tcpClient.GetStream();
+                if (get_Admin_Role(bms_class.stream))
+                {
+                    //MessageBox.Show("INFO : Validation Success, Login with Username & Password!");
+                    login login_w_credentials = new login();
+                    DialogResult dr = login_w_credentials.ShowDialog();
+                    if (dr == DialogResult.OK)
+                    {
+                        get_monitor();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Username Or Password, Closing Application!");
+                        Thread.Sleep(2000);
+                        Environment.Exit(0);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Turn on the Bms, Closing Application!");
+                    Environment.Exit(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Turn on the Bms, Closing Application!");
+                Environment.Exit(0);
+            }
+        }
+
+        void get_monitor()
+        {
+            //this.Hide();
+            monitor_form monitor_Form = new monitor_form();
+            monitor_Form.Show();
         }
 
 
@@ -109,7 +156,6 @@ namespace SmartBMS_2209A_Monitor
             string portNumber = "5166";
             string netshCommand = $"netsh advfirewall firewall add rule name=\"{ruleName}\" protocol=TCP dir=in localport={portNumber} action=allow";
 
-            // ProcessStartInfo kullanarak netsh komutunu çalýþtýrýyoruz.
             ProcessStartInfo psi = new ProcessStartInfo("cmd.exe", "/c " + netshCommand)
             {
                 RedirectStandardOutput = true,
@@ -138,7 +184,7 @@ namespace SmartBMS_2209A_Monitor
             int cnt = 0;
             while (!readString.Contains("ID?") && cnt < 10)
             {
-                //MessageBox.Show(readString);
+                MessageBox.Show(readString);
                 cnt++;
                 st.Read(rx, 0, rx.Length);
                 readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
