@@ -14,10 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SmartBMS_2209A_Monitor
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\
-=======
-build_property.ProjectDir = C:\Users\fvzdr\OneDrive\Belgeler\Github\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\
->>>>>>> 634ecb67d581167757fbcd5339b41dd532ce2191
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -36,8 +36,5 @@ C:\Users\fvzdr\OneDrive\Belgeler\Github\SmartBMS_2209A\SmartBMS_2209A_Monitoring
 C:\Users\fvzdr\OneDrive\Belgeler\Github\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\obj\Debug\net8.0-windows\ref\SmartBMS_2209A_Monitor.dll
 C:\Users\fvzdr\OneDrive\Belgeler\Github\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\obj\Debug\net8.0-windows\SmartBMS_2209A_Monitor.login.resources
 C:\Users\fvzdr\OneDrive\Belgeler\Github\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\obj\Debug\net8.0-windows\SmartBMS_2209A_Monitor.monitor_form.resources
-<<<<<<< HEAD
 C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\obj\Debug\net8.0-windows\SmartBMS_2209A_Monitor.login.resources
 C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\obj\Debug\net8.0-windows\SmartBMS_2209A_Monitor.monitor_form.resources
-=======
->>>>>>> 634ecb67d581167757fbcd5339b41dd532ce2191

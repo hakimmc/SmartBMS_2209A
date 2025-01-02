@@ -39,58 +39,42 @@ namespace SmartBMS_2209A_Monitor
 
         void auth2()
         {
-<<<<<<< HEAD
             try
             {
-
-                bms_class.tcpClient = new TcpClient();
-                bms_class.tcpClient.Connect("127.0.0.1", 5166);
-                bms_class.stream = bms_class.tcpClient.GetStream();
-                if (get_Admin_Role(bms_class.stream))
+                if (!ConnectWifi("connect.bat"))
                 {
-                    //MessageBox.Show("INFO : Validation Success, Login with Username & Password!");
-                    login login_w_credentials = new login();
-                    DialogResult dr = login_w_credentials.ShowDialog();
-                    if (dr == DialogResult.OK)
+                    MessageBox.Show("Couldnt Solve WiFi!");
+                }
+                else
+                {
+                    AddRule();
+                    bms_class.tcpClient = new TcpClient();
+                    bms_class.tcpClient.Connect("192.168.4.1", 5166);
+                    bms_class.stream = bms_class.tcpClient.GetStream();
+                    if (get_Admin_Role(bms_class.stream))
                     {
-                        get_monitor();
+                        //MessageBox.Show("INFO : Validation Success, Login with Username & Password!");
+                        login login_w_credentials = new login();
+                        DialogResult dr = login_w_credentials.ShowDialog();
+                        if (dr == DialogResult.OK)
+                        {
+                            get_monitor();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid Username Or Password, Closing Application!");
+                            Thread.Sleep(2000);
+                            Environment.Exit(0);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Invalid Username Or Password, Closing Application!");
-                        Thread.Sleep(2000);
+                        MessageBox.Show("Turn on the Bms, Closing Application!");
                         Environment.Exit(0);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Turn on the Bms, Closing Application!");
-                    Environment.Exit(0);
-                }
             }
             catch (Exception ex)
-=======
-            bms_class.tcpClient = new TcpClient();
-            bms_class.tcpClient.Connect("127.0.0.1", 5166);
-            bms_class.stream = bms_class.tcpClient.GetStream();
-            if (get_Admin_Role(bms_class.stream))
-            {
-                //MessageBox.Show("INFO : Validation Success, Login with Username & Password!");
-                login login_w_credentials = new login();
-                DialogResult dr = login_w_credentials.ShowDialog();
-                if (dr == DialogResult.OK)
-                {
-                    get_monitor();   
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Username Or Password, Closing Application!");
-                    Thread.Sleep(2000);
-                    Environment.Exit(0);
-                }
-            }
-            else
->>>>>>> 634ecb67d581167757fbcd5339b41dd532ce2191
             {
                 MessageBox.Show("Turn on the Bms, Closing Application!");
                 Environment.Exit(0);
@@ -99,9 +83,9 @@ namespace SmartBMS_2209A_Monitor
 
         void get_monitor()
         {
-            //this.Hide();
+            this.Hide();
             monitor_form monitor_Form = new monitor_form();
-            monitor_Form.Show();
+            monitor_Form.ShowDialog();
         }
 
 
@@ -207,7 +191,6 @@ namespace SmartBMS_2209A_Monitor
             int cnt = 0;
             while (!readString.Contains("ID?") && cnt < 10)
             {
-                MessageBox.Show(readString);
                 cnt++;
                 st.Read(rx, 0, rx.Length);
                 readString = Encoding.UTF8.GetString(rx, 0, rx.Length);

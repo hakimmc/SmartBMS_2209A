@@ -5,15 +5,18 @@
  *      Author: hakimmc
  */
 
-#include "driver/gpio.h"
 #include "LedTaskInit.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
 #include "Uart.h"
-#include "can.h"
+#include "Can.h"
+#include "Wifi.h"
+#include "TcpServer.h"
+#include "husarnet.h"
 
 void app_main() {
     printf("\nhelloworld\n");
-    xTaskCreate(CanReporter, "CanTask", 4096,  NULL, (UBaseType_t)1, NULL);
-    xTaskCreate(led_init, "ToggleTask", 4096,  NULL, (UBaseType_t)2, NULL);
+    nvs_flash_init();	
+    Tcp_Init();
+    husarnet_join();
+    xTaskCreate(CanReporter, "CanTask", 4096,  NULL, (UBaseType_t)2, NULL);
+    xTaskCreate(led_init, "ToggleTask", 4096,  NULL, (UBaseType_t)3, NULL);
 }

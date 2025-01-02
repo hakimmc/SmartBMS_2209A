@@ -5,7 +5,7 @@
  *      Author: hakimmc
  */
 
-#include "can.h"
+#include "Can.h"
 
 uint8_t Can_Init(twai_general_config_t can_gpio_config,twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config)
 {
