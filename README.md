@@ -1,4 +1,4 @@
-# SmartBMS_220A
+# SmartBMS_2209A
 
 ## Project Overview
 SmartBMS_2209A is a passive balancing battery management system (BMS) project developed for TÜBİTAK. This project file have embedded codes and monitoring program. SmartBMS_2209A is designed to monitor with local network, manage, and ensure the safety of batteries. Also SmartBMS_2209A supporting P2P communication rapid response or just monitoring. 
@@ -22,7 +22,7 @@ SmartBMS_2209A is a passive balancing battery management system (BMS) project de
    ```
 2. Install the required dependencies:
    ```bash
-   cd SmartBMS_220A
+   cd SmartBMS_2209A
    npm install
    ```
 
