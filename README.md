@@ -1,7 +1,7 @@
 # SmartBMS_220A
 
 ## Project Overview
-SmartBMS_220A is a passive balancing battery management system (BMS) project developed for TÜBİTAK. This project is designed to monitor, manage, and ensure the safety of batteries.
+SmartBMS_2209A is a passive balancing battery management system (BMS) project developed for TÜBİTAK. This project file have embedded codes and monitoring program. SmartBMS_2209A is designed to monitor with local network, manage, and ensure the safety of batteries. Also SmartBMS_2209A supporting P2P communication rapid response or just monitoring. 
 
 ## Developer Information
 - **Name:** Abdülhakim Çalgın
@@ -10,9 +10,10 @@ SmartBMS_220A is a passive balancing battery management system (BMS) project dev
 
 ## Features
 - Real-time battery monitoring
-- Safe charging and discharging management
 - Battery life optimization
 - User-friendly interface
+- Resistorless fast balancing
+- SoC estimation
 
 ## Installation
 1. Clone the repository:
