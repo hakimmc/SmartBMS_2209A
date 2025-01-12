@@ -10,15 +10,14 @@
 
 #include "stdint.h"
 #include "driver/uart.h"
+#include "driver/gpio.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-#define LOG_ENABLE
-#ifdef LOG_ENABLE
-void LOG(void* pvParameter);
-#endif
 
-void Uart_Init(uint8_t uart_pin, uint32_t baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN);
-uint8_t Send_Data(uint8_t uart_pin, uint8_t* data, uint8_t data_length);
-uint8_t Receive_Data(uint8_t uart_pin, uint8_t* data, uint8_t data_length, uint32_t timeout);
+void Uart_Init(uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN) ;
+uint8_t Uart_Transmit(uint8_t uart_pin, uint8_t *data, uint8_t data_length) ;
+int Uart_Receive(uint8_t uart_pin, uint8_t* data, uint8_t data_length, uint32_t timeout);
 uint8_t IsTimeout(uint32_t max_reach_time);
 
 #endif

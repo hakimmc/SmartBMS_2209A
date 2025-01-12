@@ -32,12 +32,12 @@ namespace SmartBMS_2209A_Monitor
             {
                 timer1.Enabled = false;
                 Control.CheckForIllegalCrossThreadCalls = false;
-                Thread th = new Thread(auth2);
+                Thread th = new Thread(auth);
                 th.Start();
             }
         }
 
-        void auth2()
+        void auth()
         {
             try
             {
@@ -86,40 +86,6 @@ namespace SmartBMS_2209A_Monitor
             this.Hide();
             monitor_form monitor_Form = new monitor_form();
             monitor_Form.ShowDialog();
-        }
-
-
-        public async void AUTH()
-        {
-            try
-            {
-                if (!ConnectWifi("connect.bat"))
-                {
-                    MessageBox.Show("Couldnt Solve WiFi!");
-                }
-                else
-                {
-                    AddRule();
-                    Thread.Sleep(1000);
-                    bms_class.tcpClient = new TcpClient();
-                    bms_class.tcpClient.Connect("192.168.4.1", 5166);
-                    bms_class.stream = bms_class.tcpClient.GetStream();
-                    if (get_Admin_Role(bms_class.stream))
-                    {
-                        MessageBox.Show("INFO : Validation Success, Login with Username & Password!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("INFO : Validation Not Success, Closing App!");
-                        Environment.Exit(0);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
         }
 
         public bool ConnectWifi(string file_name)
@@ -195,7 +161,8 @@ namespace SmartBMS_2209A_Monitor
                 st.Read(rx, 0, rx.Length);
                 readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
                 Array.Clear(rx, 0, rx.Length);
-
+                //WriteTcpClient(st, "HELO");
+                Thread.Sleep(250);
 
             }
             if (cnt == 10)
@@ -215,6 +182,7 @@ namespace SmartBMS_2209A_Monitor
                     st.Read(rx, 0, 5);
                     readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
                     //MessageBox.Show(readString);
+                    //WriteTcpClient(st, "OBT");
                     cnt++;
                     Thread.Sleep(100);
 

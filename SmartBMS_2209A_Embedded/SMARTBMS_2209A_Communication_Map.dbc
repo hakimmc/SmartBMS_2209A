@@ -33,7 +33,13 @@ NS_ :
 
 BS_:
 
-BU_: SMARTBMS
+BU_: SMARTBMS BatteryChemistryValues
+VAL_TABLE_ NetworkStatus 3 "WiFi_ok_AP_ok" 2 "WiFi_nok_AP_ok" 1 "WiFi_ok_AP_nok" 0 "WiFi_nok_AP_nok" ;
+VAL_TABLE_ VpnStatus 1 "Disable" 0 "Enable" ;
+VAL_TABLE_ WiFiStatus 1 "Disable" 0 "Enable" ;
+VAL_TABLE_ CanBusStatus 1 "Disable" 0 "Enable" ;
+VAL_TABLE_ TcpStatus 2 "Connected" 1 "Online" 0 "Offline" ;
+VAL_TABLE_ BatteryChem 1 "NMC" 0 "LFP" ;
 
 
 BO_ 259 Battery_Temperatures: 8 Vector__XXX
@@ -41,12 +47,23 @@ BO_ 259 Battery_Temperatures: 8 Vector__XXX
 BO_ 258 Battery_Voltages: 8 Vector__XXX
 
 BO_ 257 Battery_Messages: 8 Vector__XXX
- SG_ BatteryChemistry : 3|5@1+ (1,0) [0|31] "" BatteryChemistryValues
- SG_ AliveCounter : 0|3@1+ (1,0) [0|0] "" Vector__XXX
-
-
 
 BO_ 256 Can_Main: 8 Vector__XXX
+ SG_ TcpClientCount : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ WiFi_AP_Status : 53|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VpnEnable : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TcpEnable : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ WiFiEnable : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CanBusEnable : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SwVersionBugfix : 44|4@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SwVersionMinor : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SwVersionMajor : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BatteryBalance_MinTemp : 32|8@1+ (1,-100) [-100|155] "C" Vector__XXX
+ SG_ BatteryBalance_MaxTemp : 24|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ BatteryBalance_MinVoltage : 16|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryBalance_MaxVoltage : 8|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryChemistry : 7|1@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ AliveCounter : 0|7@1+ (1,0) [0|127] "" Vector__XXX
 
 
 
@@ -54,4 +71,10 @@ BA_DEF_  "MultiplexExtEnabled" ENUM  "No","Yes";
 BA_DEF_  "BusType" STRING ;
 BA_DEF_DEF_  "MultiplexExtEnabled" "No";
 BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 256 WiFi_AP_Status 1 "Disable" 0 "Enable" ;
+VAL_ 256 VpnEnable 1 "Disable" 0 "Enable" ;
+VAL_ 256 TcpEnable 2 "Connected" 1 "Online" 0 "Offline" ;
+VAL_ 256 WiFiEnable 1 "Disable" 0 "Enable" ;
+VAL_ 256 CanBusEnable 1 "Disable" 0 "Enable" ;
+VAL_ 256 BatteryChemistry 1 "NMC" 0 "LFP" ;
 

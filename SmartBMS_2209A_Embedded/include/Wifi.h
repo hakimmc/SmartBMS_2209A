@@ -32,14 +32,14 @@
 
 #define WIFI_CONNECT
 
-#define AP_SSID         "OttomotiveBMS"
+#define AP_SSID         "Ottomotive_BMS"
 #define AP_PASS         "Ottomotive22*"
 #define MAX_STA_CONN   5
 #define MAX_RETRY      5
 
 #ifdef WIFI_CONNECT
-    #define WIFI_SSID   "adm"
-    #define WIFI_PASS   "12345678"
+    #define WIFI_SSID   "Poyrazwifi_Calgin"
+    #define WIFI_PASS   "Ah487602"
     #define WIFI_TIMEOUT_MS 10000
     #define ESP32_AP_CHANNEL        3             
     #define ESP32_MAX_CONN          3

@@ -1,11 +1,14 @@
 /*
- * can.c
+ * Can.c
  *
  *  Created on: 18 Ara 2024
  *      Author: hakimmc
  */
 
 #include "Can.h"
+#include "d2cc_lib.h"
+
+extern DbcStruct maindbc_struct;
 
 uint8_t Can_Init(twai_general_config_t can_gpio_config,twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config)
 {
@@ -40,12 +43,19 @@ void CanReporter(void* pvParameter){
     twai_filter_config_t fconf = TWAI_FILTER_CONFIG_ACCEPT_ALL();
     twai_general_config_t gconf = TWAI_GENERAL_CONFIG_DEFAULT(5, 4, TWAI_MODE_NORMAL);
 
+    DbcStruct *struct_of_comm = &maindbc_struct;
+
     Can_Init(gconf,tconf,fconf);
     while(1){
-        Can_Transmit(Can_Main, Data_Of_Can_Main);
-        Can_Transmit(Battery_Messages, Data_Of_Battery_Messages);
-        Can_Transmit(Battery_Voltages, Data_Of_Battery_Voltages);
-        Can_Transmit(Battery_Temperatures, Data_Of_Battery_Temperatures);
+        Can_Transmit(Can_Main, struct_of_comm->Can_Main.Data);
+        Can_Transmit(Battery_Messages, struct_of_comm->Battery_Messages.Data);
+        Can_Transmit(Battery_Voltages, struct_of_comm->Battery_Voltages.Data);
+        Can_Transmit(Battery_Temperatures, struct_of_comm->Battery_Temperatures.Data);
+        printf("Data : {");
+        for(int i=0;i<8;i++){
+            printf("[%d]", struct_of_comm->Battery_Messages.Data[i]);
+        }
+        printf("}");
         vTaskDelay(pdMS_TO_TICKS(CAN_DELAY));
     }
 }

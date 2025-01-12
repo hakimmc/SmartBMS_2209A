@@ -28,6 +28,7 @@
 #include "esp_wifi.h"
 #include "esp_event.h"
 #include "esp_log.h"
+#include "d2cc_lib.h"
 
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
@@ -35,8 +36,11 @@
 #define TCP_TAG         "TCP_SERVER"
 #define SERVER_PORT     5166
 
+
+
 void Handle_Client(void* args);
 void Create_Server(void* pvParameter);
+int receive_data(int sock, char* buffer, size_t size, uint8_t* timeout_counter, uint8_t max_timeout);
 void Tcp_Init();
 
 #endif /* INCLUDE_TCPSERVER_H_ */

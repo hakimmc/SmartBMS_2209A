@@ -24,16 +24,29 @@ namespace SmartBMS_2209A_Monitor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (username_textbox.Text != "root") { this.DialogResult = DialogResult.Cancel; this.Close(); }
+            bms_class.WriteTcpClient(bms_class.stream,$"login_{username_textbox.Text}_{password_textbox.Text}");
+            string readString = string.Empty;
+            byte[] rx = new byte[2];
+            int cnt = 0;
+            while (readString.Length<2 && cnt < 10)
+            {
+                cnt++;
+                bms_class.stream.Read(rx, 0, rx.Length);
+                readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
+                Array.Clear(rx, 0, rx.Length);
+            }
+            if (readString.Contains("OK"))
+            {
+                this.DialogResult = DialogResult.OK;
+            }
             else
             {
-                if (password_textbox.Text != "1") { this.DialogResult = DialogResult.Cancel; this.Close(); }
-                else
-                {
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
+                this.DialogResult = DialogResult.Cancel;
             }
+            //MessageBox.Show(readString);
+            this.Close();
+
+
         }
     }
 }

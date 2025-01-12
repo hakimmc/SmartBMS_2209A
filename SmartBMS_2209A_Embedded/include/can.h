@@ -1,5 +1,5 @@
 /*
- * can.h
+ * Can.h
  *
  *  Created on: 18 Ara 2024
  *      Author: hakimmc
@@ -18,6 +18,7 @@
 #include "esp_err.h"
 #include "esp_log.h"
 #include "driver/twai.h"
+#include "d2cc_lib.h"
 
 #define TX_GPIO_NUM             5
 #define RX_GPIO_NUM             4
@@ -34,6 +35,7 @@
 uint8_t Can_Init(twai_general_config_t can_gpio_config,twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config);
 uint8_t Can_Transmit(twai_message_t message, uint8_t data[]);
 void CanReporter(void* pvParameter); //RTOS TASK
+
 
 #endif /* INCLUDE_CAN_H_ */
 
