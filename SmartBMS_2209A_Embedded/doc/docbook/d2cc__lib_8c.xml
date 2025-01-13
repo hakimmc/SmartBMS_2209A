@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_d2cc__lib_8c" xml:lang="en-US">
+<title>src/d2cc_lib.c File Reference</title>
+<indexterm><primary>src/d2cc_lib.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;d2cc_lib.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_d2cc__lib_8c_1ae78f43f4aca692c377c75bc182baee88">D2cc_Lib_Init</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8c_1ae5597b44f3f49cc3c016533bfa7a9374">ReadParse</link> (uint8_t *rx_data, uint32_t id, <link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8c_1a1a53ba345e601b7539ad8b1d3a60becf">CreateTable_Battery_Messages</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8c_1acce29ea481884412fe82fde8cf8a3c73">CreateTable_Battery_Temperatures</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8c_1a3f4346eef40e3f6e0856a015bed8da2d">CreateTable_Battery_Voltages</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8c_1a3a8f6f06284c77bd13fc93c18115fd53">CreateTable_Can_Main</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_d2cc__lib_8c_1a1a53ba345e601b7539ad8b1d3a60becf"/><section>
+    <title>CreateTable_Battery_Messages()</title>
+<indexterm><primary>CreateTable_Battery_Messages</primary><secondary>d2cc_lib.c</secondary></indexterm>
+<indexterm><primary>d2cc_lib.c</primary><secondary>CreateTable_Battery_Messages</secondary></indexterm>
+<para><computeroutput>void CreateTable_Battery_Messages (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<anchor xml:id="_d2cc__lib_8c_1acce29ea481884412fe82fde8cf8a3c73"/><section>
+    <title>CreateTable_Battery_Temperatures()</title>
+<indexterm><primary>CreateTable_Battery_Temperatures</primary><secondary>d2cc_lib.c</secondary></indexterm>
+<indexterm><primary>d2cc_lib.c</primary><secondary>CreateTable_Battery_Temperatures</secondary></indexterm>
+<para><computeroutput>void CreateTable_Battery_Temperatures (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<anchor xml:id="_d2cc__lib_8c_1a3f4346eef40e3f6e0856a015bed8da2d"/><section>
+    <title>CreateTable_Battery_Voltages()</title>
+<indexterm><primary>CreateTable_Battery_Voltages</primary><secondary>d2cc_lib.c</secondary></indexterm>
+<indexterm><primary>d2cc_lib.c</primary><secondary>CreateTable_Battery_Voltages</secondary></indexterm>
+<para><computeroutput>void CreateTable_Battery_Voltages (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<anchor xml:id="_d2cc__lib_8c_1a3a8f6f06284c77bd13fc93c18115fd53"/><section>
+    <title>CreateTable_Can_Main()</title>
+<indexterm><primary>CreateTable_Can_Main</primary><secondary>d2cc_lib.c</secondary></indexterm>
+<indexterm><primary>d2cc_lib.c</primary><secondary>CreateTable_Can_Main</secondary></indexterm>
+<para><computeroutput>void CreateTable_Can_Main (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<anchor xml:id="_d2cc__lib_8c_1ae78f43f4aca692c377c75bc182baee88"/><section>
+    <title>D2cc_Lib_Init()</title>
+<indexterm><primary>D2cc_Lib_Init</primary><secondary>d2cc_lib.c</secondary></indexterm>
+<indexterm><primary>d2cc_lib.c</primary><secondary>D2cc_Lib_Init</secondary></indexterm>
+<para><computeroutput>void D2cc_Lib_Init (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<anchor xml:id="_d2cc__lib_8c_1ae5597b44f3f49cc3c016533bfa7a9374"/><section>
+    <title>ReadParse()</title>
+<indexterm><primary>ReadParse</primary><secondary>d2cc_lib.c</secondary></indexterm>
+<indexterm><primary>d2cc_lib.c</primary><secondary>ReadParse</secondary></indexterm>
+<para><computeroutput>void ReadParse (uint8_t * rx_data, uint32_t id, <link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+</section>
+</section>

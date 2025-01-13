@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__led_task_init_8h_source" xml:lang="en-US">
+<title>LedTaskInit.h</title>
+<indexterm><primary>include/LedTaskInit.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+11 
+12 <emphasis role="preprocessor">#ifndef&#32;INCLUDE_LEDTASKINIT_H_</emphasis>
+13 <emphasis role="preprocessor">#define&#32;INCLUDE_LEDTASKINIT_H_</emphasis>
+14 
+15 <emphasis role="preprocessor">#include&#32;&quot;stdint.h&quot;</emphasis>
+16 
+24 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__led_task_init_8h_1ac3698c9d80d8a1abde24708cc9fdb1ee">gpio_init</link>(uint8_t&#32;gpio_pin);
+25 
+34 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__led_task_init_8h_1a1f53ce317fca339ddc6588adb1a457e4">led_init</link>(<emphasis role="keywordtype">void</emphasis>*&#32;pvParameter);
+35 
+36 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;INCLUDE_LEDTASKINIT_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

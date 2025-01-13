@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__led_task_init_8c" xml:lang="en-US">
+<title>src/LedTaskInit.c File Reference</title>
+<indexterm><primary>src/LedTaskInit.c</primary></indexterm>
+<para>
+
+<para>Implementation of LED blinking task using ESP32 GPIO. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;LedTaskInit.h&quot;<?linebreak?>#include &quot;driver/gpio.h&quot;<?linebreak?>#include &quot;freertos/FreeRTOS.h&quot;<?linebreak?>#include &quot;freertos/task.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f">LED_PIN</link>&#160;&#160;&#160;13</para>
+
+<para>GPIO pin used for the LED. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__led_task_init_8c_1ac3698c9d80d8a1abde24708cc9fdb1ee">gpio_init</link> (uint8_t gpio_pin)</para>
+
+<para>Initializes the specified GPIO pin as an output. </para>
+</listitem>
+            <listitem><para>void <link linkend="__led_task_init_8c_1a1f53ce317fca339ddc6588adb1a457e4">led_init</link> (void *pvParameter)</para>
+
+<para>LED blinking task. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Implementation of LED blinking task using ESP32 GPIO. </para>
+
+<para><formalpara><title>Date</title>
+
+<para>18 December 2024 </para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>hakimmc </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f"/><section>
+    <title>LED_PIN</title>
+<indexterm><primary>LED_PIN</primary><secondary>LedTaskInit.c</secondary></indexterm>
+<indexterm><primary>LedTaskInit.c</primary><secondary>LED_PIN</secondary></indexterm>
+<para><computeroutput>#define LED_PIN&#160;&#160;&#160;13</computeroutput></para><para>
+
+<para>GPIO pin used for the LED. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__led_task_init_8c_1ac3698c9d80d8a1abde24708cc9fdb1ee"/><section>
+    <title>gpio_init()</title>
+<indexterm><primary>gpio_init</primary><secondary>LedTaskInit.c</secondary></indexterm>
+<indexterm><primary>LedTaskInit.c</primary><secondary>gpio_init</secondary></indexterm>
+<para><computeroutput>void gpio_init (uint8_t gpio_pin)</computeroutput></para><para>
+
+<para>Initializes the specified GPIO pin as an output. </para>
+</para>
+
+<para>Initializes a GPIO pin for LED control.</para>
+
+<para>This function configures the given GPIO pin for output mode with no pull-up or pull-down resistors.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gpio_pin</entry><entry>
+<para>The GPIO pin number to initialize. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>&lt; No interrupt triggered.</para>
+
+<para>&lt; Set GPIO mode to output.</para>
+
+<para>&lt; Pin mask for the specified GPIO pin.</para>
+
+<para>&lt; Disable pull-down resistor.</para>
+
+<para>&lt; Disable pull-up resistor.</para>
+</section>
+<anchor xml:id="__led_task_init_8c_1a1f53ce317fca339ddc6588adb1a457e4"/><section>
+    <title>led_init()</title>
+<indexterm><primary>led_init</primary><secondary>LedTaskInit.c</secondary></indexterm>
+<indexterm><primary>LedTaskInit.c</primary><secondary>led_init</secondary></indexterm>
+<para><computeroutput>void led_init (void * pvParameter)</computeroutput></para><para>
+
+<para>LED blinking task. </para>
+</para>
+
+<para>Task to initialize and control LED behavior.</para>
+
+<para>This task initializes the LED GPIO pin and continuously toggles the LED state with a 500 ms delay.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pvParameter</entry><entry>
+<para>A pointer to task-specific parameters (unused). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>&lt; Initialize the LED GPIO pin.</para>
+
+<para>&lt; Turn the LED on.</para>
+
+<para>&lt; Delay for 500 ms.</para>
+
+<para>&lt; Turn the LED off.</para>
+
+<para>&lt; Delay for 500 ms.</para>
+</section>
+</section>
+</section>

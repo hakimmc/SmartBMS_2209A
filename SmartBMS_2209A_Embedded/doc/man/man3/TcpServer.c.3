@@ -1,0 +1,159 @@
+.TH "src/TcpServer.c" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/TcpServer.c \- TCP server implementation to handle incoming client connections, authenticate, and exchange data\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'TcpServer\&.h'\fP
+.br
+\fR#include 'Wifi\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSERVER_PORT\fP   8080"
+.br
+.ti -1c
+.RI "#define \fBTCP_TAG\fP   'TCP_SERVER'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBCreate_Server\fP (void *pvParameter)"
+.br
+.RI "Creates and starts a TCP server to listen for client connections\&. "
+.ti -1c
+.RI "void \fBHandle_Client\fP (void *args)"
+.br
+.RI "Handles communication with a single client\&. "
+.ti -1c
+.RI "int \fBreceive_data\fP (int sock, char *buffer, size_t size, uint8_t *timeout_counter, uint8_t max_timeout)"
+.br
+.RI "Receives data from the client socket\&. "
+.ti -1c
+.RI "void \fBTcp_Init\fP ()"
+.br
+.RI "Initializes the TCP server and starts listening for client connections\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char * \fBGUI_USER\fP = 'root'"
+.br
+.RI "Username for GUI authentication\&. "
+.ti -1c
+.RI "char * \fBGUI_PASS\fP = 'otto'"
+.br
+.RI "Password for GUI authentication\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+TCP server implementation to handle incoming client connections, authenticate, and exchange data\&. 
+
+
+.PP
+\fBDate\fP
+.RS 4
+18 December 2024 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+hakimmc 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SERVER_PORT   8080"
+Port number for the TCP server 
+.SS "#define TCP_TAG   'TCP_SERVER'"
+Tag for logging 
+.SH "Function Documentation"
+.PP 
+.SS "void Create_Server (void * pvParameter)"
+
+.PP
+Creates and starts a TCP server to listen for client connections\&. Creates and starts the TCP server\&.
+
+.PP
+This function sets up a TCP socket, binds it to a specified address and port, and listens for incoming connections\&. For each connection, a new task is created to handle the client\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIpvParameter\fP Unused parameter for FreeRTOS task\&. 
+.RE
+.PP
+
+.SS "void Handle_Client (void * args)"
+
+.PP
+Handles communication with a single client\&. Handles client connections to the TCP server\&.
+
+.PP
+This function receives and processes commands from the client, authenticates the user, and manages communication based on different states\&. It handles login, data requests, and exit commands\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIargs\fP Socket descriptor for the client\&. 
+.RE
+.PP
+
+.SS "int receive_data (int sock, char * buffer, size_t size, uint8_t * timeout_counter, uint8_t max_timeout)"
+
+.PP
+Receives data from the client socket\&. Receives data from a connected client\&.
+
+.PP
+This function receives data from the client and handles timeouts\&. If no data is received within a specified timeout period, it returns a timeout error\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsock\fP Socket descriptor for the client\&. 
+.br
+\fIbuffer\fP Buffer to store received data\&. 
+.br
+\fIsize\fP Size of the buffer\&. 
+.br
+\fItimeout_counter\fP Counter to track consecutive timeouts\&. 
+.br
+\fImax_timeout\fP Maximum allowed consecutive timeouts before returning an error\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Length of received data, -1 if timeout occurs, or -2 if maximum timeouts reached\&. 
+.RE
+.PP
+
+.SS "void Tcp_Init ()"
+
+.PP
+Initializes the TCP server and starts listening for client connections\&. Initializes the TCP server\&. < Initialize Wi-Fi in access point and station mode\&.
+
+.PP
+< Start the TCP server task\&.
+.SH "Variable Documentation"
+.PP 
+.SS "char* GUI_PASS = 'otto'"
+
+.PP
+Password for GUI authentication\&. 
+.SS "char* GUI_USER = 'root'"
+
+.PP
+Username for GUI authentication\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

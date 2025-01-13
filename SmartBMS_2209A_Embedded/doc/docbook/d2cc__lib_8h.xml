@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_d2cc__lib_8h" xml:lang="en-US">
+<title>include/d2cc_lib.h File Reference</title>
+<indexterm><primary>include/d2cc_lib.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdint.h&gt;<?linebreak?>#include &lt;stdbool.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_dbc_struct">DbcStruct</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link> { <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a">BatteryChemistry_LFP</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1">BatteryChemistry_NMC</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link> { <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5">CanBusEnable_Enable</link>
+, <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3">CanBusEnable_Disable</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</link> { <link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e">WiFiEnable_Enable</link>
+, <link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e">WiFiEnable_Disable</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link> { <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d">TcpEnable_Offline</link>
+, <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a">TcpEnable_Online</link>
+, <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475">TcpEnable_Connected</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link> { <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7">VpnEnable_Enable</link>
+, <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b">VpnEnable_Disable</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link> { <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3">WiFi_AP_Status_Enable</link>
+, <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d">WiFi_AP_Status_Disable</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_d2cc__lib_8h_1add5678661f9e8fc392ab35a8369f8487">D2cc_Lib_Init</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *st)</para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8h_1a1fc4968809341ee415d413feb9db80cb">ReadParse</link> (uint8_t *rx_data, uint32_t id, <link linkend="_struct_dbc_struct">DbcStruct</link> *st)</para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8h_1a1a53ba345e601b7539ad8b1d3a60becf">CreateTable_Battery_Messages</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8h_1acce29ea481884412fe82fde8cf8a3c73">CreateTable_Battery_Temperatures</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8h_1a3f4346eef40e3f6e0856a015bed8da2d">CreateTable_Battery_Voltages</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8h_1a3a8f6f06284c77bd13fc93c18115fd53">CreateTable_Can_Main</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57"/><section>
+    <title>BatteryChemistry_enum</title>
+<indexterm><primary>BatteryChemistry_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>BatteryChemistry_LFP</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_LFP</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a"/>BatteryChemistry_LFP</entry><entry></entry></row><row><entry><indexterm><primary>BatteryChemistry_NMC</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_NMC</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1"/>BatteryChemistry_NMC</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4"/><section>
+    <title>CanBusEnable_enum</title>
+<indexterm><primary>CanBusEnable_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CanBusEnable_enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>CanBusEnable_Enable</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CanBusEnable_Enable</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5"/>CanBusEnable_Enable</entry><entry></entry></row><row><entry><indexterm><primary>CanBusEnable_Disable</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CanBusEnable_Disable</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3"/>CanBusEnable_Disable</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e"/><section>
+    <title>TcpEnable_enum</title>
+<indexterm><primary>TcpEnable_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>TcpEnable_Offline</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_Offline</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d"/>TcpEnable_Offline</entry><entry></entry></row><row><entry><indexterm><primary>TcpEnable_Online</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_Online</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a"/>TcpEnable_Online</entry><entry></entry></row><row><entry><indexterm><primary>TcpEnable_Connected</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_Connected</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475"/>TcpEnable_Connected</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4"/><section>
+    <title>VpnEnable_enum</title>
+<indexterm><primary>VpnEnable_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>VpnEnable_enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>VpnEnable_Enable</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>VpnEnable_Enable</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7"/>VpnEnable_Enable</entry><entry></entry></row><row><entry><indexterm><primary>VpnEnable_Disable</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>VpnEnable_Disable</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b"/>VpnEnable_Disable</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8"/><section>
+    <title>WiFi_AP_Status_enum</title>
+<indexterm><primary>WiFi_AP_Status_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_AP_Status_enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>WiFi_AP_Status_Enable</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_AP_Status_Enable</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3"/>WiFi_AP_Status_Enable</entry><entry></entry></row><row><entry><indexterm><primary>WiFi_AP_Status_Disable</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_AP_Status_Disable</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d"/>WiFi_AP_Status_Disable</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c"/><section>
+    <title>WiFiEnable_enum</title>
+<indexterm><primary>WiFiEnable_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFiEnable_enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>WiFiEnable_Enable</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFiEnable_Enable</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e"/>WiFiEnable_Enable</entry><entry></entry></row><row><entry><indexterm><primary>WiFiEnable_Disable</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFiEnable_Disable</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e"/>WiFiEnable_Disable</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_d2cc__lib_8h_1a1a53ba345e601b7539ad8b1d3a60becf"/><section>
+    <title>CreateTable_Battery_Messages()</title>
+<indexterm><primary>CreateTable_Battery_Messages</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CreateTable_Battery_Messages</secondary></indexterm>
+<para><computeroutput>void CreateTable_Battery_Messages (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<anchor xml:id="_d2cc__lib_8h_1acce29ea481884412fe82fde8cf8a3c73"/><section>
+    <title>CreateTable_Battery_Temperatures()</title>
+<indexterm><primary>CreateTable_Battery_Temperatures</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CreateTable_Battery_Temperatures</secondary></indexterm>
+<para><computeroutput>void CreateTable_Battery_Temperatures (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<anchor xml:id="_d2cc__lib_8h_1a3f4346eef40e3f6e0856a015bed8da2d"/><section>
+    <title>CreateTable_Battery_Voltages()</title>
+<indexterm><primary>CreateTable_Battery_Voltages</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CreateTable_Battery_Voltages</secondary></indexterm>
+<para><computeroutput>void CreateTable_Battery_Voltages (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<anchor xml:id="_d2cc__lib_8h_1a3a8f6f06284c77bd13fc93c18115fd53"/><section>
+    <title>CreateTable_Can_Main()</title>
+<indexterm><primary>CreateTable_Can_Main</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CreateTable_Can_Main</secondary></indexterm>
+<para><computeroutput>void CreateTable_Can_Main (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<anchor xml:id="_d2cc__lib_8h_1add5678661f9e8fc392ab35a8369f8487"/><section>
+    <title>D2cc_Lib_Init()</title>
+<indexterm><primary>D2cc_Lib_Init</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>D2cc_Lib_Init</secondary></indexterm>
+<para><computeroutput>void D2cc_Lib_Init (<link linkend="_struct_dbc_struct">DbcStruct</link> * st)</computeroutput></para></section>
+<anchor xml:id="_d2cc__lib_8h_1a1fc4968809341ee415d413feb9db80cb"/><section>
+    <title>ReadParse()</title>
+<indexterm><primary>ReadParse</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>ReadParse</secondary></indexterm>
+<para><computeroutput>void ReadParse (uint8_t * rx_data, uint32_t id, <link linkend="_struct_dbc_struct">DbcStruct</link> * st)</computeroutput></para></section>
+</section>
+</section>

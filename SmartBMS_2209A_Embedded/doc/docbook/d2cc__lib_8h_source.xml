@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_d2cc__lib_8h_source" xml:lang="en-US">
+<title>d2cc_lib.h</title>
+<indexterm><primary>include/d2cc_lib.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*</emphasis>
+2 <emphasis role="comment">&#32;*&#32;&#32;d2cc_lib.h</emphasis>
+3 <emphasis role="comment">&#32;*</emphasis>
+4 <emphasis role="comment">&#32;*&#32;&#32;Created&#32;on:&#32;5.01.2025&#32;</emphasis>
+5 <emphasis role="comment">&#32;*&#32;&#32;Author:&#32;hakimmc</emphasis>
+6 <emphasis role="comment">&#32;*</emphasis>
+7 <emphasis role="comment">&#32;*&#32;&#32;https://www.linkedin.com/in/abdulhakim-calgin/</emphasis>
+8 <emphasis role="comment">&#32;*</emphasis>
+9 <emphasis role="comment">&#32;*/</emphasis>
+10 
+11 <emphasis role="preprocessor">#ifndef&#32;LIB_</emphasis>
+12 <emphasis role="preprocessor">#define&#32;LIB_</emphasis>
+13 
+14 <emphasis role="preprocessor">#include&#32;&lt;stdint.h&gt;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+16 
+17 
+18 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>{
+19 &#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a">BatteryChemistry_LFP</link>,&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1">BatteryChemistry_NMC</link>
+20 }<link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link>;
+21 
+22 
+23 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>{
+24 &#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5">CanBusEnable_Enable</link>,&#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3">CanBusEnable_Disable</link>
+25 }<link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link>;
+26 
+27 
+28 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>{
+29 &#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e">WiFiEnable_Enable</link>,&#32;&#32;<link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e">WiFiEnable_Disable</link>
+30 }<link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</link>;
+31 
+32 
+33 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>{
+34 &#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d">TcpEnable_Offline</link>,&#32;&#32;<link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a">TcpEnable_Online</link>,&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475">TcpEnable_Connected</link>
+35 }<link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link>;
+36 
+37 
+38 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>{
+39 &#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7">VpnEnable_Enable</link>,&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b">VpnEnable_Disable</link>
+40 }<link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link>;
+41 
+42 
+43 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>{
+44 &#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3">WiFi_AP_Status_Enable</link>,&#32;&#32;<link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d">WiFi_AP_Status_Disable</link>
+45 }<link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link>;
+46 
+47 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>{
+48 <emphasis role="comment">/*&#32;Battery_Messages&#32;Line&#32;Start&#32;*/</emphasis>
+49 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af">ID</link>;
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f">DLC</link>;
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">union</emphasis>{
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}Signal;
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd">Data</link>[8];
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+57 &#32;&#32;&#32;&#32;}<link linkend="__can_8c_1a130a3010e507b1482a7aeb97e8b3fcc2">Battery_Messages</link>;
+58 
+59 <emphasis role="comment">/*&#32;Battery_Messages&#32;Line&#32;End&#32;*/</emphasis>
+60 
+61 <emphasis role="comment">/*&#32;Battery_Temperatures&#32;Line&#32;Start&#32;*/</emphasis>
+62 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint32_t&#32;ID;
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;DLC;
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">union</emphasis>{
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}Signal;
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;Data[8];
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+70 &#32;&#32;&#32;&#32;}<link linkend="__can_8c_1aeac6d1745e019aac057f6d092866ff46">Battery_Temperatures</link>;
+71 
+72 <emphasis role="comment">/*&#32;Battery_Temperatures&#32;Line&#32;End&#32;*/</emphasis>
+73 
+74 <emphasis role="comment">/*&#32;Battery_Voltages&#32;Line&#32;Start&#32;*/</emphasis>
+75 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint32_t&#32;ID;
+77 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;DLC;
+78 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">union</emphasis>{
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}Signal;
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;Data[8];
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+83 &#32;&#32;&#32;&#32;}<link linkend="__can_8c_1affc81c163d004c727041b42b732420f3">Battery_Voltages</link>;
+84 
+85 <emphasis role="comment">/*&#32;Battery_Voltages&#32;Line&#32;End&#32;*/</emphasis>
+86 
+87 <emphasis role="comment">/*&#32;Can_Main&#32;Line&#32;Start&#32;*/</emphasis>
+88 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint32_t&#32;ID;
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;DLC;
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">union</emphasis>{
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1aafdcafa59c0375ecd8b2bf9e3a53ab53">AliveCounter</link>:7;&#32;<emphasis role="comment">//7&#32;bit</emphasis>
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link>&#32;<link linkend="_struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8">BatteryChemistry</link>:1;&#32;<emphasis role="comment">//1&#32;bit</emphasis>
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74">BatteryBalance_MaxVoltage</link>:8;&#32;<emphasis role="comment">//8&#32;bit</emphasis>
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab">BatteryBalance_MinVoltage</link>:8;&#32;<emphasis role="comment">//8&#32;bit</emphasis>
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be">BatteryBalance_MaxTemp</link>:8;&#32;<emphasis role="comment">//8&#32;bit</emphasis>
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d">BatteryBalance_MinTemp</link>:8;&#32;<emphasis role="comment">//8&#32;bit</emphasis>
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a">SwVersionMajor</link>:2;&#32;<emphasis role="comment">//2&#32;bit</emphasis>
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21">SwVersionMinor</link>:2;&#32;<emphasis role="comment">//2&#32;bit</emphasis>
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1ab712e03d069028bd782d5a3bf63fbbcd">SwVersionBugfix</link>:4;&#32;<emphasis role="comment">//4&#32;bit</emphasis>
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link>&#32;<link linkend="_struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad">CanBusEnable</link>:1;&#32;<emphasis role="comment">//1&#32;bit</emphasis>
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</link>&#32;<link linkend="_struct_dbc_struct_1a1ca872211a78ead331d094d0b45c0499">WiFiEnable</link>:1;&#32;<emphasis role="comment">//1&#32;bit</emphasis>
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link>&#32;<link linkend="_struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a">TcpEnable</link>:2;&#32;<emphasis role="comment">//2&#32;bit</emphasis>
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link>&#32;<link linkend="_struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54">VpnEnable</link>:1;&#32;<emphasis role="comment">//1&#32;bit</emphasis>
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link>&#32;<link linkend="_struct_dbc_struct_1a9e27bd50ce2d239ca6f1d5f7cb023de7">WiFi_AP_Status</link>:2;&#32;<emphasis role="comment">//2&#32;bit</emphasis>
+107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_dbc_struct_1a9040957d9669218f0117644dcbc7f1c2">TcpClientCount</link>:8;&#32;<emphasis role="comment">//8&#32;bit</emphasis>
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}Signal;
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;Data[8];
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b">factor</link>;
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7">offset</link>;
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_dbc_struct_1aacb347996a1291b562b366fa764aa041">value</link>;
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}Phys_Value;
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}BatteryBalance_MaxVoltage;
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;factor;
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;offset;
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;value;
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}Phys_Value;
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}BatteryBalance_MinVoltage;
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct</emphasis>{
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;factor;
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;offset;
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;value;
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}Phys_Value;
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}BatteryBalance_MinTemp;
+132 &#32;&#32;&#32;&#32;}<link linkend="__can_8c_1a5ac86e7553816a53c292e55c741953bb">Can_Main</link>;
+133 
+134 <emphasis role="comment">/*&#32;Can_Main&#32;Line&#32;End&#32;*/</emphasis>
+135 
+136 }<link linkend="_struct_dbc_struct">DbcStruct</link>;
+137 <emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;USER&#32;CODE&#32;FUNCTION&#32;BLOCK&#32;START&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+138 
+139 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_d2cc__lib_8h_1add5678661f9e8fc392ab35a8369f8487">D2cc_Lib_Init</link>(<link linkend="_struct_dbc_struct">DbcStruct</link>&#32;*st);&#32;<emphasis role="comment">//Init&#32;Function&#32;(Must&#32;Be&#32;Run)</emphasis>
+140 
+141 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_d2cc__lib_8h_1a1fc4968809341ee415d413feb9db80cb">ReadParse</link>(uint8_t*&#32;rx_data,&#32;uint32_t&#32;<emphasis role="keywordtype">id</emphasis>,&#32;<link linkend="_struct_dbc_struct">DbcStruct</link>&#32;*st);&#32;<emphasis role="comment">//Can&#32;Read&#32;&amp;&#32;Parse&#32;Function</emphasis>
+142 
+143 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_d2cc__lib_8h_1a1a53ba345e601b7539ad8b1d3a60becf">CreateTable_Battery_Messages</link>(<link linkend="_struct_dbc_struct">DbcStruct</link>&#32;*dbc);
+144 
+145 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_d2cc__lib_8h_1acce29ea481884412fe82fde8cf8a3c73">CreateTable_Battery_Temperatures</link>(<link linkend="_struct_dbc_struct">DbcStruct</link>&#32;*dbc);
+146 
+147 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_d2cc__lib_8h_1a3f4346eef40e3f6e0856a015bed8da2d">CreateTable_Battery_Voltages</link>(<link linkend="_struct_dbc_struct">DbcStruct</link>&#32;*dbc);
+148 
+149 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_d2cc__lib_8h_1a3a8f6f06284c77bd13fc93c18115fd53">CreateTable_Can_Main</link>(<link linkend="_struct_dbc_struct">DbcStruct</link>&#32;*dbc);
+150 
+151 <emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;USER&#32;CODE&#32;FUNCTION&#32;BLOCK&#32;STOP&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+152 
+153 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

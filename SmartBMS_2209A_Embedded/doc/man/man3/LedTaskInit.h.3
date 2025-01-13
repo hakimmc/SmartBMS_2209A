@@ -1,0 +1,114 @@
+.TH "include/LedTaskInit.h" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/LedTaskInit.h \- LED initialization and control tasks for ESP32\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'stdint\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgpio_init\fP (uint8_t gpio_pin)"
+.br
+.RI "Initializes a GPIO pin for LED control\&. "
+.ti -1c
+.RI "void \fBled_init\fP (void *pvParameter)"
+.br
+.RI "Task to initialize and control LED behavior\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+LED initialization and control tasks for ESP32\&. 
+
+This header file provides declarations for initializing GPIO pins and creating LED-related tasks for the ESP32\&.
+
+.PP
+Created on: 18 Dec 2024 
+.PP
+\fBAuthor\fP
+.RS 4
+hakimmc 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void gpio_init (uint8_t gpio_pin)"
+
+.PP
+Initializes a GPIO pin for LED control\&. Configures the specified GPIO pin as an output to control an LED\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIgpio_pin\fP The GPIO pin number to initialize\&.
+.RE
+.PP
+Initializes a GPIO pin for LED control\&.
+
+.PP
+This function configures the given GPIO pin for output mode with no pull-up or pull-down resistors\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIgpio_pin\fP The GPIO pin number to initialize\&. 
+.RE
+.PP
+< No interrupt triggered\&.
+
+.PP
+< Set GPIO mode to output\&.
+
+.PP
+< Pin mask for the specified GPIO pin\&.
+
+.PP
+< Disable pull-down resistor\&.
+
+.PP
+< Disable pull-up resistor\&.
+.SS "void led_init (void * pvParameter)"
+
+.PP
+Task to initialize and control LED behavior\&. This function serves as an entry point for a FreeRTOS task, handling LED initialization and operation based on the provided parameters\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIpvParameter\fP Pointer to task parameters (optional)\&.
+.RE
+.PP
+Task to initialize and control LED behavior\&.
+
+.PP
+This task initializes the LED GPIO pin and continuously toggles the LED state with a 500 ms delay\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIpvParameter\fP A pointer to task-specific parameters (unused)\&. 
+.RE
+.PP
+< Initialize the LED GPIO pin\&.
+
+.PP
+< Turn the LED on\&.
+
+.PP
+< Delay for 500 ms\&.
+
+.PP
+< Turn the LED off\&.
+
+.PP
+< Delay for 500 ms\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>C++<sp/>Source</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>C<sp/>API<sp/>is<sp/>exposed<sp/>via<sp/>[include/ZeroTierSockets.h](../include/ZeroTierSockets.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>[bindings/](./bindings)<sp/>Contains<sp/>the<sp/>source<sp/>for<sp/>wrappers<sp/>in<sp/>various<sp/>languages.<sp/>See<sp/>[examples/](../examples/)<sp/>for<sp/>their<sp/>usage.</highlight></codeline>
+    </programlisting>
+    <location file="src/README.md"/>
+  </compounddef>
+</doxygen>

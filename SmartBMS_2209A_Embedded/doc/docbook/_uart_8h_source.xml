@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__uart_8h_source" xml:lang="en-US">
+<title>Uart.h</title>
+<indexterm><primary>include/Uart.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+11 
+12 <emphasis role="preprocessor">#ifndef&#32;INCLUDE_UART_H_</emphasis>
+13 <emphasis role="preprocessor">#define&#32;INCLUDE_UART_H_</emphasis>
+14 
+15 <emphasis role="preprocessor">#include&#32;&quot;stdint.h&quot;</emphasis>
+16 <emphasis role="preprocessor">#include&#32;&quot;driver/uart.h&quot;</emphasis>
+17 <emphasis role="preprocessor">#include&#32;&quot;driver/gpio.h&quot;</emphasis>
+18 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+19 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+20 
+33 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__uart_8h_1a268262b77851c1bf5292361233c6515f">Uart_Init</link>(uint8_t&#32;uart_pin,&#32;<emphasis role="keywordtype">int</emphasis>&#32;baudrate,&#32;uint32_t&#32;rx_buffsize,&#32;uint8_t&#32;TXD_PIN,&#32;uint8_t&#32;RXD_PIN);
+34 
+45 uint8_t&#32;<link linkend="__uart_8h_1a8856e4c8f6952db371ac9bf478c7c000">Uart_Transmit</link>(uint8_t&#32;uart_pin,&#32;uint8_t&#32;*data,&#32;uint8_t&#32;data_length);
+46 
+58 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__uart_8h_1a65bb7c489c4800aeb9f32917436cce36">Uart_Receive</link>(uint8_t&#32;uart_pin,&#32;uint8_t*&#32;data,&#32;uint8_t&#32;data_length,&#32;uint32_t&#32;timeout);
+59 
+68 uint8_t&#32;<link linkend="__uart_8h_1a086601e2a6bb2527f8c1f02e0b828576">IsTimeout</link>(uint32_t&#32;max_reach_time);
+69 
+70 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;INCLUDE_UART_H_</emphasis>
+</programlisting></section>

@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__wifi_8h" xml:lang="en-US">
+<title>include/Wifi.h File Reference</title>
+<indexterm><primary>include/Wifi.h</primary></indexterm>
+<para>
+
+<para>Wi-Fi configuration for ESP32 in AP+STA mode. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;freertos/FreeRTOS.h&quot;<?linebreak?>#include &quot;freertos/event_groups.h&quot;<?linebreak?>#include &quot;esp_wifi.h&quot;<?linebreak?>#include &quot;freertos/task.h&quot;<?linebreak?>#include &quot;esp_event.h&quot;<?linebreak?>#include &quot;esp_log.h&quot;<?linebreak?>#include &quot;nvs_flash.h&quot;<?linebreak?>#include &quot;esp_netif.h&quot;<?linebreak?>#include &quot;string.h&quot;<?linebreak?>#include &lt;inttypes.h&gt;<?linebreak?>#include &lt;time.h&gt;<?linebreak?>#include &lt;sys/time.h&gt;<?linebreak?>#include &lt;esp_system.h&gt;<?linebreak?>#include &lt;lwip/netdb.h&gt;<?linebreak?>#include &lt;ping/ping_sock.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__wifi_8h_1ad552e7688532cbbecd3967538ced06ac">WIFI_CONNECTED_BIT</link>&#160;&#160;&#160;BIT0</para>
+
+<para>Event bit indicating a successful Wi-Fi connection. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a7d013b55e50dfbda0904f5f933b63ec4">WIFI_FAIL_BIT</link>&#160;&#160;&#160;BIT1</para>
+
+<para>Event bit indicating a Wi-Fi connection failure. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a6c8693be8221ff82e61fb5b44ce18bfd">WIFI_CONNECT</link></para>
+
+<para>Define this macro to enable Wi-Fi station connection. Comment it out to disable the Wi-Fi station functionality. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a56ee34255f5306176ee8fea2137397d4">AP_SSID</link>&#160;&#160;&#160;&quot;Ottomotive_BMS&quot;</para>
+
+<para>SSID for the Access Point. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a85d4dac148bc7ac5dc9a716085308335">AP_PASS</link>&#160;&#160;&#160;&quot;Ottomotive22*&quot;</para>
+
+<para>Password for the Access Point. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a428d6fc23e06208d09595c62b0a98aa9">MAX_STA_CONN</link>&#160;&#160;&#160;5</para>
+
+<para>Maximum number of stations that can connect to the Access Point. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a01c3892c16d6330e486637967ab0289b">MAX_RETRY</link>&#160;&#160;&#160;5</para>
+
+<para>Maximum number of retry attempts for Wi-Fi connection. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a586542b79d00e4db7e1d5a667ae83a2b">WIFI_SSID</link>&#160;&#160;&#160;&quot;Poyrazwifi_Calgin&quot;</para>
+
+<para>SSID for the Wi-Fi station connection. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a3c95561b03d0fcf9048b231ae2ba90fb">WIFI_PASS</link>&#160;&#160;&#160;&quot;Ah487602&quot;</para>
+
+<para>Password for the Wi-Fi station connection. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a4735ad9aef99f8584afd945f39260954">WIFI_TIMEOUT_MS</link>&#160;&#160;&#160;10000</para>
+
+<para>Timeout for Wi-Fi connection in milliseconds. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a1462b09d5f5a986ad70c72cfe1ec2b05">ESP32_AP_CHANNEL</link>&#160;&#160;&#160;3</para>
+
+<para>Channel for the Access Point. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__wifi_8h_1a13f8ef7b9aee1f387999258af50f1543">ESP32_MAX_CONN</link>&#160;&#160;&#160;3</para>
+
+<para>Maximum number of simultaneous connections to the Access Point. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="__wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c">event_handler</link> (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)</para>
+
+<para>Handles Wi-Fi events. </para>
+</listitem>
+            <listitem><para>void <link linkend="__wifi_8h_1a13bb3ba68519d8aa7c2a72cf22dc2b21">wifi_init_ap_sta</link> (void)</para>
+
+<para>Initializes the Wi-Fi in AP+STA mode. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Wi-Fi configuration for ESP32 in AP+STA mode. </para>
+
+<para>This header file provides the necessary definitions and function declarations for configuring the ESP32 to operate in both Access Point (AP) and Station (STA) modes.</para>
+
+<para>Created on: 18 Dec 2024 <formalpara><title>Author</title>
+
+<para>hakimmc </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__wifi_8h_1a85d4dac148bc7ac5dc9a716085308335"/><section>
+    <title>AP_PASS</title>
+<indexterm><primary>AP_PASS</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>AP_PASS</secondary></indexterm>
+<para><computeroutput>#define AP_PASS&#160;&#160;&#160;&quot;Ottomotive22*&quot;</computeroutput></para><para>
+
+<para>Password for the Access Point. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1a56ee34255f5306176ee8fea2137397d4"/><section>
+    <title>AP_SSID</title>
+<indexterm><primary>AP_SSID</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>AP_SSID</secondary></indexterm>
+<para><computeroutput>#define AP_SSID&#160;&#160;&#160;&quot;Ottomotive_BMS&quot;</computeroutput></para><para>
+
+<para>SSID for the Access Point. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1a1462b09d5f5a986ad70c72cfe1ec2b05"/><section>
+    <title>ESP32_AP_CHANNEL</title>
+<indexterm><primary>ESP32_AP_CHANNEL</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>ESP32_AP_CHANNEL</secondary></indexterm>
+<para><computeroutput>#define ESP32_AP_CHANNEL&#160;&#160;&#160;3</computeroutput></para><para>
+
+<para>Channel for the Access Point. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1a13f8ef7b9aee1f387999258af50f1543"/><section>
+    <title>ESP32_MAX_CONN</title>
+<indexterm><primary>ESP32_MAX_CONN</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>ESP32_MAX_CONN</secondary></indexterm>
+<para><computeroutput>#define ESP32_MAX_CONN&#160;&#160;&#160;3</computeroutput></para><para>
+
+<para>Maximum number of simultaneous connections to the Access Point. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1a01c3892c16d6330e486637967ab0289b"/><section>
+    <title>MAX_RETRY</title>
+<indexterm><primary>MAX_RETRY</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>MAX_RETRY</secondary></indexterm>
+<para><computeroutput>#define MAX_RETRY&#160;&#160;&#160;5</computeroutput></para><para>
+
+<para>Maximum number of retry attempts for Wi-Fi connection. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1a428d6fc23e06208d09595c62b0a98aa9"/><section>
+    <title>MAX_STA_CONN</title>
+<indexterm><primary>MAX_STA_CONN</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>MAX_STA_CONN</secondary></indexterm>
+<para><computeroutput>#define MAX_STA_CONN&#160;&#160;&#160;5</computeroutput></para><para>
+
+<para>Maximum number of stations that can connect to the Access Point. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1a6c8693be8221ff82e61fb5b44ce18bfd"/><section>
+    <title>WIFI_CONNECT</title>
+<indexterm><primary>WIFI_CONNECT</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>WIFI_CONNECT</secondary></indexterm>
+<para><computeroutput>#define WIFI_CONNECT</computeroutput></para><para>
+
+<para>Define this macro to enable Wi-Fi station connection. Comment it out to disable the Wi-Fi station functionality. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1ad552e7688532cbbecd3967538ced06ac"/><section>
+    <title>WIFI_CONNECTED_BIT</title>
+<indexterm><primary>WIFI_CONNECTED_BIT</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>WIFI_CONNECTED_BIT</secondary></indexterm>
+<para><computeroutput>#define WIFI_CONNECTED_BIT&#160;&#160;&#160;BIT0</computeroutput></para><para>
+
+<para>Event bit indicating a successful Wi-Fi connection. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1a7d013b55e50dfbda0904f5f933b63ec4"/><section>
+    <title>WIFI_FAIL_BIT</title>
+<indexterm><primary>WIFI_FAIL_BIT</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>WIFI_FAIL_BIT</secondary></indexterm>
+<para><computeroutput>#define WIFI_FAIL_BIT&#160;&#160;&#160;BIT1</computeroutput></para><para>
+
+<para>Event bit indicating a Wi-Fi connection failure. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1a3c95561b03d0fcf9048b231ae2ba90fb"/><section>
+    <title>WIFI_PASS</title>
+<indexterm><primary>WIFI_PASS</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>WIFI_PASS</secondary></indexterm>
+<para><computeroutput>#define WIFI_PASS&#160;&#160;&#160;&quot;Ah487602&quot;</computeroutput></para><para>
+
+<para>Password for the Wi-Fi station connection. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1a586542b79d00e4db7e1d5a667ae83a2b"/><section>
+    <title>WIFI_SSID</title>
+<indexterm><primary>WIFI_SSID</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>WIFI_SSID</secondary></indexterm>
+<para><computeroutput>#define WIFI_SSID&#160;&#160;&#160;&quot;Poyrazwifi_Calgin&quot;</computeroutput></para><para>
+
+<para>SSID for the Wi-Fi station connection. </para>
+</para>
+</section>
+<anchor xml:id="__wifi_8h_1a4735ad9aef99f8584afd945f39260954"/><section>
+    <title>WIFI_TIMEOUT_MS</title>
+<indexterm><primary>WIFI_TIMEOUT_MS</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>WIFI_TIMEOUT_MS</secondary></indexterm>
+<para><computeroutput>#define WIFI_TIMEOUT_MS&#160;&#160;&#160;10000</computeroutput></para><para>
+
+<para>Timeout for Wi-Fi connection in milliseconds. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c"/><section>
+    <title>event_handler()</title>
+<indexterm><primary>event_handler</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>event_handler</secondary></indexterm>
+<para><computeroutput>static void event_handler (void * arg, esp_event_base_t event_base, int32_t event_id, void * event_data)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Handles Wi-Fi events. </para>
+</para>
+
+<para>This function is called to process various Wi-Fi events, such as connection establishment and disconnection.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>arg</entry><entry>
+<para>User-provided argument (optional). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>event_base</entry><entry>
+<para>Event base that identifies the event type. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>event_id</entry><entry>
+<para>Event ID specifying the exact event. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>event_data</entry><entry>
+<para>Additional data associated with the event (optional). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__wifi_8h_1a13bb3ba68519d8aa7c2a72cf22dc2b21"/><section>
+    <title>wifi_init_ap_sta()</title>
+<indexterm><primary>wifi_init_ap_sta</primary><secondary>Wifi.h</secondary></indexterm>
+<indexterm><primary>Wifi.h</primary><secondary>wifi_init_ap_sta</secondary></indexterm>
+<para><computeroutput>void wifi_init_ap_sta (void )</computeroutput></para><para>
+
+<para>Initializes the Wi-Fi in AP+STA mode. </para>
+</para>
+
+<para>This function configures the ESP32 to operate in both Access Point (AP) and Station (STA) modes. The configuration is based on the defined macros.</para>
+
+<para>Initializes the Wi-Fi in AP+STA mode.</para>
+
+<para>This function initializes the Wi-Fi stack, configures the Wi-Fi interfaces, and starts the Wi-Fi service. It also registers event handlers for Wi-Fi and IP events, and connects to a Wi-Fi network in STA mode, if configured.</para>
+
+<para><note><title>Note</title>
+
+<para>This function configures the ESP32 in dual mode (AP and STA) and connects to a Wi-Fi network if <computeroutput>WIFI_CONNECT</computeroutput> is defined. </para>
+</note>
+</para>
+
+<para>&lt; Initialize network interface.</para>
+
+<para>&lt; Create the default event loop.</para>
+
+<para>&lt; Create the default Wi-Fi AP (Access Point) interface.</para>
+
+<para>&lt; Default Wi-Fi configuration.</para>
+
+<para>&lt; Initialize Wi-Fi driver with the default configuration.</para>
+
+<para>&lt; Register Wi-Fi event handler.</para>
+
+<para>&lt; Register IP event handler.</para>
+
+<para>&lt; AP SSID.</para>
+
+<para>&lt; AP password.</para>
+
+<para>&lt; Length of SSID.</para>
+
+<para>&lt; AP channel.</para>
+
+<para>&lt; Max connections to the AP.</para>
+
+<para>&lt; WPA/WPA2 PSK authentication.</para>
+
+<para>&lt; Set Wi-Fi mode to AP only.</para>
+
+<para>&lt; Set AP configuration.</para>
+
+<para>&lt; Start the Wi-Fi driver.</para>
+
+<para>&lt; Log completion of Wi-Fi initialization.</para>
+</section>
+</section>
+</section>

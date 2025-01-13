@@ -1,0 +1,136 @@
+.TH "src/Wifi.c" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Wifi.c \- Functions for initializing and managing Wi-Fi connectivity in AP (Access Point) and STA (Station) modes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'Wifi\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBevent_handler\fP (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)"
+.br
+.RI "Event handler for Wi-Fi and IP events\&. "
+.ti -1c
+.RI "void \fBwifi_init_ap_sta\fP (void)"
+.br
+.RI "Initializes Wi-Fi in both Access Point (AP) and Station (STA) modes\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Functions for initializing and managing Wi-Fi connectivity in AP (Access Point) and STA (Station) modes\&. 
+
+
+.PP
+\fBDate\fP
+.RS 4
+18 December 2024 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+hakimmc 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "static void event_handler (void * arg, esp_event_base_t event_base, int32_t event_id, void * event_data)\fR [static]\fP"
+
+.PP
+Event handler for Wi-Fi and IP events\&. This function handles Wi-Fi and IP events, such as Wi-Fi connection status changes and obtaining an IP address\&. It also manages retry logic for Wi-Fi connection attempts\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg\fP Pointer to additional arguments (unused)\&. 
+.br
+\fIevent_base\fP The event base (WIFI_EVENT or IP_EVENT)\&. 
+.br
+\fIevent_id\fP The event ID (such as WIFI_EVENT_STA_START)\&. 
+.br
+\fIevent_data\fP Event data associated with the event\&. 
+.RE
+.PP
+< Start the Wi-Fi connection process\&.
+
+.PP
+< Retry the connection\&.
+
+.PP
+< Log obtained IP address\&.
+
+.PP
+< Reset retry count\&.
+.SS "void wifi_init_ap_sta (void )"
+
+.PP
+Initializes Wi-Fi in both Access Point (AP) and Station (STA) modes\&. Initializes the Wi-Fi in AP+STA mode\&.
+
+.PP
+This function initializes the Wi-Fi stack, configures the Wi-Fi interfaces, and starts the Wi-Fi service\&. It also registers event handlers for Wi-Fi and IP events, and connects to a Wi-Fi network in STA mode, if configured\&.
+
+.PP
+\fBNote\fP
+.RS 4
+This function configures the ESP32 in dual mode (AP and STA) and connects to a Wi-Fi network if \fRWIFI_CONNECT\fP is defined\&. 
+.RE
+.PP
+< Initialize network interface\&.
+
+.PP
+< Create the default event loop\&.
+
+.PP
+< Create the default Wi-Fi AP (Access Point) interface\&.
+
+.PP
+< Default Wi-Fi configuration\&.
+
+.PP
+< Initialize Wi-Fi driver with the default configuration\&.
+
+.PP
+< Register Wi-Fi event handler\&.
+
+.PP
+< Register IP event handler\&.
+
+.PP
+< AP SSID\&.
+
+.PP
+< AP password\&.
+
+.PP
+< Length of SSID\&.
+
+.PP
+< AP channel\&.
+
+.PP
+< Max connections to the AP\&.
+
+.PP
+< WPA/WPA2 PSK authentication\&.
+
+.PP
+< Set Wi-Fi mode to AP only\&.
+
+.PP
+< Set AP configuration\&.
+
+.PP
+< Start the Wi-Fi driver\&.
+
+.PP
+< Log completion of Wi-Fi initialization\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

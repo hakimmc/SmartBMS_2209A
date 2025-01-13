@@ -1,0 +1,235 @@
+.TH "include/Bq76pl455.h" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Bq76pl455.h \- Header file for interfacing with the BQ76PL455A-Q1 battery management IC\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'Uart\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBBQ_UART_PORT\fP   UART_NUM_1"
+.br
+.RI "UART port used for communication with the BQ76PL455A-Q1\&. "
+.ti -1c
+.RI "#define \fBBQ_TX\fP   12"
+.br
+.RI "GPIO pin number for UART TX (transmit) connected to the BQ76PL455A-Q1\&. "
+.ti -1c
+.RI "#define \fBBQ_RX\fP   11"
+.br
+.RI "GPIO pin number for UART RX (receive) connected to the BQ76PL455A-Q1\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBBq_Init\fP ()"
+.br
+.RI "Initializes the BQ76PL455A-Q1 interface\&. "
+.ti -1c
+.RI "void \fBBQ_Test\fP ()"
+.br
+.RI "Tests the communication with the BQ76PL455A-Q1\&. "
+.ti -1c
+.RI "uint8_t * \fBCRC16\fP (uint8_t *data, uint8_t data_length)"
+.br
+.RI "Calculates the CRC-16 for a given data buffer\&. "
+.ti -1c
+.RI "void \fBBQ_Start\fP (void *args)"
+.br
+.RI "Starts the BQ76PL455A-Q1 task\&. "
+.ti -1c
+.RI "void \fBBQ_Uart_Init\fP (uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)"
+.br
+.RI "Initializes the UART interface for the BQ76PL455A-Q1\&. "
+.ti -1c
+.RI "uint8_t \fBBQ_Uart_Transmit\fP (uint8_t uart_pin, uint8_t *data, uint8_t data_length)"
+.br
+.RI "Transmits data to the BQ76PL455A-Q1 over UART\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file for interfacing with the BQ76PL455A-Q1 battery management IC\&. 
+
+This file provides declarations for initializing, communicating, and managing the BQ76PL455A-Q1 IC using UART\&. It includes CRC-16 calculation and message structure details\&.
+
+.PP
+Created on: 18 Dec 2024 
+.PP
+\fBAuthor\fP
+.RS 4
+hakimmc 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BQ_RX   11"
+
+.PP
+GPIO pin number for UART RX (receive) connected to the BQ76PL455A-Q1\&. 
+.SS "#define BQ_TX   12"
+
+.PP
+GPIO pin number for UART TX (transmit) connected to the BQ76PL455A-Q1\&. 
+.SS "#define BQ_UART_PORT   UART_NUM_1"
+
+.PP
+UART port used for communication with the BQ76PL455A-Q1\&. 
+.SH "Function Documentation"
+.PP 
+.SS "void Bq_Init ()"
+
+.PP
+Initializes the BQ76PL455A-Q1 interface\&. Sets up the UART interface and any necessary configurations for communication with the BQ76PL455A-Q1 device\&. 
+.SS "void BQ_Start (void * args)"
+
+.PP
+Starts the BQ76PL455A-Q1 task\&. A FreeRTOS task responsible for managing communication with the BQ76PL455A-Q1\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIargs\fP Pointer to task-specific arguments (optional)\&.
+.RE
+.PP
+Starts the BQ76PL455A-Q1 task\&.
+
+.PP
+Continuously transmits a test message via UART at regular intervals\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIargs\fP Task-specific arguments (optional)\&. 
+.RE
+.PP
+
+.SS "void BQ_Test ()"
+
+.PP
+Tests the communication with the BQ76PL455A-Q1\&. Sends a test command or sequence to verify the functionality of the BQ76PL455A-Q1\&.
+
+.PP
+Tests the communication with the BQ76PL455A-Q1\&.
+
+.PP
+Sends a test message to read the device ID\&. 
+.SS "void BQ_Uart_Init (uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)"
+
+.PP
+Initializes the UART interface for the BQ76PL455A-Q1\&. Configures the UART parameters for communicating with the BQ76PL455A-Q1, including pin assignments, baud rate, and RX buffer size\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuart_pin\fP The UART port number to initialize\&. 
+.br
+\fIbaudrate\fP The desired baud rate for communication\&. 
+.br
+\fIrx_buffsize\fP The size of the RX buffer\&. 
+.br
+\fITXD_PIN\fP The GPIO pin number for UART TX\&. 
+.br
+\fIRXD_PIN\fP The GPIO pin number for UART RX\&.
+.RE
+.PP
+Initializes the UART interface for the BQ76PL455A-Q1\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuart_pin\fP UART port number\&. 
+.br
+\fIbaudrate\fP Baud rate for UART communication\&. 
+.br
+\fIrx_buffsize\fP RX buffer size\&. 
+.br
+\fITXD_PIN\fP GPIO pin for UART TX\&. 
+.br
+\fIRXD_PIN\fP GPIO pin for UART RX\&. 
+.RE
+.PP
+
+.SS "uint8_t BQ_Uart_Transmit (uint8_t uart_pin, uint8_t * data, uint8_t data_length)"
+
+.PP
+Transmits data to the BQ76PL455A-Q1 over UART\&. Sends a sequence of bytes to the BQ76PL455A-Q1 via UART\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuart_pin\fP The UART port number to use for transmission\&. 
+.br
+\fIdata\fP Pointer to the data buffer to be transmitted\&. 
+.br
+\fIdata_length\fP The length of the data buffer in bytes\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns \fR0\fP on success or a non-zero value on failure\&.
+.RE
+.PP
+Transmits data to the BQ76PL455A-Q1 over UART\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuart_pin\fP UART port number\&. 
+.br
+\fIdata\fP Pointer to the data buffer to be transmitted\&. 
+.br
+\fIdata_length\fP Length of the data buffer in bytes\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+1 on success, 0 on failure\&. 
+.RE
+.PP
+
+.SS "uint8_t * CRC16 (uint8_t * data, uint8_t data_length)"
+
+.PP
+Calculates the CRC-16 for a given data buffer\&. Computes the CRC-16 using the IBM standard with reversed MSB and LSB for compatibility with the BQ76PL455A-Q1 message format\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Pointer to the data buffer for which the CRC needs to be calculated\&. 
+.br
+\fIdata_length\fP The length of the data buffer in bytes\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to a 2-byte array containing the CRC-16 result\&.
+.RE
+.PP
+Calculates the CRC-16 for a given data buffer\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Pointer to the data buffer\&. 
+.br
+\fIdata_length\fP Length of the data buffer in bytes\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to a 2-byte array containing the CRC checksum\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_doxygen___markdown_8md" kind="file" language="Markdown">
+    <compoundname>Doxygen_Markdown.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>SmartBMS_2209A<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Main<sp/>Page</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Project<sp/>Name:**<sp/>SmartBMS_2209A<sp/>v1.0.0<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">**Brief<sp/>Description:**<sp/>Battery<sp/>Management<sp/>System<sp/>for<sp/>Tubitak<sp/>2209A<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Navigation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Home](doc/html/index.html)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Search</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Use<sp/>the<sp/>search<sp/>box<sp/>to<sp/>find<sp/>specific<sp/>content<sp/>within<sp/>the<sp/>documentation.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Footer</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Generated<sp/>by<sp/>[Doxygen](https://www.doxygen.org/index.html)<sp/>1.13.2.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Doxygen<sp/>Logo](doxygen.svg)</highlight></codeline>
+    </programlisting>
+    <location file="Doxygen_Markdown.md"/>
+  </compounddef>
+</doxygen>

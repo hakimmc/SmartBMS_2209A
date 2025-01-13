@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_led_task_init_8c" kind="file" language="C++">
+    <compoundname>LedTaskInit.c</compoundname>
+    <includes refid="_led_task_init_8h" local="yes">LedTaskInit.h</includes>
+    <includes local="yes">driver/gpio.h</includes>
+    <includes local="yes">freertos/FreeRTOS.h</includes>
+    <includes local="yes">freertos/task.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>LedTaskInit.h</label>
+        <link refid="_led_task_init_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/LedTaskInit.c</label>
+        <link refid="_led_task_init_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>driver/gpio.h</label>
+      </node>
+      <node id="5">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="6">
+        <label>freertos/task.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" prot="public" static="no">
+        <name>LED_PIN</name>
+        <initializer>13</initializer>
+        <briefdescription>
+<para>GPIO pin used for the LED. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/LedTaskInit.c" line="14" column="9" bodyfile="src/LedTaskInit.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_led_task_init_8c_1ac3698c9d80d8a1abde24708cc9fdb1ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gpio_init</definition>
+        <argsstring>(uint8_t gpio_pin)</argsstring>
+        <name>gpio_init</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>gpio_pin</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the specified GPIO pin as an output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes a GPIO pin for LED control.</para>
+<para>This function configures the given GPIO pin for output mode with no pull-up or pull-down resistors.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gpio_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The GPIO pin number to initialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; No interrupt triggered.</para>
+<para>&lt; Set GPIO mode to output.</para>
+<para>&lt; Pin mask for the specified GPIO pin.</para>
+<para>&lt; Disable pull-down resistor.</para>
+<para>&lt; Disable pull-up resistor.</para>
+        </inbodydescription>
+        <location file="src/LedTaskInit.c" line="23" column="6" bodyfile="src/LedTaskInit.c" bodystart="23" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="_led_task_init_8c_1a1f53ce317fca339ddc6588adb1a457e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void led_init</definition>
+        <argsstring>(void *pvParameter)</argsstring>
+        <name>led_init</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameter</declname>
+        </param>
+        <briefdescription>
+<para>LED blinking task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Task to initialize and control LED behavior.</para>
+<para>This task initializes the LED GPIO pin and continuously toggles the LED state with a 500 ms delay.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pvParameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to task-specific parameters (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Initialize the LED GPIO pin.</para>
+<para>&lt; Turn the LED on.</para>
+<para>&lt; Delay for 500 ms.</para>
+<para>&lt; Turn the LED off.</para>
+<para>&lt; Delay for 500 ms.</para>
+        </inbodydescription>
+        <location file="src/LedTaskInit.c" line="43" column="6" bodyfile="src/LedTaskInit.c" bodystart="43" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementation of LED blinking task using ESP32 GPIO. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>18 December 2024 </para>
+</simplesect>
+<simplesect kind="author"><para>hakimmc </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_led_task_init_8h" kindref="compound">LedTaskInit.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/gpio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/FreeRTOS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/task.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_PIN<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_task_init_8c_1ac3698c9d80d8a1abde24708cc9fdb1ee" kindref="member">gpio_init</ref>(uint8_t<sp/>gpio_pin)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config_t<sp/>io_conf;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.intr_type<sp/>=<sp/>GPIO_INTR_DISABLE;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.mode<sp/>=<sp/>GPIO_MODE_OUTPUT;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pin_bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/>gpio_pin);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_down_en<sp/>=<sp/>GPIO_PULLDOWN_DISABLE;<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_up_en<sp/>=<sp/>GPIO_PULLUP_DISABLE;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>the<sp/>GPIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config(&amp;io_conf);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_task_init_8c_1a1f53ce317fca339ddc6588adb1a457e4" kindref="member">led_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pvParameter)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_led_task_init_8c_1ac3698c9d80d8a1abde24708cc9fdb1ee" kindref="member">gpio_init</ref>(<ref refid="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" kindref="member">LED_PIN</ref>);<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level(<ref refid="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" kindref="member">LED_PIN</ref>,<sp/>1);<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(pdMS_TO_TICKS(500));<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level(<ref refid="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" kindref="member">LED_PIN</ref>,<sp/>0);<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(pdMS_TO_TICKS(500));<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/LedTaskInit.c"/>
+  </compounddef>
+</doxygen>

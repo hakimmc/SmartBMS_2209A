@@ -1,0 +1,233 @@
+.TH "include/Can.h" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Can.h \- CAN communication interface for ESP32\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'stdint\&.h'\fP
+.br
+\fR#include <stdio\&.h>\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+\fR#include 'freertos/FreeRTOS\&.h'\fP
+.br
+\fR#include 'freertos/task\&.h'\fP
+.br
+\fR#include 'freertos/queue\&.h'\fP
+.br
+\fR#include 'freertos/semphr\&.h'\fP
+.br
+\fR#include 'esp_err\&.h'\fP
+.br
+\fR#include 'esp_log\&.h'\fP
+.br
+\fR#include 'driver/twai\&.h'\fP
+.br
+\fR#include 'd2cc_lib\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTX_GPIO_NUM\fP   5"
+.br
+.RI "GPIO pin number for CAN TX\&. "
+.ti -1c
+.RI "#define \fBRX_GPIO_NUM\fP   4"
+.br
+.RI "GPIO pin number for CAN RX\&. "
+.ti -1c
+.RI "#define \fBCAN_TAG\fP   'CAN_MASTER'"
+.br
+.RI "Tag for logging CAN-related messages\&. "
+.ti -1c
+.RI "#define \fBCan_Main_ID\fP   0x100"
+.br
+.RI "CAN ID for main messages\&. "
+.ti -1c
+.RI "#define \fBBattery_Messages_ID\fP   0x101"
+.br
+.RI "CAN ID for battery messages\&. "
+.ti -1c
+.RI "#define \fBCan_Battery_Voltages_ID\fP   0x102"
+.br
+.RI "CAN ID for battery voltage messages\&. "
+.ti -1c
+.RI "#define \fBCan_Battery_Temperatures_ID\fP   0x103"
+.br
+.RI "CAN ID for battery temperature messages\&. "
+.ti -1c
+.RI "#define \fBCAN_DELAY\fP   250"
+.br
+.RI "Delay in milliseconds for CAN tasks\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBCan_Init\fP (twai_general_config_t can_gpio_config, twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config)"
+.br
+.RI "Initializes the CAN interface\&. "
+.ti -1c
+.RI "uint8_t \fBCan_Transmit\fP (twai_message_t message, uint8_t data[])"
+.br
+.RI "Transmits a CAN message\&. "
+.ti -1c
+.RI "void \fBCanReporter\fP (void *pvParameter)"
+.br
+.RI "Task to report CAN messages\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+CAN communication interface for ESP32\&. 
+
+This header file provides declarations for initializing and managing CAN (Controller Area Network) communication on the ESP32 using the TWAI (Two-Wire Automotive Interface) driver\&.
+
+.PP
+Created on: 18 Dec 2024 
+.PP
+\fBAuthor\fP
+.RS 4
+hakimmc 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define Battery_Messages_ID   0x101"
+
+.PP
+CAN ID for battery messages\&. 
+.SS "#define Can_Battery_Temperatures_ID   0x103"
+
+.PP
+CAN ID for battery temperature messages\&. 
+.SS "#define Can_Battery_Voltages_ID   0x102"
+
+.PP
+CAN ID for battery voltage messages\&. 
+.SS "#define CAN_DELAY   250"
+
+.PP
+Delay in milliseconds for CAN tasks\&. 
+.SS "#define Can_Main_ID   0x100"
+
+.PP
+CAN ID for main messages\&. 
+.SS "#define CAN_TAG   'CAN_MASTER'"
+
+.PP
+Tag for logging CAN-related messages\&. 
+.SS "#define RX_GPIO_NUM   4"
+
+.PP
+GPIO pin number for CAN RX\&. 
+.SS "#define TX_GPIO_NUM   5"
+
+.PP
+GPIO pin number for CAN TX\&. 
+.SH "Function Documentation"
+.PP 
+.SS "uint8_t Can_Init (twai_general_config_t can_gpio_config, twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config)"
+
+.PP
+Initializes the CAN interface\&. Configures the CAN interface with the specified general, timing, and filter configurations\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcan_gpio_config\fP Configuration for CAN GPIO pins\&. 
+.br
+\fIcan_time_config\fP Timing configuration for CAN communication\&. 
+.br
+\fIcan_filter_config\fP Filter configuration for CAN messages\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fR0\fP on success or a non-zero value if initialization fails\&.
+.RE
+.PP
+Initializes the CAN interface\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcan_gpio_config\fP General configuration for the CAN GPIO pins and mode\&. 
+.br
+\fIcan_time_config\fP Timing configuration for the CAN bus (e\&.g\&., bitrate)\&. 
+.br
+\fIcan_filter_config\fP Filter configuration for message acceptance\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+uint8_t Returns 1 if the driver is successfully initialized\&. 
+.RE
+.PP
+
+.SS "uint8_t Can_Transmit (twai_message_t message, uint8_t data[])"
+
+.PP
+Transmits a CAN message\&. Sends a CAN message with the specified data through the CAN interface\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP The TWAI message structure to transmit\&. 
+.br
+\fIdata\fP Pointer to the data array to be transmitted\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fR0\fP on success or a non-zero value if transmission fails\&.
+.RE
+.PP
+Transmits a CAN message\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP The CAN message structure to transmit\&. 
+.br
+\fIdata\fP The data array to be sent with the message\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+uint8_t Returns 1 if the transmission is successful\&. 
+.RE
+.PP
+
+.SS "void CanReporter (void * pvParameter)"
+
+.PP
+Task to report CAN messages\&. A FreeRTOS task that handles CAN communication and reporting\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIpvParameter\fP Pointer to task-specific parameters (optional)\&.
+.RE
+.PP
+Task to report CAN messages\&.
+
+.PP
+This function initializes the CAN driver and repeatedly transmits preconfigured CAN messages, using data from the \fR\fBDbcStruct\fP\fP\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIpvParameter\fP A pointer to any parameters passed to the task (unused)\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

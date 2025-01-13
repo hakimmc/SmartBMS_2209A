@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__tcp_server_8c" xml:lang="en-US">
+<title>src/TcpServer.c File Reference</title>
+<indexterm><primary>src/TcpServer.c</primary></indexterm>
+<para>
+
+<para>TCP server implementation to handle incoming client connections, authenticate, and exchange data. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;TcpServer.h&quot;<?linebreak?>#include &quot;Wifi.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__tcp_server_8c_1ac42367fe5c999ec6650de83e9d72fe8c">SERVER_PORT</link>&#160;&#160;&#160;8080</para>
+</listitem>
+            <listitem><para>#define <link linkend="__tcp_server_8c_1aef135ff19068a2ab235f21f2c833969b">TCP_TAG</link>&#160;&#160;&#160;&quot;TCP_SERVER&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__tcp_server_8c_1a71663496e793fd4869a37af2eaeb9dfb">Create_Server</link> (void *pvParameter)</para>
+
+<para>Creates and starts a TCP server to listen for client connections. </para>
+</listitem>
+            <listitem><para>void <link linkend="__tcp_server_8c_1a423bc60f42ad6bf912e07cd5320b1948">Handle_Client</link> (void *args)</para>
+
+<para>Handles communication with a single client. </para>
+</listitem>
+            <listitem><para>int <link linkend="__tcp_server_8c_1a00e67904809f7a47e29ca050bcabbae2">receive_data</link> (int sock, char *buffer, size_t size, uint8_t *timeout_counter, uint8_t max_timeout)</para>
+
+<para>Receives data from the client socket. </para>
+</listitem>
+            <listitem><para>void <link linkend="__tcp_server_8c_1a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</link> ()</para>
+
+<para>Initializes the TCP server and starts listening for client connections. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="__tcp_server_8c_1a19bd4a5dc2066779c571dc423ee2e5fc">GUI_USER</link> = &quot;root&quot;</para>
+
+<para>Username for GUI authentication. </para>
+</listitem>
+            <listitem><para>char * <link linkend="__tcp_server_8c_1a35d706daa4dcd113099247f519235595">GUI_PASS</link> = &quot;otto&quot;</para>
+
+<para>Password for GUI authentication. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>TCP server implementation to handle incoming client connections, authenticate, and exchange data. </para>
+
+<para><formalpara><title>Date</title>
+
+<para>18 December 2024 </para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>hakimmc </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__tcp_server_8c_1ac42367fe5c999ec6650de83e9d72fe8c"/><section>
+    <title>SERVER_PORT</title>
+<indexterm><primary>SERVER_PORT</primary><secondary>TcpServer.c</secondary></indexterm>
+<indexterm><primary>TcpServer.c</primary><secondary>SERVER_PORT</secondary></indexterm>
+<para><computeroutput>#define SERVER_PORT&#160;&#160;&#160;8080</computeroutput></para>
+<para>Port number for the TCP server </para>
+</section>
+<anchor xml:id="__tcp_server_8c_1aef135ff19068a2ab235f21f2c833969b"/><section>
+    <title>TCP_TAG</title>
+<indexterm><primary>TCP_TAG</primary><secondary>TcpServer.c</secondary></indexterm>
+<indexterm><primary>TcpServer.c</primary><secondary>TCP_TAG</secondary></indexterm>
+<para><computeroutput>#define TCP_TAG&#160;&#160;&#160;&quot;TCP_SERVER&quot;</computeroutput></para>
+<para>Tag for logging </para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__tcp_server_8c_1a71663496e793fd4869a37af2eaeb9dfb"/><section>
+    <title>Create_Server()</title>
+<indexterm><primary>Create_Server</primary><secondary>TcpServer.c</secondary></indexterm>
+<indexterm><primary>TcpServer.c</primary><secondary>Create_Server</secondary></indexterm>
+<para><computeroutput>void Create_Server (void * pvParameter)</computeroutput></para><para>
+
+<para>Creates and starts a TCP server to listen for client connections. </para>
+</para>
+
+<para>Creates and starts the TCP server.</para>
+
+<para>This function sets up a TCP socket, binds it to a specified address and port, and listens for incoming connections. For each connection, a new task is created to handle the client.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pvParameter</entry><entry>
+<para>Unused parameter for FreeRTOS task. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__tcp_server_8c_1a423bc60f42ad6bf912e07cd5320b1948"/><section>
+    <title>Handle_Client()</title>
+<indexterm><primary>Handle_Client</primary><secondary>TcpServer.c</secondary></indexterm>
+<indexterm><primary>TcpServer.c</primary><secondary>Handle_Client</secondary></indexterm>
+<para><computeroutput>void Handle_Client (void * args)</computeroutput></para><para>
+
+<para>Handles communication with a single client. </para>
+</para>
+
+<para>Handles client connections to the TCP server.</para>
+
+<para>This function receives and processes commands from the client, authenticates the user, and manages communication based on different states. It handles login, data requests, and exit commands.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>args</entry><entry>
+<para>Socket descriptor for the client. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__tcp_server_8c_1a00e67904809f7a47e29ca050bcabbae2"/><section>
+    <title>receive_data()</title>
+<indexterm><primary>receive_data</primary><secondary>TcpServer.c</secondary></indexterm>
+<indexterm><primary>TcpServer.c</primary><secondary>receive_data</secondary></indexterm>
+<para><computeroutput>int receive_data (int sock, char * buffer, size_t size, uint8_t * timeout_counter, uint8_t max_timeout)</computeroutput></para><para>
+
+<para>Receives data from the client socket. </para>
+</para>
+
+<para>Receives data from a connected client.</para>
+
+<para>This function receives data from the client and handles timeouts. If no data is received within a specified timeout period, it returns a timeout error.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sock</entry><entry>
+<para>Socket descriptor for the client. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer</entry><entry>
+<para>Buffer to store received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Size of the buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>timeout_counter</entry><entry>
+<para>Counter to track consecutive timeouts. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>max_timeout</entry><entry>
+<para>Maximum allowed consecutive timeouts before returning an error.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Length of received data, -1 if timeout occurs, or -2 if maximum timeouts reached. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__tcp_server_8c_1a13ddbecdfd3a974bad6c7ff356cb4674"/><section>
+    <title>Tcp_Init()</title>
+<indexterm><primary>Tcp_Init</primary><secondary>TcpServer.c</secondary></indexterm>
+<indexterm><primary>TcpServer.c</primary><secondary>Tcp_Init</secondary></indexterm>
+<para><computeroutput>void Tcp_Init ( )</computeroutput></para><para>
+
+<para>Initializes the TCP server and starts listening for client connections. </para>
+</para>
+
+<para>Initializes the TCP server. </para>
+
+<para>&lt; Initialize Wi-Fi in access point and station mode.</para>
+
+<para>&lt; Start the TCP server task.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__tcp_server_8c_1a35d706daa4dcd113099247f519235595"/><section>
+    <title>GUI_PASS</title>
+<indexterm><primary>GUI_PASS</primary><secondary>TcpServer.c</secondary></indexterm>
+<indexterm><primary>TcpServer.c</primary><secondary>GUI_PASS</secondary></indexterm>
+<para><computeroutput>char* GUI_PASS = &quot;otto&quot;</computeroutput></para><para>
+
+<para>Password for GUI authentication. </para>
+</para>
+</section>
+<anchor xml:id="__tcp_server_8c_1a19bd4a5dc2066779c571dc423ee2e5fc"/><section>
+    <title>GUI_USER</title>
+<indexterm><primary>GUI_USER</primary><secondary>TcpServer.c</secondary></indexterm>
+<indexterm><primary>TcpServer.c</primary><secondary>GUI_USER</secondary></indexterm>
+<para><computeroutput>char* GUI_USER = &quot;root&quot;</computeroutput></para><para>
+
+<para>Username for GUI authentication. </para>
+</para>
+</section>
+</section>
+</section>

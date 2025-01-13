@@ -1,0 +1,240 @@
+\doxysection{include/\+Can.h File Reference}
+\hypertarget{_can_8h}{}\label{_can_8h}\index{include/Can.h@{include/Can.h}}
+
+
+CAN communication interface for ESP32.  
+
+
+{\ttfamily \#include "{}stdint.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}freertos/\+Free\+RTOS.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/task.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/queue.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/semphr.\+h"{}}\newline
+{\ttfamily \#include "{}esp\+\_\+err.\+h"{}}\newline
+{\ttfamily \#include "{}esp\+\_\+log.\+h"{}}\newline
+{\ttfamily \#include "{}driver/twai.\+h"{}}\newline
+{\ttfamily \#include "{}d2cc\+\_\+lib.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_can_8h_aa0e0a9f9b6b180a338070cd1da9f6960}{TX\+\_\+\+GPIO\+\_\+\+NUM}}~5
+\begin{DoxyCompactList}\small\item\em GPIO pin number for CAN TX. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_can_8h_a105aacd025d247748462e6cce43eb816}{RX\+\_\+\+GPIO\+\_\+\+NUM}}~4
+\begin{DoxyCompactList}\small\item\em GPIO pin number for CAN RX. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_can_8h_a4791c142b857f44449cc8ad8d22ef045}{CAN\+\_\+\+TAG}}~"{}CAN\+\_\+\+MASTER"{}
+\begin{DoxyCompactList}\small\item\em Tag for logging CAN-\/related messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_can_8h_afd4f58c1a509cc8343774f0ca05c9061}{Can\+\_\+\+Main\+\_\+\+ID}}~0x100
+\begin{DoxyCompactList}\small\item\em CAN ID for main messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_can_8h_ab46f9642beab36ac6b8624c11f4f5ed4}{Battery\+\_\+\+Messages\+\_\+\+ID}}~0x101
+\begin{DoxyCompactList}\small\item\em CAN ID for battery messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_can_8h_a1e870e11e6fd939606c6fff3b122d4fd}{Can\+\_\+\+Battery\+\_\+\+Voltages\+\_\+\+ID}}~0x102
+\begin{DoxyCompactList}\small\item\em CAN ID for battery voltage messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_can_8h_a22ff50c4de22c7bfc6240a2b7a478e3e}{Can\+\_\+\+Battery\+\_\+\+Temperatures\+\_\+\+ID}}~0x103
+\begin{DoxyCompactList}\small\item\em CAN ID for battery temperature messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_can_8h_ac5d0198b7447cc2c29044ccd56dd9443}{CAN\+\_\+\+DELAY}}~250
+\begin{DoxyCompactList}\small\item\em Delay in milliseconds for CAN tasks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_can_8h_a8920d0f7ab8095cccb447da8d5fae390}{Can\+\_\+\+Init}} (twai\+\_\+general\+\_\+config\+\_\+t can\+\_\+gpio\+\_\+config, twai\+\_\+timing\+\_\+config\+\_\+t can\+\_\+time\+\_\+config, twai\+\_\+filter\+\_\+config\+\_\+t can\+\_\+filter\+\_\+config)
+\begin{DoxyCompactList}\small\item\em Initializes the CAN interface. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_can_8h_a51dc04f4c5f5a544e73c33e2d606193b}{Can\+\_\+\+Transmit}} (twai\+\_\+message\+\_\+t message, uint8\+\_\+t data\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Transmits a CAN message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_can_8h_a99ef09684458d26b79a4185bc0af934b}{Can\+Reporter}} (void \texorpdfstring{$\ast$}{*}pv\+Parameter)
+\begin{DoxyCompactList}\small\item\em Task to report CAN messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CAN communication interface for ESP32. 
+
+This header file provides declarations for initializing and managing CAN (Controller Area Network) communication on the ESP32 using the TWAI (Two-\/\+Wire Automotive Interface) driver.
+
+Created on\+: 18 Dec 2024 \begin{DoxyAuthor}{Author}
+hakimmc 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_can_8h_ab46f9642beab36ac6b8624c11f4f5ed4}\index{Can.h@{Can.h}!Battery\_Messages\_ID@{Battery\_Messages\_ID}}
+\index{Battery\_Messages\_ID@{Battery\_Messages\_ID}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{Battery\_Messages\_ID}{Battery\_Messages\_ID}}
+{\footnotesize\ttfamily \label{_can_8h_ab46f9642beab36ac6b8624c11f4f5ed4} 
+\#define Battery\+\_\+\+Messages\+\_\+\+ID~0x101}
+
+
+
+CAN ID for battery messages. 
+
+\Hypertarget{_can_8h_a22ff50c4de22c7bfc6240a2b7a478e3e}\index{Can.h@{Can.h}!Can\_Battery\_Temperatures\_ID@{Can\_Battery\_Temperatures\_ID}}
+\index{Can\_Battery\_Temperatures\_ID@{Can\_Battery\_Temperatures\_ID}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{Can\_Battery\_Temperatures\_ID}{Can\_Battery\_Temperatures\_ID}}
+{\footnotesize\ttfamily \label{_can_8h_a22ff50c4de22c7bfc6240a2b7a478e3e} 
+\#define Can\+\_\+\+Battery\+\_\+\+Temperatures\+\_\+\+ID~0x103}
+
+
+
+CAN ID for battery temperature messages. 
+
+\Hypertarget{_can_8h_a1e870e11e6fd939606c6fff3b122d4fd}\index{Can.h@{Can.h}!Can\_Battery\_Voltages\_ID@{Can\_Battery\_Voltages\_ID}}
+\index{Can\_Battery\_Voltages\_ID@{Can\_Battery\_Voltages\_ID}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{Can\_Battery\_Voltages\_ID}{Can\_Battery\_Voltages\_ID}}
+{\footnotesize\ttfamily \label{_can_8h_a1e870e11e6fd939606c6fff3b122d4fd} 
+\#define Can\+\_\+\+Battery\+\_\+\+Voltages\+\_\+\+ID~0x102}
+
+
+
+CAN ID for battery voltage messages. 
+
+\Hypertarget{_can_8h_ac5d0198b7447cc2c29044ccd56dd9443}\index{Can.h@{Can.h}!CAN\_DELAY@{CAN\_DELAY}}
+\index{CAN\_DELAY@{CAN\_DELAY}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{CAN\_DELAY}{CAN\_DELAY}}
+{\footnotesize\ttfamily \label{_can_8h_ac5d0198b7447cc2c29044ccd56dd9443} 
+\#define CAN\+\_\+\+DELAY~250}
+
+
+
+Delay in milliseconds for CAN tasks. 
+
+\Hypertarget{_can_8h_afd4f58c1a509cc8343774f0ca05c9061}\index{Can.h@{Can.h}!Can\_Main\_ID@{Can\_Main\_ID}}
+\index{Can\_Main\_ID@{Can\_Main\_ID}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{Can\_Main\_ID}{Can\_Main\_ID}}
+{\footnotesize\ttfamily \label{_can_8h_afd4f58c1a509cc8343774f0ca05c9061} 
+\#define Can\+\_\+\+Main\+\_\+\+ID~0x100}
+
+
+
+CAN ID for main messages. 
+
+\Hypertarget{_can_8h_a4791c142b857f44449cc8ad8d22ef045}\index{Can.h@{Can.h}!CAN\_TAG@{CAN\_TAG}}
+\index{CAN\_TAG@{CAN\_TAG}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{CAN\_TAG}{CAN\_TAG}}
+{\footnotesize\ttfamily \label{_can_8h_a4791c142b857f44449cc8ad8d22ef045} 
+\#define CAN\+\_\+\+TAG~"{}CAN\+\_\+\+MASTER"{}}
+
+
+
+Tag for logging CAN-\/related messages. 
+
+\Hypertarget{_can_8h_a105aacd025d247748462e6cce43eb816}\index{Can.h@{Can.h}!RX\_GPIO\_NUM@{RX\_GPIO\_NUM}}
+\index{RX\_GPIO\_NUM@{RX\_GPIO\_NUM}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{RX\_GPIO\_NUM}{RX\_GPIO\_NUM}}
+{\footnotesize\ttfamily \label{_can_8h_a105aacd025d247748462e6cce43eb816} 
+\#define RX\+\_\+\+GPIO\+\_\+\+NUM~4}
+
+
+
+GPIO pin number for CAN RX. 
+
+\Hypertarget{_can_8h_aa0e0a9f9b6b180a338070cd1da9f6960}\index{Can.h@{Can.h}!TX\_GPIO\_NUM@{TX\_GPIO\_NUM}}
+\index{TX\_GPIO\_NUM@{TX\_GPIO\_NUM}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{TX\_GPIO\_NUM}{TX\_GPIO\_NUM}}
+{\footnotesize\ttfamily \label{_can_8h_aa0e0a9f9b6b180a338070cd1da9f6960} 
+\#define TX\+\_\+\+GPIO\+\_\+\+NUM~5}
+
+
+
+GPIO pin number for CAN TX. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_can_8h_a8920d0f7ab8095cccb447da8d5fae390}\index{Can.h@{Can.h}!Can\_Init@{Can\_Init}}
+\index{Can\_Init@{Can\_Init}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{Can\_Init()}{Can\_Init()}}
+{\footnotesize\ttfamily \label{_can_8h_a8920d0f7ab8095cccb447da8d5fae390} 
+uint8\+\_\+t Can\+\_\+\+Init (\begin{DoxyParamCaption}\item[{twai\+\_\+general\+\_\+config\+\_\+t}]{can\+\_\+gpio\+\_\+config}{, }\item[{twai\+\_\+timing\+\_\+config\+\_\+t}]{can\+\_\+time\+\_\+config}{, }\item[{twai\+\_\+filter\+\_\+config\+\_\+t}]{can\+\_\+filter\+\_\+config}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the CAN interface. 
+
+Configures the CAN interface with the specified general, timing, and filter configurations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em can\+\_\+gpio\+\_\+config} & Configuration for CAN GPIO pins. \\
+\hline
+{\em can\+\_\+time\+\_\+config} & Timing configuration for CAN communication. \\
+\hline
+{\em can\+\_\+filter\+\_\+config} & Filter configuration for CAN messages. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily 0} on success or a non-\/zero value if initialization fails.
+\end{DoxyReturn}
+Initializes the CAN interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em can\+\_\+gpio\+\_\+config} & General configuration for the CAN GPIO pins and mode. \\
+\hline
+{\em can\+\_\+time\+\_\+config} & Timing configuration for the CAN bus (e.\+g., bitrate). \\
+\hline
+{\em can\+\_\+filter\+\_\+config} & Filter configuration for message acceptance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Returns 1 if the driver is successfully initialized. 
+\end{DoxyReturn}
+\Hypertarget{_can_8h_a51dc04f4c5f5a544e73c33e2d606193b}\index{Can.h@{Can.h}!Can\_Transmit@{Can\_Transmit}}
+\index{Can\_Transmit@{Can\_Transmit}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{Can\_Transmit()}{Can\_Transmit()}}
+{\footnotesize\ttfamily \label{_can_8h_a51dc04f4c5f5a544e73c33e2d606193b} 
+uint8\+\_\+t Can\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{twai\+\_\+message\+\_\+t}]{message}{, }\item[{uint8\+\_\+t}]{data}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Transmits a CAN message. 
+
+Sends a CAN message with the specified data through the CAN interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The TWAI message structure to transmit. \\
+\hline
+{\em data} & Pointer to the data array to be transmitted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily 0} on success or a non-\/zero value if transmission fails.
+\end{DoxyReturn}
+Transmits a CAN message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The CAN message structure to transmit. \\
+\hline
+{\em data} & The data array to be sent with the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Returns 1 if the transmission is successful. 
+\end{DoxyReturn}
+\Hypertarget{_can_8h_a99ef09684458d26b79a4185bc0af934b}\index{Can.h@{Can.h}!CanReporter@{CanReporter}}
+\index{CanReporter@{CanReporter}!Can.h@{Can.h}}
+\doxysubsubsection{\texorpdfstring{CanReporter()}{CanReporter()}}
+{\footnotesize\ttfamily \label{_can_8h_a99ef09684458d26b79a4185bc0af934b} 
+void Can\+Reporter (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameter}{}\end{DoxyParamCaption})}
+
+
+
+Task to report CAN messages. 
+
+A Free\+RTOS task that handles CAN communication and reporting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameter} & Pointer to task-\/specific parameters (optional).\\
+\hline
+\end{DoxyParams}
+Task to report CAN messages.
+
+This function initializes the CAN driver and repeatedly transmits preconfigured CAN messages, using data from the {\ttfamily \doxylink{struct_dbc_struct}{Dbc\+Struct}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameter} & A pointer to any parameters passed to the task (unused). \\
+\hline
+\end{DoxyParams}

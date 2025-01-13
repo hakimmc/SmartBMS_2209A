@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['server_5fport_0',['SERVER_PORT',['../_tcp_server_8h.html#ac42367fe5c999ec6650de83e9d72fe8c',1,'SERVER_PORT:&#160;TcpServer.h'],['../_tcp_server_8c.html#ac42367fe5c999ec6650de83e9d72fe8c',1,'SERVER_PORT:&#160;TcpServer.c']]],
-  ['signal_1',['Signal',['../struct_dbc_struct.html#a69808b27e62d3066841098480113bdf8',1,'DbcStruct::Signal'],['../struct_dbc_struct.html#ac02fab03e10a73ab3026bc900ec0c807',1,'DbcStruct::Signal'],['../struct_dbc_struct.html#ab957d591284e13f130a259219c65197b',1,'DbcStruct::Signal'],['../struct_dbc_struct.html#a6893b0165e1bcc78faf0c175d45b0689',1,'DbcStruct::Signal']]],
-  ['swversionbugfix_2',['SwVersionBugfix',['../struct_dbc_struct.html#ab712e03d069028bd782d5a3bf63fbbcd',1,'DbcStruct']]],
-  ['swversionmajor_3',['SwVersionMajor',['../struct_dbc_struct.html#acd25bf8ccca66642eec649623550c36a',1,'DbcStruct']]],
-  ['swversionminor_4',['SwVersionMinor',['../struct_dbc_struct.html#aef00c82a9c81580820ff10e499b6ed21',1,'DbcStruct']]]
+  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['readparse_1',['ReadParse',['../d2cc__lib_8h.html#a1fc4968809341ee415d413feb9db80cb',1,'ReadParse(uint8_t *rx_data, uint32_t id, DbcStruct *st):&#160;d2cc_lib.c'],['../d2cc__lib_8c.html#ae5597b44f3f49cc3c016533bfa7a9374',1,'ReadParse(uint8_t *rx_data, uint32_t id, DbcStruct *dbc):&#160;d2cc_lib.c']]],
+  ['receive_5fdata_2',['receive_data',['../_tcp_server_8h.html#a00e67904809f7a47e29ca050bcabbae2',1,'receive_data(int sock, char *buffer, size_t size, uint8_t *timeout_counter, uint8_t max_timeout):&#160;TcpServer.c'],['../_tcp_server_8c.html#a00e67904809f7a47e29ca050bcabbae2',1,'receive_data(int sock, char *buffer, size_t size, uint8_t *timeout_counter, uint8_t max_timeout):&#160;TcpServer.c']]],
+  ['rx_5fgpio_5fnum_3',['RX_GPIO_NUM',['../_can_8h.html#a105aacd025d247748462e6cce43eb816',1,'Can.h']]]
 ];

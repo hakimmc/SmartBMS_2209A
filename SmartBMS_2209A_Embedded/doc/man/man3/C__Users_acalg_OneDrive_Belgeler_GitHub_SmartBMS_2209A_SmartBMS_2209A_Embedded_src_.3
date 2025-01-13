@@ -1,0 +1,52 @@
+.TH "src Directory Reference" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src Directory Reference
+.SH SYNOPSIS
+.br
+.PP
+.SS "Files"
+
+.in +1c
+.ti -1c
+.RI "file \fBBq76pl455\&.c\fP"
+.br
+.RI "Implementation file for interfacing with the BQ76PL455A-Q1 battery management IC\&. "
+.ti -1c
+.RI "file \fBCan\&.c\fP"
+.br
+.RI "CAN driver implementation for the ESP32 using the TWAI driver\&. "
+.ti -1c
+.RI "file \fBd2cc_lib\&.c\fP"
+.br
+.ti -1c
+.RI "file \fBLedTaskInit\&.c\fP"
+.br
+.RI "Implementation of LED blinking task using ESP32 GPIO\&. "
+.ti -1c
+.RI "file \fBmain\&.c\fP"
+.br
+.RI "Main application entry point for ESP32, initializing various tasks\&. "
+.ti -1c
+.RI "file \fBTcpServer\&.c\fP"
+.br
+.RI "TCP server implementation to handle incoming client connections, authenticate, and exchange data\&. "
+.ti -1c
+.RI "file \fBUart\&.c\fP"
+.br
+.RI "UART initialization, transmission, and reception functions for UART communication\&. "
+.ti -1c
+.RI "file \fBWifi\&.c\fP"
+.br
+.RI "Functions for initializing and managing Wi-Fi connectivity in AP (Access Point) and STA (Station) modes\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.IP "\(bu" 2
+C API is exposed via \fRinclude/ZeroTierSockets\&.h\fP
+.IP "\(bu" 2
+\fRbindings/\fP Contains the source for wrappers in various languages\&. See \fRexamples/\fP for their usage\&. 
+.PP
+

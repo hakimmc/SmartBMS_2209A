@@ -1,0 +1,209 @@
+\doxysection{include/\+Uart.h File Reference}
+\hypertarget{_uart_8h}{}\label{_uart_8h}\index{include/Uart.h@{include/Uart.h}}
+
+
+UART driver interface for ESP32.  
+
+
+{\ttfamily \#include "{}stdint.\+h"{}}\newline
+{\ttfamily \#include "{}driver/uart.\+h"{}}\newline
+{\ttfamily \#include "{}driver/gpio.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_uart_8h_a268262b77851c1bf5292361233c6515f}{Uart\+\_\+\+Init}} (uint8\+\_\+t uart\+\_\+pin, int baudrate, uint32\+\_\+t rx\+\_\+buffsize, uint8\+\_\+t TXD\+\_\+\+PIN, uint8\+\_\+t RXD\+\_\+\+PIN)
+\begin{DoxyCompactList}\small\item\em Initializes the UART interface. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_uart_8h_a8856e4c8f6952db371ac9bf478c7c000}{Uart\+\_\+\+Transmit}} (uint8\+\_\+t uart\+\_\+pin, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint8\+\_\+t data\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Transmits data over UART. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_uart_8h_a65bb7c489c4800aeb9f32917436cce36}{Uart\+\_\+\+Receive}} (uint8\+\_\+t uart\+\_\+pin, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint8\+\_\+t data\+\_\+length, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Receives data from UART. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_uart_8h_a086601e2a6bb2527f8c1f02e0b828576}{Is\+Timeout}} (uint32\+\_\+t max\+\_\+reach\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Checks for a timeout condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+UART driver interface for ESP32. 
+
+This header file provides the function declarations for initializing and using UART communication on the ESP32.
+
+Created on\+: 18 Dec 2024 \begin{DoxyAuthor}{Author}
+hakimmc 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_uart_8h_a086601e2a6bb2527f8c1f02e0b828576}\index{Uart.h@{Uart.h}!IsTimeout@{IsTimeout}}
+\index{IsTimeout@{IsTimeout}!Uart.h@{Uart.h}}
+\doxysubsubsection{\texorpdfstring{IsTimeout()}{IsTimeout()}}
+{\footnotesize\ttfamily \label{_uart_8h_a086601e2a6bb2527f8c1f02e0b828576} 
+uint8\+\_\+t Is\+Timeout (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+\_\+reach\+\_\+time}{}\end{DoxyParamCaption})}
+
+
+
+Checks for a timeout condition. 
+
+Determines if a given time has exceeded the specified maximum time limit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+reach\+\_\+time} & The maximum allowable time in milliseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\ttfamily 1} if the timeout condition is met, or {\ttfamily 0} otherwise.
+\end{DoxyReturn}
+Checks for a timeout condition.
+
+This function checks if the specified maximum time has passed since the start of the function call.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+reach\+\_\+time} & Maximum time in ticks to wait before timing out.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if timeout occurred, 1 if still within the allowed time. 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Get current tick count.
+
+\texorpdfstring{$<$}{<} Wait for the timeout period to pass.
+
+\texorpdfstring{$<$}{<} Timeout reached.
+
+\texorpdfstring{$<$}{<} Timeout not reached.\Hypertarget{_uart_8h_a268262b77851c1bf5292361233c6515f}\index{Uart.h@{Uart.h}!Uart\_Init@{Uart\_Init}}
+\index{Uart\_Init@{Uart\_Init}!Uart.h@{Uart.h}}
+\doxysubsubsection{\texorpdfstring{Uart\_Init()}{Uart\_Init()}}
+{\footnotesize\ttfamily \label{_uart_8h_a268262b77851c1bf5292361233c6515f} 
+void Uart\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{uart\+\_\+pin}{, }\item[{int}]{baudrate}{, }\item[{uint32\+\_\+t}]{rx\+\_\+buffsize}{, }\item[{uint8\+\_\+t}]{TXD\+\_\+\+PIN}{, }\item[{uint8\+\_\+t}]{RXD\+\_\+\+PIN}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the UART interface. 
+
+Configures the UART interface with the specified parameters, including pin assignments, baud rate, and RX buffer size.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+pin} & The UART port number to initialize (e.\+g., UART\+\_\+\+NUM\+\_\+0, UART\+\_\+\+NUM\+\_\+1). \\
+\hline
+{\em baudrate} & The desired baud rate for communication. \\
+\hline
+{\em rx\+\_\+buffsize} & The size of the RX buffer. \\
+\hline
+{\em TXD\+\_\+\+PIN} & The GPIO pin number assigned for UART TX (transmit). \\
+\hline
+{\em RXD\+\_\+\+PIN} & The GPIO pin number assigned for UART RX (receive).\\
+\hline
+\end{DoxyParams}
+Initializes the UART interface.
+
+This function configures the UART with the specified baud rate, data bits, stop bits, and other settings. It also assigns pins for transmission and reception and installs the UART driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+pin} & UART port to configure (typically 0, 1, or 2). \\
+\hline
+{\em baudrate} & The baud rate for the UART communication. \\
+\hline
+{\em rx\+\_\+buffsize} & The size of the receive buffer. \\
+\hline
+{\em TXD\+\_\+\+PIN} & The GPIO pin for UART transmission (TX). \\
+\hline
+{\em RXD\+\_\+\+PIN} & The GPIO pin for UART reception (RX). \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Configures the UART with the given settings.
+
+\texorpdfstring{$<$}{<} Assigns pins to UART.
+
+\texorpdfstring{$<$}{<} Installs the UART driver with specified buffer size.\Hypertarget{_uart_8h_a65bb7c489c4800aeb9f32917436cce36}\index{Uart.h@{Uart.h}!Uart\_Receive@{Uart\_Receive}}
+\index{Uart\_Receive@{Uart\_Receive}!Uart.h@{Uart.h}}
+\doxysubsubsection{\texorpdfstring{Uart\_Receive()}{Uart\_Receive()}}
+{\footnotesize\ttfamily \label{_uart_8h_a65bb7c489c4800aeb9f32917436cce36} 
+int Uart\+\_\+\+Receive (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{uart\+\_\+pin}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint8\+\_\+t}]{data\+\_\+length}{, }\item[{uint32\+\_\+t}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+Receives data from UART. 
+
+Reads data from the specified UART port into a buffer, with an optional timeout.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+pin} & The UART port number to use for reception. \\
+\hline
+{\em data} & Pointer to the buffer where received data will be stored. \\
+\hline
+{\em data\+\_\+length} & The maximum number of bytes to read. \\
+\hline
+{\em timeout} & The maximum time to wait for data in milliseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes successfully received, or a negative value on error.
+\end{DoxyReturn}
+Receives data from UART.
+
+This function receives data from the UART port and stores it in the provided buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+pin} & UART port to use for reception (typically 0, 1, or 2). \\
+\hline
+{\em data} & Pointer to the buffer to store received data. \\
+\hline
+{\em data\+\_\+length} & Length of the data buffer. \\
+\hline
+{\em timeout} & Timeout for receiving data in milliseconds.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes received or an error code. 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Reads data from UART into buffer.\Hypertarget{_uart_8h_a8856e4c8f6952db371ac9bf478c7c000}\index{Uart.h@{Uart.h}!Uart\_Transmit@{Uart\_Transmit}}
+\index{Uart\_Transmit@{Uart\_Transmit}!Uart.h@{Uart.h}}
+\doxysubsubsection{\texorpdfstring{Uart\_Transmit()}{Uart\_Transmit()}}
+{\footnotesize\ttfamily \label{_uart_8h_a8856e4c8f6952db371ac9bf478c7c000} 
+uint8\+\_\+t Uart\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{uart\+\_\+pin}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint8\+\_\+t}]{data\+\_\+length}{}\end{DoxyParamCaption})}
+
+
+
+Transmits data over UART. 
+
+Sends a sequence of bytes through the specified UART port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+pin} & The UART port number to use for transmission. \\
+\hline
+{\em data} & Pointer to the data buffer containing the bytes to transmit. \\
+\hline
+{\em data\+\_\+length} & The number of bytes to transmit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\ttfamily 0} on success or a non-\/zero value if the transmission fails.
+\end{DoxyReturn}
+Transmits data over UART.
+
+This function sends a specified amount of data through the UART transmission port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+pin} & UART port to use for transmission (typically 0, 1, or 2). \\
+\hline
+{\em data} & Pointer to the data to be transmitted. \\
+\hline
+{\em data\+\_\+length} & Length of the data to be transmitted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if transmission is successful, 0 if failed. 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Writes data to UART.
+
+\texorpdfstring{$<$}{<} Transmission failure.
+
+\texorpdfstring{$<$}{<} Transmission success.

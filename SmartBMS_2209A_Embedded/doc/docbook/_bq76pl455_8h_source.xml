@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__bq76pl455_8h_source" xml:lang="en-US">
+<title>Bq76pl455.h</title>
+<indexterm><primary>include/Bq76pl455.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+11 
+12 <emphasis role="preprocessor">#ifndef&#32;BQ76PL455_H_</emphasis>
+13 <emphasis role="preprocessor">#define&#32;BQ76PL455_H_</emphasis>
+14 
+15 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__uart_8h">Uart.h</link>&quot;</emphasis>
+16 
+21 <emphasis role="preprocessor">#define&#32;BQ_UART_PORT&#32;&#32;&#32;&#32;UART_NUM_1</emphasis>
+22 
+27 <emphasis role="preprocessor">#define&#32;BQ_TX&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;12</emphasis>
+28 
+33 <emphasis role="preprocessor">#define&#32;BQ_RX&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;11</emphasis>
+34 
+41 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__bq76pl455_8h_1ab1f7f8492c3cca0837700429807074e3">Bq_Init</link>();
+42 
+48 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__bq76pl455_8h_1ac1a68691cca07c6263b16eb463fd7e06">BQ_Test</link>();
+49 
+60 uint8_t*&#32;<link linkend="__bq76pl455_8h_1a7f64a91901131f6c570e15d57d6a75b5">CRC16</link>(uint8_t*&#32;data,&#32;uint8_t&#32;data_length);
+61 
+69 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__bq76pl455_8h_1afce328763ae545228a5fe77ba53296da">BQ_Start</link>(<emphasis role="keywordtype">void</emphasis>&#32;*args);
+70 
+83 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__bq76pl455_8h_1a5db7a92f619e063198490508230e18a2">BQ_Uart_Init</link>(uint8_t&#32;uart_pin,&#32;<emphasis role="keywordtype">int</emphasis>&#32;baudrate,&#32;uint32_t&#32;rx_buffsize,&#32;uint8_t&#32;TXD_PIN,&#32;uint8_t&#32;RXD_PIN);
+84 
+95 uint8_t&#32;<link linkend="__bq76pl455_8h_1aa01b4d094c5fc9ed6d46e6a622dbb75e">BQ_Uart_Transmit</link>(uint8_t&#32;uart_pin,&#32;uint8_t&#32;*data,&#32;uint8_t&#32;data_length);
+96 
+97 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;BQ76PL455_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

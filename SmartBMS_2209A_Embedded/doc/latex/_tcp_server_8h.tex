@@ -1,0 +1,215 @@
+\doxysection{include/\+Tcp\+Server.h File Reference}
+\hypertarget{_tcp_server_8h}{}\label{_tcp_server_8h}\index{include/TcpServer.h@{include/TcpServer.h}}
+
+
+TCP server implementation for ESP32.  
+
+
+{\ttfamily \#include $<$lwip/sockets.\+h$>$}\newline
+{\ttfamily \#include $<$esp\+\_\+log.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include "{}freertos/\+Free\+RTOS.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/task.\+h"{}}\newline
+{\ttfamily \#include "{}esp\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include "{}Wifi.\+h"{}}\newline
+{\ttfamily \#include "{}esp\+\_\+ping.\+h"{}}\newline
+{\ttfamily \#include "{}ping/ping\+\_\+sock.\+h"{}}\newline
+{\ttfamily \#include "{}nvs\+\_\+flash.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/event\+\_\+groups.\+h"{}}\newline
+{\ttfamily \#include "{}esp\+\_\+wifi.\+h"{}}\newline
+{\ttfamily \#include "{}esp\+\_\+event.\+h"{}}\newline
+{\ttfamily \#include "{}d2cc\+\_\+lib.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_tcp_server_8h_ad552e7688532cbbecd3967538ced06ac}{WIFI\+\_\+\+CONNECTED\+\_\+\+BIT}}~BIT0
+\begin{DoxyCompactList}\small\item\em Uncomment the following line to enable Wi-\/\+Fi connection functionality. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_tcp_server_8h_a7d013b55e50dfbda0904f5f933b63ec4}{WIFI\+\_\+\+FAIL\+\_\+\+BIT}}~BIT1
+\begin{DoxyCompactList}\small\item\em Event bit indicating a Wi-\/\+Fi connection failure. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_tcp_server_8h_aef135ff19068a2ab235f21f2c833969b}{TCP\+\_\+\+TAG}}~"{}TCP\+\_\+\+SERVER"{}
+\begin{DoxyCompactList}\small\item\em Tag for logging TCP server messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_tcp_server_8h_ac42367fe5c999ec6650de83e9d72fe8c}{SERVER\+\_\+\+PORT}}~5166
+\begin{DoxyCompactList}\small\item\em Port number for the TCP server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_tcp_server_8h_a423bc60f42ad6bf912e07cd5320b1948}{Handle\+\_\+\+Client}} (void \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Handles client connections to the TCP server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_tcp_server_8h_a71663496e793fd4869a37af2eaeb9dfb}{Create\+\_\+\+Server}} (void \texorpdfstring{$\ast$}{*}pv\+Parameter)
+\begin{DoxyCompactList}\small\item\em Creates and starts the TCP server. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_tcp_server_8h_a00e67904809f7a47e29ca050bcabbae2}{receive\+\_\+data}} (int sock, char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t size, uint8\+\_\+t \texorpdfstring{$\ast$}{*}timeout\+\_\+counter, uint8\+\_\+t max\+\_\+timeout)
+\begin{DoxyCompactList}\small\item\em Receives data from a connected client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_tcp_server_8h_a13ddbecdfd3a974bad6c7ff356cb4674}{Tcp\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the TCP server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+TCP server implementation for ESP32. 
+
+This header file provides declarations for functions and macros used in implementing a TCP server on the ESP32. It supports handling client connections and data transfer over Wi-\/\+Fi.
+
+Created on\+: 18 Dec 2024 \begin{DoxyAuthor}{Author}
+hakimmc 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_tcp_server_8h_ac42367fe5c999ec6650de83e9d72fe8c}\index{TcpServer.h@{TcpServer.h}!SERVER\_PORT@{SERVER\_PORT}}
+\index{SERVER\_PORT@{SERVER\_PORT}!TcpServer.h@{TcpServer.h}}
+\doxysubsubsection{\texorpdfstring{SERVER\_PORT}{SERVER\_PORT}}
+{\footnotesize\ttfamily \label{_tcp_server_8h_ac42367fe5c999ec6650de83e9d72fe8c} 
+\#define SERVER\+\_\+\+PORT~5166}
+
+
+
+Port number for the TCP server. 
+
+\Hypertarget{_tcp_server_8h_aef135ff19068a2ab235f21f2c833969b}\index{TcpServer.h@{TcpServer.h}!TCP\_TAG@{TCP\_TAG}}
+\index{TCP\_TAG@{TCP\_TAG}!TcpServer.h@{TcpServer.h}}
+\doxysubsubsection{\texorpdfstring{TCP\_TAG}{TCP\_TAG}}
+{\footnotesize\ttfamily \label{_tcp_server_8h_aef135ff19068a2ab235f21f2c833969b} 
+\#define TCP\+\_\+\+TAG~"{}TCP\+\_\+\+SERVER"{}}
+
+
+
+Tag for logging TCP server messages. 
+
+\Hypertarget{_tcp_server_8h_ad552e7688532cbbecd3967538ced06ac}\index{TcpServer.h@{TcpServer.h}!WIFI\_CONNECTED\_BIT@{WIFI\_CONNECTED\_BIT}}
+\index{WIFI\_CONNECTED\_BIT@{WIFI\_CONNECTED\_BIT}!TcpServer.h@{TcpServer.h}}
+\doxysubsubsection{\texorpdfstring{WIFI\_CONNECTED\_BIT}{WIFI\_CONNECTED\_BIT}}
+{\footnotesize\ttfamily \label{_tcp_server_8h_ad552e7688532cbbecd3967538ced06ac} 
+\#define WIFI\+\_\+\+CONNECTED\+\_\+\+BIT~BIT0}
+
+
+
+Uncomment the following line to enable Wi-\/\+Fi connection functionality. 
+
+Event bit indicating a successful Wi-\/\+Fi connection. \Hypertarget{_tcp_server_8h_a7d013b55e50dfbda0904f5f933b63ec4}\index{TcpServer.h@{TcpServer.h}!WIFI\_FAIL\_BIT@{WIFI\_FAIL\_BIT}}
+\index{WIFI\_FAIL\_BIT@{WIFI\_FAIL\_BIT}!TcpServer.h@{TcpServer.h}}
+\doxysubsubsection{\texorpdfstring{WIFI\_FAIL\_BIT}{WIFI\_FAIL\_BIT}}
+{\footnotesize\ttfamily \label{_tcp_server_8h_a7d013b55e50dfbda0904f5f933b63ec4} 
+\#define WIFI\+\_\+\+FAIL\+\_\+\+BIT~BIT1}
+
+
+
+Event bit indicating a Wi-\/\+Fi connection failure. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_tcp_server_8h_a71663496e793fd4869a37af2eaeb9dfb}\index{TcpServer.h@{TcpServer.h}!Create\_Server@{Create\_Server}}
+\index{Create\_Server@{Create\_Server}!TcpServer.h@{TcpServer.h}}
+\doxysubsubsection{\texorpdfstring{Create\_Server()}{Create\_Server()}}
+{\footnotesize\ttfamily \label{_tcp_server_8h_a71663496e793fd4869a37af2eaeb9dfb} 
+void Create\+\_\+\+Server (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameter}{}\end{DoxyParamCaption})}
+
+
+
+Creates and starts the TCP server. 
+
+Sets up the TCP server to listen for incoming client connections and handle them using the specified parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameter} & Pointer to additional parameters for server setup (optional).\\
+\hline
+\end{DoxyParams}
+Creates and starts the TCP server.
+
+This function sets up a TCP socket, binds it to a specified address and port, and listens for incoming connections. For each connection, a new task is created to handle the client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameter} & Unused parameter for Free\+RTOS task. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_tcp_server_8h_a423bc60f42ad6bf912e07cd5320b1948}\index{TcpServer.h@{TcpServer.h}!Handle\_Client@{Handle\_Client}}
+\index{Handle\_Client@{Handle\_Client}!TcpServer.h@{TcpServer.h}}
+\doxysubsubsection{\texorpdfstring{Handle\_Client()}{Handle\_Client()}}
+{\footnotesize\ttfamily \label{_tcp_server_8h_a423bc60f42ad6bf912e07cd5320b1948} 
+void Handle\+\_\+\+Client (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{args}{}\end{DoxyParamCaption})}
+
+
+
+Handles client connections to the TCP server. 
+
+This function processes communication with a connected client, handling data transmission and reception as required.
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Pointer to additional arguments (optional).\\
+\hline
+\end{DoxyParams}
+Handles client connections to the TCP server.
+
+This function receives and processes commands from the client, authenticates the user, and manages communication based on different states. It handles login, data requests, and exit commands.
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Socket descriptor for the client. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_tcp_server_8h_a00e67904809f7a47e29ca050bcabbae2}\index{TcpServer.h@{TcpServer.h}!receive\_data@{receive\_data}}
+\index{receive\_data@{receive\_data}!TcpServer.h@{TcpServer.h}}
+\doxysubsubsection{\texorpdfstring{receive\_data()}{receive\_data()}}
+{\footnotesize\ttfamily \label{_tcp_server_8h_a00e67904809f7a47e29ca050bcabbae2} 
+int receive\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{sock}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{size}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{timeout\+\_\+counter}{, }\item[{uint8\+\_\+t}]{max\+\_\+timeout}{}\end{DoxyParamCaption})}
+
+
+
+Receives data from a connected client. 
+
+Reads data from a socket connection into the provided buffer, with support for timeout and retry mechanisms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor for the client connection. \\
+\hline
+{\em buffer} & Pointer to the buffer where the received data will be stored. \\
+\hline
+{\em size} & The maximum number of bytes to read. \\
+\hline
+{\em timeout\+\_\+counter} & Pointer to a counter tracking timeout occurrences. \\
+\hline
+{\em max\+\_\+timeout} & The maximum number of allowable timeouts before returning an error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes received, or a negative value if an error occurs.
+\end{DoxyReturn}
+Receives data from a connected client.
+
+This function receives data from the client and handles timeouts. If no data is received within a specified timeout period, it returns a timeout error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & Socket descriptor for the client. \\
+\hline
+{\em buffer} & Buffer to store received data. \\
+\hline
+{\em size} & Size of the buffer. \\
+\hline
+{\em timeout\+\_\+counter} & Counter to track consecutive timeouts. \\
+\hline
+{\em max\+\_\+timeout} & Maximum allowed consecutive timeouts before returning an error.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length of received data, -\/1 if timeout occurs, or -\/2 if maximum timeouts reached. 
+\end{DoxyReturn}
+\Hypertarget{_tcp_server_8h_a13ddbecdfd3a974bad6c7ff356cb4674}\index{TcpServer.h@{TcpServer.h}!Tcp\_Init@{Tcp\_Init}}
+\index{Tcp\_Init@{Tcp\_Init}!TcpServer.h@{TcpServer.h}}
+\doxysubsubsection{\texorpdfstring{Tcp\_Init()}{Tcp\_Init()}}
+{\footnotesize\ttfamily \label{_tcp_server_8h_a13ddbecdfd3a974bad6c7ff356cb4674} 
+void Tcp\+\_\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the TCP server. 
+
+Configures the necessary components and prepares the ESP32 for running a TCP server.
+
+Initializes the TCP server. \texorpdfstring{$<$}{<} Initialize Wi-\/\+Fi in access point and station mode.
+
+\texorpdfstring{$<$}{<} Start the TCP server task.

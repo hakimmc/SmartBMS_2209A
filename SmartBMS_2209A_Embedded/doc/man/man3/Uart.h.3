@@ -1,0 +1,239 @@
+.TH "include/Uart.h" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Uart.h \- UART driver interface for ESP32\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'stdint\&.h'\fP
+.br
+\fR#include 'driver/uart\&.h'\fP
+.br
+\fR#include 'driver/gpio\&.h'\fP
+.br
+\fR#include <stdio\&.h>\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBUart_Init\fP (uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)"
+.br
+.RI "Initializes the UART interface\&. "
+.ti -1c
+.RI "uint8_t \fBUart_Transmit\fP (uint8_t uart_pin, uint8_t *data, uint8_t data_length)"
+.br
+.RI "Transmits data over UART\&. "
+.ti -1c
+.RI "int \fBUart_Receive\fP (uint8_t uart_pin, uint8_t *data, uint8_t data_length, uint32_t timeout)"
+.br
+.RI "Receives data from UART\&. "
+.ti -1c
+.RI "uint8_t \fBIsTimeout\fP (uint32_t max_reach_time)"
+.br
+.RI "Checks for a timeout condition\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+UART driver interface for ESP32\&. 
+
+This header file provides the function declarations for initializing and using UART communication on the ESP32\&.
+
+.PP
+Created on: 18 Dec 2024 
+.PP
+\fBAuthor\fP
+.RS 4
+hakimmc 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "uint8_t IsTimeout (uint32_t max_reach_time)"
+
+.PP
+Checks for a timeout condition\&. Determines if a given time has exceeded the specified maximum time limit\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fImax_reach_time\fP The maximum allowable time in milliseconds\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns \fR1\fP if the timeout condition is met, or \fR0\fP otherwise\&.
+.RE
+.PP
+Checks for a timeout condition\&.
+
+.PP
+This function checks if the specified maximum time has passed since the start of the function call\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fImax_reach_time\fP Maximum time in ticks to wait before timing out\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+0 if timeout occurred, 1 if still within the allowed time\&. 
+.RE
+.PP
+< Get current tick count\&.
+
+.PP
+< Wait for the timeout period to pass\&.
+
+.PP
+< Timeout reached\&.
+
+.PP
+< Timeout not reached\&.
+.SS "void Uart_Init (uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)"
+
+.PP
+Initializes the UART interface\&. Configures the UART interface with the specified parameters, including pin assignments, baud rate, and RX buffer size\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuart_pin\fP The UART port number to initialize (e\&.g\&., UART_NUM_0, UART_NUM_1)\&. 
+.br
+\fIbaudrate\fP The desired baud rate for communication\&. 
+.br
+\fIrx_buffsize\fP The size of the RX buffer\&. 
+.br
+\fITXD_PIN\fP The GPIO pin number assigned for UART TX (transmit)\&. 
+.br
+\fIRXD_PIN\fP The GPIO pin number assigned for UART RX (receive)\&.
+.RE
+.PP
+Initializes the UART interface\&.
+
+.PP
+This function configures the UART with the specified baud rate, data bits, stop bits, and other settings\&. It also assigns pins for transmission and reception and installs the UART driver\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuart_pin\fP UART port to configure (typically 0, 1, or 2)\&. 
+.br
+\fIbaudrate\fP The baud rate for the UART communication\&. 
+.br
+\fIrx_buffsize\fP The size of the receive buffer\&. 
+.br
+\fITXD_PIN\fP The GPIO pin for UART transmission (TX)\&. 
+.br
+\fIRXD_PIN\fP The GPIO pin for UART reception (RX)\&. 
+.RE
+.PP
+< Configures the UART with the given settings\&.
+
+.PP
+< Assigns pins to UART\&.
+
+.PP
+< Installs the UART driver with specified buffer size\&.
+.SS "int Uart_Receive (uint8_t uart_pin, uint8_t * data, uint8_t data_length, uint32_t timeout)"
+
+.PP
+Receives data from UART\&. Reads data from the specified UART port into a buffer, with an optional timeout\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuart_pin\fP The UART port number to use for reception\&. 
+.br
+\fIdata\fP Pointer to the buffer where received data will be stored\&. 
+.br
+\fIdata_length\fP The maximum number of bytes to read\&. 
+.br
+\fItimeout\fP The maximum time to wait for data in milliseconds\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of bytes successfully received, or a negative value on error\&.
+.RE
+.PP
+Receives data from UART\&.
+
+.PP
+This function receives data from the UART port and stores it in the provided buffer\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuart_pin\fP UART port to use for reception (typically 0, 1, or 2)\&. 
+.br
+\fIdata\fP Pointer to the buffer to store received data\&. 
+.br
+\fIdata_length\fP Length of the data buffer\&. 
+.br
+\fItimeout\fP Timeout for receiving data in milliseconds\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of bytes received or an error code\&. 
+.RE
+.PP
+< Reads data from UART into buffer\&.
+.SS "uint8_t Uart_Transmit (uint8_t uart_pin, uint8_t * data, uint8_t data_length)"
+
+.PP
+Transmits data over UART\&. Sends a sequence of bytes through the specified UART port\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuart_pin\fP The UART port number to use for transmission\&. 
+.br
+\fIdata\fP Pointer to the data buffer containing the bytes to transmit\&. 
+.br
+\fIdata_length\fP The number of bytes to transmit\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns \fR0\fP on success or a non-zero value if the transmission fails\&.
+.RE
+.PP
+Transmits data over UART\&.
+
+.PP
+This function sends a specified amount of data through the UART transmission port\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuart_pin\fP UART port to use for transmission (typically 0, 1, or 2)\&. 
+.br
+\fIdata\fP Pointer to the data to be transmitted\&. 
+.br
+\fIdata_length\fP Length of the data to be transmitted\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+1 if transmission is successful, 0 if failed\&. 
+.RE
+.PP
+< Writes data to UART\&.
+
+.PP
+< Transmission failure\&.
+
+.PP
+< Transmission success\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

@@ -1,0 +1,159 @@
+\doxysection{d2cc\+\_\+lib.\+h}
+\hypertarget{d2cc__lib_8h_source}{}\label{d2cc__lib_8h_source}\index{include/d2cc\_lib.h@{include/d2cc\_lib.h}}
+\mbox{\hyperlink{d2cc__lib_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ \ d2cc\_lib.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ 5.01.2025\ }}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ Author:\ hakimmc}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ \ https://www.linkedin.com/in/abdulhakim-\/calgin/}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ LIB\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ LIB\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a}{BatteryChemistry\_LFP}},\ \ \ \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1}{BatteryChemistry\_NMC}}}
+\DoxyCodeLine{00020\ \}\mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57}{BatteryChemistry\_enum}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5}{CanBusEnable\_Enable}},\ \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3}{CanBusEnable\_Disable}}}
+\DoxyCodeLine{00025\ \}\mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4}{CanBusEnable\_enum}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e}{WiFiEnable\_Enable}},\ \mbox{\hyperlink{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e}{WiFiEnable\_Disable}}}
+\DoxyCodeLine{00030\ \}\mbox{\hyperlink{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0c}{WiFiEnable\_enum}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d}{TcpEnable\_Offline}},\ \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a}{TcpEnable\_Online}},\ \ \ \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475}{TcpEnable\_Connected}}}
+\DoxyCodeLine{00035\ \}\mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789e}{TcpEnable\_enum}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7}{VpnEnable\_Enable}},\ \ \ \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b}{VpnEnable\_Disable}}}
+\DoxyCodeLine{00040\ \}\mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4}{VpnEnable\_enum}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3}{WiFi\_AP\_Status\_Enable}},\ \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d}{WiFi\_AP\_Status\_Disable}}}
+\DoxyCodeLine{00045\ \}\mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8}{WiFi\_AP\_Status\_enum}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00048\ \textcolor{comment}{/*\ Battery\_Messages\ Line\ Start\ */}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_dbc_struct_a0b24f67210c02a92c019021bba07f1af}{ID}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_a6911c520e7c91105dac30c798b81033f}{DLC}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}\{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}Signal;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_aeade4ab284b79f71689506788e7481dd}{Data}}[8];}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00057\ \ \ \ \ \}\mbox{\hyperlink{_can_8c_a130a3010e507b1482a7aeb97e8b3fcc2}{Battery\_Messages}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{/*\ Battery\_Messages\ Line\ End\ */}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{/*\ Battery\_Temperatures\ Line\ Start\ */}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ uint32\_t\ ID;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ uint8\_t\ DLC;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}\{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}Signal;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ Data[8];}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00070\ \ \ \ \ \}\mbox{\hyperlink{_can_8c_aeac6d1745e019aac057f6d092866ff46}{Battery\_Temperatures}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{comment}{/*\ Battery\_Temperatures\ Line\ End\ */}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{comment}{/*\ Battery\_Voltages\ Line\ Start\ */}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ uint32\_t\ ID;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ uint8\_t\ DLC;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}\{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}Signal;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ Data[8];}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00083\ \ \ \ \ \}\mbox{\hyperlink{_can_8c_affc81c163d004c727041b42b732420f3}{Battery\_Voltages}};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{/*\ Battery\_Voltages\ Line\ End\ */}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{comment}{/*\ Can\_Main\ Line\ Start\ */}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ uint32\_t\ ID;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ uint8\_t\ DLC;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union}\{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_aafdcafa59c0375ecd8b2bf9e3a53ab53}{AliveCounter}}:7;\ \textcolor{comment}{//7\ bit}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57}{BatteryChemistry\_enum}}\ \mbox{\hyperlink{struct_dbc_struct_a7a06730f35cb4de82713855e2c0ae1e8}{BatteryChemistry}}:1;\ \textcolor{comment}{//1\ bit}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_a448ff1f8f3fec4b0cd1ae1da34b72e74}{BatteryBalance\_MaxVoltage}}:8;\ \textcolor{comment}{//8\ bit}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_a924f2f712aa30711ca07c571e8e51eab}{BatteryBalance\_MinVoltage}}:8;\ \textcolor{comment}{//8\ bit}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_ad64cfb03672b0c31c2eb92612c8741be}{BatteryBalance\_MaxTemp}}:8;\ \textcolor{comment}{//8\ bit}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_a642f31176bf356e0ef022cdf036a143d}{BatteryBalance\_MinTemp}}:8;\ \textcolor{comment}{//8\ bit}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_acd25bf8ccca66642eec649623550c36a}{SwVersionMajor}}:2;\ \textcolor{comment}{//2\ bit}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_aef00c82a9c81580820ff10e499b6ed21}{SwVersionMinor}}:2;\ \textcolor{comment}{//2\ bit}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_ab712e03d069028bd782d5a3bf63fbbcd}{SwVersionBugfix}}:4;\ \textcolor{comment}{//4\ bit}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4}{CanBusEnable\_enum}}\ \mbox{\hyperlink{struct_dbc_struct_a96f0ecd6a7074aca0fcfd72592245fad}{CanBusEnable}}:1;\ \textcolor{comment}{//1\ bit}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0c}{WiFiEnable\_enum}}\ \mbox{\hyperlink{struct_dbc_struct_a1ca872211a78ead331d094d0b45c0499}{WiFiEnable}}:1;\ \textcolor{comment}{//1\ bit}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789e}{TcpEnable\_enum}}\ \mbox{\hyperlink{struct_dbc_struct_a2270f5d54c5392a398ef141186d3366a}{TcpEnable}}:2;\ \textcolor{comment}{//2\ bit}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4}{VpnEnable\_enum}}\ \mbox{\hyperlink{struct_dbc_struct_ab631e49f6f05106ef5180c4a8db81e54}{VpnEnable}}:1;\ \textcolor{comment}{//1\ bit}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8}{WiFi\_AP\_Status\_enum}}\ \mbox{\hyperlink{struct_dbc_struct_a9e27bd50ce2d239ca6f1d5f7cb023de7}{WiFi\_AP\_Status}}:2;\ \textcolor{comment}{//2\ bit}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_dbc_struct_a9040957d9669218f0117644dcbc7f1c2}{TcpClientCount}}:8;\ \textcolor{comment}{//8\ bit}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \}Signal;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ Data[8];}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dbc_struct_a1003abb8f5969cce5ea2949d4128f16b}{factor}};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_dbc_struct_afe6c37d7e5b15901c0d388aca1bee4e7}{offset}};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dbc_struct_aacb347996a1291b562b366fa764aa041}{value}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}Phys\_Value;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}BatteryBalance\_MaxVoltage;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ factor;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ offset;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ value;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \}Phys\_Value;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}BatteryBalance\_MinVoltage;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ factor;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ offset;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ value;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}Phys\_Value;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \}BatteryBalance\_MinTemp;}
+\DoxyCodeLine{00132\ \ \ \ \ \}\mbox{\hyperlink{_can_8c_a5ac86e7553816a53c292e55c741953bb}{Can\_Main}};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{comment}{/*\ Can\_Main\ Line\ End\ */}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \}\mbox{\hyperlink{struct_dbc_struct}{DbcStruct}};}
+\DoxyCodeLine{00137\ \textcolor{comment}{/*\ \ \ \ \ USER\ CODE\ FUNCTION\ BLOCK\ START\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{d2cc__lib_8h_add5678661f9e8fc392ab35a8369f8487}{D2cc\_Lib\_Init}}(\mbox{\hyperlink{struct_dbc_struct}{DbcStruct}}\ *st);\ \textcolor{comment}{//Init\ Function\ (Must\ Be\ Run)}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{d2cc__lib_8h_a1fc4968809341ee415d413feb9db80cb}{ReadParse}}(uint8\_t*\ rx\_data,\ uint32\_t\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{struct_dbc_struct}{DbcStruct}}\ *st);\ \textcolor{comment}{//Can\ Read\ \&\ Parse\ Function}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{d2cc__lib_8h_a1a53ba345e601b7539ad8b1d3a60becf}{CreateTable\_Battery\_Messages}}(\mbox{\hyperlink{struct_dbc_struct}{DbcStruct}}\ *dbc);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{d2cc__lib_8h_acce29ea481884412fe82fde8cf8a3c73}{CreateTable\_Battery\_Temperatures}}(\mbox{\hyperlink{struct_dbc_struct}{DbcStruct}}\ *dbc);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{d2cc__lib_8h_a3f4346eef40e3f6e0856a015bed8da2d}{CreateTable\_Battery\_Voltages}}(\mbox{\hyperlink{struct_dbc_struct}{DbcStruct}}\ *dbc);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{d2cc__lib_8h_a3a8f6f06284c77bd13fc93c18115fd53}{CreateTable\_Can\_Main}}(\mbox{\hyperlink{struct_dbc_struct}{DbcStruct}}\ *dbc);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{comment}{/*\ \ \ \ \ USER\ CODE\ FUNCTION\ BLOCK\ STOP\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

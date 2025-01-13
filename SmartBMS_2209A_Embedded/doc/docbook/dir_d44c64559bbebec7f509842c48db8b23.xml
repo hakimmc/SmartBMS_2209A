@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_d44c64559bbebec7f509842c48db8b23" xml:lang="en-US">
+<title>include Directory Reference</title>
+<indexterm><primary>include Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__bq76pl455_8h">Bq76pl455.h</link></para>
+
+<para>Header file for interfacing with the BQ76PL455A-Q1 battery management IC. </para>
+</listitem>
+            <listitem><para>file <link linkend="__can_8h">Can.h</link></para>
+
+<para>CAN communication interface for ESP32. </para>
+</listitem>
+            <listitem><para>file <link linkend="_d2cc__lib_8h">d2cc_lib.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__led_task_init_8h">LedTaskInit.h</link></para>
+
+<para>LED initialization and control tasks for ESP32. </para>
+</listitem>
+            <listitem><para>file <link linkend="__tcp_server_8h">TcpServer.h</link></para>
+
+<para>TCP server implementation for ESP32. </para>
+</listitem>
+            <listitem><para>file <link linkend="__uart_8h">Uart.h</link></para>
+
+<para>UART driver interface for ESP32. </para>
+</listitem>
+            <listitem><para>file <link linkend="__wifi_8h">Wifi.h</link></para>
+
+<para>Wi-Fi configuration for ESP32 in AP+STA mode. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

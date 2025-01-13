@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_dbc_struct" xml:lang="en-US">
+<title>DbcStruct Struct Reference</title>
+<indexterm><primary>DbcStruct</primary></indexterm>
+<para>
+<computeroutput>#include &lt;d2cc_lib.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;uint32_t <link linkend="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af">ID</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f">DLC</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;union {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a69808b27e62d3066841098480113bdf8">Signal</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd">Data</link> [8]</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} </para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb">Battery_Messages</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;uint32_t <link linkend="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af">ID</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f">DLC</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;union {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ac02fab03e10a73ab3026bc900ec0c807">Signal</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd">Data</link> [8]</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} </para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b">Battery_Temperatures</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;uint32_t <link linkend="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af">ID</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f">DLC</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;union {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ab957d591284e13f130a259219c65197b">Signal</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd">Data</link> [8]</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} </para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc">Battery_Voltages</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;uint32_t <link linkend="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af">ID</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f">DLC</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;union {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aafdcafa59c0375ecd8b2bf9e3a53ab53">AliveCounter</link>:7</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link> <link linkend="_struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8">BatteryChemistry</link>:1</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74">BatteryBalance_MaxVoltage</link>:8</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab">BatteryBalance_MinVoltage</link>:8</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be">BatteryBalance_MaxTemp</link>:8</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d">BatteryBalance_MinTemp</link>:8</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a">SwVersionMajor</link>:2</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21">SwVersionMinor</link>:2</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1ab712e03d069028bd782d5a3bf63fbbcd">SwVersionBugfix</link>:4</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link> <link linkend="_struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad">CanBusEnable</link>:1</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</link> <link linkend="_struct_dbc_struct_1a1ca872211a78ead331d094d0b45c0499">WiFiEnable</link>:1</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link> <link linkend="_struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a">TcpEnable</link>:2</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link> <link linkend="_struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54">VpnEnable</link>:1</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link> <link linkend="_struct_dbc_struct_1a9e27bd50ce2d239ca6f1d5f7cb023de7">WiFi_AP_Status</link>:2</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a9040957d9669218f0117644dcbc7f1c2">TcpClientCount</link>:8</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a6893b0165e1bcc78faf0c175d45b0689">Signal</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd">Data</link> [8]</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b">factor</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;int <link linkend="_struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7">offset</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1aacb347996a1291b562b366fa764aa041">value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a39ef3d0f181193d908a3d957569f53e9">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ab926cf2e04c76fe31d1b0ddbded7666f">BatteryBalance_MaxVoltage</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b">factor</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;int <link linkend="_struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7">offset</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1aacb347996a1291b562b366fa764aa041">value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ac4b14f88a9116417c5247ea986ba72ab">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ac90174b4db5494409edf52628b1c9301">BatteryBalance_MinVoltage</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b">factor</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;int <link linkend="_struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7">offset</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1aacb347996a1291b562b366fa764aa041">value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ae49571f5b09c005a992e49b14d2649b6">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a1596535fa5514019cf0cf3aef02d817f">BatteryBalance_MinTemp</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c">Can_Main</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_dbc_struct_1aafdcafa59c0375ecd8b2bf9e3a53ab53"/><section>
+    <title>AliveCounter</title>
+<indexterm><primary>AliveCounter</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>AliveCounter</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::AliveCounter</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb"/><section>
+    <title>[struct]</title>
+<indexterm><primary>Battery_Messages</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Messages</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Battery_Messages</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b"/><section>
+    <title>[struct]</title>
+<indexterm><primary>Battery_Temperatures</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Temperatures</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Battery_Temperatures</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc"/><section>
+    <title>[struct]</title>
+<indexterm><primary>Battery_Voltages</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Voltages</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Battery_Voltages</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be"/><section>
+    <title>BatteryBalance_MaxTemp</title>
+<indexterm><primary>BatteryBalance_MaxTemp</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MaxTemp</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MaxTemp</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74"/><section>
+    <title>BatteryBalance_MaxVoltage<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryBalance_MaxVoltage</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MaxVoltage</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MaxVoltage</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1ab926cf2e04c76fe31d1b0ddbded7666f"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryBalance_MaxVoltage</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MaxVoltage</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryBalance_MaxVoltage</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d"/><section>
+    <title>BatteryBalance_MinTemp<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryBalance_MinTemp</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MinTemp</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MinTemp</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a1596535fa5514019cf0cf3aef02d817f"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryBalance_MinTemp</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MinTemp</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryBalance_MinTemp</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab"/><section>
+    <title>BatteryBalance_MinVoltage<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryBalance_MinVoltage</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MinVoltage</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MinVoltage</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1ac90174b4db5494409edf52628b1c9301"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryBalance_MinVoltage</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MinVoltage</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryBalance_MinVoltage</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8"/><section>
+    <title>BatteryChemistry</title>
+<indexterm><primary>BatteryChemistry</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryChemistry</secondary></indexterm>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link> DbcStruct::BatteryChemistry</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c"/><section>
+    <title>[struct]</title>
+<indexterm><primary>Can_Main</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Can_Main</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Can_Main</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad"/><section>
+    <title>CanBusEnable</title>
+<indexterm><primary>CanBusEnable</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>CanBusEnable</secondary></indexterm>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link> DbcStruct::CanBusEnable</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd"/><section>
+    <title>Data</title>
+<indexterm><primary>Data</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Data</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Data[8]</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f"/><section>
+    <title>DLC</title>
+<indexterm><primary>DLC</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>DLC</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::DLC</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b"/><section>
+    <title>factor</title>
+<indexterm><primary>factor</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>factor</secondary></indexterm>
+<para><computeroutput>float DbcStruct::factor</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af"/><section>
+    <title>ID</title>
+<indexterm><primary>ID</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>ID</secondary></indexterm>
+<para><computeroutput>uint32_t DbcStruct::ID</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7"/><section>
+    <title>offset</title>
+<indexterm><primary>offset</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>offset</secondary></indexterm>
+<para><computeroutput>int DbcStruct::offset</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a39ef3d0f181193d908a3d957569f53e9"/><section>
+    <title>[struct]<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>Phys_Value</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Phys_Value</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Phys_Value</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1ac4b14f88a9116417c5247ea986ba72ab"/><section>
+    <title>[struct]<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>Phys_Value</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Phys_Value</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Phys_Value</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1ae49571f5b09c005a992e49b14d2649b6"/><section>
+    <title>[struct]<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>Phys_Value</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Phys_Value</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Phys_Value</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a69808b27e62d3066841098480113bdf8"/><section>
+    <title>[struct]<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>Signal</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Signal</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Signal</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1ac02fab03e10a73ab3026bc900ec0c807"/><section>
+    <title>[struct]<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>Signal</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Signal</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Signal</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1ab957d591284e13f130a259219c65197b"/><section>
+    <title>[struct]<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>Signal</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Signal</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Signal</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a6893b0165e1bcc78faf0c175d45b0689"/><section>
+    <title>[struct]<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>Signal</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Signal</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Signal</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1ab712e03d069028bd782d5a3bf63fbbcd"/><section>
+    <title>SwVersionBugfix</title>
+<indexterm><primary>SwVersionBugfix</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>SwVersionBugfix</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::SwVersionBugfix</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a"/><section>
+    <title>SwVersionMajor</title>
+<indexterm><primary>SwVersionMajor</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>SwVersionMajor</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::SwVersionMajor</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21"/><section>
+    <title>SwVersionMinor</title>
+<indexterm><primary>SwVersionMinor</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>SwVersionMinor</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::SwVersionMinor</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a9040957d9669218f0117644dcbc7f1c2"/><section>
+    <title>TcpClientCount</title>
+<indexterm><primary>TcpClientCount</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>TcpClientCount</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::TcpClientCount</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a"/><section>
+    <title>TcpEnable</title>
+<indexterm><primary>TcpEnable</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>TcpEnable</secondary></indexterm>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link> DbcStruct::TcpEnable</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1aacb347996a1291b562b366fa764aa041"/><section>
+    <title>value</title>
+<indexterm><primary>value</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>value</secondary></indexterm>
+<para><computeroutput>float DbcStruct::value</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54"/><section>
+    <title>VpnEnable</title>
+<indexterm><primary>VpnEnable</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>VpnEnable</secondary></indexterm>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link> DbcStruct::VpnEnable</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a9e27bd50ce2d239ca6f1d5f7cb023de7"/><section>
+    <title>WiFi_AP_Status</title>
+<indexterm><primary>WiFi_AP_Status</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>WiFi_AP_Status</secondary></indexterm>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link> DbcStruct::WiFi_AP_Status</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1a1ca872211a78ead331d094d0b45c0499"/><section>
+    <title>WiFiEnable</title>
+<indexterm><primary>WiFiEnable</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>WiFiEnable</secondary></indexterm>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</link> DbcStruct::WiFiEnable</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+include/<link linkend="_d2cc__lib_8h">d2cc_lib.h</link></section>
+</section>

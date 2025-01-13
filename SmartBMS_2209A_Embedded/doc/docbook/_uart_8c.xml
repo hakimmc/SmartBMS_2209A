@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__uart_8c" xml:lang="en-US">
+<title>src/Uart.c File Reference</title>
+<indexterm><primary>src/Uart.c</primary></indexterm>
+<para>
+
+<para>UART initialization, transmission, and reception functions for UART communication. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;LedTaskInit.h&quot;<?linebreak?>#include &quot;Uart.h&quot;<?linebreak?>#include &quot;Can.h&quot;<?linebreak?>#include &quot;Wifi.h&quot;<?linebreak?>#include &quot;TcpServer.h&quot;<?linebreak?>#include &quot;d2cc_lib.h&quot;<?linebreak?>#include &quot;Bq76pl455.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__uart_8c_1a268262b77851c1bf5292361233c6515f">Uart_Init</link> (uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)</para>
+
+<para>Initializes the UART peripheral with specified parameters. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__uart_8c_1a8856e4c8f6952db371ac9bf478c7c000">Uart_Transmit</link> (uint8_t uart_pin, uint8_t *data, uint8_t data_length)</para>
+
+<para>Transmits data via UART. </para>
+</listitem>
+            <listitem><para>int <link linkend="__uart_8c_1a65bb7c489c4800aeb9f32917436cce36">Uart_Receive</link> (uint8_t uart_pin, uint8_t *data, uint8_t data_length, uint32_t timeout)</para>
+
+<para>Receives data via UART. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__uart_8c_1a086601e2a6bb2527f8c1f02e0b828576">IsTimeout</link> (uint32_t max_reach_time)</para>
+
+<para>Checks if a specified timeout duration has been reached. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>UART initialization, transmission, and reception functions for UART communication. </para>
+
+<para><formalpara><title>Date</title>
+
+<para>18 December 2024 </para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>hakimmc </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__uart_8c_1a086601e2a6bb2527f8c1f02e0b828576"/><section>
+    <title>IsTimeout()</title>
+<indexterm><primary>IsTimeout</primary><secondary>Uart.c</secondary></indexterm>
+<indexterm><primary>Uart.c</primary><secondary>IsTimeout</secondary></indexterm>
+<para><computeroutput>uint8_t IsTimeout (uint32_t max_reach_time)</computeroutput></para><para>
+
+<para>Checks if a specified timeout duration has been reached. </para>
+</para>
+
+<para>Checks for a timeout condition.</para>
+
+<para>This function checks if the specified maximum time has passed since the start of the function call.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>max_reach_time</entry><entry>
+<para>Maximum time in ticks to wait before timing out.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 if timeout occurred, 1 if still within the allowed time. </para>
+</formalpara>
+</para>
+
+<para>&lt; Get current tick count.</para>
+
+<para>&lt; Wait for the timeout period to pass.</para>
+
+<para>&lt; Timeout reached.</para>
+
+<para>&lt; Timeout not reached.</para>
+</section>
+<anchor xml:id="__uart_8c_1a268262b77851c1bf5292361233c6515f"/><section>
+    <title>Uart_Init()</title>
+<indexterm><primary>Uart_Init</primary><secondary>Uart.c</secondary></indexterm>
+<indexterm><primary>Uart.c</primary><secondary>Uart_Init</secondary></indexterm>
+<para><computeroutput>void Uart_Init (uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)</computeroutput></para><para>
+
+<para>Initializes the UART peripheral with specified parameters. </para>
+</para>
+
+<para>Initializes the UART interface.</para>
+
+<para>This function configures the UART with the specified baud rate, data bits, stop bits, and other settings. It also assigns pins for transmission and reception and installs the UART driver.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uart_pin</entry><entry>
+<para>UART port to configure (typically 0, 1, or 2). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>baudrate</entry><entry>
+<para>The baud rate for the UART communication. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>rx_buffsize</entry><entry>
+<para>The size of the receive buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>TXD_PIN</entry><entry>
+<para>The GPIO pin for UART transmission (TX). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>RXD_PIN</entry><entry>
+<para>The GPIO pin for UART reception (RX). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>&lt; Configures the UART with the given settings.</para>
+
+<para>&lt; Assigns pins to UART.</para>
+
+<para>&lt; Installs the UART driver with specified buffer size.</para>
+</section>
+<anchor xml:id="__uart_8c_1a65bb7c489c4800aeb9f32917436cce36"/><section>
+    <title>Uart_Receive()</title>
+<indexterm><primary>Uart_Receive</primary><secondary>Uart.c</secondary></indexterm>
+<indexterm><primary>Uart.c</primary><secondary>Uart_Receive</secondary></indexterm>
+<para><computeroutput>int Uart_Receive (uint8_t uart_pin, uint8_t * data, uint8_t data_length, uint32_t timeout)</computeroutput></para><para>
+
+<para>Receives data via UART. </para>
+</para>
+
+<para>Receives data from UART.</para>
+
+<para>This function receives data from the UART port and stores it in the provided buffer.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uart_pin</entry><entry>
+<para>UART port to use for reception (typically 0, 1, or 2). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the buffer to store received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data_length</entry><entry>
+<para>Length of the data buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>timeout</entry><entry>
+<para>Timeout for receiving data in milliseconds.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of bytes received or an error code. </para>
+</formalpara>
+</para>
+
+<para>&lt; Reads data from UART into buffer.</para>
+</section>
+<anchor xml:id="__uart_8c_1a8856e4c8f6952db371ac9bf478c7c000"/><section>
+    <title>Uart_Transmit()</title>
+<indexterm><primary>Uart_Transmit</primary><secondary>Uart.c</secondary></indexterm>
+<indexterm><primary>Uart.c</primary><secondary>Uart_Transmit</secondary></indexterm>
+<para><computeroutput>uint8_t Uart_Transmit (uint8_t uart_pin, uint8_t * data, uint8_t data_length)</computeroutput></para><para>
+
+<para>Transmits data via UART. </para>
+</para>
+
+<para>Transmits data over UART.</para>
+
+<para>This function sends a specified amount of data through the UART transmission port.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uart_pin</entry><entry>
+<para>UART port to use for transmission (typically 0, 1, or 2). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the data to be transmitted. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data_length</entry><entry>
+<para>Length of the data to be transmitted.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>1 if transmission is successful, 0 if failed. </para>
+</formalpara>
+</para>
+
+<para>&lt; Writes data to UART.</para>
+
+<para>&lt; Transmission failure.</para>
+
+<para>&lt; Transmission success.</para>
+</section>
+</section>
+</section>

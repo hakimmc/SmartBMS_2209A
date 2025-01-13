@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_bq76pl455_8c" kind="file" language="C++">
+    <compoundname>Bq76pl455.c</compoundname>
+    <includes refid="_bq76pl455_8h" local="yes">Bq76pl455.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Bq76pl455.h</label>
+        <link refid="_bq76pl455_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Uart.h</label>
+        <link refid="_uart_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Bq76pl455.c</label>
+        <link refid="_bq76pl455_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>driver/gpio.h</label>
+      </node>
+      <node id="5">
+        <label>driver/uart.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_bq76pl455_8c_1ad04f1495afe1fac3b3f1a738bb83d8ea" prot="public" static="no" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t crc16_table_bq[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>crc16_table_bq</name>
+        <initializer>= {
+    
+    
+    
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bq76pl455.c" line="14" column="16" bodyfile="src/Bq76pl455.c" bodystart="14" bodyend="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_bq76pl455_8c_1a07142409ffe9cbd3d17bc2fb0ceb4eb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BQ_Init</definition>
+        <argsstring>()</argsstring>
+        <name>BQ_Init</name>
+        <briefdescription>
+<para>Initialize the BQ76PL455A-Q1 communication interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Configures the UART for the BQ76PL455A-Q1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bq76pl455.c" line="25" column="6" bodyfile="src/Bq76pl455.c" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="_bq76pl455_8c_1ac1a68691cca07c6263b16eb463fd7e06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BQ_Test</definition>
+        <argsstring>()</argsstring>
+        <name>BQ_Test</name>
+        <briefdescription>
+<para>Test communication with the BQ76PL455A-Q1 device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests the communication with the BQ76PL455A-Q1.</para>
+<para>Sends a test message to read the device ID. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bq76pl455.c" line="34" column="6" bodyfile="src/Bq76pl455.c" bodystart="34" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="_bq76pl455_8c_1afce328763ae545228a5fe77ba53296da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BQ_Start</definition>
+        <argsstring>(void *args)</argsstring>
+        <name>BQ_Start</name>
+        <param>
+          <type>void *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Starts the main task for BQ76PL455A-Q1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the BQ76PL455A-Q1 task.</para>
+<para>Continuously transmits a test message via UART at regular intervals.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Task-specific arguments (optional). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bq76pl455.c" line="47" column="6" bodyfile="src/Bq76pl455.c" bodystart="47" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="_bq76pl455_8c_1a7f64a91901131f6c570e15d57d6a75b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t * CRC16</definition>
+        <argsstring>(uint8_t *data, uint8_t data_length)</argsstring>
+        <name>CRC16</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data_length</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the CRC-16 checksum for a given data buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the CRC-16 for a given data buffer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to a 2-byte array containing the CRC checksum. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bq76pl455.c" line="69" column="9" bodyfile="src/Bq76pl455.c" bodystart="69" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="_bq76pl455_8c_1a5db7a92f619e063198490508230e18a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BQ_Uart_Init</definition>
+        <argsstring>(uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)</argsstring>
+        <name>BQ_Uart_Init</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>uart_pin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>baudrate</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>rx_buffsize</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>TXD_PIN</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>RXD_PIN</declname>
+        </param>
+        <briefdescription>
+<para>Initialize UART for communication with the BQ76PL455A-Q1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the UART interface for the BQ76PL455A-Q1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uart_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UART port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baudrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Baud rate for UART communication. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rx_buffsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RX buffer size. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TXD_PIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO pin for UART TX. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RXD_PIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO pin for UART RX. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bq76pl455.c" line="92" column="6" bodyfile="src/Bq76pl455.c" bodystart="92" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="_bq76pl455_8c_1aa01b4d094c5fc9ed6d46e6a622dbb75e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t BQ_Uart_Transmit</definition>
+        <argsstring>(uint8_t uart_pin, uint8_t *data, uint8_t data_length)</argsstring>
+        <name>BQ_Uart_Transmit</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>uart_pin</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data_length</declname>
+        </param>
+        <briefdescription>
+<para>Transmit data via UART to the BQ76PL455A-Q1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Transmits data to the BQ76PL455A-Q1 over UART.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uart_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UART port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data buffer to be transmitted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Bq76pl455.c" line="128" column="9" bodyfile="src/Bq76pl455.c" bodystart="128" bodyend="135"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementation file for interfacing with the BQ76PL455A-Q1 battery management IC. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides functionality to initialize, communicate, and calculate CRC for the BQ76PL455A-Q1 IC.</para>
+<para>Created on: 18 Dec 2024 <simplesect kind="author"><para></para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bq76pl455_8h" kindref="compound">Bq76pl455.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>-----------------<sp/>CRC<sp/>Table<sp/>-----------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="_bq76pl455_8c_1ad04f1495afe1fac3b3f1a738bb83d8ea" kindref="member">crc16_table_bq</ref>[256]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Precomputed<sp/>CRC-16<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0x0000<sp/>-<sp/>0xFFFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Add<sp/>your<sp/>CRC<sp/>table<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_bq76pl455_8c_1a07142409ffe9cbd3d17bc2fb0ceb4eb1" kindref="member">BQ_Init</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_uart_8h_1a268262b77851c1bf5292361233c6515f" kindref="member">Uart_Init</ref>(<ref refid="_bq76pl455_8h_1affe9f6ad00bd064e9ed9a77cae998f77" kindref="member">BQ_UART_PORT</ref>,<sp/>250000,<sp/>8,<sp/><ref refid="_bq76pl455_8h_1a9491feb889b0266826e8907cad0d42f2" kindref="member">BQ_TX</ref>,<sp/><ref refid="_bq76pl455_8h_1a1cc27c7b563113b7136d2ea7ff0fa7f5" kindref="member">BQ_RX</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_bq76pl455_8c_1ac1a68691cca07c6263b16eb463fd7e06" kindref="member">BQ_Test</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>Read_Id_Message[]<sp/>=<sp/>{0x89,<sp/>0x01,<sp/>0x00,<sp/>0x0A,<sp/>0x00,<sp/>0xDA,<sp/>0x83};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_uart_8h_1a8856e4c8f6952db371ac9bf478c7c000" kindref="member">Uart_Transmit</ref>(<ref refid="_bq76pl455_8h_1affe9f6ad00bd064e9ed9a77cae998f77" kindref="member">BQ_UART_PORT</ref>,<sp/>Read_Id_Message,<sp/>7);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Further<sp/>response<sp/>handling<sp/>logic<sp/>can<sp/>be<sp/>implemented<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_bq76pl455_8c_1afce328763ae545228a5fe77ba53296da" kindref="member">BQ_Start</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*args)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bq76pl455_8c_1a5db7a92f619e063198490508230e18a2" kindref="member">BQ_Uart_Init</ref>(<ref refid="_bq76pl455_8h_1affe9f6ad00bd064e9ed9a77cae998f77" kindref="member">BQ_UART_PORT</ref>,<sp/>115200,<sp/>256,<sp/><ref refid="_bq76pl455_8h_1a9491feb889b0266826e8907cad0d42f2" kindref="member">BQ_TX</ref>,<sp/><ref refid="_bq76pl455_8h_1a1cc27c7b563113b7136d2ea7ff0fa7f5" kindref="member">BQ_RX</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data[]<sp/>=<sp/>{</highlight><highlight class="charliteral">&apos;h&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;e&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;l&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;o&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_bq76pl455_8c_1aa01b4d094c5fc9ed6d46e6a622dbb75e" kindref="member">BQ_Uart_Transmit</ref>(<ref refid="_bq76pl455_8h_1affe9f6ad00bd064e9ed9a77cae998f77" kindref="member">BQ_UART_PORT</ref>,<sp/>data,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(data)))<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Data<sp/>sent\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Data<sp/>send<sp/>failed\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(1000<sp/>/<sp/>portTICK_PERIOD_MS);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">uint8_t*<sp/><ref refid="_bq76pl455_8c_1a7f64a91901131f6c570e15d57d6a75b5" kindref="member">CRC16</ref>(uint8_t*<sp/>data,<sp/>uint8_t<sp/>data_length)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>out_data[2];</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>CRC<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data_length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CRC<sp/>^=<sp/>(*data++)<sp/>&amp;<sp/>0x00FF;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CRC<sp/>=<sp/><ref refid="_bq76pl455_8c_1ad04f1495afe1fac3b3f1a738bb83d8ea" kindref="member">crc16_table_bq</ref>[CRC<sp/>&amp;<sp/>0x00FF]<sp/>^<sp/>(CRC<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>out_data[0]<sp/>=<sp/>(uint8_t)((CRC<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xFF);<sp/></highlight><highlight class="comment">//<sp/>MSB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>out_data[1]<sp/>=<sp/>(uint8_t)(CRC<sp/>&amp;<sp/>0xFF);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LSB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out_data;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_bq76pl455_8c_1a5db7a92f619e063198490508230e18a2" kindref="member">BQ_Uart_Init</ref>(uint8_t<sp/>uart_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>baudrate,<sp/>uint32_t<sp/>rx_buffsize,<sp/>uint8_t<sp/>TXD_PIN,<sp/>uint8_t<sp/>RXD_PIN)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uart_config_t<sp/>uart_config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.baud_rate<sp/>=<sp/>baudrate,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.data_bits<sp/>=<sp/>UART_DATA_8_BITS,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.parity<sp/>=<sp/>UART_PARITY_DISABLE,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.stop_bits<sp/>=<sp/>UART_STOP_BITS_1,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.flow_ctrl<sp/>=<sp/>UART_HW_FLOWCTRL_DISABLE,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.source_clk<sp/>=<sp/>UART_SCLK_DEFAULT,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>ret<sp/>=<sp/>uart_param_config((uart_port_t)uart_pin,<sp/>&amp;uart_config);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>!=<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;UART<sp/>parameter<sp/>configuration<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(ret));</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>uart_set_pin((uart_port_t)uart_pin,<sp/>TXD_PIN,<sp/>RXD_PIN,<sp/>UART_PIN_NO_CHANGE,<sp/>UART_PIN_NO_CHANGE);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>!=<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;UART<sp/>pin<sp/>assignment<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(ret));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>uart_driver_install((uart_port_t)uart_pin,<sp/>rx_buffsize<sp/>*<sp/>2,<sp/>0,<sp/>0,<sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>!=<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;UART<sp/>driver<sp/>installation<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(ret));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">uint8_t<sp/><ref refid="_bq76pl455_8c_1aa01b4d094c5fc9ed6d46e6a622dbb75e" kindref="member">BQ_Uart_Transmit</ref>(uint8_t<sp/>uart_pin,<sp/>uint8_t<sp/>*data,<sp/>uint8_t<sp/>data_length)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>uart_write_bytes((uart_port_t)uart_pin,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)data,<sp/>data_length);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;UART<sp/>transmission<sp/>failed\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Bq76pl455.c"/>
+  </compounddef>
+</doxygen>

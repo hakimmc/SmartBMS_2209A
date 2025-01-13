@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__tcp_server_8h_source" xml:lang="en-US">
+<title>TcpServer.h</title>
+<indexterm><primary>include/TcpServer.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+12 
+13 <emphasis role="preprocessor">#ifndef&#32;INCLUDE_TCPSERVER_H_</emphasis>
+14 <emphasis role="preprocessor">#define&#32;INCLUDE_TCPSERVER_H_</emphasis>
+15 
+19 <emphasis role="comment">//#define&#32;WIFI_CONNECT</emphasis>
+20 
+21 <emphasis role="preprocessor">#include&#32;&lt;lwip/sockets.h&gt;</emphasis>
+22 <emphasis role="preprocessor">#include&#32;&lt;esp_log.h&gt;</emphasis>
+23 <emphasis role="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+24 <emphasis role="preprocessor">#include&#32;&lt;errno.h&gt;</emphasis>
+25 <emphasis role="preprocessor">#include&#32;&quot;freertos/FreeRTOS.h&quot;</emphasis>
+26 <emphasis role="preprocessor">#include&#32;&quot;freertos/task.h&quot;</emphasis>
+27 <emphasis role="preprocessor">#include&#32;&quot;esp_system.h&quot;</emphasis>
+28 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__wifi_8h">Wifi.h</link>&quot;</emphasis>
+29 <emphasis role="preprocessor">#include&#32;&quot;string.h&quot;</emphasis>
+30 <emphasis role="preprocessor">#include&#32;&quot;esp_ping.h&quot;</emphasis>
+31 <emphasis role="preprocessor">#include&#32;&quot;ping/ping_sock.h&quot;</emphasis>
+32 <emphasis role="preprocessor">#include&#32;&quot;nvs_flash.h&quot;</emphasis>
+33 <emphasis role="preprocessor">#include&#32;&quot;freertos/event_groups.h&quot;</emphasis>
+34 <emphasis role="preprocessor">#include&#32;&quot;esp_wifi.h&quot;</emphasis>
+35 <emphasis role="preprocessor">#include&#32;&quot;esp_event.h&quot;</emphasis>
+36 <emphasis role="preprocessor">#include&#32;&quot;esp_log.h&quot;</emphasis>
+37 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_d2cc__lib_8h">d2cc_lib.h</link>&quot;</emphasis>
+38 
+43 <emphasis role="preprocessor">#define&#32;WIFI_CONNECTED_BIT&#32;BIT0</emphasis>
+44 
+49 <emphasis role="preprocessor">#define&#32;WIFI_FAIL_BIT&#32;&#32;&#32;&#32;&#32;&#32;BIT1</emphasis>
+50 
+55 <emphasis role="preprocessor">#define&#32;TCP_TAG&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;TCP_SERVER&quot;</emphasis>
+56 
+61 <emphasis role="preprocessor">#define&#32;SERVER_PORT&#32;&#32;&#32;&#32;&#32;5166</emphasis>
+62 
+71 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__tcp_server_8h_1a423bc60f42ad6bf912e07cd5320b1948">Handle_Client</link>(<emphasis role="keywordtype">void</emphasis>*&#32;args);
+72 
+81 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__tcp_server_8h_1a71663496e793fd4869a37af2eaeb9dfb">Create_Server</link>(<emphasis role="keywordtype">void</emphasis>*&#32;pvParameter);
+82 
+96 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__tcp_server_8h_1a00e67904809f7a47e29ca050bcabbae2">receive_data</link>(<emphasis role="keywordtype">int</emphasis>&#32;sock,&#32;<emphasis role="keywordtype">char</emphasis>*&#32;buffer,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;size,&#32;uint8_t*&#32;timeout_counter,&#32;uint8_t&#32;max_timeout);
+97 
+103 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__tcp_server_8h_1a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</link>();
+104 
+105 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;INCLUDE_TCPSERVER_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

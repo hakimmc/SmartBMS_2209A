@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_can_8c" kind="file" language="C++">
+    <compoundname>Can.c</compoundname>
+    <includes refid="_can_8h" local="yes">Can.h</includes>
+    <includes refid="d2cc__lib_8h" local="yes">d2cc_lib.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Can.h</label>
+        <link refid="_can_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>d2cc_lib.h</label>
+        <link refid="d2cc__lib_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Can.c</label>
+        <link refid="_can_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>driver/twai.h</label>
+      </node>
+      <node id="10">
+        <label>esp_err.h</label>
+      </node>
+      <node id="11">
+        <label>esp_log.h</label>
+      </node>
+      <node id="6">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="8">
+        <label>freertos/queue.h</label>
+      </node>
+      <node id="9">
+        <label>freertos/semphr.h</label>
+      </node>
+      <node id="7">
+        <label>freertos/task.h</label>
+      </node>
+      <node id="14">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_can_8c_1adabf6670e12fa284be00ec7af178f57d" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>DbcStruct maindbc_struct</definition>
+        <argsstring></argsstring>
+        <name>maindbc_struct</name>
+        <briefdescription>
+<para>Structure to hold CAN message data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="11" column="18" bodyfile="src/main.c" bodystart="16" bodyend="-1" declfile="src/Can.c" declline="11" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="_can_8c_1a5ac86e7553816a53c292e55c741953bb" prot="public" static="no" mutable="no">
+        <type>twai_message_t</type>
+        <definition>twai_message_t Can_Main</definition>
+        <argsstring></argsstring>
+        <name>Can_Main</name>
+        <initializer>= {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <ref refid="_can_8h_1afd4f58c1a509cc8343774f0ca05c9061" kindref="member">Can_Main_ID</ref>, .data_length_code = 8, .data = {0},}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="47" column="16" bodyfile="src/Can.c" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="variable" id="_can_8c_1a130a3010e507b1482a7aeb97e8b3fcc2" prot="public" static="no" mutable="no">
+        <type>twai_message_t</type>
+        <definition>twai_message_t Battery_Messages</definition>
+        <argsstring></argsstring>
+        <name>Battery_Messages</name>
+        <initializer>= {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <ref refid="_can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4" kindref="member">Battery_Messages_ID</ref>, .data_length_code = 8, .data = {0},}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="48" column="16" bodyfile="src/Can.c" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="variable" id="_can_8c_1affc81c163d004c727041b42b732420f3" prot="public" static="no" mutable="no">
+        <type>twai_message_t</type>
+        <definition>twai_message_t Battery_Voltages</definition>
+        <argsstring></argsstring>
+        <name>Battery_Voltages</name>
+        <initializer>= {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <ref refid="_can_8h_1a1e870e11e6fd939606c6fff3b122d4fd" kindref="member">Can_Battery_Voltages_ID</ref>, .data_length_code = 8, .data = {0},}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="49" column="16" bodyfile="src/Can.c" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="variable" id="_can_8c_1aeac6d1745e019aac057f6d092866ff46" prot="public" static="no" mutable="no">
+        <type>twai_message_t</type>
+        <definition>twai_message_t Battery_Temperatures</definition>
+        <argsstring></argsstring>
+        <name>Battery_Temperatures</name>
+        <initializer>= {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <ref refid="_can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e" kindref="member">Can_Battery_Temperatures_ID</ref>, .data_length_code = 8, .data = {0},}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="50" column="16" bodyfile="src/Can.c" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="variable" id="_can_8c_1ad097fc803847532903674508f4286a2f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Data_Of_Can_Main[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>Data_Of_Can_Main</name>
+        <initializer>= {0, 1, 2, 3, 4, 5, 6, 7}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="53" column="9" bodyfile="src/Can.c" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="variable" id="_can_8c_1aa0ee0676a6100daf2b3b1aad623bd07b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Data_Of_Battery_Messages[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>Data_Of_Battery_Messages</name>
+        <initializer>= {8, 9, 10, 11, 12, 13, 14, 15}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="54" column="9" bodyfile="src/Can.c" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="variable" id="_can_8c_1a1f5180759945949348fed4c7a0bb56db" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Data_Of_Battery_Voltages[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>Data_Of_Battery_Voltages</name>
+        <initializer>= {16, 17, 22, 32, 42, 52, 62, 72}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="55" column="9" bodyfile="src/Can.c" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="variable" id="_can_8c_1a6674195f29972ad81603995168dbe0d3" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Data_Of_Battery_Temperatures[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>Data_Of_Battery_Temperatures</name>
+        <initializer>= {35, 13, 23, 33, 43, 53, 63, 73}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="56" column="9" bodyfile="src/Can.c" bodystart="56" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_can_8c_1a8920d0f7ab8095cccb447da8d5fae390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Can_Init</definition>
+        <argsstring>(twai_general_config_t can_gpio_config, twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config)</argsstring>
+        <name>Can_Init</name>
+        <param>
+          <type>twai_general_config_t</type>
+          <declname>can_gpio_config</declname>
+        </param>
+        <param>
+          <type>twai_timing_config_t</type>
+          <declname>can_time_config</declname>
+        </param>
+        <param>
+          <type>twai_filter_config_t</type>
+          <declname>can_filter_config</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the CAN (TWAI) driver with the specified configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the CAN interface.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>can_gpio_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>General configuration for the CAN GPIO pins and mode. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>can_time_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timing configuration for the CAN bus (e.g., bitrate). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>can_filter_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filter configuration for message acceptance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint8_t Returns 1 if the driver is successfully initialized. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="21" column="9" bodyfile="src/Can.c" bodystart="21" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="_can_8c_1a51dc04f4c5f5a544e73c33e2d606193b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Can_Transmit</definition>
+        <argsstring>(twai_message_t message, uint8_t data[])</argsstring>
+        <name>Can_Transmit</name>
+        <param>
+          <type>twai_message_t</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Transmits a CAN message with the specified data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Transmits a CAN message.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CAN message structure to transmit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data array to be sent with the message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint8_t Returns 1 if the transmission is successful. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="37" column="9" bodyfile="src/Can.c" bodystart="37" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="_can_8c_1a99ef09684458d26b79a4185bc0af934b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanReporter</definition>
+        <argsstring>(void *pvParameter)</argsstring>
+        <name>CanReporter</name>
+        <param>
+          <type>void *</type>
+          <declname>pvParameter</declname>
+        </param>
+        <briefdescription>
+<para>Task function to periodically report CAN messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Task to report CAN messages.</para>
+<para>This function initializes the CAN driver and repeatedly transmits preconfigured CAN messages, using data from the <computeroutput><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pvParameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to any parameters passed to the task (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Can.c" line="66" column="6" bodyfile="src/Can.c" bodystart="66" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>CAN driver implementation for the ESP32 using the TWAI driver. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>18 December 2024 </para>
+</simplesect>
+<simplesect kind="author"><para>hakimmc </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_can_8h" kindref="compound">Can.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2cc__lib_8h" kindref="compound">d2cc_lib.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/><ref refid="_can_8c_1adabf6670e12fa284be00ec7af178f57d" kindref="member">maindbc_struct</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">uint8_t<sp/><ref refid="_can_8c_1a8920d0f7ab8095cccb447da8d5fae390" kindref="member">Can_Init</ref>(twai_general_config_t<sp/>can_gpio_config,<sp/>twai_timing_config_t<sp/>can_time_config,<sp/>twai_filter_config_t<sp/>can_filter_config)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(twai_driver_install(&amp;can_gpio_config,<sp/>&amp;can_time_config,<sp/>&amp;can_filter_config));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGI(<ref refid="_can_8h_1a4791c142b857f44449cc8ad8d22ef045" kindref="member">CAN_TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Driver<sp/>installed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(twai_start());</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGI(<ref refid="_can_8h_1a4791c142b857f44449cc8ad8d22ef045" kindref="member">CAN_TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Driver<sp/>started&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">uint8_t<sp/><ref refid="_can_8c_1a51dc04f4c5f5a544e73c33e2d606193b" kindref="member">Can_Transmit</ref>(twai_message_t<sp/>message,<sp/>uint8_t<sp/>data[])</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>message.data_length_code;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message.data[i]<sp/>=<sp/>data[i];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>twai_transmit(&amp;message,<sp/>portMAX_DELAY);<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Predefined<sp/>CAN<sp/>message<sp/>structures</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">twai_message_t<sp/><ref refid="_can_8c_1a5ac86e7553816a53c292e55c741953bb" kindref="member">Can_Main</ref><sp/>=<sp/>{.extd<sp/>=<sp/>0,<sp/>.rtr<sp/>=<sp/>0,<sp/>.ss<sp/>=<sp/>0,<sp/>.self<sp/>=<sp/>0,<sp/>.dlc_non_comp<sp/>=<sp/>0,<sp/>.identifier<sp/>=<sp/><ref refid="_can_8h_1afd4f58c1a509cc8343774f0ca05c9061" kindref="member">Can_Main_ID</ref>,<sp/>.data_length_code<sp/>=<sp/>8,<sp/>.data<sp/>=<sp/>{0},};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">twai_message_t<sp/><ref refid="_can_8c_1a130a3010e507b1482a7aeb97e8b3fcc2" kindref="member">Battery_Messages</ref><sp/>=<sp/>{.extd<sp/>=<sp/>0,<sp/>.rtr<sp/>=<sp/>0,<sp/>.ss<sp/>=<sp/>0,<sp/>.self<sp/>=<sp/>0,<sp/>.dlc_non_comp<sp/>=<sp/>0,<sp/>.identifier<sp/>=<sp/><ref refid="_can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4" kindref="member">Battery_Messages_ID</ref>,<sp/>.data_length_code<sp/>=<sp/>8,<sp/>.data<sp/>=<sp/>{0},};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">twai_message_t<sp/><ref refid="_can_8c_1affc81c163d004c727041b42b732420f3" kindref="member">Battery_Voltages</ref><sp/>=<sp/>{.extd<sp/>=<sp/>0,<sp/>.rtr<sp/>=<sp/>0,<sp/>.ss<sp/>=<sp/>0,<sp/>.self<sp/>=<sp/>0,<sp/>.dlc_non_comp<sp/>=<sp/>0,<sp/>.identifier<sp/>=<sp/><ref refid="_can_8h_1a1e870e11e6fd939606c6fff3b122d4fd" kindref="member">Can_Battery_Voltages_ID</ref>,<sp/>.data_length_code<sp/>=<sp/>8,<sp/>.data<sp/>=<sp/>{0},};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">twai_message_t<sp/><ref refid="_can_8c_1aeac6d1745e019aac057f6d092866ff46" kindref="member">Battery_Temperatures</ref><sp/>=<sp/>{.extd<sp/>=<sp/>0,<sp/>.rtr<sp/>=<sp/>0,<sp/>.ss<sp/>=<sp/>0,<sp/>.self<sp/>=<sp/>0,<sp/>.dlc_non_comp<sp/>=<sp/>0,<sp/>.identifier<sp/>=<sp/><ref refid="_can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e" kindref="member">Can_Battery_Temperatures_ID</ref>,<sp/>.data_length_code<sp/>=<sp/>8,<sp/>.data<sp/>=<sp/>{0},};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Predefined<sp/>data<sp/>arrays<sp/>for<sp/>CAN<sp/>messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">uint8_t<sp/><ref refid="_can_8c_1ad097fc803847532903674508f4286a2f" kindref="member">Data_Of_Can_Main</ref>[8]<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4,<sp/>5,<sp/>6,<sp/>7};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">uint8_t<sp/><ref refid="_can_8c_1aa0ee0676a6100daf2b3b1aad623bd07b" kindref="member">Data_Of_Battery_Messages</ref>[8]<sp/>=<sp/>{8,<sp/>9,<sp/>10,<sp/>11,<sp/>12,<sp/>13,<sp/>14,<sp/>15};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">uint8_t<sp/><ref refid="_can_8c_1a1f5180759945949348fed4c7a0bb56db" kindref="member">Data_Of_Battery_Voltages</ref>[8]<sp/>=<sp/>{16,<sp/>17,<sp/>22,<sp/>32,<sp/>42,<sp/>52,<sp/>62,<sp/>72};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">uint8_t<sp/><ref refid="_can_8c_1a6674195f29972ad81603995168dbe0d3" kindref="member">Data_Of_Battery_Temperatures</ref>[8]<sp/>=<sp/>{35,<sp/>13,<sp/>23,<sp/>33,<sp/>43,<sp/>53,<sp/>63,<sp/>73};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_can_8c_1a99ef09684458d26b79a4185bc0af934b" kindref="member">CanReporter</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pvParameter)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>twai_timing_config_t<sp/>tconf<sp/>=<sp/>TWAI_TIMING_CONFIG_500KBITS();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>twai_filter_config_t<sp/>fconf<sp/>=<sp/>TWAI_FILTER_CONFIG_ACCEPT_ALL();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>twai_general_config_t<sp/>gconf<sp/>=<sp/>TWAI_GENERAL_CONFIG_DEFAULT(5,<sp/>4,<sp/>TWAI_MODE_NORMAL);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/>*struct_of_comm<sp/>=<sp/>&amp;<ref refid="_can_8c_1adabf6670e12fa284be00ec7af178f57d" kindref="member">maindbc_struct</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_can_8c_1a8920d0f7ab8095cccb447da8d5fae390" kindref="member">Can_Init</ref>(gconf,<sp/>tconf,<sp/>fconf);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_can_8c_1a51dc04f4c5f5a544e73c33e2d606193b" kindref="member">Can_Transmit</ref>(<ref refid="_can_8c_1a5ac86e7553816a53c292e55c741953bb" kindref="member">Can_Main</ref>,<sp/>struct_of_comm-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" kindref="member">Data</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_can_8c_1a51dc04f4c5f5a544e73c33e2d606193b" kindref="member">Can_Transmit</ref>(<ref refid="_can_8c_1a130a3010e507b1482a7aeb97e8b3fcc2" kindref="member">Battery_Messages</ref>,<sp/>struct_of_comm-&gt;<ref refid="struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb" kindref="member">Battery_Messages</ref>.<ref refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" kindref="member">Data</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_can_8c_1a51dc04f4c5f5a544e73c33e2d606193b" kindref="member">Can_Transmit</ref>(<ref refid="_can_8c_1affc81c163d004c727041b42b732420f3" kindref="member">Battery_Voltages</ref>,<sp/>struct_of_comm-&gt;<ref refid="struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc" kindref="member">Battery_Voltages</ref>.<ref refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" kindref="member">Data</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_can_8c_1a51dc04f4c5f5a544e73c33e2d606193b" kindref="member">Can_Transmit</ref>(<ref refid="_can_8c_1aeac6d1745e019aac057f6d092866ff46" kindref="member">Battery_Temperatures</ref>,<sp/>struct_of_comm-&gt;<ref refid="struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b" kindref="member">Battery_Temperatures</ref>.<ref refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" kindref="member">Data</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Data<sp/>:<sp/>{&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;[%d]&quot;</highlight><highlight class="normal">,<sp/>struct_of_comm-&gt;<ref refid="struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb" kindref="member">Battery_Messages</ref>.<ref refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" kindref="member">Data</ref>[i]);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(pdMS_TO_TICKS(<ref refid="_can_8h_1ac5d0198b7447cc2c29044ccd56dd9443" kindref="member">CAN_DELAY</ref>));</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Can.c"/>
+  </compounddef>
+</doxygen>

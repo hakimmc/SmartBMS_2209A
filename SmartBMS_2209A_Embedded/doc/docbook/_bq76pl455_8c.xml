@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__bq76pl455_8c" xml:lang="en-US">
+<title>src/Bq76pl455.c File Reference</title>
+<indexterm><primary>src/Bq76pl455.c</primary></indexterm>
+<para>
+
+<para>Implementation file for interfacing with the BQ76PL455A-Q1 battery management IC. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Bq76pl455.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__bq76pl455_8c_1a07142409ffe9cbd3d17bc2fb0ceb4eb1">BQ_Init</link> ()</para>
+
+<para>Initialize the BQ76PL455A-Q1 communication interface. </para>
+</listitem>
+            <listitem><para>void <link linkend="__bq76pl455_8c_1ac1a68691cca07c6263b16eb463fd7e06">BQ_Test</link> ()</para>
+
+<para>Test communication with the BQ76PL455A-Q1 device. </para>
+</listitem>
+            <listitem><para>void <link linkend="__bq76pl455_8c_1afce328763ae545228a5fe77ba53296da">BQ_Start</link> (void *args)</para>
+
+<para>Starts the main task for BQ76PL455A-Q1. </para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="__bq76pl455_8c_1a7f64a91901131f6c570e15d57d6a75b5">CRC16</link> (uint8_t *data, uint8_t data_length)</para>
+
+<para>Calculate the CRC-16 checksum for a given data buffer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__bq76pl455_8c_1a5db7a92f619e063198490508230e18a2">BQ_Uart_Init</link> (uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)</para>
+
+<para>Initialize UART for communication with the BQ76PL455A-Q1. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__bq76pl455_8c_1aa01b4d094c5fc9ed6d46e6a622dbb75e">BQ_Uart_Transmit</link> (uint8_t uart_pin, uint8_t *data, uint8_t data_length)</para>
+
+<para>Transmit data via UART to the BQ76PL455A-Q1. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const uint16_t <link linkend="__bq76pl455_8c_1ad04f1495afe1fac3b3f1a738bb83d8ea">crc16_table_bq</link> [256]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Implementation file for interfacing with the BQ76PL455A-Q1 battery management IC. </para>
+
+<para>Provides functionality to initialize, communicate, and calculate CRC for the BQ76PL455A-Q1 IC.</para>
+
+<para>Created on: 18 Dec 2024 <formalpara><title>Author</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__bq76pl455_8c_1a07142409ffe9cbd3d17bc2fb0ceb4eb1"/><section>
+    <title>BQ_Init()</title>
+<indexterm><primary>BQ_Init</primary><secondary>Bq76pl455.c</secondary></indexterm>
+<indexterm><primary>Bq76pl455.c</primary><secondary>BQ_Init</secondary></indexterm>
+<para><computeroutput>void BQ_Init ( )</computeroutput></para><para>
+
+<para>Initialize the BQ76PL455A-Q1 communication interface. </para>
+</para>
+
+<para>Configures the UART for the BQ76PL455A-Q1. </para>
+</section>
+<anchor xml:id="__bq76pl455_8c_1afce328763ae545228a5fe77ba53296da"/><section>
+    <title>BQ_Start()</title>
+<indexterm><primary>BQ_Start</primary><secondary>Bq76pl455.c</secondary></indexterm>
+<indexterm><primary>Bq76pl455.c</primary><secondary>BQ_Start</secondary></indexterm>
+<para><computeroutput>void BQ_Start (void * args)</computeroutput></para><para>
+
+<para>Starts the main task for BQ76PL455A-Q1. </para>
+</para>
+
+<para>Starts the BQ76PL455A-Q1 task.</para>
+
+<para>Continuously transmits a test message via UART at regular intervals.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>args</entry><entry>
+<para>Task-specific arguments (optional). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__bq76pl455_8c_1ac1a68691cca07c6263b16eb463fd7e06"/><section>
+    <title>BQ_Test()</title>
+<indexterm><primary>BQ_Test</primary><secondary>Bq76pl455.c</secondary></indexterm>
+<indexterm><primary>Bq76pl455.c</primary><secondary>BQ_Test</secondary></indexterm>
+<para><computeroutput>void BQ_Test ( )</computeroutput></para><para>
+
+<para>Test communication with the BQ76PL455A-Q1 device. </para>
+</para>
+
+<para>Tests the communication with the BQ76PL455A-Q1.</para>
+
+<para>Sends a test message to read the device ID. </para>
+</section>
+<anchor xml:id="__bq76pl455_8c_1a5db7a92f619e063198490508230e18a2"/><section>
+    <title>BQ_Uart_Init()</title>
+<indexterm><primary>BQ_Uart_Init</primary><secondary>Bq76pl455.c</secondary></indexterm>
+<indexterm><primary>Bq76pl455.c</primary><secondary>BQ_Uart_Init</secondary></indexterm>
+<para><computeroutput>void BQ_Uart_Init (uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)</computeroutput></para><para>
+
+<para>Initialize UART for communication with the BQ76PL455A-Q1. </para>
+</para>
+
+<para>Initializes the UART interface for the BQ76PL455A-Q1.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uart_pin</entry><entry>
+<para>UART port number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>baudrate</entry><entry>
+<para>Baud rate for UART communication. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>rx_buffsize</entry><entry>
+<para>RX buffer size. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>TXD_PIN</entry><entry>
+<para>GPIO pin for UART TX. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>RXD_PIN</entry><entry>
+<para>GPIO pin for UART RX. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__bq76pl455_8c_1aa01b4d094c5fc9ed6d46e6a622dbb75e"/><section>
+    <title>BQ_Uart_Transmit()</title>
+<indexterm><primary>BQ_Uart_Transmit</primary><secondary>Bq76pl455.c</secondary></indexterm>
+<indexterm><primary>Bq76pl455.c</primary><secondary>BQ_Uart_Transmit</secondary></indexterm>
+<para><computeroutput>uint8_t BQ_Uart_Transmit (uint8_t uart_pin, uint8_t * data, uint8_t data_length)</computeroutput></para><para>
+
+<para>Transmit data via UART to the BQ76PL455A-Q1. </para>
+</para>
+
+<para>Transmits data to the BQ76PL455A-Q1 over UART.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uart_pin</entry><entry>
+<para>UART port number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the data buffer to be transmitted. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data_length</entry><entry>
+<para>Length of the data buffer in bytes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>1 on success, 0 on failure. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__bq76pl455_8c_1a7f64a91901131f6c570e15d57d6a75b5"/><section>
+    <title>CRC16()</title>
+<indexterm><primary>CRC16</primary><secondary>Bq76pl455.c</secondary></indexterm>
+<indexterm><primary>Bq76pl455.c</primary><secondary>CRC16</secondary></indexterm>
+<para><computeroutput>uint8_t * CRC16 (uint8_t * data, uint8_t data_length)</computeroutput></para><para>
+
+<para>Calculate the CRC-16 checksum for a given data buffer. </para>
+</para>
+
+<para>Calculates the CRC-16 for a given data buffer.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the data buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data_length</entry><entry>
+<para>Length of the data buffer in bytes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to a 2-byte array containing the CRC checksum. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__bq76pl455_8c_1ad04f1495afe1fac3b3f1a738bb83d8ea"/><section>
+    <title>crc16_table_bq</title>
+<indexterm><primary>crc16_table_bq</primary><secondary>Bq76pl455.c</secondary></indexterm>
+<indexterm><primary>Bq76pl455.c</primary><secondary>crc16_table_bq</secondary></indexterm>
+<para><computeroutput>const uint16_t crc16_table_bq[256]</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;
+}
+</programlisting></section>
+</section>
+</section>

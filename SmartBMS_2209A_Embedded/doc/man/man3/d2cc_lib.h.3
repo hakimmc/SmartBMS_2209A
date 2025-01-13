@@ -1,0 +1,139 @@
+.TH "include/d2cc_lib.h" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/d2cc_lib.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdint\&.h>\fP
+.br
+\fR#include <stdbool\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBDbcStruct\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBBatteryChemistry_enum\fP { \fBBatteryChemistry_LFP\fP, \fBBatteryChemistry_NMC\fP }"
+.br
+.ti -1c
+.RI "enum \fBCanBusEnable_enum\fP { \fBCanBusEnable_Enable\fP, \fBCanBusEnable_Disable\fP }"
+.br
+.ti -1c
+.RI "enum \fBWiFiEnable_enum\fP { \fBWiFiEnable_Enable\fP, \fBWiFiEnable_Disable\fP }"
+.br
+.ti -1c
+.RI "enum \fBTcpEnable_enum\fP { \fBTcpEnable_Offline\fP, \fBTcpEnable_Online\fP, \fBTcpEnable_Connected\fP }"
+.br
+.ti -1c
+.RI "enum \fBVpnEnable_enum\fP { \fBVpnEnable_Enable\fP, \fBVpnEnable_Disable\fP }"
+.br
+.ti -1c
+.RI "enum \fBWiFi_AP_Status_enum\fP { \fBWiFi_AP_Status_Enable\fP, \fBWiFi_AP_Status_Disable\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBD2cc_Lib_Init\fP (\fBDbcStruct\fP *st)"
+.br
+.ti -1c
+.RI "void \fBReadParse\fP (uint8_t *rx_data, uint32_t id, \fBDbcStruct\fP *st)"
+.br
+.ti -1c
+.RI "void \fBCreateTable_Battery_Messages\fP (\fBDbcStruct\fP *dbc)"
+.br
+.ti -1c
+.RI "void \fBCreateTable_Battery_Temperatures\fP (\fBDbcStruct\fP *dbc)"
+.br
+.ti -1c
+.RI "void \fBCreateTable_Battery_Voltages\fP (\fBDbcStruct\fP *dbc)"
+.br
+.ti -1c
+.RI "void \fBCreateTable_Can_Main\fP (\fBDbcStruct\fP *dbc)"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBBatteryChemistry_enum\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIBatteryChemistry_LFP \fP
+.TP
+\f(BIBatteryChemistry_NMC \fP
+.SS "enum \fBCanBusEnable_enum\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BICanBusEnable_Enable \fP
+.TP
+\f(BICanBusEnable_Disable \fP
+.SS "enum \fBTcpEnable_enum\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BITcpEnable_Offline \fP
+.TP
+\f(BITcpEnable_Online \fP
+.TP
+\f(BITcpEnable_Connected \fP
+.SS "enum \fBVpnEnable_enum\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIVpnEnable_Enable \fP
+.TP
+\f(BIVpnEnable_Disable \fP
+.SS "enum \fBWiFi_AP_Status_enum\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIWiFi_AP_Status_Enable \fP
+.TP
+\f(BIWiFi_AP_Status_Disable \fP
+.SS "enum \fBWiFiEnable_enum\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIWiFiEnable_Enable \fP
+.TP
+\f(BIWiFiEnable_Disable \fP
+.SH "Function Documentation"
+.PP 
+.SS "void CreateTable_Battery_Messages (\fBDbcStruct\fP * dbc)"
+
+.SS "void CreateTable_Battery_Temperatures (\fBDbcStruct\fP * dbc)"
+
+.SS "void CreateTable_Battery_Voltages (\fBDbcStruct\fP * dbc)"
+
+.SS "void CreateTable_Can_Main (\fBDbcStruct\fP * dbc)"
+
+.SS "void D2cc_Lib_Init (\fBDbcStruct\fP * st)"
+
+.SS "void ReadParse (uint8_t * rx_data, uint32_t id, \fBDbcStruct\fP * st)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

@@ -1,0 +1,120 @@
+.TH "src/LedTaskInit.c" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/LedTaskInit.c \- Implementation of LED blinking task using ESP32 GPIO\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'LedTaskInit\&.h'\fP
+.br
+\fR#include 'driver/gpio\&.h'\fP
+.br
+\fR#include 'freertos/FreeRTOS\&.h'\fP
+.br
+\fR#include 'freertos/task\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLED_PIN\fP   13"
+.br
+.RI "GPIO pin used for the LED\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgpio_init\fP (uint8_t gpio_pin)"
+.br
+.RI "Initializes the specified GPIO pin as an output\&. "
+.ti -1c
+.RI "void \fBled_init\fP (void *pvParameter)"
+.br
+.RI "LED blinking task\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of LED blinking task using ESP32 GPIO\&. 
+
+
+.PP
+\fBDate\fP
+.RS 4
+18 December 2024 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+hakimmc 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LED_PIN   13"
+
+.PP
+GPIO pin used for the LED\&. 
+.SH "Function Documentation"
+.PP 
+.SS "void gpio_init (uint8_t gpio_pin)"
+
+.PP
+Initializes the specified GPIO pin as an output\&. Initializes a GPIO pin for LED control\&.
+
+.PP
+This function configures the given GPIO pin for output mode with no pull-up or pull-down resistors\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIgpio_pin\fP The GPIO pin number to initialize\&. 
+.RE
+.PP
+< No interrupt triggered\&.
+
+.PP
+< Set GPIO mode to output\&.
+
+.PP
+< Pin mask for the specified GPIO pin\&.
+
+.PP
+< Disable pull-down resistor\&.
+
+.PP
+< Disable pull-up resistor\&.
+.SS "void led_init (void * pvParameter)"
+
+.PP
+LED blinking task\&. Task to initialize and control LED behavior\&.
+
+.PP
+This task initializes the LED GPIO pin and continuously toggles the LED state with a 500 ms delay\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIpvParameter\fP A pointer to task-specific parameters (unused)\&. 
+.RE
+.PP
+< Initialize the LED GPIO pin\&.
+
+.PP
+< Turn the LED on\&.
+
+.PP
+< Delay for 500 ms\&.
+
+.PP
+< Turn the LED off\&.
+
+.PP
+< Delay for 500 ms\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

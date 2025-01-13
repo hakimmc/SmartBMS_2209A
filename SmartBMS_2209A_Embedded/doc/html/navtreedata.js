@@ -25,6 +25,13 @@
 var NAVTREE =
 [
   [ "SmartBMS_2209A", "index.html", [
+    [ "SmartBMS_2209A Documentation", "md__doxygen___markdown.html", [
+      [ "Main Page", "md__doxygen___markdown.html#autotoc_md1", [
+        [ "Navigation", "md__doxygen___markdown.html#autotoc_md3", null ],
+        [ "Search", "md__doxygen___markdown.html#autotoc_md5", null ],
+        [ "Footer", "md__doxygen___markdown.html#autotoc_md7", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="struct_dbc_struct" kind="struct"><name>DbcStruct</name>
+    <member refid="struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af" kind="variable"><name>ID</name></member>
+    <member refid="struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f" kind="variable"><name>DLC</name></member>
+    <member refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kind="variable"><name>Signal</name></member>
+    <member refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" kind="variable"><name>Data</name></member>
+    <member refid="struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb" kind="variable"><name>Battery_Messages</name></member>
+    <member refid="struct_dbc_struct_1ac02fab03e10a73ab3026bc900ec0c807" kind="variable"><name>Signal</name></member>
+    <member refid="struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b" kind="variable"><name>Battery_Temperatures</name></member>
+    <member refid="struct_dbc_struct_1ab957d591284e13f130a259219c65197b" kind="variable"><name>Signal</name></member>
+    <member refid="struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc" kind="variable"><name>Battery_Voltages</name></member>
+    <member refid="struct_dbc_struct_1aafdcafa59c0375ecd8b2bf9e3a53ab53" kind="variable"><name>AliveCounter</name></member>
+    <member refid="struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8" kind="variable"><name>BatteryChemistry</name></member>
+    <member refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" kind="variable"><name>BatteryBalance_MaxVoltage</name></member>
+    <member refid="struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab" kind="variable"><name>BatteryBalance_MinVoltage</name></member>
+    <member refid="struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be" kind="variable"><name>BatteryBalance_MaxTemp</name></member>
+    <member refid="struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d" kind="variable"><name>BatteryBalance_MinTemp</name></member>
+    <member refid="struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a" kind="variable"><name>SwVersionMajor</name></member>
+    <member refid="struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21" kind="variable"><name>SwVersionMinor</name></member>
+    <member refid="struct_dbc_struct_1ab712e03d069028bd782d5a3bf63fbbcd" kind="variable"><name>SwVersionBugfix</name></member>
+    <member refid="struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad" kind="variable"><name>CanBusEnable</name></member>
+    <member refid="struct_dbc_struct_1a1ca872211a78ead331d094d0b45c0499" kind="variable"><name>WiFiEnable</name></member>
+    <member refid="struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a" kind="variable"><name>TcpEnable</name></member>
+    <member refid="struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54" kind="variable"><name>VpnEnable</name></member>
+    <member refid="struct_dbc_struct_1a9e27bd50ce2d239ca6f1d5f7cb023de7" kind="variable"><name>WiFi_AP_Status</name></member>
+    <member refid="struct_dbc_struct_1a9040957d9669218f0117644dcbc7f1c2" kind="variable"><name>TcpClientCount</name></member>
+    <member refid="struct_dbc_struct_1a6893b0165e1bcc78faf0c175d45b0689" kind="variable"><name>Signal</name></member>
+    <member refid="struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b" kind="variable"><name>factor</name></member>
+    <member refid="struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7" kind="variable"><name>offset</name></member>
+    <member refid="struct_dbc_struct_1aacb347996a1291b562b366fa764aa041" kind="variable"><name>value</name></member>
+    <member refid="struct_dbc_struct_1a39ef3d0f181193d908a3d957569f53e9" kind="variable"><name>Phys_Value</name></member>
+    <member refid="struct_dbc_struct_1ab926cf2e04c76fe31d1b0ddbded7666f" kind="variable"><name>BatteryBalance_MaxVoltage</name></member>
+    <member refid="struct_dbc_struct_1ac4b14f88a9116417c5247ea986ba72ab" kind="variable"><name>Phys_Value</name></member>
+    <member refid="struct_dbc_struct_1ac90174b4db5494409edf52628b1c9301" kind="variable"><name>BatteryBalance_MinVoltage</name></member>
+    <member refid="struct_dbc_struct_1ae49571f5b09c005a992e49b14d2649b6" kind="variable"><name>Phys_Value</name></member>
+    <member refid="struct_dbc_struct_1a1596535fa5514019cf0cf3aef02d817f" kind="variable"><name>BatteryBalance_MinTemp</name></member>
+    <member refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kind="variable"><name>Can_Main</name></member>
+  </compound>
+  <compound refid="_doxygen___markdown_8md" kind="file"><name>Doxygen_Markdown.md</name>
+  </compound>
+  <compound refid="_bq76pl455_8h" kind="file"><name>Bq76pl455.h</name>
+    <member refid="_bq76pl455_8h_1affe9f6ad00bd064e9ed9a77cae998f77" kind="define"><name>BQ_UART_PORT</name></member>
+    <member refid="_bq76pl455_8h_1a9491feb889b0266826e8907cad0d42f2" kind="define"><name>BQ_TX</name></member>
+    <member refid="_bq76pl455_8h_1a1cc27c7b563113b7136d2ea7ff0fa7f5" kind="define"><name>BQ_RX</name></member>
+    <member refid="_bq76pl455_8h_1ab1f7f8492c3cca0837700429807074e3" kind="function"><name>Bq_Init</name></member>
+    <member refid="_bq76pl455_8h_1ac1a68691cca07c6263b16eb463fd7e06" kind="function"><name>BQ_Test</name></member>
+    <member refid="_bq76pl455_8h_1a7f64a91901131f6c570e15d57d6a75b5" kind="function"><name>CRC16</name></member>
+    <member refid="_bq76pl455_8h_1afce328763ae545228a5fe77ba53296da" kind="function"><name>BQ_Start</name></member>
+    <member refid="_bq76pl455_8h_1a5db7a92f619e063198490508230e18a2" kind="function"><name>BQ_Uart_Init</name></member>
+    <member refid="_bq76pl455_8h_1aa01b4d094c5fc9ed6d46e6a622dbb75e" kind="function"><name>BQ_Uart_Transmit</name></member>
+  </compound>
+  <compound refid="_can_8h" kind="file"><name>Can.h</name>
+    <member refid="_can_8h_1aa0e0a9f9b6b180a338070cd1da9f6960" kind="define"><name>TX_GPIO_NUM</name></member>
+    <member refid="_can_8h_1a105aacd025d247748462e6cce43eb816" kind="define"><name>RX_GPIO_NUM</name></member>
+    <member refid="_can_8h_1a4791c142b857f44449cc8ad8d22ef045" kind="define"><name>CAN_TAG</name></member>
+    <member refid="_can_8h_1afd4f58c1a509cc8343774f0ca05c9061" kind="define"><name>Can_Main_ID</name></member>
+    <member refid="_can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4" kind="define"><name>Battery_Messages_ID</name></member>
+    <member refid="_can_8h_1a1e870e11e6fd939606c6fff3b122d4fd" kind="define"><name>Can_Battery_Voltages_ID</name></member>
+    <member refid="_can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e" kind="define"><name>Can_Battery_Temperatures_ID</name></member>
+    <member refid="_can_8h_1ac5d0198b7447cc2c29044ccd56dd9443" kind="define"><name>CAN_DELAY</name></member>
+    <member refid="_can_8h_1a8920d0f7ab8095cccb447da8d5fae390" kind="function"><name>Can_Init</name></member>
+    <member refid="_can_8h_1a51dc04f4c5f5a544e73c33e2d606193b" kind="function"><name>Can_Transmit</name></member>
+    <member refid="_can_8h_1a99ef09684458d26b79a4185bc0af934b" kind="function"><name>CanReporter</name></member>
+  </compound>
+  <compound refid="d2cc__lib_8h" kind="file"><name>d2cc_lib.h</name>
+    <member refid="d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57" kind="enum"><name>BatteryChemistry_enum</name></member>
+    <member refid="d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a" kind="enumvalue"><name>BatteryChemistry_LFP</name></member>
+    <member refid="d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1" kind="enumvalue"><name>BatteryChemistry_NMC</name></member>
+    <member refid="d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4" kind="enum"><name>CanBusEnable_enum</name></member>
+    <member refid="d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5" kind="enumvalue"><name>CanBusEnable_Enable</name></member>
+    <member refid="d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3" kind="enumvalue"><name>CanBusEnable_Disable</name></member>
+    <member refid="d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c" kind="enum"><name>WiFiEnable_enum</name></member>
+    <member refid="d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e" kind="enumvalue"><name>WiFiEnable_Enable</name></member>
+    <member refid="d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e" kind="enumvalue"><name>WiFiEnable_Disable</name></member>
+    <member refid="d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e" kind="enum"><name>TcpEnable_enum</name></member>
+    <member refid="d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d" kind="enumvalue"><name>TcpEnable_Offline</name></member>
+    <member refid="d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a" kind="enumvalue"><name>TcpEnable_Online</name></member>
+    <member refid="d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475" kind="enumvalue"><name>TcpEnable_Connected</name></member>
+    <member refid="d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4" kind="enum"><name>VpnEnable_enum</name></member>
+    <member refid="d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7" kind="enumvalue"><name>VpnEnable_Enable</name></member>
+    <member refid="d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b" kind="enumvalue"><name>VpnEnable_Disable</name></member>
+    <member refid="d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8" kind="enum"><name>WiFi_AP_Status_enum</name></member>
+    <member refid="d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3" kind="enumvalue"><name>WiFi_AP_Status_Enable</name></member>
+    <member refid="d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d" kind="enumvalue"><name>WiFi_AP_Status_Disable</name></member>
+    <member refid="d2cc__lib_8h_1add5678661f9e8fc392ab35a8369f8487" kind="function"><name>D2cc_Lib_Init</name></member>
+    <member refid="d2cc__lib_8h_1a1fc4968809341ee415d413feb9db80cb" kind="function"><name>ReadParse</name></member>
+    <member refid="d2cc__lib_8h_1a1a53ba345e601b7539ad8b1d3a60becf" kind="function"><name>CreateTable_Battery_Messages</name></member>
+    <member refid="d2cc__lib_8h_1acce29ea481884412fe82fde8cf8a3c73" kind="function"><name>CreateTable_Battery_Temperatures</name></member>
+    <member refid="d2cc__lib_8h_1a3f4346eef40e3f6e0856a015bed8da2d" kind="function"><name>CreateTable_Battery_Voltages</name></member>
+    <member refid="d2cc__lib_8h_1a3a8f6f06284c77bd13fc93c18115fd53" kind="function"><name>CreateTable_Can_Main</name></member>
+  </compound>
+  <compound refid="_led_task_init_8h" kind="file"><name>LedTaskInit.h</name>
+    <member refid="_led_task_init_8h_1ac3698c9d80d8a1abde24708cc9fdb1ee" kind="function"><name>gpio_init</name></member>
+    <member refid="_led_task_init_8h_1a1f53ce317fca339ddc6588adb1a457e4" kind="function"><name>led_init</name></member>
+  </compound>
+  <compound refid="_tcp_server_8h" kind="file"><name>TcpServer.h</name>
+    <member refid="_tcp_server_8h_1ad552e7688532cbbecd3967538ced06ac" kind="define"><name>WIFI_CONNECTED_BIT</name></member>
+    <member refid="_tcp_server_8h_1a7d013b55e50dfbda0904f5f933b63ec4" kind="define"><name>WIFI_FAIL_BIT</name></member>
+    <member refid="_tcp_server_8h_1aef135ff19068a2ab235f21f2c833969b" kind="define"><name>TCP_TAG</name></member>
+    <member refid="_tcp_server_8h_1ac42367fe5c999ec6650de83e9d72fe8c" kind="define"><name>SERVER_PORT</name></member>
+    <member refid="_tcp_server_8h_1a423bc60f42ad6bf912e07cd5320b1948" kind="function"><name>Handle_Client</name></member>
+    <member refid="_tcp_server_8h_1a71663496e793fd4869a37af2eaeb9dfb" kind="function"><name>Create_Server</name></member>
+    <member refid="_tcp_server_8h_1a00e67904809f7a47e29ca050bcabbae2" kind="function"><name>receive_data</name></member>
+    <member refid="_tcp_server_8h_1a13ddbecdfd3a974bad6c7ff356cb4674" kind="function"><name>Tcp_Init</name></member>
+  </compound>
+  <compound refid="_uart_8h" kind="file"><name>Uart.h</name>
+    <member refid="_uart_8h_1a268262b77851c1bf5292361233c6515f" kind="function"><name>Uart_Init</name></member>
+    <member refid="_uart_8h_1a8856e4c8f6952db371ac9bf478c7c000" kind="function"><name>Uart_Transmit</name></member>
+    <member refid="_uart_8h_1a65bb7c489c4800aeb9f32917436cce36" kind="function"><name>Uart_Receive</name></member>
+    <member refid="_uart_8h_1a086601e2a6bb2527f8c1f02e0b828576" kind="function"><name>IsTimeout</name></member>
+  </compound>
+  <compound refid="_wifi_8h" kind="file"><name>Wifi.h</name>
+    <member refid="_wifi_8h_1ad552e7688532cbbecd3967538ced06ac" kind="define"><name>WIFI_CONNECTED_BIT</name></member>
+    <member refid="_wifi_8h_1a7d013b55e50dfbda0904f5f933b63ec4" kind="define"><name>WIFI_FAIL_BIT</name></member>
+    <member refid="_wifi_8h_1a6c8693be8221ff82e61fb5b44ce18bfd" kind="define"><name>WIFI_CONNECT</name></member>
+    <member refid="_wifi_8h_1a56ee34255f5306176ee8fea2137397d4" kind="define"><name>AP_SSID</name></member>
+    <member refid="_wifi_8h_1a85d4dac148bc7ac5dc9a716085308335" kind="define"><name>AP_PASS</name></member>
+    <member refid="_wifi_8h_1a428d6fc23e06208d09595c62b0a98aa9" kind="define"><name>MAX_STA_CONN</name></member>
+    <member refid="_wifi_8h_1a01c3892c16d6330e486637967ab0289b" kind="define"><name>MAX_RETRY</name></member>
+    <member refid="_wifi_8h_1a586542b79d00e4db7e1d5a667ae83a2b" kind="define"><name>WIFI_SSID</name></member>
+    <member refid="_wifi_8h_1a3c95561b03d0fcf9048b231ae2ba90fb" kind="define"><name>WIFI_PASS</name></member>
+    <member refid="_wifi_8h_1a4735ad9aef99f8584afd945f39260954" kind="define"><name>WIFI_TIMEOUT_MS</name></member>
+    <member refid="_wifi_8h_1a1462b09d5f5a986ad70c72cfe1ec2b05" kind="define"><name>ESP32_AP_CHANNEL</name></member>
+    <member refid="_wifi_8h_1a13f8ef7b9aee1f387999258af50f1543" kind="define"><name>ESP32_MAX_CONN</name></member>
+    <member refid="_wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c" kind="function"><name>event_handler</name></member>
+    <member refid="_wifi_8h_1a13bb3ba68519d8aa7c2a72cf22dc2b21" kind="function"><name>wifi_init_ap_sta</name></member>
+  </compound>
+  <compound refid="_bq76pl455_8c" kind="file"><name>Bq76pl455.c</name>
+    <member refid="_bq76pl455_8c_1ad04f1495afe1fac3b3f1a738bb83d8ea" kind="variable"><name>crc16_table_bq</name></member>
+    <member refid="_bq76pl455_8c_1a07142409ffe9cbd3d17bc2fb0ceb4eb1" kind="function"><name>BQ_Init</name></member>
+    <member refid="_bq76pl455_8c_1ac1a68691cca07c6263b16eb463fd7e06" kind="function"><name>BQ_Test</name></member>
+    <member refid="_bq76pl455_8c_1afce328763ae545228a5fe77ba53296da" kind="function"><name>BQ_Start</name></member>
+    <member refid="_bq76pl455_8c_1a7f64a91901131f6c570e15d57d6a75b5" kind="function"><name>CRC16</name></member>
+    <member refid="_bq76pl455_8c_1a5db7a92f619e063198490508230e18a2" kind="function"><name>BQ_Uart_Init</name></member>
+    <member refid="_bq76pl455_8c_1aa01b4d094c5fc9ed6d46e6a622dbb75e" kind="function"><name>BQ_Uart_Transmit</name></member>
+  </compound>
+  <compound refid="_can_8c" kind="file"><name>Can.c</name>
+    <member refid="_can_8c_1adabf6670e12fa284be00ec7af178f57d" kind="variable"><name>maindbc_struct</name></member>
+    <member refid="_can_8c_1a5ac86e7553816a53c292e55c741953bb" kind="variable"><name>Can_Main</name></member>
+    <member refid="_can_8c_1a130a3010e507b1482a7aeb97e8b3fcc2" kind="variable"><name>Battery_Messages</name></member>
+    <member refid="_can_8c_1affc81c163d004c727041b42b732420f3" kind="variable"><name>Battery_Voltages</name></member>
+    <member refid="_can_8c_1aeac6d1745e019aac057f6d092866ff46" kind="variable"><name>Battery_Temperatures</name></member>
+    <member refid="_can_8c_1ad097fc803847532903674508f4286a2f" kind="variable"><name>Data_Of_Can_Main</name></member>
+    <member refid="_can_8c_1aa0ee0676a6100daf2b3b1aad623bd07b" kind="variable"><name>Data_Of_Battery_Messages</name></member>
+    <member refid="_can_8c_1a1f5180759945949348fed4c7a0bb56db" kind="variable"><name>Data_Of_Battery_Voltages</name></member>
+    <member refid="_can_8c_1a6674195f29972ad81603995168dbe0d3" kind="variable"><name>Data_Of_Battery_Temperatures</name></member>
+    <member refid="_can_8c_1a8920d0f7ab8095cccb447da8d5fae390" kind="function"><name>Can_Init</name></member>
+    <member refid="_can_8c_1a51dc04f4c5f5a544e73c33e2d606193b" kind="function"><name>Can_Transmit</name></member>
+    <member refid="_can_8c_1a99ef09684458d26b79a4185bc0af934b" kind="function"><name>CanReporter</name></member>
+  </compound>
+  <compound refid="d2cc__lib_8c" kind="file"><name>d2cc_lib.c</name>
+    <member refid="d2cc__lib_8c_1ae78f43f4aca692c377c75bc182baee88" kind="function"><name>D2cc_Lib_Init</name></member>
+    <member refid="d2cc__lib_8c_1ae5597b44f3f49cc3c016533bfa7a9374" kind="function"><name>ReadParse</name></member>
+    <member refid="d2cc__lib_8c_1a1a53ba345e601b7539ad8b1d3a60becf" kind="function"><name>CreateTable_Battery_Messages</name></member>
+    <member refid="d2cc__lib_8c_1acce29ea481884412fe82fde8cf8a3c73" kind="function"><name>CreateTable_Battery_Temperatures</name></member>
+    <member refid="d2cc__lib_8c_1a3f4346eef40e3f6e0856a015bed8da2d" kind="function"><name>CreateTable_Battery_Voltages</name></member>
+    <member refid="d2cc__lib_8c_1a3a8f6f06284c77bd13fc93c18115fd53" kind="function"><name>CreateTable_Can_Main</name></member>
+  </compound>
+  <compound refid="_led_task_init_8c" kind="file"><name>LedTaskInit.c</name>
+    <member refid="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" kind="define"><name>LED_PIN</name></member>
+    <member refid="_led_task_init_8c_1ac3698c9d80d8a1abde24708cc9fdb1ee" kind="function"><name>gpio_init</name></member>
+    <member refid="_led_task_init_8c_1a1f53ce317fca339ddc6588adb1a457e4" kind="function"><name>led_init</name></member>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1adabf6670e12fa284be00ec7af178f57d" kind="variable"><name>maindbc_struct</name></member>
+    <member refid="main_8c_1abce06be17fc37d675118a678a8100a36" kind="function"><name>app_main</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_tcp_server_8c" kind="file"><name>TcpServer.c</name>
+    <member refid="_tcp_server_8c_1ac42367fe5c999ec6650de83e9d72fe8c" kind="define"><name>SERVER_PORT</name></member>
+    <member refid="_tcp_server_8c_1aef135ff19068a2ab235f21f2c833969b" kind="define"><name>TCP_TAG</name></member>
+    <member refid="_tcp_server_8c_1a19bd4a5dc2066779c571dc423ee2e5fc" kind="variable"><name>GUI_USER</name></member>
+    <member refid="_tcp_server_8c_1a35d706daa4dcd113099247f519235595" kind="variable"><name>GUI_PASS</name></member>
+    <member refid="_tcp_server_8c_1a71663496e793fd4869a37af2eaeb9dfb" kind="function"><name>Create_Server</name></member>
+    <member refid="_tcp_server_8c_1a423bc60f42ad6bf912e07cd5320b1948" kind="function"><name>Handle_Client</name></member>
+    <member refid="_tcp_server_8c_1a00e67904809f7a47e29ca050bcabbae2" kind="function"><name>receive_data</name></member>
+    <member refid="_tcp_server_8c_1a13ddbecdfd3a974bad6c7ff356cb4674" kind="function"><name>Tcp_Init</name></member>
+  </compound>
+  <compound refid="_uart_8c" kind="file"><name>Uart.c</name>
+    <member refid="_uart_8c_1a268262b77851c1bf5292361233c6515f" kind="function"><name>Uart_Init</name></member>
+    <member refid="_uart_8c_1a8856e4c8f6952db371ac9bf478c7c000" kind="function"><name>Uart_Transmit</name></member>
+    <member refid="_uart_8c_1a65bb7c489c4800aeb9f32917436cce36" kind="function"><name>Uart_Receive</name></member>
+    <member refid="_uart_8c_1a086601e2a6bb2527f8c1f02e0b828576" kind="function"><name>IsTimeout</name></member>
+  </compound>
+  <compound refid="_wifi_8c" kind="file"><name>Wifi.c</name>
+    <member refid="_wifi_8c_1ab89f8a7d7357e4fb0e466836024c7f9c" kind="function"><name>event_handler</name></member>
+    <member refid="_wifi_8c_1a13bb3ba68519d8aa7c2a72cf22dc2b21" kind="function"><name>wifi_init_ap_sta</name></member>
+  </compound>
+  <compound refid="md__doxygen___markdown" kind="page"><name>md__doxygen___markdown</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

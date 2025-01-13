@@ -9,9 +9,7 @@
 
 ### Navigation
 
-- [Home](doc/index.html)
-- [Search](search/)
-- [Documentation](doxygen_crawl.html)
+- [Home](doc/html/index.html)
 
 ---
 

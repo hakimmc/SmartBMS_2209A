@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__wifi_8h_source" xml:lang="en-US">
+<title>Wifi.h</title>
+<indexterm><primary>include/Wifi.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+12 
+13 <emphasis role="preprocessor">#ifndef&#32;WIFI_AP_STA_H</emphasis>
+14 <emphasis role="preprocessor">#define&#32;WIFI_AP_STA_H</emphasis>
+15 
+16 <emphasis role="preprocessor">#include&#32;&quot;freertos/FreeRTOS.h&quot;</emphasis>
+17 <emphasis role="preprocessor">#include&#32;&quot;freertos/event_groups.h&quot;</emphasis>
+18 <emphasis role="preprocessor">#include&#32;&quot;esp_wifi.h&quot;</emphasis>
+19 <emphasis role="preprocessor">#include&#32;&quot;freertos/task.h&quot;</emphasis>
+20 <emphasis role="preprocessor">#include&#32;&quot;esp_event.h&quot;</emphasis>
+21 <emphasis role="preprocessor">#include&#32;&quot;esp_log.h&quot;</emphasis>
+22 <emphasis role="preprocessor">#include&#32;&quot;nvs_flash.h&quot;</emphasis>
+23 <emphasis role="preprocessor">#include&#32;&quot;esp_netif.h&quot;</emphasis>
+24 <emphasis role="preprocessor">#include&#32;&quot;string.h&quot;</emphasis>
+25 <emphasis role="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+26 <emphasis role="preprocessor">#include&#32;&lt;inttypes.h&gt;</emphasis>
+27 <emphasis role="preprocessor">#include&#32;&lt;time.h&gt;</emphasis>
+28 <emphasis role="preprocessor">#include&#32;&lt;sys/time.h&gt;</emphasis>
+29 <emphasis role="preprocessor">#include&#32;&lt;esp_system.h&gt;</emphasis>
+30 <emphasis role="preprocessor">#include&#32;&lt;lwip/netdb.h&gt;</emphasis>
+31 <emphasis role="preprocessor">#include&#32;&lt;ping/ping_sock.h&gt;</emphasis>
+32 
+37 <emphasis role="preprocessor">#define&#32;WIFI_CONNECTED_BIT&#32;BIT0</emphasis>
+38 
+43 <emphasis role="preprocessor">#define&#32;WIFI_FAIL_BIT&#32;&#32;&#32;&#32;&#32;&#32;BIT1</emphasis>
+44 
+49 <emphasis role="preprocessor">#define&#32;WIFI_CONNECT</emphasis>
+50 
+55 <emphasis role="preprocessor">#define&#32;AP_SSID&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;Ottomotive_BMS&quot;</emphasis>
+56 
+61 <emphasis role="preprocessor">#define&#32;AP_PASS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;Ottomotive22*&quot;</emphasis>
+62 
+67 <emphasis role="preprocessor">#define&#32;MAX_STA_CONN&#32;&#32;&#32;5</emphasis>
+68 
+73 <emphasis role="preprocessor">#define&#32;MAX_RETRY&#32;&#32;&#32;&#32;&#32;&#32;5</emphasis>
+74 
+75 <emphasis role="preprocessor">#ifdef&#32;WIFI_CONNECT</emphasis><emphasis role="preprocessor"></emphasis>
+80 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#define&#32;WIFI_SSID&#32;&#32;&#32;&quot;Poyrazwifi_Calgin&quot;</emphasis>
+81 
+86 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#define&#32;WIFI_PASS&#32;&#32;&#32;&quot;Ah487602&quot;</emphasis>
+87 
+92 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#define&#32;WIFI_TIMEOUT_MS&#32;10000</emphasis>
+93 
+98 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#define&#32;ESP32_AP_CHANNEL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+99 
+104 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#define&#32;ESP32_MAX_CONN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3</emphasis>
+105 <emphasis role="preprocessor">#endif</emphasis>
+106 
+118 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c">event_handler</link>(<emphasis role="keywordtype">void</emphasis>&#32;*arg,&#32;esp_event_base_t&#32;event_base,&#32;int32_t&#32;event_id,&#32;<emphasis role="keywordtype">void</emphasis>&#32;*event_data);
+119 
+126 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__wifi_8h_1a13bb3ba68519d8aa7c2a72cf22dc2b21">wifi_init_ap_sta</link>(<emphasis role="keywordtype">void</emphasis>);
+127 
+128 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;WIFI_AP_STA_H</emphasis>
+</programlisting></section>

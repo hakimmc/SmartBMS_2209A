@@ -1,0 +1,306 @@
+.TH "DbcStruct" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DbcStruct
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <d2cc_lib\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBID\fP"
+.br
+.ti -1c
+.RI "   uint8_t \fBDLC\fP"
+.br
+.ti -1c
+.RI "   union {"
+.br
+.ti -1c
+.RI "      struct {"
+.br
+.ti -1c
+.RI "      } \fBSignal\fP"
+.br
+.ti -1c
+.RI "      uint8_t \fBData\fP [8]"
+.br
+.ti -1c
+.RI "   } "
+.br
+.ti -1c
+.RI "} \fBBattery_Messages\fP"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBID\fP"
+.br
+.ti -1c
+.RI "   uint8_t \fBDLC\fP"
+.br
+.ti -1c
+.RI "   union {"
+.br
+.ti -1c
+.RI "      struct {"
+.br
+.ti -1c
+.RI "      } \fBSignal\fP"
+.br
+.ti -1c
+.RI "      uint8_t \fBData\fP [8]"
+.br
+.ti -1c
+.RI "   } "
+.br
+.ti -1c
+.RI "} \fBBattery_Temperatures\fP"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBID\fP"
+.br
+.ti -1c
+.RI "   uint8_t \fBDLC\fP"
+.br
+.ti -1c
+.RI "   union {"
+.br
+.ti -1c
+.RI "      struct {"
+.br
+.ti -1c
+.RI "      } \fBSignal\fP"
+.br
+.ti -1c
+.RI "      uint8_t \fBData\fP [8]"
+.br
+.ti -1c
+.RI "   } "
+.br
+.ti -1c
+.RI "} \fBBattery_Voltages\fP"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBID\fP"
+.br
+.ti -1c
+.RI "   uint8_t \fBDLC\fP"
+.br
+.ti -1c
+.RI "   union {"
+.br
+.ti -1c
+.RI "      struct {"
+.br
+.ti -1c
+.RI "         uint8_t \fBAliveCounter\fP:7"
+.br
+.ti -1c
+.RI "         \fBBatteryChemistry_enum\fP \fBBatteryChemistry\fP:1"
+.br
+.ti -1c
+.RI "         uint8_t \fBBatteryBalance_MaxVoltage\fP:8"
+.br
+.ti -1c
+.RI "         uint8_t \fBBatteryBalance_MinVoltage\fP:8"
+.br
+.ti -1c
+.RI "         uint8_t \fBBatteryBalance_MaxTemp\fP:8"
+.br
+.ti -1c
+.RI "         uint8_t \fBBatteryBalance_MinTemp\fP:8"
+.br
+.ti -1c
+.RI "         uint8_t \fBSwVersionMajor\fP:2"
+.br
+.ti -1c
+.RI "         uint8_t \fBSwVersionMinor\fP:2"
+.br
+.ti -1c
+.RI "         uint8_t \fBSwVersionBugfix\fP:4"
+.br
+.ti -1c
+.RI "         \fBCanBusEnable_enum\fP \fBCanBusEnable\fP:1"
+.br
+.ti -1c
+.RI "         \fBWiFiEnable_enum\fP \fBWiFiEnable\fP:1"
+.br
+.ti -1c
+.RI "         \fBTcpEnable_enum\fP \fBTcpEnable\fP:2"
+.br
+.ti -1c
+.RI "         \fBVpnEnable_enum\fP \fBVpnEnable\fP:1"
+.br
+.ti -1c
+.RI "         \fBWiFi_AP_Status_enum\fP \fBWiFi_AP_Status\fP:2"
+.br
+.ti -1c
+.RI "         uint8_t \fBTcpClientCount\fP:8"
+.br
+.ti -1c
+.RI "      } \fBSignal\fP"
+.br
+.ti -1c
+.RI "      uint8_t \fBData\fP [8]"
+.br
+.ti -1c
+.RI "   } "
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      struct {"
+.br
+.ti -1c
+.RI "         float \fBfactor\fP"
+.br
+.ti -1c
+.RI "         int \fBoffset\fP"
+.br
+.ti -1c
+.RI "         float \fBvalue\fP"
+.br
+.ti -1c
+.RI "      } \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryBalance_MaxVoltage\fP"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      struct {"
+.br
+.ti -1c
+.RI "         float \fBfactor\fP"
+.br
+.ti -1c
+.RI "         int \fBoffset\fP"
+.br
+.ti -1c
+.RI "         float \fBvalue\fP"
+.br
+.ti -1c
+.RI "      } \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryBalance_MinVoltage\fP"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      struct {"
+.br
+.ti -1c
+.RI "         float \fBfactor\fP"
+.br
+.ti -1c
+.RI "         int \fBoffset\fP"
+.br
+.ti -1c
+.RI "         float \fBvalue\fP"
+.br
+.ti -1c
+.RI "      } \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryBalance_MinTemp\fP"
+.br
+.ti -1c
+.RI "} \fBCan_Main\fP"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t DbcStruct::AliveCounter"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Battery_Messages"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Battery_Temperatures"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Battery_Voltages"
+
+.SS "uint8_t DbcStruct::BatteryBalance_MaxTemp"
+
+.SS "uint8_t DbcStruct::BatteryBalance_MaxVoltage"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryBalance_MaxVoltage"
+
+.SS "uint8_t DbcStruct::BatteryBalance_MinTemp"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryBalance_MinTemp"
+
+.SS "uint8_t DbcStruct::BatteryBalance_MinVoltage"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryBalance_MinVoltage"
+
+.SS "\fBBatteryChemistry_enum\fP DbcStruct::BatteryChemistry"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Can_Main"
+
+.SS "\fBCanBusEnable_enum\fP DbcStruct::CanBusEnable"
+
+.SS "uint8_t DbcStruct::Data[8]"
+
+.SS "uint8_t DbcStruct::DLC"
+
+.SS "float DbcStruct::factor"
+
+.SS "uint32_t DbcStruct::ID"
+
+.SS "int DbcStruct::offset"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Phys_Value"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Phys_Value"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Phys_Value"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Signal"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Signal"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Signal"
+
+.SS "struct  { \&.\&.\&. }  DbcStruct::Signal"
+
+.SS "uint8_t DbcStruct::SwVersionBugfix"
+
+.SS "uint8_t DbcStruct::SwVersionMajor"
+
+.SS "uint8_t DbcStruct::SwVersionMinor"
+
+.SS "uint8_t DbcStruct::TcpClientCount"
+
+.SS "\fBTcpEnable_enum\fP DbcStruct::TcpEnable"
+
+.SS "float DbcStruct::value"
+
+.SS "\fBVpnEnable_enum\fP DbcStruct::VpnEnable"
+
+.SS "\fBWiFi_AP_Status_enum\fP DbcStruct::WiFi_AP_Status"
+
+.SS "\fBWiFiEnable_enum\fP DbcStruct::WiFiEnable"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

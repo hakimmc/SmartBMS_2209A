@@ -1,0 +1,562 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_uart_8c" kind="file" language="C++">
+    <compoundname>Uart.c</compoundname>
+    <includes refid="_led_task_init_8h" local="yes">LedTaskInit.h</includes>
+    <includes refid="_uart_8h" local="yes">Uart.h</includes>
+    <includes refid="_can_8h" local="yes">Can.h</includes>
+    <includes refid="_wifi_8h" local="yes">Wifi.h</includes>
+    <includes refid="_tcp_server_8h" local="yes">TcpServer.h</includes>
+    <includes refid="d2cc__lib_8h" local="yes">d2cc_lib.h</includes>
+    <includes refid="_bq76pl455_8h" local="yes">Bq76pl455.h</includes>
+    <incdepgraph>
+      <node id="36">
+        <label>Bq76pl455.h</label>
+        <link refid="_bq76pl455_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Can.h</label>
+        <link refid="_can_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>LedTaskInit.h</label>
+        <link refid="_led_task_init_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>TcpServer.h</label>
+        <link refid="_tcp_server_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Uart.h</label>
+        <link refid="_uart_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Wifi.h</label>
+        <link refid="_wifi_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>d2cc_lib.h</label>
+        <link refid="d2cc__lib_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Uart.c</label>
+        <link refid="_uart_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>driver/gpio.h</label>
+      </node>
+      <node id="16">
+        <label>driver/twai.h</label>
+      </node>
+      <node id="5">
+        <label>driver/uart.h</label>
+      </node>
+      <node id="34">
+        <label>errno.h</label>
+      </node>
+      <node id="14">
+        <label>esp_err.h</label>
+      </node>
+      <node id="22">
+        <label>esp_event.h</label>
+      </node>
+      <node id="15">
+        <label>esp_log.h</label>
+      </node>
+      <node id="24">
+        <label>esp_netif.h</label>
+      </node>
+      <node id="35">
+        <label>esp_ping.h</label>
+      </node>
+      <node id="29">
+        <label>esp_system.h</label>
+      </node>
+      <node id="21">
+        <label>esp_wifi.h</label>
+      </node>
+      <node id="10">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="20">
+        <label>freertos/event_groups.h</label>
+      </node>
+      <node id="12">
+        <label>freertos/queue.h</label>
+      </node>
+      <node id="13">
+        <label>freertos/semphr.h</label>
+      </node>
+      <node id="11">
+        <label>freertos/task.h</label>
+      </node>
+      <node id="26">
+        <label>inttypes.h</label>
+      </node>
+      <node id="30">
+        <label>lwip/netdb.h</label>
+      </node>
+      <node id="33">
+        <label>lwip/sockets.h</label>
+      </node>
+      <node id="23">
+        <label>nvs_flash.h</label>
+      </node>
+      <node id="31">
+        <label>ping/ping_sock.h</label>
+      </node>
+      <node id="18">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="25">
+        <label>string.h</label>
+      </node>
+      <node id="28">
+        <label>sys/time.h</label>
+      </node>
+      <node id="27">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_uart_8c_1a268262b77851c1bf5292361233c6515f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Uart_Init</definition>
+        <argsstring>(uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)</argsstring>
+        <name>Uart_Init</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>uart_pin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>baudrate</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>rx_buffsize</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>TXD_PIN</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>RXD_PIN</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the UART peripheral with specified parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the UART interface.</para>
+<para>This function configures the UART with the specified baud rate, data bits, stop bits, and other settings. It also assigns pins for transmission and reception and installs the UART driver.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uart_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UART port to configure (typically 0, 1, or 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baudrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The baud rate for the UART communication. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rx_buffsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the receive buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TXD_PIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The GPIO pin for UART transmission (TX). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RXD_PIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The GPIO pin for UART reception (RX). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Configures the UART with the given settings.</para>
+<para>&lt; Assigns pins to UART.</para>
+<para>&lt; Installs the UART driver with specified buffer size.</para>
+        </inbodydescription>
+        <location file="src/Uart.c" line="28" column="6" bodyfile="src/Uart.c" bodystart="28" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="_uart_8c_1a8856e4c8f6952db371ac9bf478c7c000" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Uart_Transmit</definition>
+        <argsstring>(uint8_t uart_pin, uint8_t *data, uint8_t data_length)</argsstring>
+        <name>Uart_Transmit</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>uart_pin</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data_length</declname>
+        </param>
+        <briefdescription>
+<para>Transmits data via UART. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Transmits data over UART.</para>
+<para>This function sends a specified amount of data through the UART transmission port.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uart_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UART port to use for transmission (typically 0, 1, or 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data to be transmitted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data to be transmitted.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if transmission is successful, 0 if failed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Writes data to UART.</para>
+<para>&lt; Transmission failure.</para>
+<para>&lt; Transmission success.</para>
+        </inbodydescription>
+        <location file="src/Uart.c" line="61" column="9" bodyfile="src/Uart.c" bodystart="61" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="_uart_8c_1a65bb7c489c4800aeb9f32917436cce36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Uart_Receive</definition>
+        <argsstring>(uint8_t uart_pin, uint8_t *data, uint8_t data_length, uint32_t timeout)</argsstring>
+        <name>Uart_Receive</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>uart_pin</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data_length</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Receives data via UART. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Receives data from UART.</para>
+<para>This function receives data from the UART port and stores it in the provided buffer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uart_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UART port to use for reception (typically 0, 1, or 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the buffer to store received data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timeout for receiving data in milliseconds.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes received or an error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Reads data from UART into buffer.</para>
+        </inbodydescription>
+        <location file="src/Uart.c" line="83" column="5" bodyfile="src/Uart.c" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="_uart_8c_1a086601e2a6bb2527f8c1f02e0b828576" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t IsTimeout</definition>
+        <argsstring>(uint32_t max_reach_time)</argsstring>
+        <name>IsTimeout</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>max_reach_time</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a specified timeout duration has been reached. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks for a timeout condition.</para>
+<para>This function checks if the specified maximum time has passed since the start of the function call.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_reach_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum time in ticks to wait before timing out.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if timeout occurred, 1 if still within the allowed time. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Get current tick count.</para>
+<para>&lt; Wait for the timeout period to pass.</para>
+<para>&lt; Timeout reached.</para>
+<para>&lt; Timeout not reached.</para>
+        </inbodydescription>
+        <location file="src/Uart.c" line="97" column="9" bodyfile="src/Uart.c" bodystart="97" bodyend="106"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>UART initialization, transmission, and reception functions for UART communication. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="date"><para>18 December 2024 </para>
+</simplesect>
+<simplesect kind="author"><para>hakimmc </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_led_task_init_8h" kindref="compound">LedTaskInit.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_uart_8h" kindref="compound">Uart.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_can_8h" kindref="compound">Can.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_wifi_8h" kindref="compound">Wifi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_tcp_server_8h" kindref="compound">TcpServer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2cc__lib_8h" kindref="compound">d2cc_lib.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bq76pl455_8h" kindref="compound">Bq76pl455.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_uart_8c_1a268262b77851c1bf5292361233c6515f" kindref="member">Uart_Init</ref>(uint8_t<sp/>uart_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>baudrate,<sp/>uint32_t<sp/>rx_buffsize,<sp/>uint8_t<sp/>TXD_PIN,<sp/>uint8_t<sp/>RXD_PIN)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uart_config_t<sp/>uart_config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.baud_rate<sp/>=<sp/>baudrate,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.data_bits<sp/>=<sp/>UART_DATA_8_BITS,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.parity<sp/>=<sp/>UART_PARITY_DISABLE,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.stop_bits<sp/>=<sp/>UART_STOP_BITS_1,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.flow_ctrl<sp/>=<sp/>UART_HW_FLOWCTRL_DISABLE,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.source_clk<sp/>=<sp/>UART_SCLK_DEFAULT,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>ret;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>uart_param_config((uart_port_t)uart_pin,<sp/>&amp;uart_config);<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>uart_set_pin((uart_port_t)uart_pin,<sp/>TXD_PIN,<sp/>RXD_PIN,<sp/>UART_PIN_NO_CHANGE,<sp/>UART_PIN_NO_CHANGE);<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>uart_driver_install((uart_port_t)uart_pin,<sp/>rx_buffsize<sp/>*<sp/>2,<sp/>0,<sp/>0,<sp/>NULL,<sp/>0);<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>!=<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;UART<sp/>driver<sp/>installation<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(ret));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">uint8_t<sp/><ref refid="_uart_8c_1a8856e4c8f6952db371ac9bf478c7c000" kindref="member">Uart_Transmit</ref>(uint8_t<sp/>uart_pin,<sp/>uint8_t<sp/>*data,<sp/>uint8_t<sp/>data_length)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>uart_write_bytes((uart_port_t)uart_pin,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)data,<sp/>data_length);<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;UART<sp/>transmission<sp/>failed\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_uart_8c_1a65bb7c489c4800aeb9f32917436cce36" kindref="member">Uart_Receive</ref>(uint8_t<sp/>uart_pin,<sp/>uint8_t*<sp/>data,<sp/>uint8_t<sp/>data_length,<sp/>uint32_t<sp/>timeout)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>uart_read_bytes(uart_pin,<sp/>data,<sp/>data_length,<sp/>timeout);<sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">uint8_t<sp/><ref refid="_uart_8c_1a086601e2a6bb2527f8c1f02e0b828576" kindref="member">IsTimeout</ref>(uint32_t<sp/>max_reach_time)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>TickType_t<sp/>now<sp/>=<sp/>xTaskGetTickCount();<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(xTaskGetTickCount()<sp/>-<sp/>now<sp/>&lt;<sp/>max_reach_time);<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(xTaskGetTickCount()<sp/>-<sp/>now<sp/>&gt;=<sp/>max_reach_time)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Uart.c"/>
+  </compounddef>
+</doxygen>

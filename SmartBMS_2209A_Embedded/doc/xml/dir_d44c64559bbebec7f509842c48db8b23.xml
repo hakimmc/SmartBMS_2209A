@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="_bq76pl455_8h">Bq76pl455.h</innerfile>
+    <innerfile refid="_can_8h">Can.h</innerfile>
+    <innerfile refid="d2cc__lib_8h">d2cc_lib.h</innerfile>
+    <innerfile refid="_led_task_init_8h">LedTaskInit.h</innerfile>
+    <innerfile refid="_tcp_server_8h">TcpServer.h</innerfile>
+    <innerfile refid="_uart_8h">Uart.h</innerfile>
+    <innerfile refid="_wifi_8h">Wifi.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

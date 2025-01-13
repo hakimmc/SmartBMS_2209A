@@ -1,0 +1,486 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_bq76pl455_8h" kind="file" language="C++">
+    <compoundname>Bq76pl455.h</compoundname>
+    <includes refid="_uart_8h" local="yes">Uart.h</includes>
+    <includedby refid="_bq76pl455_8c" local="yes">src/Bq76pl455.c</includedby>
+    <includedby refid="_uart_8c" local="yes">src/Uart.c</includedby>
+    <includedby refid="main_8c" local="yes">src/main.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/Bq76pl455.h</label>
+        <link refid="_bq76pl455_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Uart.h</label>
+        <link refid="_uart_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>driver/gpio.h</label>
+      </node>
+      <node id="4">
+        <label>driver/uart.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/Bq76pl455.h</label>
+        <link refid="_bq76pl455_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/Bq76pl455.c</label>
+        <link refid="_bq76pl455_8c"/>
+      </node>
+      <node id="3">
+        <label>src/Uart.c</label>
+        <link refid="_uart_8c"/>
+      </node>
+      <node id="4">
+        <label>src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_bq76pl455_8h_1affe9f6ad00bd064e9ed9a77cae998f77" prot="public" static="no">
+        <name>BQ_UART_PORT</name>
+        <initializer>UART_NUM_1</initializer>
+        <briefdescription>
+<para>UART port used for communication with the BQ76PL455A-Q1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Bq76pl455.h" line="21" column="9" bodyfile="include/Bq76pl455.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_bq76pl455_8h_1a9491feb889b0266826e8907cad0d42f2" prot="public" static="no">
+        <name>BQ_TX</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para>GPIO pin number for UART TX (transmit) connected to the BQ76PL455A-Q1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Bq76pl455.h" line="27" column="9" bodyfile="include/Bq76pl455.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_bq76pl455_8h_1a1cc27c7b563113b7136d2ea7ff0fa7f5" prot="public" static="no">
+        <name>BQ_RX</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para>GPIO pin number for UART RX (receive) connected to the BQ76PL455A-Q1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Bq76pl455.h" line="33" column="9" bodyfile="include/Bq76pl455.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_bq76pl455_8h_1ab1f7f8492c3cca0837700429807074e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bq_Init</definition>
+        <argsstring>()</argsstring>
+        <name>Bq_Init</name>
+        <briefdescription>
+<para>Initializes the BQ76PL455A-Q1 interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up the UART interface and any necessary configurations for communication with the BQ76PL455A-Q1 device. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Bq76pl455.h" line="41" column="6" declfile="include/Bq76pl455.h" declline="41" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_bq76pl455_8h_1ac1a68691cca07c6263b16eb463fd7e06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BQ_Test</definition>
+        <argsstring>()</argsstring>
+        <name>BQ_Test</name>
+        <briefdescription>
+<para>Tests the communication with the BQ76PL455A-Q1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends a test command or sequence to verify the functionality of the BQ76PL455A-Q1.</para>
+<para>Tests the communication with the BQ76PL455A-Q1.</para>
+<para>Sends a test message to read the device ID. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Bq76pl455.h" line="48" column="6" bodyfile="src/Bq76pl455.c" bodystart="34" bodyend="38" declfile="include/Bq76pl455.h" declline="48" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_bq76pl455_8h_1a7f64a91901131f6c570e15d57d6a75b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t * CRC16</definition>
+        <argsstring>(uint8_t *data, uint8_t data_length)</argsstring>
+        <name>CRC16</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data_length</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the CRC-16 for a given data buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the CRC-16 using the IBM standard with reversed MSB and LSB for compatibility with the BQ76PL455A-Q1 message format.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data buffer for which the CRC needs to be calculated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to a 2-byte array containing the CRC-16 result.</para>
+</simplesect>
+Calculates the CRC-16 for a given data buffer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to a 2-byte array containing the CRC checksum. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Bq76pl455.h" line="60" column="9" bodyfile="src/Bq76pl455.c" bodystart="69" bodyend="81" declfile="include/Bq76pl455.h" declline="60" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="_bq76pl455_8h_1afce328763ae545228a5fe77ba53296da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BQ_Start</definition>
+        <argsstring>(void *args)</argsstring>
+        <name>BQ_Start</name>
+        <param>
+          <type>void *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Starts the BQ76PL455A-Q1 task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A FreeRTOS task responsible for managing communication with the BQ76PL455A-Q1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to task-specific arguments (optional).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Starts the BQ76PL455A-Q1 task.</para>
+<para>Continuously transmits a test message via UART at regular intervals.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Task-specific arguments (optional). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Bq76pl455.h" line="69" column="6" bodyfile="src/Bq76pl455.c" bodystart="47" bodyend="60" declfile="include/Bq76pl455.h" declline="69" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_bq76pl455_8h_1a5db7a92f619e063198490508230e18a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BQ_Uart_Init</definition>
+        <argsstring>(uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)</argsstring>
+        <name>BQ_Uart_Init</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>uart_pin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>baudrate</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>rx_buffsize</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>TXD_PIN</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>RXD_PIN</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the UART interface for the BQ76PL455A-Q1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Configures the UART parameters for communicating with the BQ76PL455A-Q1, including pin assignments, baud rate, and RX buffer size.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uart_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UART port number to initialize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baudrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired baud rate for communication. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rx_buffsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the RX buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TXD_PIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The GPIO pin number for UART TX. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RXD_PIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The GPIO pin number for UART RX.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initializes the UART interface for the BQ76PL455A-Q1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uart_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UART port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baudrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Baud rate for UART communication. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rx_buffsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RX buffer size. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TXD_PIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO pin for UART TX. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RXD_PIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO pin for UART RX. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Bq76pl455.h" line="83" column="6" bodyfile="src/Bq76pl455.c" bodystart="92" bodyend="118" declfile="include/Bq76pl455.h" declline="83" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_bq76pl455_8h_1aa01b4d094c5fc9ed6d46e6a622dbb75e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t BQ_Uart_Transmit</definition>
+        <argsstring>(uint8_t uart_pin, uint8_t *data, uint8_t data_length)</argsstring>
+        <name>BQ_Uart_Transmit</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>uart_pin</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data_length</declname>
+        </param>
+        <briefdescription>
+<para>Transmits data to the BQ76PL455A-Q1 over UART. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends a sequence of bytes to the BQ76PL455A-Q1 via UART.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uart_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UART port number to use for transmission. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data buffer to be transmitted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns <computeroutput>0</computeroutput> on success or a non-zero value on failure.</para>
+</simplesect>
+Transmits data to the BQ76PL455A-Q1 over UART.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uart_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UART port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data buffer to be transmitted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 on success, 0 on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Bq76pl455.h" line="95" column="9" bodyfile="src/Bq76pl455.c" bodystart="128" bodyend="135" declfile="include/Bq76pl455.h" declline="95" declcolumn="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Header file for interfacing with the BQ76PL455A-Q1 battery management IC. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file provides declarations for initializing, communicating, and managing the BQ76PL455A-Q1 IC using UART. It includes CRC-16 calculation and message structure details.</para>
+<para>Created on: 18 Dec 2024 <simplesect kind="author"><para>hakimmc </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BQ76PL455_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BQ76PL455_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_uart_8h" kindref="compound">Uart.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_bq76pl455_8h_1affe9f6ad00bd064e9ed9a77cae998f77" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BQ_UART_PORT<sp/><sp/><sp/><sp/>UART_NUM_1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="_bq76pl455_8h_1a9491feb889b0266826e8907cad0d42f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BQ_TX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="_bq76pl455_8h_1a1cc27c7b563113b7136d2ea7ff0fa7f5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BQ_RX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_bq76pl455_8h_1ab1f7f8492c3cca0837700429807074e3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_bq76pl455_8h_1ab1f7f8492c3cca0837700429807074e3" kindref="member">Bq_Init</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_bq76pl455_8h_1ac1a68691cca07c6263b16eb463fd7e06" kindref="member">BQ_Test</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">uint8_t*<sp/><ref refid="_bq76pl455_8h_1a7f64a91901131f6c570e15d57d6a75b5" kindref="member">CRC16</ref>(uint8_t*<sp/>data,<sp/>uint8_t<sp/>data_length);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_bq76pl455_8h_1afce328763ae545228a5fe77ba53296da" kindref="member">BQ_Start</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*args);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_bq76pl455_8h_1a5db7a92f619e063198490508230e18a2" kindref="member">BQ_Uart_Init</ref>(uint8_t<sp/>uart_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>baudrate,<sp/>uint32_t<sp/>rx_buffsize,<sp/>uint8_t<sp/>TXD_PIN,<sp/>uint8_t<sp/>RXD_PIN);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">uint8_t<sp/><ref refid="_bq76pl455_8h_1aa01b4d094c5fc9ed6d46e6a622dbb75e" kindref="member">BQ_Uart_Transmit</ref>(uint8_t<sp/>uart_pin,<sp/>uint8_t<sp/>*data,<sp/>uint8_t<sp/>data_length);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BQ76PL455_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/Bq76pl455.h"/>
+  </compounddef>
+</doxygen>

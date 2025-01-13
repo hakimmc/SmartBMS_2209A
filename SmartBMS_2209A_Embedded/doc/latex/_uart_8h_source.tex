@@ -1,0 +1,26 @@
+\doxysection{Uart.\+h}
+\hypertarget{_uart_8h_source}{}\label{_uart_8h_source}\index{include/Uart.h@{include/Uart.h}}
+\mbox{\hyperlink{_uart_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ INCLUDE\_UART\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ INCLUDE\_UART\_H\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}driver/uart.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}driver/gpio.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_uart_8h_a268262b77851c1bf5292361233c6515f}{Uart\_Init}}(uint8\_t\ uart\_pin,\ \textcolor{keywordtype}{int}\ baudrate,\ uint32\_t\ rx\_buffsize,\ uint8\_t\ TXD\_PIN,\ uint8\_t\ RXD\_PIN);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00045\ uint8\_t\ \mbox{\hyperlink{_uart_8h_a8856e4c8f6952db371ac9bf478c7c000}{Uart\_Transmit}}(uint8\_t\ uart\_pin,\ uint8\_t\ *data,\ uint8\_t\ data\_length);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_uart_8h_a65bb7c489c4800aeb9f32917436cce36}{Uart\_Receive}}(uint8\_t\ uart\_pin,\ uint8\_t*\ data,\ uint8\_t\ data\_length,\ uint32\_t\ timeout);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00068\ uint8\_t\ \mbox{\hyperlink{_uart_8h_a086601e2a6bb2527f8c1f02e0b828576}{IsTimeout}}(uint32\_t\ max\_reach\_time);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INCLUDE\_UART\_H\_}}
+
+\end{DoxyCode}

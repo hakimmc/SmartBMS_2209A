@@ -1,0 +1,166 @@
+\doxysection{src/\+Tcp\+Server.c File Reference}
+\hypertarget{_tcp_server_8c}{}\label{_tcp_server_8c}\index{src/TcpServer.c@{src/TcpServer.c}}
+
+
+TCP server implementation to handle incoming client connections, authenticate, and exchange data.  
+
+
+{\ttfamily \#include "{}Tcp\+Server.\+h"{}}\newline
+{\ttfamily \#include "{}Wifi.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_tcp_server_8c_ac42367fe5c999ec6650de83e9d72fe8c}{SERVER\+\_\+\+PORT}}~8080
+\item 
+\#define \mbox{\hyperlink{_tcp_server_8c_aef135ff19068a2ab235f21f2c833969b}{TCP\+\_\+\+TAG}}~"{}TCP\+\_\+\+SERVER"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_tcp_server_8c_a71663496e793fd4869a37af2eaeb9dfb}{Create\+\_\+\+Server}} (void \texorpdfstring{$\ast$}{*}pv\+Parameter)
+\begin{DoxyCompactList}\small\item\em Creates and starts a TCP server to listen for client connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_tcp_server_8c_a423bc60f42ad6bf912e07cd5320b1948}{Handle\+\_\+\+Client}} (void \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Handles communication with a single client. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_tcp_server_8c_a00e67904809f7a47e29ca050bcabbae2}{receive\+\_\+data}} (int sock, char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t size, uint8\+\_\+t \texorpdfstring{$\ast$}{*}timeout\+\_\+counter, uint8\+\_\+t max\+\_\+timeout)
+\begin{DoxyCompactList}\small\item\em Receives data from the client socket. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_tcp_server_8c_a13ddbecdfd3a974bad6c7ff356cb4674}{Tcp\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the TCP server and starts listening for client connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_tcp_server_8c_a19bd4a5dc2066779c571dc423ee2e5fc}{GUI\+\_\+\+USER}} = "{}root"{}
+\begin{DoxyCompactList}\small\item\em Username for GUI authentication. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_tcp_server_8c_a35d706daa4dcd113099247f519235595}{GUI\+\_\+\+PASS}} = "{}otto"{}
+\begin{DoxyCompactList}\small\item\em Password for GUI authentication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+TCP server implementation to handle incoming client connections, authenticate, and exchange data. 
+
+\begin{DoxyDate}{Date}
+18 December 2024 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+hakimmc 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_tcp_server_8c_ac42367fe5c999ec6650de83e9d72fe8c}\index{TcpServer.c@{TcpServer.c}!SERVER\_PORT@{SERVER\_PORT}}
+\index{SERVER\_PORT@{SERVER\_PORT}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{SERVER\_PORT}{SERVER\_PORT}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_ac42367fe5c999ec6650de83e9d72fe8c} 
+\#define SERVER\+\_\+\+PORT~8080}
+
+Port number for the TCP server \Hypertarget{_tcp_server_8c_aef135ff19068a2ab235f21f2c833969b}\index{TcpServer.c@{TcpServer.c}!TCP\_TAG@{TCP\_TAG}}
+\index{TCP\_TAG@{TCP\_TAG}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{TCP\_TAG}{TCP\_TAG}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_aef135ff19068a2ab235f21f2c833969b} 
+\#define TCP\+\_\+\+TAG~"{}TCP\+\_\+\+SERVER"{}}
+
+Tag for logging 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_tcp_server_8c_a71663496e793fd4869a37af2eaeb9dfb}\index{TcpServer.c@{TcpServer.c}!Create\_Server@{Create\_Server}}
+\index{Create\_Server@{Create\_Server}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{Create\_Server()}{Create\_Server()}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_a71663496e793fd4869a37af2eaeb9dfb} 
+void Create\+\_\+\+Server (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameter}{}\end{DoxyParamCaption})}
+
+
+
+Creates and starts a TCP server to listen for client connections. 
+
+Creates and starts the TCP server.
+
+This function sets up a TCP socket, binds it to a specified address and port, and listens for incoming connections. For each connection, a new task is created to handle the client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameter} & Unused parameter for Free\+RTOS task. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_tcp_server_8c_a423bc60f42ad6bf912e07cd5320b1948}\index{TcpServer.c@{TcpServer.c}!Handle\_Client@{Handle\_Client}}
+\index{Handle\_Client@{Handle\_Client}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{Handle\_Client()}{Handle\_Client()}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_a423bc60f42ad6bf912e07cd5320b1948} 
+void Handle\+\_\+\+Client (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{args}{}\end{DoxyParamCaption})}
+
+
+
+Handles communication with a single client. 
+
+Handles client connections to the TCP server.
+
+This function receives and processes commands from the client, authenticates the user, and manages communication based on different states. It handles login, data requests, and exit commands.
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Socket descriptor for the client. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_tcp_server_8c_a00e67904809f7a47e29ca050bcabbae2}\index{TcpServer.c@{TcpServer.c}!receive\_data@{receive\_data}}
+\index{receive\_data@{receive\_data}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{receive\_data()}{receive\_data()}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_a00e67904809f7a47e29ca050bcabbae2} 
+int receive\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{sock}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{size}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{timeout\+\_\+counter}{, }\item[{uint8\+\_\+t}]{max\+\_\+timeout}{}\end{DoxyParamCaption})}
+
+
+
+Receives data from the client socket. 
+
+Receives data from a connected client.
+
+This function receives data from the client and handles timeouts. If no data is received within a specified timeout period, it returns a timeout error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & Socket descriptor for the client. \\
+\hline
+{\em buffer} & Buffer to store received data. \\
+\hline
+{\em size} & Size of the buffer. \\
+\hline
+{\em timeout\+\_\+counter} & Counter to track consecutive timeouts. \\
+\hline
+{\em max\+\_\+timeout} & Maximum allowed consecutive timeouts before returning an error.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length of received data, -\/1 if timeout occurs, or -\/2 if maximum timeouts reached. 
+\end{DoxyReturn}
+\Hypertarget{_tcp_server_8c_a13ddbecdfd3a974bad6c7ff356cb4674}\index{TcpServer.c@{TcpServer.c}!Tcp\_Init@{Tcp\_Init}}
+\index{Tcp\_Init@{Tcp\_Init}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{Tcp\_Init()}{Tcp\_Init()}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_a13ddbecdfd3a974bad6c7ff356cb4674} 
+void Tcp\+\_\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the TCP server and starts listening for client connections. 
+
+Initializes the TCP server. \texorpdfstring{$<$}{<} Initialize Wi-\/\+Fi in access point and station mode.
+
+\texorpdfstring{$<$}{<} Start the TCP server task.
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_tcp_server_8c_a35d706daa4dcd113099247f519235595}\index{TcpServer.c@{TcpServer.c}!GUI\_PASS@{GUI\_PASS}}
+\index{GUI\_PASS@{GUI\_PASS}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{GUI\_PASS}{GUI\_PASS}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_a35d706daa4dcd113099247f519235595} 
+char\texorpdfstring{$\ast$}{*} GUI\+\_\+\+PASS = "{}otto"{}}
+
+
+
+Password for GUI authentication. 
+
+\Hypertarget{_tcp_server_8c_a19bd4a5dc2066779c571dc423ee2e5fc}\index{TcpServer.c@{TcpServer.c}!GUI\_USER@{GUI\_USER}}
+\index{GUI\_USER@{GUI\_USER}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{GUI\_USER}{GUI\_USER}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_a19bd4a5dc2066779c571dc423ee2e5fc} 
+char\texorpdfstring{$\ast$}{*} GUI\+\_\+\+USER = "{}root"{}}
+
+
+
+Username for GUI authentication. 
+

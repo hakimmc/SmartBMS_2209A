@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="_bq76pl455_8c">Bq76pl455.c</innerfile>
+    <innerfile refid="_can_8c">Can.c</innerfile>
+    <innerfile refid="d2cc__lib_8c">d2cc_lib.c</innerfile>
+    <innerfile refid="_led_task_init_8c">LedTaskInit.c</innerfile>
+    <innerfile refid="main_8c">main.c</innerfile>
+    <innerfile refid="_tcp_server_8c">TcpServer.c</innerfile>
+    <innerfile refid="_uart_8c">Uart.c</innerfile>
+    <innerfile refid="_wifi_8c">Wifi.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>C API is exposed via <ulink url="../include/ZeroTierSockets.h">include/ZeroTierSockets.h</ulink></para>
+</listitem><listitem><para><ulink url="./bindings">bindings/</ulink> Contains the source for wrappers in various languages. See <ulink url="../examples/">examples/</ulink> for their usage. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

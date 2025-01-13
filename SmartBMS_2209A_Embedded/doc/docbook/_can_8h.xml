@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__can_8h" xml:lang="en-US">
+<title>include/Can.h File Reference</title>
+<indexterm><primary>include/Can.h</primary></indexterm>
+<para>
+
+<para>CAN communication interface for ESP32. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stdint.h&quot;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &quot;freertos/FreeRTOS.h&quot;<?linebreak?>#include &quot;freertos/task.h&quot;<?linebreak?>#include &quot;freertos/queue.h&quot;<?linebreak?>#include &quot;freertos/semphr.h&quot;<?linebreak?>#include &quot;esp_err.h&quot;<?linebreak?>#include &quot;esp_log.h&quot;<?linebreak?>#include &quot;driver/twai.h&quot;<?linebreak?>#include &quot;d2cc_lib.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__can_8h_1aa0e0a9f9b6b180a338070cd1da9f6960">TX_GPIO_NUM</link>&#160;&#160;&#160;5</para>
+
+<para>GPIO pin number for CAN TX. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__can_8h_1a105aacd025d247748462e6cce43eb816">RX_GPIO_NUM</link>&#160;&#160;&#160;4</para>
+
+<para>GPIO pin number for CAN RX. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__can_8h_1a4791c142b857f44449cc8ad8d22ef045">CAN_TAG</link>&#160;&#160;&#160;&quot;CAN_MASTER&quot;</para>
+
+<para>Tag for logging CAN-related messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__can_8h_1afd4f58c1a509cc8343774f0ca05c9061">Can_Main_ID</link>&#160;&#160;&#160;0x100</para>
+
+<para>CAN ID for main messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4">Battery_Messages_ID</link>&#160;&#160;&#160;0x101</para>
+
+<para>CAN ID for battery messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__can_8h_1a1e870e11e6fd939606c6fff3b122d4fd">Can_Battery_Voltages_ID</link>&#160;&#160;&#160;0x102</para>
+
+<para>CAN ID for battery voltage messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e">Can_Battery_Temperatures_ID</link>&#160;&#160;&#160;0x103</para>
+
+<para>CAN ID for battery temperature messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__can_8h_1ac5d0198b7447cc2c29044ccd56dd9443">CAN_DELAY</link>&#160;&#160;&#160;250</para>
+
+<para>Delay in milliseconds for CAN tasks. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="__can_8h_1a8920d0f7ab8095cccb447da8d5fae390">Can_Init</link> (twai_general_config_t can_gpio_config, twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config)</para>
+
+<para>Initializes the CAN interface. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__can_8h_1a51dc04f4c5f5a544e73c33e2d606193b">Can_Transmit</link> (twai_message_t message, uint8_t data[])</para>
+
+<para>Transmits a CAN message. </para>
+</listitem>
+            <listitem><para>void <link linkend="__can_8h_1a99ef09684458d26b79a4185bc0af934b">CanReporter</link> (void *pvParameter)</para>
+
+<para>Task to report CAN messages. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>CAN communication interface for ESP32. </para>
+
+<para>This header file provides declarations for initializing and managing CAN (Controller Area Network) communication on the ESP32 using the TWAI (Two-Wire Automotive Interface) driver.</para>
+
+<para>Created on: 18 Dec 2024 <formalpara><title>Author</title>
+
+<para>hakimmc </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4"/><section>
+    <title>Battery_Messages_ID</title>
+<indexterm><primary>Battery_Messages_ID</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>Battery_Messages_ID</secondary></indexterm>
+<para><computeroutput>#define Battery_Messages_ID&#160;&#160;&#160;0x101</computeroutput></para><para>
+
+<para>CAN ID for battery messages. </para>
+</para>
+</section>
+<anchor xml:id="__can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e"/><section>
+    <title>Can_Battery_Temperatures_ID</title>
+<indexterm><primary>Can_Battery_Temperatures_ID</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>Can_Battery_Temperatures_ID</secondary></indexterm>
+<para><computeroutput>#define Can_Battery_Temperatures_ID&#160;&#160;&#160;0x103</computeroutput></para><para>
+
+<para>CAN ID for battery temperature messages. </para>
+</para>
+</section>
+<anchor xml:id="__can_8h_1a1e870e11e6fd939606c6fff3b122d4fd"/><section>
+    <title>Can_Battery_Voltages_ID</title>
+<indexterm><primary>Can_Battery_Voltages_ID</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>Can_Battery_Voltages_ID</secondary></indexterm>
+<para><computeroutput>#define Can_Battery_Voltages_ID&#160;&#160;&#160;0x102</computeroutput></para><para>
+
+<para>CAN ID for battery voltage messages. </para>
+</para>
+</section>
+<anchor xml:id="__can_8h_1ac5d0198b7447cc2c29044ccd56dd9443"/><section>
+    <title>CAN_DELAY</title>
+<indexterm><primary>CAN_DELAY</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>CAN_DELAY</secondary></indexterm>
+<para><computeroutput>#define CAN_DELAY&#160;&#160;&#160;250</computeroutput></para><para>
+
+<para>Delay in milliseconds for CAN tasks. </para>
+</para>
+</section>
+<anchor xml:id="__can_8h_1afd4f58c1a509cc8343774f0ca05c9061"/><section>
+    <title>Can_Main_ID</title>
+<indexterm><primary>Can_Main_ID</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>Can_Main_ID</secondary></indexterm>
+<para><computeroutput>#define Can_Main_ID&#160;&#160;&#160;0x100</computeroutput></para><para>
+
+<para>CAN ID for main messages. </para>
+</para>
+</section>
+<anchor xml:id="__can_8h_1a4791c142b857f44449cc8ad8d22ef045"/><section>
+    <title>CAN_TAG</title>
+<indexterm><primary>CAN_TAG</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>CAN_TAG</secondary></indexterm>
+<para><computeroutput>#define CAN_TAG&#160;&#160;&#160;&quot;CAN_MASTER&quot;</computeroutput></para><para>
+
+<para>Tag for logging CAN-related messages. </para>
+</para>
+</section>
+<anchor xml:id="__can_8h_1a105aacd025d247748462e6cce43eb816"/><section>
+    <title>RX_GPIO_NUM</title>
+<indexterm><primary>RX_GPIO_NUM</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>RX_GPIO_NUM</secondary></indexterm>
+<para><computeroutput>#define RX_GPIO_NUM&#160;&#160;&#160;4</computeroutput></para><para>
+
+<para>GPIO pin number for CAN RX. </para>
+</para>
+</section>
+<anchor xml:id="__can_8h_1aa0e0a9f9b6b180a338070cd1da9f6960"/><section>
+    <title>TX_GPIO_NUM</title>
+<indexterm><primary>TX_GPIO_NUM</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>TX_GPIO_NUM</secondary></indexterm>
+<para><computeroutput>#define TX_GPIO_NUM&#160;&#160;&#160;5</computeroutput></para><para>
+
+<para>GPIO pin number for CAN TX. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__can_8h_1a8920d0f7ab8095cccb447da8d5fae390"/><section>
+    <title>Can_Init()</title>
+<indexterm><primary>Can_Init</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>Can_Init</secondary></indexterm>
+<para><computeroutput>uint8_t Can_Init (twai_general_config_t can_gpio_config, twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config)</computeroutput></para><para>
+
+<para>Initializes the CAN interface. </para>
+</para>
+
+<para>Configures the CAN interface with the specified general, timing, and filter configurations.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>can_gpio_config</entry><entry>
+<para>Configuration for CAN GPIO pins. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>can_time_config</entry><entry>
+<para>Timing configuration for CAN communication. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>can_filter_config</entry><entry>
+<para>Filter configuration for CAN messages. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><computeroutput>0</computeroutput> on success or a non-zero value if initialization fails.</para>
+</formalpara>
+Initializes the CAN interface.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>can_gpio_config</entry><entry>
+<para>General configuration for the CAN GPIO pins and mode. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>can_time_config</entry><entry>
+<para>Timing configuration for the CAN bus (e.g., bitrate). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>can_filter_config</entry><entry>
+<para>Filter configuration for message acceptance. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>uint8_t Returns 1 if the driver is successfully initialized. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__can_8h_1a51dc04f4c5f5a544e73c33e2d606193b"/><section>
+    <title>Can_Transmit()</title>
+<indexterm><primary>Can_Transmit</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>Can_Transmit</secondary></indexterm>
+<para><computeroutput>uint8_t Can_Transmit (twai_message_t message, uint8_t data[])</computeroutput></para><para>
+
+<para>Transmits a CAN message. </para>
+</para>
+
+<para>Sends a CAN message with the specified data through the CAN interface.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>message</entry><entry>
+<para>The TWAI message structure to transmit. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the data array to be transmitted. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><computeroutput>0</computeroutput> on success or a non-zero value if transmission fails.</para>
+</formalpara>
+Transmits a CAN message.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>message</entry><entry>
+<para>The CAN message structure to transmit. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>The data array to be sent with the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>uint8_t Returns 1 if the transmission is successful. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__can_8h_1a99ef09684458d26b79a4185bc0af934b"/><section>
+    <title>CanReporter()</title>
+<indexterm><primary>CanReporter</primary><secondary>Can.h</secondary></indexterm>
+<indexterm><primary>Can.h</primary><secondary>CanReporter</secondary></indexterm>
+<para><computeroutput>void CanReporter (void * pvParameter)</computeroutput></para><para>
+
+<para>Task to report CAN messages. </para>
+</para>
+
+<para>A FreeRTOS task that handles CAN communication and reporting.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pvParameter</entry><entry>
+<para>Pointer to task-specific parameters (optional).</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Task to report CAN messages.</para>
+
+<para>This function initializes the CAN driver and repeatedly transmits preconfigured CAN messages, using data from the <computeroutput><link linkend="_struct_dbc_struct">DbcStruct</link></computeroutput>.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pvParameter</entry><entry>
+<para>A pointer to any parameters passed to the task (unused). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__wifi_8c" xml:lang="en-US">
+<title>src/Wifi.c File Reference</title>
+<indexterm><primary>src/Wifi.c</primary></indexterm>
+<para>
+
+<para>Functions for initializing and managing Wi-Fi connectivity in AP (Access Point) and STA (Station) modes. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Wifi.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="__wifi_8c_1ab89f8a7d7357e4fb0e466836024c7f9c">event_handler</link> (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)</para>
+
+<para>Event handler for Wi-Fi and IP events. </para>
+</listitem>
+            <listitem><para>void <link linkend="__wifi_8c_1a13bb3ba68519d8aa7c2a72cf22dc2b21">wifi_init_ap_sta</link> (void)</para>
+
+<para>Initializes Wi-Fi in both Access Point (AP) and Station (STA) modes. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Functions for initializing and managing Wi-Fi connectivity in AP (Access Point) and STA (Station) modes. </para>
+
+<para><formalpara><title>Date</title>
+
+<para>18 December 2024 </para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>hakimmc </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__wifi_8c_1ab89f8a7d7357e4fb0e466836024c7f9c"/><section>
+    <title>event_handler()</title>
+<indexterm><primary>event_handler</primary><secondary>Wifi.c</secondary></indexterm>
+<indexterm><primary>Wifi.c</primary><secondary>event_handler</secondary></indexterm>
+<para><computeroutput>static void event_handler (void * arg, esp_event_base_t event_base, int32_t event_id, void * event_data)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Event handler for Wi-Fi and IP events. </para>
+</para>
+
+<para>This function handles Wi-Fi and IP events, such as Wi-Fi connection status changes and obtaining an IP address. It also manages retry logic for Wi-Fi connection attempts.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>arg</entry><entry>
+<para>Pointer to additional arguments (unused). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>event_base</entry><entry>
+<para>The event base (WIFI_EVENT or IP_EVENT). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>event_id</entry><entry>
+<para>The event ID (such as WIFI_EVENT_STA_START). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>event_data</entry><entry>
+<para>Event data associated with the event. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>&lt; Start the Wi-Fi connection process.</para>
+
+<para>&lt; Retry the connection.</para>
+
+<para>&lt; Log obtained IP address.</para>
+
+<para>&lt; Reset retry count.</para>
+</section>
+<anchor xml:id="__wifi_8c_1a13bb3ba68519d8aa7c2a72cf22dc2b21"/><section>
+    <title>wifi_init_ap_sta()</title>
+<indexterm><primary>wifi_init_ap_sta</primary><secondary>Wifi.c</secondary></indexterm>
+<indexterm><primary>Wifi.c</primary><secondary>wifi_init_ap_sta</secondary></indexterm>
+<para><computeroutput>void wifi_init_ap_sta (void )</computeroutput></para><para>
+
+<para>Initializes Wi-Fi in both Access Point (AP) and Station (STA) modes. </para>
+</para>
+
+<para>Initializes the Wi-Fi in AP+STA mode.</para>
+
+<para>This function initializes the Wi-Fi stack, configures the Wi-Fi interfaces, and starts the Wi-Fi service. It also registers event handlers for Wi-Fi and IP events, and connects to a Wi-Fi network in STA mode, if configured.</para>
+
+<para><note><title>Note</title>
+
+<para>This function configures the ESP32 in dual mode (AP and STA) and connects to a Wi-Fi network if <computeroutput>WIFI_CONNECT</computeroutput> is defined. </para>
+</note>
+</para>
+
+<para>&lt; Initialize network interface.</para>
+
+<para>&lt; Create the default event loop.</para>
+
+<para>&lt; Create the default Wi-Fi AP (Access Point) interface.</para>
+
+<para>&lt; Default Wi-Fi configuration.</para>
+
+<para>&lt; Initialize Wi-Fi driver with the default configuration.</para>
+
+<para>&lt; Register Wi-Fi event handler.</para>
+
+<para>&lt; Register IP event handler.</para>
+
+<para>&lt; AP SSID.</para>
+
+<para>&lt; AP password.</para>
+
+<para>&lt; Length of SSID.</para>
+
+<para>&lt; AP channel.</para>
+
+<para>&lt; Max connections to the AP.</para>
+
+<para>&lt; WPA/WPA2 PSK authentication.</para>
+
+<para>&lt; Set Wi-Fi mode to AP only.</para>
+
+<para>&lt; Set AP configuration.</para>
+
+<para>&lt; Start the Wi-Fi driver.</para>
+
+<para>&lt; Log completion of Wi-Fi initialization.</para>
+</section>
+</section>
+</section>

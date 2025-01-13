@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="d2cc__lib_8c" kind="file" language="C++">
+    <compoundname>d2cc_lib.c</compoundname>
+    <includes refid="d2cc__lib_8h" local="yes">d2cc_lib.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>d2cc_lib.h</label>
+        <link refid="d2cc__lib_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/d2cc_lib.c</label>
+        <link refid="d2cc__lib_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d2cc__lib_8c_1ae78f43f4aca692c377c75bc182baee88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void D2cc_Lib_Init</definition>
+        <argsstring>(DbcStruct *dbc)</argsstring>
+        <name>D2cc_Lib_Init</name>
+        <param>
+          <type><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref> *</type>
+          <declname>dbc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/d2cc_lib.c" line="14" column="6" bodyfile="src/d2cc_lib.c" bodystart="14" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="d2cc__lib_8c_1ae5597b44f3f49cc3c016533bfa7a9374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadParse</definition>
+        <argsstring>(uint8_t *rx_data, uint32_t id, DbcStruct *dbc)</argsstring>
+        <name>ReadParse</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>rx_data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref> *</type>
+          <declname>dbc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/d2cc_lib.c" line="32" column="6" bodyfile="src/d2cc_lib.c" bodystart="32" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d2cc__lib_8c_1a1a53ba345e601b7539ad8b1d3a60becf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateTable_Battery_Messages</definition>
+        <argsstring>(DbcStruct *dbc)</argsstring>
+        <name>CreateTable_Battery_Messages</name>
+        <param>
+          <type><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref> *</type>
+          <declname>dbc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/d2cc_lib.c" line="61" column="6" bodyfile="src/d2cc_lib.c" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d2cc__lib_8c_1acce29ea481884412fe82fde8cf8a3c73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateTable_Battery_Temperatures</definition>
+        <argsstring>(DbcStruct *dbc)</argsstring>
+        <name>CreateTable_Battery_Temperatures</name>
+        <param>
+          <type><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref> *</type>
+          <declname>dbc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/d2cc_lib.c" line="65" column="6" bodyfile="src/d2cc_lib.c" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d2cc__lib_8c_1a3f4346eef40e3f6e0856a015bed8da2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateTable_Battery_Voltages</definition>
+        <argsstring>(DbcStruct *dbc)</argsstring>
+        <name>CreateTable_Battery_Voltages</name>
+        <param>
+          <type><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref> *</type>
+          <declname>dbc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/d2cc_lib.c" line="69" column="6" bodyfile="src/d2cc_lib.c" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d2cc__lib_8c_1a3a8f6f06284c77bd13fc93c18115fd53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateTable_Can_Main</definition>
+        <argsstring>(DbcStruct *dbc)</argsstring>
+        <name>CreateTable_Can_Main</name>
+        <param>
+          <type><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref> *</type>
+          <declname>dbc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/d2cc_lib.c" line="73" column="6" bodyfile="src/d2cc_lib.c" bodystart="73" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>d2cc_lib.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>5.01.2025<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Author:<sp/>hakimmc</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>https://www.linkedin.com/in/abdulhakim-calgin/</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2cc__lib_8h" kindref="compound">d2cc_lib.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2cc__lib_8c_1ae78f43f4aca692c377c75bc182baee88" kindref="member">D2cc_Lib_Init</ref>(<ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/>*dbc){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb" kindref="member">Battery_Messages</ref>.<ref refid="struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af" kindref="member">ID</ref><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/>0x101;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb" kindref="member">Battery_Messages</ref>.<ref refid="struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f" kindref="member">DLC</ref><sp/><sp/><sp/>=<sp/><sp/><sp/>8;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b" kindref="member">Battery_Temperatures</ref>.<ref refid="struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af" kindref="member">ID</ref><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/>0x103;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b" kindref="member">Battery_Temperatures</ref>.<ref refid="struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f" kindref="member">DLC</ref><sp/><sp/><sp/>=<sp/><sp/><sp/>8;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc" kindref="member">Battery_Voltages</ref>.<ref refid="struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af" kindref="member">ID</ref><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/>0x102;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc" kindref="member">Battery_Voltages</ref>.<ref refid="struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f" kindref="member">DLC</ref><sp/><sp/><sp/>=<sp/><sp/><sp/>8;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af" kindref="member">ID</ref><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/>0x100;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f" kindref="member">DLC</ref><sp/><sp/><sp/>=<sp/><sp/><sp/>8;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" kindref="member">BatteryBalance_MaxVoltage</ref>.Phys_Value.factor<sp/><sp/><sp/>=<sp/><sp/><sp/>10;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" kindref="member">BatteryBalance_MaxVoltage</ref>.Phys_Value.offset<sp/><sp/><sp/>=<sp/><sp/><sp/>2000;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab" kindref="member">BatteryBalance_MinVoltage</ref>.Phys_Value.factor<sp/><sp/><sp/>=<sp/><sp/><sp/>10;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab" kindref="member">BatteryBalance_MinVoltage</ref>.Phys_Value.offset<sp/><sp/><sp/>=<sp/><sp/><sp/>2000;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d" kindref="member">BatteryBalance_MinTemp</ref>.Phys_Value.factor<sp/><sp/>=<sp/><sp/><sp/>1;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d" kindref="member">BatteryBalance_MinTemp</ref>.Phys_Value.offset<sp/><sp/>=<sp/><sp/><sp/>-100;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2cc__lib_8c_1ae5597b44f3f49cc3c016533bfa7a9374" kindref="member">ReadParse</ref>(uint8_t*<sp/>rx_data,<sp/>uint32_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/>*dbc){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x101:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;8;i++){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb" kindref="member">Battery_Messages</ref>.<ref refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" kindref="member">Data</ref>[i]<sp/>=<sp/>rx_data[i];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x103:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;8;i++){</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b" kindref="member">Battery_Temperatures</ref>.<ref refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" kindref="member">Data</ref>[i]<sp/>=<sp/>rx_data[i];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x102:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;8;i++){</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc" kindref="member">Battery_Voltages</ref>.<ref refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" kindref="member">Data</ref>[i]<sp/>=<sp/>rx_data[i];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x100:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;8;i++){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" kindref="member">Data</ref>[i]<sp/>=<sp/>rx_data[i];</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" kindref="member">BatteryBalance_MaxVoltage</ref>.Phys_Value.value<sp/><sp/><sp/><sp/>=<sp/><sp/><sp/>(dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" kindref="member">BatteryBalance_MaxVoltage</ref><sp/>*<sp/>10)<sp/>+<sp/>2000;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab" kindref="member">BatteryBalance_MinVoltage</ref>.Phys_Value.value<sp/><sp/><sp/><sp/>=<sp/><sp/><sp/>(dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab" kindref="member">BatteryBalance_MinVoltage</ref><sp/>*<sp/>10)<sp/>+<sp/>2000;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d" kindref="member">BatteryBalance_MinTemp</ref>.Phys_Value.value<sp/><sp/><sp/>=<sp/><sp/><sp/>(dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d" kindref="member">BatteryBalance_MinTemp</ref><sp/>*<sp/>1)<sp/>+<sp/>-100;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2cc__lib_8c_1a1a53ba345e601b7539ad8b1d3a60becf" kindref="member">CreateTable_Battery_Messages</ref>(<ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/>*dbc)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2cc__lib_8c_1acce29ea481884412fe82fde8cf8a3c73" kindref="member">CreateTable_Battery_Temperatures</ref>(<ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/>*dbc)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2cc__lib_8c_1a3f4346eef40e3f6e0856a015bed8da2d" kindref="member">CreateTable_Battery_Voltages</ref>(<ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/>*dbc)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2cc__lib_8c_1a3a8f6f06284c77bd13fc93c18115fd53" kindref="member">CreateTable_Can_Main</ref>(<ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/>*dbc)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1aafdcafa59c0375ecd8b2bf9e3a53ab53" kindref="member">AliveCounter</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8" kindref="member">BatteryChemistry</ref><sp/>=<sp/><ref refid="d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a" kindref="member">BatteryChemistry_LFP</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" kindref="member">BatteryBalance_MaxVoltage</ref><sp/>=<sp/>(2700-dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" kindref="member">BatteryBalance_MaxVoltage</ref>.Phys_Value.offset)/dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" kindref="member">BatteryBalance_MaxVoltage</ref>.Phys_Value.factor;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab" kindref="member">BatteryBalance_MinVoltage</ref><sp/>=<sp/>(3500-dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" kindref="member">BatteryBalance_MaxVoltage</ref>.Phys_Value.offset)/dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" kindref="member">BatteryBalance_MaxVoltage</ref>.Phys_Value.factor;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be" kindref="member">BatteryBalance_MaxTemp</ref><sp/>=<sp/>40;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d" kindref="member">BatteryBalance_MinTemp</ref><sp/>=<sp/>0-dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d" kindref="member">BatteryBalance_MinTemp</ref>.Phys_Value.offset;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a" kindref="member">SwVersionMajor</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21" kindref="member">SwVersionMinor</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1ab712e03d069028bd782d5a3bf63fbbcd" kindref="member">SwVersionBugfix</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad" kindref="member">CanBusEnable</ref><sp/>=<sp/><ref refid="d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5" kindref="member">CanBusEnable_Enable</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a1ca872211a78ead331d094d0b45c0499" kindref="member">WiFiEnable</ref><sp/>=<sp/><ref refid="d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e" kindref="member">WiFiEnable_Enable</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a" kindref="member">TcpEnable</ref><sp/>=<sp/><ref refid="d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d" kindref="member">TcpEnable_Offline</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54" kindref="member">VpnEnable</ref><sp/>=<sp/><ref refid="d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b" kindref="member">VpnEnable_Disable</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a9e27bd50ce2d239ca6f1d5f7cb023de7" kindref="member">WiFi_AP_Status</ref><sp/>=<sp/><ref refid="d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d" kindref="member">WiFi_AP_Status_Disable</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>dbc-&gt;<ref refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" kindref="member">Can_Main</ref>.<ref refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" kindref="member">Signal</ref>.<ref refid="struct_dbc_struct_1a9040957d9669218f0117644dcbc7f1c2" kindref="member">TcpClientCount</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/d2cc_lib.c"/>
+  </compounddef>
+</doxygen>

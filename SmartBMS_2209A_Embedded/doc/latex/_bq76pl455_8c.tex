@@ -1,0 +1,171 @@
+\doxysection{src/\+Bq76pl455.c File Reference}
+\hypertarget{_bq76pl455_8c}{}\label{_bq76pl455_8c}\index{src/Bq76pl455.c@{src/Bq76pl455.c}}
+
+
+Implementation file for interfacing with the BQ76\+PL455\+A-\/\+Q1 battery management IC.  
+
+
+{\ttfamily \#include "{}Bq76pl455.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_bq76pl455_8c_a07142409ffe9cbd3d17bc2fb0ceb4eb1}{BQ\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the BQ76\+PL455\+A-\/\+Q1 communication interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bq76pl455_8c_ac1a68691cca07c6263b16eb463fd7e06}{BQ\+\_\+\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Test communication with the BQ76\+PL455\+A-\/\+Q1 device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bq76pl455_8c_afce328763ae545228a5fe77ba53296da}{BQ\+\_\+\+Start}} (void \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Starts the main task for BQ76\+PL455\+A-\/\+Q1. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_bq76pl455_8c_a7f64a91901131f6c570e15d57d6a75b5}{CRC16}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint8\+\_\+t data\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Calculate the CRC-\/16 checksum for a given data buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bq76pl455_8c_a5db7a92f619e063198490508230e18a2}{BQ\+\_\+\+Uart\+\_\+\+Init}} (uint8\+\_\+t uart\+\_\+pin, int baudrate, uint32\+\_\+t rx\+\_\+buffsize, uint8\+\_\+t TXD\+\_\+\+PIN, uint8\+\_\+t RXD\+\_\+\+PIN)
+\begin{DoxyCompactList}\small\item\em Initialize UART for communication with the BQ76\+PL455\+A-\/\+Q1. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_bq76pl455_8c_aa01b4d094c5fc9ed6d46e6a622dbb75e}{BQ\+\_\+\+Uart\+\_\+\+Transmit}} (uint8\+\_\+t uart\+\_\+pin, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint8\+\_\+t data\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Transmit data via UART to the BQ76\+PL455\+A-\/\+Q1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint16\+\_\+t \mbox{\hyperlink{_bq76pl455_8c_ad04f1495afe1fac3b3f1a738bb83d8ea}{crc16\+\_\+table\+\_\+bq}} \mbox{[}256\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation file for interfacing with the BQ76\+PL455\+A-\/\+Q1 battery management IC. 
+
+Provides functionality to initialize, communicate, and calculate CRC for the BQ76\+PL455\+A-\/\+Q1 IC.
+
+Created on\+: 18 Dec 2024 \begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_bq76pl455_8c_a07142409ffe9cbd3d17bc2fb0ceb4eb1}\index{Bq76pl455.c@{Bq76pl455.c}!BQ\_Init@{BQ\_Init}}
+\index{BQ\_Init@{BQ\_Init}!Bq76pl455.c@{Bq76pl455.c}}
+\doxysubsubsection{\texorpdfstring{BQ\_Init()}{BQ\_Init()}}
+{\footnotesize\ttfamily \label{_bq76pl455_8c_a07142409ffe9cbd3d17bc2fb0ceb4eb1} 
+void BQ\+\_\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the BQ76\+PL455\+A-\/\+Q1 communication interface. 
+
+Configures the UART for the BQ76\+PL455\+A-\/\+Q1. \Hypertarget{_bq76pl455_8c_afce328763ae545228a5fe77ba53296da}\index{Bq76pl455.c@{Bq76pl455.c}!BQ\_Start@{BQ\_Start}}
+\index{BQ\_Start@{BQ\_Start}!Bq76pl455.c@{Bq76pl455.c}}
+\doxysubsubsection{\texorpdfstring{BQ\_Start()}{BQ\_Start()}}
+{\footnotesize\ttfamily \label{_bq76pl455_8c_afce328763ae545228a5fe77ba53296da} 
+void BQ\+\_\+\+Start (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{args}{}\end{DoxyParamCaption})}
+
+
+
+Starts the main task for BQ76\+PL455\+A-\/\+Q1. 
+
+Starts the BQ76\+PL455\+A-\/\+Q1 task.
+
+Continuously transmits a test message via UART at regular intervals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Task-\/specific arguments (optional). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bq76pl455_8c_ac1a68691cca07c6263b16eb463fd7e06}\index{Bq76pl455.c@{Bq76pl455.c}!BQ\_Test@{BQ\_Test}}
+\index{BQ\_Test@{BQ\_Test}!Bq76pl455.c@{Bq76pl455.c}}
+\doxysubsubsection{\texorpdfstring{BQ\_Test()}{BQ\_Test()}}
+{\footnotesize\ttfamily \label{_bq76pl455_8c_ac1a68691cca07c6263b16eb463fd7e06} 
+void BQ\+\_\+\+Test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Test communication with the BQ76\+PL455\+A-\/\+Q1 device. 
+
+Tests the communication with the BQ76\+PL455\+A-\/\+Q1.
+
+Sends a test message to read the device ID. \Hypertarget{_bq76pl455_8c_a5db7a92f619e063198490508230e18a2}\index{Bq76pl455.c@{Bq76pl455.c}!BQ\_Uart\_Init@{BQ\_Uart\_Init}}
+\index{BQ\_Uart\_Init@{BQ\_Uart\_Init}!Bq76pl455.c@{Bq76pl455.c}}
+\doxysubsubsection{\texorpdfstring{BQ\_Uart\_Init()}{BQ\_Uart\_Init()}}
+{\footnotesize\ttfamily \label{_bq76pl455_8c_a5db7a92f619e063198490508230e18a2} 
+void BQ\+\_\+\+Uart\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{uart\+\_\+pin}{, }\item[{int}]{baudrate}{, }\item[{uint32\+\_\+t}]{rx\+\_\+buffsize}{, }\item[{uint8\+\_\+t}]{TXD\+\_\+\+PIN}{, }\item[{uint8\+\_\+t}]{RXD\+\_\+\+PIN}{}\end{DoxyParamCaption})}
+
+
+
+Initialize UART for communication with the BQ76\+PL455\+A-\/\+Q1. 
+
+Initializes the UART interface for the BQ76\+PL455\+A-\/\+Q1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+pin} & UART port number. \\
+\hline
+{\em baudrate} & Baud rate for UART communication. \\
+\hline
+{\em rx\+\_\+buffsize} & RX buffer size. \\
+\hline
+{\em TXD\+\_\+\+PIN} & GPIO pin for UART TX. \\
+\hline
+{\em RXD\+\_\+\+PIN} & GPIO pin for UART RX. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bq76pl455_8c_aa01b4d094c5fc9ed6d46e6a622dbb75e}\index{Bq76pl455.c@{Bq76pl455.c}!BQ\_Uart\_Transmit@{BQ\_Uart\_Transmit}}
+\index{BQ\_Uart\_Transmit@{BQ\_Uart\_Transmit}!Bq76pl455.c@{Bq76pl455.c}}
+\doxysubsubsection{\texorpdfstring{BQ\_Uart\_Transmit()}{BQ\_Uart\_Transmit()}}
+{\footnotesize\ttfamily \label{_bq76pl455_8c_aa01b4d094c5fc9ed6d46e6a622dbb75e} 
+uint8\+\_\+t BQ\+\_\+\+Uart\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{uart\+\_\+pin}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint8\+\_\+t}]{data\+\_\+length}{}\end{DoxyParamCaption})}
+
+
+
+Transmit data via UART to the BQ76\+PL455\+A-\/\+Q1. 
+
+Transmits data to the BQ76\+PL455\+A-\/\+Q1 over UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart\+\_\+pin} & UART port number. \\
+\hline
+{\em data} & Pointer to the data buffer to be transmitted. \\
+\hline
+{\em data\+\_\+length} & Length of the data buffer in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 on failure. 
+\end{DoxyReturn}
+\Hypertarget{_bq76pl455_8c_a7f64a91901131f6c570e15d57d6a75b5}\index{Bq76pl455.c@{Bq76pl455.c}!CRC16@{CRC16}}
+\index{CRC16@{CRC16}!Bq76pl455.c@{Bq76pl455.c}}
+\doxysubsubsection{\texorpdfstring{CRC16()}{CRC16()}}
+{\footnotesize\ttfamily \label{_bq76pl455_8c_a7f64a91901131f6c570e15d57d6a75b5} 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} CRC16 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint8\+\_\+t}]{data\+\_\+length}{}\end{DoxyParamCaption})}
+
+
+
+Calculate the CRC-\/16 checksum for a given data buffer. 
+
+Calculates the CRC-\/16 for a given data buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the data buffer. \\
+\hline
+{\em data\+\_\+length} & Length of the data buffer in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a 2-\/byte array containing the CRC checksum. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_bq76pl455_8c_ad04f1495afe1fac3b3f1a738bb83d8ea}\index{Bq76pl455.c@{Bq76pl455.c}!crc16\_table\_bq@{crc16\_table\_bq}}
+\index{crc16\_table\_bq@{crc16\_table\_bq}!Bq76pl455.c@{Bq76pl455.c}}
+\doxysubsubsection{\texorpdfstring{crc16\_table\_bq}{crc16\_table\_bq}}
+{\footnotesize\ttfamily \label{_bq76pl455_8c_ad04f1495afe1fac3b3f1a738bb83d8ea} 
+const uint16\+\_\+t crc16\+\_\+table\+\_\+bq\mbox{[}256\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

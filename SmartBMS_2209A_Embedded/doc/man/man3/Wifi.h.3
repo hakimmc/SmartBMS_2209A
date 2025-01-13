@@ -1,0 +1,258 @@
+.TH "include/Wifi.h" 3 "Version v1.0.0" "SmartBMS_2209A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Wifi.h \- Wi-Fi configuration for ESP32 in AP+STA mode\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'freertos/FreeRTOS\&.h'\fP
+.br
+\fR#include 'freertos/event_groups\&.h'\fP
+.br
+\fR#include 'esp_wifi\&.h'\fP
+.br
+\fR#include 'freertos/task\&.h'\fP
+.br
+\fR#include 'esp_event\&.h'\fP
+.br
+\fR#include 'esp_log\&.h'\fP
+.br
+\fR#include 'nvs_flash\&.h'\fP
+.br
+\fR#include 'esp_netif\&.h'\fP
+.br
+\fR#include 'string\&.h'\fP
+.br
+\fR#include <inttypes\&.h>\fP
+.br
+\fR#include <time\&.h>\fP
+.br
+\fR#include <sys/time\&.h>\fP
+.br
+\fR#include <esp_system\&.h>\fP
+.br
+\fR#include <lwip/netdb\&.h>\fP
+.br
+\fR#include <ping/ping_sock\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBWIFI_CONNECTED_BIT\fP   BIT0"
+.br
+.RI "Event bit indicating a successful Wi-Fi connection\&. "
+.ti -1c
+.RI "#define \fBWIFI_FAIL_BIT\fP   BIT1"
+.br
+.RI "Event bit indicating a Wi-Fi connection failure\&. "
+.ti -1c
+.RI "#define \fBWIFI_CONNECT\fP"
+.br
+.RI "Define this macro to enable Wi-Fi station connection\&. Comment it out to disable the Wi-Fi station functionality\&. "
+.ti -1c
+.RI "#define \fBAP_SSID\fP   'Ottomotive_BMS'"
+.br
+.RI "SSID for the Access Point\&. "
+.ti -1c
+.RI "#define \fBAP_PASS\fP   'Ottomotive22*'"
+.br
+.RI "Password for the Access Point\&. "
+.ti -1c
+.RI "#define \fBMAX_STA_CONN\fP   5"
+.br
+.RI "Maximum number of stations that can connect to the Access Point\&. "
+.ti -1c
+.RI "#define \fBMAX_RETRY\fP   5"
+.br
+.RI "Maximum number of retry attempts for Wi-Fi connection\&. "
+.ti -1c
+.RI "#define \fBWIFI_SSID\fP   'Poyrazwifi_Calgin'"
+.br
+.RI "SSID for the Wi-Fi station connection\&. "
+.ti -1c
+.RI "#define \fBWIFI_PASS\fP   'Ah487602'"
+.br
+.RI "Password for the Wi-Fi station connection\&. "
+.ti -1c
+.RI "#define \fBWIFI_TIMEOUT_MS\fP   10000"
+.br
+.RI "Timeout for Wi-Fi connection in milliseconds\&. "
+.ti -1c
+.RI "#define \fBESP32_AP_CHANNEL\fP   3"
+.br
+.RI "Channel for the Access Point\&. "
+.ti -1c
+.RI "#define \fBESP32_MAX_CONN\fP   3"
+.br
+.RI "Maximum number of simultaneous connections to the Access Point\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBevent_handler\fP (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)"
+.br
+.RI "Handles Wi-Fi events\&. "
+.ti -1c
+.RI "void \fBwifi_init_ap_sta\fP (void)"
+.br
+.RI "Initializes the Wi-Fi in AP+STA mode\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Wi-Fi configuration for ESP32 in AP+STA mode\&. 
+
+This header file provides the necessary definitions and function declarations for configuring the ESP32 to operate in both Access Point (AP) and Station (STA) modes\&.
+
+.PP
+Created on: 18 Dec 2024 
+.PP
+\fBAuthor\fP
+.RS 4
+hakimmc 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define AP_PASS   'Ottomotive22*'"
+
+.PP
+Password for the Access Point\&. 
+.SS "#define AP_SSID   'Ottomotive_BMS'"
+
+.PP
+SSID for the Access Point\&. 
+.SS "#define ESP32_AP_CHANNEL   3"
+
+.PP
+Channel for the Access Point\&. 
+.SS "#define ESP32_MAX_CONN   3"
+
+.PP
+Maximum number of simultaneous connections to the Access Point\&. 
+.SS "#define MAX_RETRY   5"
+
+.PP
+Maximum number of retry attempts for Wi-Fi connection\&. 
+.SS "#define MAX_STA_CONN   5"
+
+.PP
+Maximum number of stations that can connect to the Access Point\&. 
+.SS "#define WIFI_CONNECT"
+
+.PP
+Define this macro to enable Wi-Fi station connection\&. Comment it out to disable the Wi-Fi station functionality\&. 
+.SS "#define WIFI_CONNECTED_BIT   BIT0"
+
+.PP
+Event bit indicating a successful Wi-Fi connection\&. 
+.SS "#define WIFI_FAIL_BIT   BIT1"
+
+.PP
+Event bit indicating a Wi-Fi connection failure\&. 
+.SS "#define WIFI_PASS   'Ah487602'"
+
+.PP
+Password for the Wi-Fi station connection\&. 
+.SS "#define WIFI_SSID   'Poyrazwifi_Calgin'"
+
+.PP
+SSID for the Wi-Fi station connection\&. 
+.SS "#define WIFI_TIMEOUT_MS   10000"
+
+.PP
+Timeout for Wi-Fi connection in milliseconds\&. 
+.SH "Function Documentation"
+.PP 
+.SS "static void event_handler (void * arg, esp_event_base_t event_base, int32_t event_id, void * event_data)\fR [static]\fP"
+
+.PP
+Handles Wi-Fi events\&. This function is called to process various Wi-Fi events, such as connection establishment and disconnection\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg\fP User-provided argument (optional)\&. 
+.br
+\fIevent_base\fP Event base that identifies the event type\&. 
+.br
+\fIevent_id\fP Event ID specifying the exact event\&. 
+.br
+\fIevent_data\fP Additional data associated with the event (optional)\&. 
+.RE
+.PP
+
+.SS "void wifi_init_ap_sta (void )"
+
+.PP
+Initializes the Wi-Fi in AP+STA mode\&. This function configures the ESP32 to operate in both Access Point (AP) and Station (STA) modes\&. The configuration is based on the defined macros\&.
+
+.PP
+Initializes the Wi-Fi in AP+STA mode\&.
+
+.PP
+This function initializes the Wi-Fi stack, configures the Wi-Fi interfaces, and starts the Wi-Fi service\&. It also registers event handlers for Wi-Fi and IP events, and connects to a Wi-Fi network in STA mode, if configured\&.
+
+.PP
+\fBNote\fP
+.RS 4
+This function configures the ESP32 in dual mode (AP and STA) and connects to a Wi-Fi network if \fRWIFI_CONNECT\fP is defined\&. 
+.RE
+.PP
+< Initialize network interface\&.
+
+.PP
+< Create the default event loop\&.
+
+.PP
+< Create the default Wi-Fi AP (Access Point) interface\&.
+
+.PP
+< Default Wi-Fi configuration\&.
+
+.PP
+< Initialize Wi-Fi driver with the default configuration\&.
+
+.PP
+< Register Wi-Fi event handler\&.
+
+.PP
+< Register IP event handler\&.
+
+.PP
+< AP SSID\&.
+
+.PP
+< AP password\&.
+
+.PP
+< Length of SSID\&.
+
+.PP
+< AP channel\&.
+
+.PP
+< Max connections to the AP\&.
+
+.PP
+< WPA/WPA2 PSK authentication\&.
+
+.PP
+< Set Wi-Fi mode to AP only\&.
+
+.PP
+< Set AP configuration\&.
+
+.PP
+< Start the Wi-Fi driver\&.
+
+.PP
+< Log completion of Wi-Fi initialization\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

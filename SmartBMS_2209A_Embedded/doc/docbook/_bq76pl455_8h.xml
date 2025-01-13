@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__bq76pl455_8h" xml:lang="en-US">
+<title>include/Bq76pl455.h File Reference</title>
+<indexterm><primary>include/Bq76pl455.h</primary></indexterm>
+<para>
+
+<para>Header file for interfacing with the BQ76PL455A-Q1 battery management IC. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Uart.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__bq76pl455_8h_1affe9f6ad00bd064e9ed9a77cae998f77">BQ_UART_PORT</link>&#160;&#160;&#160;UART_NUM_1</para>
+
+<para>UART port used for communication with the BQ76PL455A-Q1. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__bq76pl455_8h_1a9491feb889b0266826e8907cad0d42f2">BQ_TX</link>&#160;&#160;&#160;12</para>
+
+<para>GPIO pin number for UART TX (transmit) connected to the BQ76PL455A-Q1. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__bq76pl455_8h_1a1cc27c7b563113b7136d2ea7ff0fa7f5">BQ_RX</link>&#160;&#160;&#160;11</para>
+
+<para>GPIO pin number for UART RX (receive) connected to the BQ76PL455A-Q1. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__bq76pl455_8h_1ab1f7f8492c3cca0837700429807074e3">Bq_Init</link> ()</para>
+
+<para>Initializes the BQ76PL455A-Q1 interface. </para>
+</listitem>
+            <listitem><para>void <link linkend="__bq76pl455_8h_1ac1a68691cca07c6263b16eb463fd7e06">BQ_Test</link> ()</para>
+
+<para>Tests the communication with the BQ76PL455A-Q1. </para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="__bq76pl455_8h_1a7f64a91901131f6c570e15d57d6a75b5">CRC16</link> (uint8_t *data, uint8_t data_length)</para>
+
+<para>Calculates the CRC-16 for a given data buffer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__bq76pl455_8h_1afce328763ae545228a5fe77ba53296da">BQ_Start</link> (void *args)</para>
+
+<para>Starts the BQ76PL455A-Q1 task. </para>
+</listitem>
+            <listitem><para>void <link linkend="__bq76pl455_8h_1a5db7a92f619e063198490508230e18a2">BQ_Uart_Init</link> (uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)</para>
+
+<para>Initializes the UART interface for the BQ76PL455A-Q1. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__bq76pl455_8h_1aa01b4d094c5fc9ed6d46e6a622dbb75e">BQ_Uart_Transmit</link> (uint8_t uart_pin, uint8_t *data, uint8_t data_length)</para>
+
+<para>Transmits data to the BQ76PL455A-Q1 over UART. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file for interfacing with the BQ76PL455A-Q1 battery management IC. </para>
+
+<para>This file provides declarations for initializing, communicating, and managing the BQ76PL455A-Q1 IC using UART. It includes CRC-16 calculation and message structure details.</para>
+
+<para>Created on: 18 Dec 2024 <formalpara><title>Author</title>
+
+<para>hakimmc </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__bq76pl455_8h_1a1cc27c7b563113b7136d2ea7ff0fa7f5"/><section>
+    <title>BQ_RX</title>
+<indexterm><primary>BQ_RX</primary><secondary>Bq76pl455.h</secondary></indexterm>
+<indexterm><primary>Bq76pl455.h</primary><secondary>BQ_RX</secondary></indexterm>
+<para><computeroutput>#define BQ_RX&#160;&#160;&#160;11</computeroutput></para><para>
+
+<para>GPIO pin number for UART RX (receive) connected to the BQ76PL455A-Q1. </para>
+</para>
+</section>
+<anchor xml:id="__bq76pl455_8h_1a9491feb889b0266826e8907cad0d42f2"/><section>
+    <title>BQ_TX</title>
+<indexterm><primary>BQ_TX</primary><secondary>Bq76pl455.h</secondary></indexterm>
+<indexterm><primary>Bq76pl455.h</primary><secondary>BQ_TX</secondary></indexterm>
+<para><computeroutput>#define BQ_TX&#160;&#160;&#160;12</computeroutput></para><para>
+
+<para>GPIO pin number for UART TX (transmit) connected to the BQ76PL455A-Q1. </para>
+</para>
+</section>
+<anchor xml:id="__bq76pl455_8h_1affe9f6ad00bd064e9ed9a77cae998f77"/><section>
+    <title>BQ_UART_PORT</title>
+<indexterm><primary>BQ_UART_PORT</primary><secondary>Bq76pl455.h</secondary></indexterm>
+<indexterm><primary>Bq76pl455.h</primary><secondary>BQ_UART_PORT</secondary></indexterm>
+<para><computeroutput>#define BQ_UART_PORT&#160;&#160;&#160;UART_NUM_1</computeroutput></para><para>
+
+<para>UART port used for communication with the BQ76PL455A-Q1. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__bq76pl455_8h_1ab1f7f8492c3cca0837700429807074e3"/><section>
+    <title>Bq_Init()</title>
+<indexterm><primary>Bq_Init</primary><secondary>Bq76pl455.h</secondary></indexterm>
+<indexterm><primary>Bq76pl455.h</primary><secondary>Bq_Init</secondary></indexterm>
+<para><computeroutput>void Bq_Init ( )</computeroutput></para><para>
+
+<para>Initializes the BQ76PL455A-Q1 interface. </para>
+</para>
+
+<para>Sets up the UART interface and any necessary configurations for communication with the BQ76PL455A-Q1 device. </para>
+</section>
+<anchor xml:id="__bq76pl455_8h_1afce328763ae545228a5fe77ba53296da"/><section>
+    <title>BQ_Start()</title>
+<indexterm><primary>BQ_Start</primary><secondary>Bq76pl455.h</secondary></indexterm>
+<indexterm><primary>Bq76pl455.h</primary><secondary>BQ_Start</secondary></indexterm>
+<para><computeroutput>void BQ_Start (void * args)</computeroutput></para><para>
+
+<para>Starts the BQ76PL455A-Q1 task. </para>
+</para>
+
+<para>A FreeRTOS task responsible for managing communication with the BQ76PL455A-Q1.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>args</entry><entry>
+<para>Pointer to task-specific arguments (optional).</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Starts the BQ76PL455A-Q1 task.</para>
+
+<para>Continuously transmits a test message via UART at regular intervals.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>args</entry><entry>
+<para>Task-specific arguments (optional). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__bq76pl455_8h_1ac1a68691cca07c6263b16eb463fd7e06"/><section>
+    <title>BQ_Test()</title>
+<indexterm><primary>BQ_Test</primary><secondary>Bq76pl455.h</secondary></indexterm>
+<indexterm><primary>Bq76pl455.h</primary><secondary>BQ_Test</secondary></indexterm>
+<para><computeroutput>void BQ_Test ( )</computeroutput></para><para>
+
+<para>Tests the communication with the BQ76PL455A-Q1. </para>
+</para>
+
+<para>Sends a test command or sequence to verify the functionality of the BQ76PL455A-Q1.</para>
+
+<para>Tests the communication with the BQ76PL455A-Q1.</para>
+
+<para>Sends a test message to read the device ID. </para>
+</section>
+<anchor xml:id="__bq76pl455_8h_1a5db7a92f619e063198490508230e18a2"/><section>
+    <title>BQ_Uart_Init()</title>
+<indexterm><primary>BQ_Uart_Init</primary><secondary>Bq76pl455.h</secondary></indexterm>
+<indexterm><primary>Bq76pl455.h</primary><secondary>BQ_Uart_Init</secondary></indexterm>
+<para><computeroutput>void BQ_Uart_Init (uint8_t uart_pin, int baudrate, uint32_t rx_buffsize, uint8_t TXD_PIN, uint8_t RXD_PIN)</computeroutput></para><para>
+
+<para>Initializes the UART interface for the BQ76PL455A-Q1. </para>
+</para>
+
+<para>Configures the UART parameters for communicating with the BQ76PL455A-Q1, including pin assignments, baud rate, and RX buffer size.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uart_pin</entry><entry>
+<para>The UART port number to initialize. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>baudrate</entry><entry>
+<para>The desired baud rate for communication. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>rx_buffsize</entry><entry>
+<para>The size of the RX buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>TXD_PIN</entry><entry>
+<para>The GPIO pin number for UART TX. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>RXD_PIN</entry><entry>
+<para>The GPIO pin number for UART RX.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Initializes the UART interface for the BQ76PL455A-Q1.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uart_pin</entry><entry>
+<para>UART port number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>baudrate</entry><entry>
+<para>Baud rate for UART communication. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>rx_buffsize</entry><entry>
+<para>RX buffer size. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>TXD_PIN</entry><entry>
+<para>GPIO pin for UART TX. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>RXD_PIN</entry><entry>
+<para>GPIO pin for UART RX. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__bq76pl455_8h_1aa01b4d094c5fc9ed6d46e6a622dbb75e"/><section>
+    <title>BQ_Uart_Transmit()</title>
+<indexterm><primary>BQ_Uart_Transmit</primary><secondary>Bq76pl455.h</secondary></indexterm>
+<indexterm><primary>Bq76pl455.h</primary><secondary>BQ_Uart_Transmit</secondary></indexterm>
+<para><computeroutput>uint8_t BQ_Uart_Transmit (uint8_t uart_pin, uint8_t * data, uint8_t data_length)</computeroutput></para><para>
+
+<para>Transmits data to the BQ76PL455A-Q1 over UART. </para>
+</para>
+
+<para>Sends a sequence of bytes to the BQ76PL455A-Q1 via UART.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uart_pin</entry><entry>
+<para>The UART port number to use for transmission. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the data buffer to be transmitted. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data_length</entry><entry>
+<para>The length of the data buffer in bytes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns <computeroutput>0</computeroutput> on success or a non-zero value on failure.</para>
+</formalpara>
+Transmits data to the BQ76PL455A-Q1 over UART.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uart_pin</entry><entry>
+<para>UART port number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the data buffer to be transmitted. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data_length</entry><entry>
+<para>Length of the data buffer in bytes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>1 on success, 0 on failure. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__bq76pl455_8h_1a7f64a91901131f6c570e15d57d6a75b5"/><section>
+    <title>CRC16()</title>
+<indexterm><primary>CRC16</primary><secondary>Bq76pl455.h</secondary></indexterm>
+<indexterm><primary>Bq76pl455.h</primary><secondary>CRC16</secondary></indexterm>
+<para><computeroutput>uint8_t * CRC16 (uint8_t * data, uint8_t data_length)</computeroutput></para><para>
+
+<para>Calculates the CRC-16 for a given data buffer. </para>
+</para>
+
+<para>Computes the CRC-16 using the IBM standard with reversed MSB and LSB for compatibility with the BQ76PL455A-Q1 message format.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the data buffer for which the CRC needs to be calculated. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data_length</entry><entry>
+<para>The length of the data buffer in bytes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to a 2-byte array containing the CRC-16 result.</para>
+</formalpara>
+Calculates the CRC-16 for a given data buffer.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the data buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data_length</entry><entry>
+<para>Length of the data buffer in bytes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to a 2-byte array containing the CRC checksum. </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>
