@@ -1,18 +1,30 @@
-/*
- * TcpServer.c
- *
- *  Created on: 18 Ara 2024
- *      Author: hakimmc
+/**
+ * @file TcpServer.c
+ * @brief TCP server implementation to handle incoming client connections, authenticate, and exchange data.
+ * @date 18 December 2024
+ * @author hakimmc
  */
-
 
 #include "TcpServer.h"
 #include "Wifi.h"
- 
 
-char*  GUI_USER = "root";
-char*  GUI_PASS = "otto";
+#define SERVER_PORT 8080 /**< Port number for the TCP server */
+#define TCP_TAG "TCP_SERVER" /**< Tag for logging */
 
+/** @brief Username for GUI authentication */
+char* GUI_USER = "root";
+/** @brief Password for GUI authentication */
+char* GUI_PASS = "otto";
+
+/**
+ * @brief Creates and starts a TCP server to listen for client connections.
+ * 
+ * This function sets up a TCP socket, binds it to a specified address and port,
+ * and listens for incoming connections. For each connection, a new task is created
+ * to handle the client.
+ * 
+ * @param pvParameter Unused parameter for FreeRTOS task.
+ */
 void Create_Server(void* pvParameter)
 {
     char addr_str[128];
@@ -67,6 +79,14 @@ void Create_Server(void* pvParameter)
     close(listen_sock);
 }
 
+/**
+ * @brief Handles communication with a single client.
+ * 
+ * This function receives and processes commands from the client, authenticates the user,
+ * and manages communication based on different states. It handles login, data requests, and exit commands.
+ * 
+ * @param args Socket descriptor for the client.
+ */
 void Handle_Client(void* args)
 {
     int sock = (int)args;
@@ -108,7 +128,7 @@ void Handle_Client(void* args)
                                 break;
                             }
                         }
-                        if(state<3){
+                        if(state < 3){
                             send(sock, "EHLO", 4, 0);
                             state = 1;
                             timeout_counter = 0;
@@ -185,8 +205,21 @@ void Handle_Client(void* args)
     vTaskDelete(NULL);
 }
 
-
-int receive_data(int sock, char* buffer, size_t size, uint8_t* timeout_counter, uint8_t max_timeout) 
+/**
+ * @brief Receives data from the client socket.
+ * 
+ * This function receives data from the client and handles timeouts. If no data is received
+ * within a specified timeout period, it returns a timeout error.
+ * 
+ * @param sock Socket descriptor for the client.
+ * @param buffer Buffer to store received data.
+ * @param size Size of the buffer.
+ * @param timeout_counter Counter to track consecutive timeouts.
+ * @param max_timeout Maximum allowed consecutive timeouts before returning an error.
+ * 
+ * @return Length of received data, -1 if timeout occurs, or -2 if maximum timeouts reached.
+ */
+int receive_data(int sock, char* buffer, size_t size, uint8_t* timeout_counter, uint8_t max_timeout)
 {
     int len = recv(sock, buffer, size, 0);
     if (len <= 0) {
@@ -200,9 +233,12 @@ int receive_data(int sock, char* buffer, size_t size, uint8_t* timeout_counter, 
     return len;
 }
 
+/**
+ * @brief Initializes the TCP server and starts listening for client connections.
+ */
 void Tcp_Init()
 {
-    wifi_init_ap_sta(); 
+    wifi_init_ap_sta(); /**< Initialize Wi-Fi in access point and station mode. */
 
-    xTaskCreate(Create_Server, "tcp_server", 4096, NULL, (UBaseType_t)5, NULL);
+    xTaskCreate(Create_Server, "tcp_server", 4096, NULL, (UBaseType_t)5, NULL); /**< Start the TCP server task. */
 }
