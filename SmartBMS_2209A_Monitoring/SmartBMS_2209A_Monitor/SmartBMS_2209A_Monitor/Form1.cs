@@ -125,26 +125,58 @@ namespace SmartBMS_2209A_Monitor
 
         public void AddRule()
         {
-            string ruleName = "ESP32_TCP_Connection";
-            string portNumber = "5166";
-            string netshCommand = $"netsh advfirewall firewall add rule name=\"{ruleName}\" protocol=TCP dir=in localport={portNumber} action=allow";
+            // removed with v2 software. added external bat file for addrule
 
-            ProcessStartInfo psi = new ProcessStartInfo("cmd.exe", "/c " + netshCommand)
+            string ruleName = "OTTOMOTIVE_BMS";
+            bool isRuleExists = false;
+
+            // Check if the rule exists
+            var checkRuleProc = new Process
             {
-                RedirectStandardOutput = true,
-                UseShellExecute = false,
-                CreateNoWindow = true
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = "netsh",
+                    Arguments = $"advfirewall firewall show rule name=\"{ruleName}\"",
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    CreateNoWindow = true
+                }
             };
 
-            Process process = new Process
+            checkRuleProc.Start();
+            string output = checkRuleProc.StandardOutput.ReadToEnd();
+            checkRuleProc.WaitForExit();
+
+            // Check if the rule exists in the output
+            isRuleExists = output.Contains(ruleName);
+
+            if (!isRuleExists)
             {
-                StartInfo = psi
-            };
+                // Add the rule if it does not exist
+                var addRuleProc = new Process
+                {
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "add_firewall_rule.bat",
+                        UseShellExecute = true,
+                        Verb = "runas",
+                        RedirectStandardOutput = false,
+                        CreateNoWindow = false
+                    }
+                };
 
-            process.Start();
+                try
+                {
+                    addRuleProc.Start();
+                    addRuleProc.WaitForExit();
+                    Console.WriteLine("Batch file executed successfully.");
+                }
+                catch (System.ComponentModel.Win32Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+            }
 
-            string output = process.StandardOutput.ReadToEnd();
-            process.WaitForExit();
         }
 
         public bool get_Admin_Role(Stream st)

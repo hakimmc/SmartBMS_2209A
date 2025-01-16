@@ -1,6 +1,6 @@
 \doxysection{Can.\+h}
-\hypertarget{_can_8h_source}{}\label{_can_8h_source}\index{include/Can.h@{include/Can.h}}
-\mbox{\hyperlink{_can_8h}{Go to the documentation of this file.}}
+\label{_can_8h_source}\index{include/Can.h@{include/Can.h}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
 \DoxyCodeLine{00011\ }
@@ -17,7 +17,7 @@
 \DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}esp\_err.h"{}}}
 \DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}esp\_log.h"{}}}
 \DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}driver/twai.h"{}}}
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{d2cc__lib_8h}{d2cc\_lib.h}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}d2cc\_lib.h"{}}}
 \DoxyCodeLine{00026\ }
 \DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ TX\_GPIO\_NUM\ \ \ \ \ \ \ \ \ \ \ \ \ 5}}
 \DoxyCodeLine{00032\ }
@@ -35,11 +35,11 @@
 \DoxyCodeLine{00068\ }
 \DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ CAN\_DELAY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 250\ }\textcolor{comment}{//\ ms}}
 \DoxyCodeLine{00074\ }
-\DoxyCodeLine{00085\ uint8\_t\ \mbox{\hyperlink{_can_8h_a8920d0f7ab8095cccb447da8d5fae390}{Can\_Init}}(twai\_general\_config\_t\ can\_gpio\_config,\ twai\_timing\_config\_t\ can\_time\_config,\ twai\_filter\_config\_t\ can\_filter\_config);}
+\DoxyCodeLine{00085\ uint8\_t\ Can\_Init(twai\_general\_config\_t\ can\_gpio\_config,\ twai\_timing\_config\_t\ can\_time\_config,\ twai\_filter\_config\_t\ can\_filter\_config);}
 \DoxyCodeLine{00086\ }
-\DoxyCodeLine{00096\ uint8\_t\ \mbox{\hyperlink{_can_8h_a51dc04f4c5f5a544e73c33e2d606193b}{Can\_Transmit}}(twai\_message\_t\ message,\ uint8\_t\ data[]);}
+\DoxyCodeLine{00096\ uint8\_t\ Can\_Transmit(twai\_message\_t\ message,\ uint8\_t\ data[]);}
 \DoxyCodeLine{00097\ }
-\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_can_8h_a99ef09684458d26b79a4185bc0af934b}{CanReporter}}(\textcolor{keywordtype}{void}*\ pvParameter);}
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ CanReporter(\textcolor{keywordtype}{void}*\ pvParameter);}
 \DoxyCodeLine{00106\ }
 \DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INCLUDE\_CAN\_H\_\ */}\textcolor{preprocessor}{}}
 

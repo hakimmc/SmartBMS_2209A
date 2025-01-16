@@ -1,5 +1,5 @@
 \doxysection{src/\+Led\+Task\+Init.c File Reference}
-\hypertarget{_led_task_init_8c}{}\label{_led_task_init_8c}\index{src/LedTaskInit.c@{src/LedTaskInit.c}}
+\label{_led_task_init_8c}\index{src/LedTaskInit.c@{src/LedTaskInit.c}}
 
 
 Implementation of LED blinking task using ESP32 GPIO.  
@@ -12,14 +12,14 @@ Implementation of LED blinking task using ESP32 GPIO.
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{_led_task_init_8c_ab4553be4db9860d940f81d7447173b2f}{LED\+\_\+\+PIN}}~13
+\#define \textbf{ LED\+\_\+\+PIN}~13
 \begin{DoxyCompactList}\small\item\em GPIO pin used for the LED. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{_led_task_init_8c_ac3698c9d80d8a1abde24708cc9fdb1ee}{gpio\+\_\+init}} (uint8\+\_\+t gpio\+\_\+pin)
+void \textbf{ gpio\+\_\+init} (uint8\+\_\+t gpio\+\_\+pin)
 \begin{DoxyCompactList}\small\item\em Initializes the specified GPIO pin as an output. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_led_task_init_8c_a1f53ce317fca339ddc6588adb1a457e4}{led\+\_\+init}} (void \texorpdfstring{$\ast$}{*}pv\+Parameter)
+void \textbf{ led\+\_\+init} (void $\ast$pv\+Parameter)
 \begin{DoxyCompactList}\small\item\em LED blinking task. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -35,9 +35,9 @@ hakimmc
 
 
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{_led_task_init_8c_ab4553be4db9860d940f81d7447173b2f}\index{LedTaskInit.c@{LedTaskInit.c}!LED\_PIN@{LED\_PIN}}
+\index{LedTaskInit.c@{LedTaskInit.c}!LED\_PIN@{LED\_PIN}}
 \index{LED\_PIN@{LED\_PIN}!LedTaskInit.c@{LedTaskInit.c}}
-\doxysubsubsection{\texorpdfstring{LED\_PIN}{LED\_PIN}}
+\doxysubsubsection{LED\_PIN}
 {\footnotesize\ttfamily \label{_led_task_init_8c_ab4553be4db9860d940f81d7447173b2f} 
 \#define LED\+\_\+\+PIN~13}
 
@@ -48,9 +48,9 @@ GPIO pin used for the LED.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{_led_task_init_8c_ac3698c9d80d8a1abde24708cc9fdb1ee}\index{LedTaskInit.c@{LedTaskInit.c}!gpio\_init@{gpio\_init}}
+\index{LedTaskInit.c@{LedTaskInit.c}!gpio\_init@{gpio\_init}}
 \index{gpio\_init@{gpio\_init}!LedTaskInit.c@{LedTaskInit.c}}
-\doxysubsubsection{\texorpdfstring{gpio\_init()}{gpio\_init()}}
+\doxysubsubsection{gpio\_init()}
 {\footnotesize\ttfamily \label{_led_task_init_8c_ac3698c9d80d8a1abde24708cc9fdb1ee} 
 void gpio\+\_\+init (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gpio\+\_\+pin}{}\end{DoxyParamCaption})}
 
@@ -67,19 +67,19 @@ This function configures the given GPIO pin for output mode with no pull-\/up or
 {\em gpio\+\_\+pin} & The GPIO pin number to initialize. \\
 \hline
 \end{DoxyParams}
-\texorpdfstring{$<$}{<} No interrupt triggered.
+$<$ No interrupt triggered.
 
-\texorpdfstring{$<$}{<} Set GPIO mode to output.
+$<$ Set GPIO mode to output.
 
-\texorpdfstring{$<$}{<} Pin mask for the specified GPIO pin.
+$<$ Pin mask for the specified GPIO pin.
 
-\texorpdfstring{$<$}{<} Disable pull-\/down resistor.
+$<$ Disable pull-\/down resistor.
 
-\texorpdfstring{$<$}{<} Disable pull-\/up resistor.\Hypertarget{_led_task_init_8c_a1f53ce317fca339ddc6588adb1a457e4}\index{LedTaskInit.c@{LedTaskInit.c}!led\_init@{led\_init}}
+$<$ Disable pull-\/up resistor.\index{LedTaskInit.c@{LedTaskInit.c}!led\_init@{led\_init}}
 \index{led\_init@{led\_init}!LedTaskInit.c@{LedTaskInit.c}}
-\doxysubsubsection{\texorpdfstring{led\_init()}{led\_init()}}
+\doxysubsubsection{led\_init()}
 {\footnotesize\ttfamily \label{_led_task_init_8c_a1f53ce317fca339ddc6588adb1a457e4} 
-void led\+\_\+init (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameter}{}\end{DoxyParamCaption})}
+void led\+\_\+init (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameter}{}\end{DoxyParamCaption})}
 
 
 
@@ -94,12 +94,12 @@ This task initializes the LED GPIO pin and continuously toggles the LED state wi
 {\em pv\+Parameter} & A pointer to task-\/specific parameters (unused). \\
 \hline
 \end{DoxyParams}
-\texorpdfstring{$<$}{<} Initialize the LED GPIO pin.
+$<$ Initialize the LED GPIO pin.
 
-\texorpdfstring{$<$}{<} Turn the LED on.
+$<$ Turn the LED on.
 
-\texorpdfstring{$<$}{<} Delay for 500 ms.
+$<$ Delay for 500 ms.
 
-\texorpdfstring{$<$}{<} Turn the LED off.
+$<$ Turn the LED off.
 
-\texorpdfstring{$<$}{<} Delay for 500 ms.
+$<$ Delay for 500 ms.

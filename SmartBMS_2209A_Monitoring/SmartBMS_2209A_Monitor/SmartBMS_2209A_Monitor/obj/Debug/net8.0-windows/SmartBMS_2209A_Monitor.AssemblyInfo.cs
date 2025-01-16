@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartBMS_2209A_Monitor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4b86e8fbf50939314d4c86fcd2b17d093c101fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+690cb6ba20d5755e54f1476a91b87456d595276d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartBMS_2209A_Monitor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartBMS_2209A_Monitor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

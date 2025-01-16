@@ -1,6 +1,6 @@
 \doxysection{Tcp\+Server.\+h}
-\hypertarget{_tcp_server_8h_source}{}\label{_tcp_server_8h_source}\index{include/TcpServer.h@{include/TcpServer.h}}
-\mbox{\hyperlink{_tcp_server_8h}{Go to the documentation of this file.}}
+\label{_tcp_server_8h_source}\index{include/TcpServer.h@{include/TcpServer.h}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
 \DoxyCodeLine{00012\ }
@@ -16,7 +16,7 @@
 \DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}freertos/FreeRTOS.h"{}}}
 \DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}freertos/task.h"{}}}
 \DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}esp\_system.h"{}}}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_wifi_8h}{Wifi.h}}"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}Wifi.h"{}}}
 \DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}string.h"{}}}
 \DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}esp\_ping.h"{}}}
 \DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}ping/ping\_sock.h"{}}}
@@ -25,7 +25,7 @@
 \DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}esp\_wifi.h"{}}}
 \DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}esp\_event.h"{}}}
 \DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}esp\_log.h"{}}}
-\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{d2cc__lib_8h}{d2cc\_lib.h}}"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}d2cc\_lib.h"{}}}
 \DoxyCodeLine{00038\ }
 \DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ WIFI\_CONNECTED\_BIT\ BIT0}}
 \DoxyCodeLine{00044\ }
@@ -35,13 +35,13 @@
 \DoxyCodeLine{00056\ }
 \DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ SERVER\_PORT\ \ \ \ \ 5166}}
 \DoxyCodeLine{00062\ }
-\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_tcp_server_8h_a423bc60f42ad6bf912e07cd5320b1948}{Handle\_Client}}(\textcolor{keywordtype}{void}*\ args);}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ Handle\_Client(\textcolor{keywordtype}{void}*\ args);}
 \DoxyCodeLine{00072\ }
-\DoxyCodeLine{00081\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_tcp_server_8h_a71663496e793fd4869a37af2eaeb9dfb}{Create\_Server}}(\textcolor{keywordtype}{void}*\ pvParameter);}
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{void}\ Create\_Server(\textcolor{keywordtype}{void}*\ pvParameter);}
 \DoxyCodeLine{00082\ }
-\DoxyCodeLine{00096\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_tcp_server_8h_a00e67904809f7a47e29ca050bcabbae2}{receive\_data}}(\textcolor{keywordtype}{int}\ sock,\ \textcolor{keywordtype}{char}*\ buffer,\ \textcolor{keywordtype}{size\_t}\ size,\ uint8\_t*\ timeout\_counter,\ uint8\_t\ max\_timeout);}
+\DoxyCodeLine{00096\ \textcolor{keywordtype}{int}\ receive\_data(\textcolor{keywordtype}{int}\ sock,\ \textcolor{keywordtype}{char}*\ buffer,\ \textcolor{keywordtype}{size\_t}\ size,\ uint8\_t*\ timeout\_counter,\ uint8\_t\ max\_timeout);}
 \DoxyCodeLine{00097\ }
-\DoxyCodeLine{00103\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_tcp_server_8h_a13ddbecdfd3a974bad6c7ff356cb4674}{Tcp\_Init}}();}
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{void}\ Tcp\_Init();}
 \DoxyCodeLine{00104\ }
 \DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INCLUDE\_TCPSERVER\_H\_\ */}\textcolor{preprocessor}{}}
 

@@ -24,28 +24,35 @@ namespace SmartBMS_2209A_Monitor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bms_class.WriteTcpClient(bms_class.stream,$"login_{username_textbox.Text}_{password_textbox.Text}");
-            string readString = string.Empty;
-            byte[] rx = new byte[2];
-            int cnt = 0;
-            while (readString.Length<2 && cnt < 10)
+            try
             {
-                cnt++;
-                bms_class.stream.Read(rx, 0, rx.Length);
-                readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
-                Array.Clear(rx, 0, rx.Length);
+                bms_class.WriteTcpClient(bms_class.stream, $"login_{username_textbox.Text}_{password_textbox.Text}");
+                string readString = string.Empty;
+                byte[] rx = new byte[2];
+                int cnt = 0;
+                while (readString.Length < 2 && cnt < 10)
+                {
+                    cnt++;
+                    bms_class.stream.Read(rx, 0, rx.Length);
+                    readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
+                    Array.Clear(rx, 0, rx.Length);
+                }
+                if (readString.Contains("OK"))
+                {
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.Cancel;
+                }
+                //MessageBox.Show(readString);
+                this.Close();
             }
-            if (readString.Contains("OK"))
-            {
-                this.DialogResult = DialogResult.OK;
-            }
-            else
+            catch
             {
                 this.DialogResult = DialogResult.Cancel;
+                this.Close();
             }
-            //MessageBox.Show(readString);
-            this.Close();
-
 
         }
     }

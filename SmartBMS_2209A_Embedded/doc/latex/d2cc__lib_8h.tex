@@ -1,154 +1,154 @@
 \doxysection{include/d2cc\+\_\+lib.h File Reference}
-\hypertarget{d2cc__lib_8h}{}\label{d2cc__lib_8h}\index{include/d2cc\_lib.h@{include/d2cc\_lib.h}}
+\label{d2cc__lib_8h}\index{include/d2cc\_lib.h@{include/d2cc\_lib.h}}
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}}
+struct \textbf{ Dbc\+Struct}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57}{Battery\+Chemistry\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a}{Battery\+Chemistry\+\_\+\+LFP}}
-, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1}{Battery\+Chemistry\+\_\+\+NMC}}
+enum \textbf{ Battery\+Chemistry\+\_\+enum} \{ \textbf{ Battery\+Chemistry\+\_\+\+LFP}
+, \textbf{ Battery\+Chemistry\+\_\+\+NMC}
  \}
 \item 
-enum \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4}{Can\+Bus\+Enable\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5}{Can\+Bus\+Enable\+\_\+\+Enable}}
-, \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3}{Can\+Bus\+Enable\+\_\+\+Disable}}
+enum \textbf{ Can\+Bus\+Enable\+\_\+enum} \{ \textbf{ Can\+Bus\+Enable\+\_\+\+Enable}
+, \textbf{ Can\+Bus\+Enable\+\_\+\+Disable}
  \}
 \item 
-enum \mbox{\hyperlink{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0c}{Wi\+Fi\+Enable\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e}{Wi\+Fi\+Enable\+\_\+\+Enable}}
-, \mbox{\hyperlink{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e}{Wi\+Fi\+Enable\+\_\+\+Disable}}
+enum \textbf{ Wi\+Fi\+Enable\+\_\+enum} \{ \textbf{ Wi\+Fi\+Enable\+\_\+\+Enable}
+, \textbf{ Wi\+Fi\+Enable\+\_\+\+Disable}
  \}
 \item 
-enum \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789e}{Tcp\+Enable\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d}{Tcp\+Enable\+\_\+\+Offline}}
-, \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a}{Tcp\+Enable\+\_\+\+Online}}
-, \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475}{Tcp\+Enable\+\_\+\+Connected}}
+enum \textbf{ Tcp\+Enable\+\_\+enum} \{ \textbf{ Tcp\+Enable\+\_\+\+Offline}
+, \textbf{ Tcp\+Enable\+\_\+\+Online}
+, \textbf{ Tcp\+Enable\+\_\+\+Connected}
  \}
 \item 
-enum \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4}{Vpn\+Enable\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7}{Vpn\+Enable\+\_\+\+Enable}}
-, \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b}{Vpn\+Enable\+\_\+\+Disable}}
+enum \textbf{ Vpn\+Enable\+\_\+enum} \{ \textbf{ Vpn\+Enable\+\_\+\+Enable}
+, \textbf{ Vpn\+Enable\+\_\+\+Disable}
  \}
 \item 
-enum \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8}{Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3}{Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Enable}}
-, \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d}{Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Disable}}
+enum \textbf{ Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+enum} \{ \textbf{ Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Enable}
+, \textbf{ Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Disable}
  \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{d2cc__lib_8h_add5678661f9e8fc392ab35a8369f8487}{D2cc\+\_\+\+Lib\+\_\+\+Init}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}st)
+void \textbf{ D2cc\+\_\+\+Lib\+\_\+\+Init} (\textbf{ Dbc\+Struct} $\ast$st)
 \item 
-void \mbox{\hyperlink{d2cc__lib_8h_a1fc4968809341ee415d413feb9db80cb}{Read\+Parse}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}rx\+\_\+data, uint32\+\_\+t id, \mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}st)
+void \textbf{ Read\+Parse} (uint8\+\_\+t $\ast$rx\+\_\+data, uint32\+\_\+t id, \textbf{ Dbc\+Struct} $\ast$st)
 \item 
-void \mbox{\hyperlink{d2cc__lib_8h_a1a53ba345e601b7539ad8b1d3a60becf}{Create\+Table\+\_\+\+Battery\+\_\+\+Messages}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+void \textbf{ Create\+Table\+\_\+\+Battery\+\_\+\+Messages} (\textbf{ Dbc\+Struct} $\ast$dbc)
 \item 
-void \mbox{\hyperlink{d2cc__lib_8h_acce29ea481884412fe82fde8cf8a3c73}{Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+void \textbf{ Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures} (\textbf{ Dbc\+Struct} $\ast$dbc)
 \item 
-void \mbox{\hyperlink{d2cc__lib_8h_a3f4346eef40e3f6e0856a015bed8da2d}{Create\+Table\+\_\+\+Battery\+\_\+\+Voltages}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+void \textbf{ Create\+Table\+\_\+\+Battery\+\_\+\+Voltages} (\textbf{ Dbc\+Struct} $\ast$dbc)
 \item 
-void \mbox{\hyperlink{d2cc__lib_8h_a3a8f6f06284c77bd13fc93c18115fd53}{Create\+Table\+\_\+\+Can\+\_\+\+Main}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+void \textbf{ Create\+Table\+\_\+\+Can\+\_\+\+Main} (\textbf{ Dbc\+Struct} $\ast$dbc)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Enumeration Type Documentation}
-\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_enum@{BatteryChemistry\_enum}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_enum@{BatteryChemistry\_enum}}
 \index{BatteryChemistry\_enum@{BatteryChemistry\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{BatteryChemistry\_enum}{BatteryChemistry\_enum}}
+\doxysubsubsection{BatteryChemistry\_enum}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57} 
-enum \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57}{Battery\+Chemistry\+\_\+enum}}}
+enum \textbf{ Battery\+Chemistry\+\_\+enum}}
 
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_LFP@{BatteryChemistry\_LFP}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_LFP@{BatteryChemistry\_LFP}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_LFP@{BatteryChemistry\_LFP}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_LFP@{BatteryChemistry\_LFP}}}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a} 
 Battery\+Chemistry\+\_\+\+LFP&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_NMC@{BatteryChemistry\_NMC}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_NMC@{BatteryChemistry\_NMC}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_NMC@{BatteryChemistry\_NMC}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_NMC@{BatteryChemistry\_NMC}}}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1} 
 Battery\+Chemistry\+\_\+\+NMC&\\
 \hline
 
 \end{DoxyEnumFields}
-\Hypertarget{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4}\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_enum@{CanBusEnable\_enum}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_enum@{CanBusEnable\_enum}}
 \index{CanBusEnable\_enum@{CanBusEnable\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{CanBusEnable\_enum}{CanBusEnable\_enum}}
+\doxysubsubsection{CanBusEnable\_enum}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4} 
-enum \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4}{Can\+Bus\+Enable\+\_\+enum}}}
+enum \textbf{ Can\+Bus\+Enable\+\_\+enum}}
 
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CanBusEnable\_Enable@{CanBusEnable\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_Enable@{CanBusEnable\_Enable}}}\Hypertarget{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5}\label{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CanBusEnable\_Enable@{CanBusEnable\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_Enable@{CanBusEnable\_Enable}}}\label{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5} 
 Can\+Bus\+Enable\+\_\+\+Enable&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CanBusEnable\_Disable@{CanBusEnable\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_Disable@{CanBusEnable\_Disable}}}\Hypertarget{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3}\label{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CanBusEnable\_Disable@{CanBusEnable\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_Disable@{CanBusEnable\_Disable}}}\label{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3} 
 Can\+Bus\+Enable\+\_\+\+Disable&\\
 \hline
 
 \end{DoxyEnumFields}
-\Hypertarget{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789e}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_enum@{TcpEnable\_enum}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_enum@{TcpEnable\_enum}}
 \index{TcpEnable\_enum@{TcpEnable\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{TcpEnable\_enum}{TcpEnable\_enum}}
+\doxysubsubsection{TcpEnable\_enum}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789e} 
-enum \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789e}{Tcp\+Enable\+\_\+enum}}}
+enum \textbf{ Tcp\+Enable\+\_\+enum}}
 
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_Offline@{TcpEnable\_Offline}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_Offline@{TcpEnable\_Offline}}}\Hypertarget{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_Offline@{TcpEnable\_Offline}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_Offline@{TcpEnable\_Offline}}}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d} 
 Tcp\+Enable\+\_\+\+Offline&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_Online@{TcpEnable\_Online}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_Online@{TcpEnable\_Online}}}\Hypertarget{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_Online@{TcpEnable\_Online}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_Online@{TcpEnable\_Online}}}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a} 
 Tcp\+Enable\+\_\+\+Online&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_Connected@{TcpEnable\_Connected}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_Connected@{TcpEnable\_Connected}}}\Hypertarget{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_Connected@{TcpEnable\_Connected}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_Connected@{TcpEnable\_Connected}}}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475} 
 Tcp\+Enable\+\_\+\+Connected&\\
 \hline
 
 \end{DoxyEnumFields}
-\Hypertarget{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_enum@{VpnEnable\_enum}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_enum@{VpnEnable\_enum}}
 \index{VpnEnable\_enum@{VpnEnable\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{VpnEnable\_enum}{VpnEnable\_enum}}
+\doxysubsubsection{VpnEnable\_enum}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4} 
-enum \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4}{Vpn\+Enable\+\_\+enum}}}
+enum \textbf{ Vpn\+Enable\+\_\+enum}}
 
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{VpnEnable\_Enable@{VpnEnable\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_Enable@{VpnEnable\_Enable}}}\Hypertarget{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7}\label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VpnEnable\_Enable@{VpnEnable\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_Enable@{VpnEnable\_Enable}}}\label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7} 
 Vpn\+Enable\+\_\+\+Enable&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{VpnEnable\_Disable@{VpnEnable\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_Disable@{VpnEnable\_Disable}}}\Hypertarget{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b}\label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VpnEnable\_Disable@{VpnEnable\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_Disable@{VpnEnable\_Disable}}}\label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b} 
 Vpn\+Enable\+\_\+\+Disable&\\
 \hline
 
 \end{DoxyEnumFields}
-\Hypertarget{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_enum@{WiFi\_AP\_Status\_enum}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_enum@{WiFi\_AP\_Status\_enum}}
 \index{WiFi\_AP\_Status\_enum@{WiFi\_AP\_Status\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{WiFi\_AP\_Status\_enum}{WiFi\_AP\_Status\_enum}}
+\doxysubsubsection{WiFi\_AP\_Status\_enum}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8} 
-enum \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8}{Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+enum}}}
+enum \textbf{ Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+enum}}
 
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFi\_AP\_Status\_Enable@{WiFi\_AP\_Status\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_Enable@{WiFi\_AP\_Status\_Enable}}}\Hypertarget{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3}\label{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFi\_AP\_Status\_Enable@{WiFi\_AP\_Status\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_Enable@{WiFi\_AP\_Status\_Enable}}}\label{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3} 
 Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Enable&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFi\_AP\_Status\_Disable@{WiFi\_AP\_Status\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_Disable@{WiFi\_AP\_Status\_Disable}}}\Hypertarget{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d}\label{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFi\_AP\_Status\_Disable@{WiFi\_AP\_Status\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_Disable@{WiFi\_AP\_Status\_Disable}}}\label{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d} 
 Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Disable&\\
 \hline
 
 \end{DoxyEnumFields}
-\Hypertarget{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0c}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFiEnable\_enum@{WiFiEnable\_enum}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFiEnable\_enum@{WiFiEnable\_enum}}
 \index{WiFiEnable\_enum@{WiFiEnable\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{WiFiEnable\_enum}{WiFiEnable\_enum}}
+\doxysubsubsection{WiFiEnable\_enum}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0c} 
-enum \mbox{\hyperlink{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0c}{Wi\+Fi\+Enable\+\_\+enum}}}
+enum \textbf{ Wi\+Fi\+Enable\+\_\+enum}}
 
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFiEnable\_Enable@{WiFiEnable\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFiEnable\_Enable@{WiFiEnable\_Enable}}}\Hypertarget{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e}\label{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFiEnable\_Enable@{WiFiEnable\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFiEnable\_Enable@{WiFiEnable\_Enable}}}\label{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e} 
 Wi\+Fi\+Enable\+\_\+\+Enable&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFiEnable\_Disable@{WiFiEnable\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFiEnable\_Disable@{WiFiEnable\_Disable}}}\Hypertarget{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e}\label{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFiEnable\_Disable@{WiFiEnable\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFiEnable\_Disable@{WiFiEnable\_Disable}}}\label{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e} 
 Wi\+Fi\+Enable\+\_\+\+Disable&\\
 \hline
 
@@ -156,39 +156,39 @@ Wi\+Fi\+Enable\+\_\+\+Disable&\\
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{d2cc__lib_8h_a1a53ba345e601b7539ad8b1d3a60becf}\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Messages@{CreateTable\_Battery\_Messages}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Messages@{CreateTable\_Battery\_Messages}}
 \index{CreateTable\_Battery\_Messages@{CreateTable\_Battery\_Messages}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Messages()}{CreateTable\_Battery\_Messages()}}
+\doxysubsubsection{CreateTable\_Battery\_Messages()}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a1a53ba345e601b7539ad8b1d3a60becf} 
-void Create\+Table\+\_\+\+Battery\+\_\+\+Messages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
+void Create\+Table\+\_\+\+Battery\+\_\+\+Messages (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
 
-\Hypertarget{d2cc__lib_8h_acce29ea481884412fe82fde8cf8a3c73}\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Temperatures@{CreateTable\_Battery\_Temperatures}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Temperatures@{CreateTable\_Battery\_Temperatures}}
 \index{CreateTable\_Battery\_Temperatures@{CreateTable\_Battery\_Temperatures}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Temperatures()}{CreateTable\_Battery\_Temperatures()}}
+\doxysubsubsection{CreateTable\_Battery\_Temperatures()}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_acce29ea481884412fe82fde8cf8a3c73} 
-void Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
+void Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
 
-\Hypertarget{d2cc__lib_8h_a3f4346eef40e3f6e0856a015bed8da2d}\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Voltages@{CreateTable\_Battery\_Voltages}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Voltages@{CreateTable\_Battery\_Voltages}}
 \index{CreateTable\_Battery\_Voltages@{CreateTable\_Battery\_Voltages}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Voltages()}{CreateTable\_Battery\_Voltages()}}
+\doxysubsubsection{CreateTable\_Battery\_Voltages()}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a3f4346eef40e3f6e0856a015bed8da2d} 
-void Create\+Table\+\_\+\+Battery\+\_\+\+Voltages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
+void Create\+Table\+\_\+\+Battery\+\_\+\+Voltages (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
 
-\Hypertarget{d2cc__lib_8h_a3a8f6f06284c77bd13fc93c18115fd53}\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Can\_Main@{CreateTable\_Can\_Main}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Can\_Main@{CreateTable\_Can\_Main}}
 \index{CreateTable\_Can\_Main@{CreateTable\_Can\_Main}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{CreateTable\_Can\_Main()}{CreateTable\_Can\_Main()}}
+\doxysubsubsection{CreateTable\_Can\_Main()}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a3a8f6f06284c77bd13fc93c18115fd53} 
-void Create\+Table\+\_\+\+Can\+\_\+\+Main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
+void Create\+Table\+\_\+\+Can\+\_\+\+Main (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
 
-\Hypertarget{d2cc__lib_8h_add5678661f9e8fc392ab35a8369f8487}\index{d2cc\_lib.h@{d2cc\_lib.h}!D2cc\_Lib\_Init@{D2cc\_Lib\_Init}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!D2cc\_Lib\_Init@{D2cc\_Lib\_Init}}
 \index{D2cc\_Lib\_Init@{D2cc\_Lib\_Init}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{D2cc\_Lib\_Init()}{D2cc\_Lib\_Init()}}
+\doxysubsubsection{D2cc\_Lib\_Init()}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_add5678661f9e8fc392ab35a8369f8487} 
-void D2cc\+\_\+\+Lib\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{st}{}\end{DoxyParamCaption})}
+void D2cc\+\_\+\+Lib\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{st}{}\end{DoxyParamCaption})}
 
-\Hypertarget{d2cc__lib_8h_a1fc4968809341ee415d413feb9db80cb}\index{d2cc\_lib.h@{d2cc\_lib.h}!ReadParse@{ReadParse}}
+\index{d2cc\_lib.h@{d2cc\_lib.h}!ReadParse@{ReadParse}}
 \index{ReadParse@{ReadParse}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{\texorpdfstring{ReadParse()}{ReadParse()}}
+\doxysubsubsection{ReadParse()}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a1fc4968809341ee415d413feb9db80cb} 
-void Read\+Parse (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{rx\+\_\+data}{, }\item[{uint32\+\_\+t}]{id}{, }\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{st}{}\end{DoxyParamCaption})}
+void Read\+Parse (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+data}{, }\item[{uint32\+\_\+t}]{id}{, }\item[{\textbf{ Dbc\+Struct} $\ast$}]{st}{}\end{DoxyParamCaption})}
 

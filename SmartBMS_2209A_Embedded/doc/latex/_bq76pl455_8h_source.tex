@@ -1,13 +1,13 @@
 \doxysection{Bq76pl455.\+h}
-\hypertarget{_bq76pl455_8h_source}{}\label{_bq76pl455_8h_source}\index{include/Bq76pl455.h@{include/Bq76pl455.h}}
-\mbox{\hyperlink{_bq76pl455_8h}{Go to the documentation of this file.}}
+\label{_bq76pl455_8h_source}\index{include/Bq76pl455.h@{include/Bq76pl455.h}}
+\textbf{ Go to the documentation of this file.}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ BQ76PL455\_H\_}}
 \DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ BQ76PL455\_H\_}}
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_uart_8h}{Uart.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}Uart.h"{}}}
 \DoxyCodeLine{00016\ }
 \DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ BQ\_UART\_PORT\ \ \ \ UART\_NUM\_1}}
 \DoxyCodeLine{00022\ }
@@ -15,17 +15,17 @@
 \DoxyCodeLine{00028\ }
 \DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ BQ\_RX\ \ \ \ \ \ \ \ \ \ \ 11}}
 \DoxyCodeLine{00034\ }
-\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bq76pl455_8h_ab1f7f8492c3cca0837700429807074e3}{Bq\_Init}}();}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ Bq\_Init();}
 \DoxyCodeLine{00042\ }
-\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bq76pl455_8h_ac1a68691cca07c6263b16eb463fd7e06}{BQ\_Test}}();}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ BQ\_Test();}
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00060\ uint8\_t*\ \mbox{\hyperlink{_bq76pl455_8h_a7f64a91901131f6c570e15d57d6a75b5}{CRC16}}(uint8\_t*\ data,\ uint8\_t\ data\_length);}
+\DoxyCodeLine{00060\ uint8\_t*\ CRC16(uint8\_t*\ data,\ uint8\_t\ data\_length);}
 \DoxyCodeLine{00061\ }
-\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bq76pl455_8h_afce328763ae545228a5fe77ba53296da}{BQ\_Start}}(\textcolor{keywordtype}{void}\ *args);}
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ BQ\_Start(\textcolor{keywordtype}{void}\ *args);}
 \DoxyCodeLine{00070\ }
-\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bq76pl455_8h_a5db7a92f619e063198490508230e18a2}{BQ\_Uart\_Init}}(uint8\_t\ uart\_pin,\ \textcolor{keywordtype}{int}\ baudrate,\ uint32\_t\ rx\_buffsize,\ uint8\_t\ TXD\_PIN,\ uint8\_t\ RXD\_PIN);}
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ BQ\_Uart\_Init(uint8\_t\ uart\_pin,\ \textcolor{keywordtype}{int}\ baudrate,\ uint32\_t\ rx\_buffsize,\ uint8\_t\ TXD\_PIN,\ uint8\_t\ RXD\_PIN);}
 \DoxyCodeLine{00084\ }
-\DoxyCodeLine{00095\ uint8\_t\ \mbox{\hyperlink{_bq76pl455_8h_aa01b4d094c5fc9ed6d46e6a622dbb75e}{BQ\_Uart\_Transmit}}(uint8\_t\ uart\_pin,\ uint8\_t\ *data,\ uint8\_t\ data\_length);}
+\DoxyCodeLine{00095\ uint8\_t\ BQ\_Uart\_Transmit(uint8\_t\ uart\_pin,\ uint8\_t\ *data,\ uint8\_t\ data\_length);}
 \DoxyCodeLine{00096\ }
 \DoxyCodeLine{00097\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ BQ76PL455\_H\_\ */}\textcolor{preprocessor}{}}
 

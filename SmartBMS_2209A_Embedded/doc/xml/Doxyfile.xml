@@ -313,7 +313,7 @@
   </option>
   <option  id='LATEX_EXTRA_FILES' default='yes' type='stringlist'>
   </option>
-  <option  id='PDF_HYPERLINKS' default='yes' type='bool'><value>YES</value></option>
+  <option  id='PDF_HYPERLINKS' default='no' type='bool'><value>NO</value></option>
   <option  id='USE_PDFLATEX' default='yes' type='bool'><value>YES</value></option>
   <option  id='LATEX_BATCHMODE' default='yes' type='string'><value>NO</value></option>
   <option  id='LATEX_HIDE_INDICES' default='yes' type='bool'><value>NO</value></option>
