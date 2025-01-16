@@ -21,6 +21,7 @@ SmartBMS_2209A is a passive balancing battery management system (BMS) project de
    git clone https://github.com/hakimmc/SmartBMS_2209A.git
    ```
    or just double click to git_clone.bat file.
+   
 3. Install the required dependencies:
    ```bash
    Download and install .NET V8
