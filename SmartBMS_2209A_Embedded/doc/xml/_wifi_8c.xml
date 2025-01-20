@@ -91,9 +91,9 @@
       </node>
     </incdepgraph>
     <sectiondef kind="func">
-      <memberdef kind="function" id="_wifi_8c_1ab89f8a7d7357e4fb0e466836024c7f9c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_wifi_8c_1a729c8b3e4ebc79d753bd4887f2b25412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void event_handler</definition>
+        <definition>void event_handler</definition>
         <argsstring>(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)</argsstring>
         <name>event_handler</name>
         <param>
@@ -116,6 +116,7 @@
 <para>Event handler for Wi-Fi and IP events. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handles Wi-Fi events.</para>
 <para>This function handles Wi-Fi and IP events, such as Wi-Fi connection status changes and obtaining an IP address. It also manages retry logic for Wi-Fi connection attempts.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -158,7 +159,7 @@
 <para>&lt; Log obtained IP address.</para>
 <para>&lt; Reset retry count.</para>
         </inbodydescription>
-        <location file="src/Wifi.c" line="21" column="13" bodyfile="src/Wifi.c" bodystart="21" bodyend="39"/>
+        <location file="src/Wifi.c" line="21" column="6" bodyfile="src/Wifi.c" bodystart="21" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="_wifi_8c_1a13bb3ba68519d8aa7c2a72cf22dc2b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -215,7 +216,7 @@
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_wifi_8h" kindref="compound">Wifi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_wifi_8c_1ab89f8a7d7357e4fb0e466836024c7f9c" kindref="member">event_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg,<sp/>esp_event_base_t<sp/>event_base,<sp/>int32_t<sp/>event_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*event_data)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_wifi_8c_1a729c8b3e4ebc79d753bd4887f2b25412" kindref="member">event_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg,<sp/>esp_event_base_t<sp/>event_base,<sp/>int32_t<sp/>event_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*event_data)<sp/>{</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retry_count<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event_base<sp/>==<sp/>WIFI_EVENT<sp/>&amp;&amp;<sp/>event_id<sp/>==<sp/>WIFI_EVENT_STA_START)<sp/>{</highlight></codeline>
@@ -253,12 +254,12 @@
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_event_handler_instance_t<sp/>instance_got_ip;</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_EVENT_ANY_ID,</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="_wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c" kindref="member">event_handler</ref>,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="_wifi_8h_1a729c8b3e4ebc79d753bd4887f2b25412" kindref="member">event_handler</ref>,</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;instance_any_id));<sp/></highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT,</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IP_EVENT_STA_GOT_IP,</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="_wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c" kindref="member">event_handler</ref>,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="_wifi_8h_1a729c8b3e4ebc79d753bd4887f2b25412" kindref="member">event_handler</ref>,</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;instance_got_ip));<sp/></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>

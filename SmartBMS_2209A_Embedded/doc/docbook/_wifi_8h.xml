@@ -63,7 +63,7 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>static void <link linkend="__wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c">event_handler</link> (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)</para>
+            <listitem><para>void <link linkend="__wifi_8h_1a729c8b3e4ebc79d753bd4887f2b25412">event_handler</link> (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)</para>
 
 <para>Handles Wi-Fi events. </para>
 </listitem>
@@ -199,11 +199,11 @@
 </section>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="__wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c"/><section>
+<anchor xml:id="__wifi_8h_1a729c8b3e4ebc79d753bd4887f2b25412"/><section>
     <title>event_handler()</title>
 <indexterm><primary>event_handler</primary><secondary>Wifi.h</secondary></indexterm>
 <indexterm><primary>Wifi.h</primary><secondary>event_handler</secondary></indexterm>
-<para><computeroutput>static void event_handler (void * arg, esp_event_base_t event_base, int32_t event_id, void * event_data)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+<para><computeroutput>void event_handler (void * arg, esp_event_base_t event_base, int32_t event_id, void * event_data)</computeroutput></para><para>
 
 <para>Handles Wi-Fi events. </para>
 </para>
@@ -237,7 +237,46 @@ Parameters</title>
                             </row>
                             <row>
 <entry>event_data</entry><entry>
-<para>Additional data associated with the event (optional). </para>
+<para>Additional data associated with the event (optional).</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Handles Wi-Fi events.</para>
+
+<para>This function handles Wi-Fi and IP events, such as Wi-Fi connection status changes and obtaining an IP address. It also manages retry logic for Wi-Fi connection attempts.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>arg</entry><entry>
+<para>Pointer to additional arguments (unused). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>event_base</entry><entry>
+<para>The event base (WIFI_EVENT or IP_EVENT). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>event_id</entry><entry>
+<para>The event ID (such as WIFI_EVENT_STA_START). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>event_data</entry><entry>
+<para>Event data associated with the event. </para>
 </entry>
                             </row>
                         </tbody>
@@ -246,6 +285,14 @@ Parameters</title>
                     </para>
                 </formalpara>
                 </para>
+
+<para>&lt; Start the Wi-Fi connection process.</para>
+
+<para>&lt; Retry the connection.</para>
+
+<para>&lt; Log obtained IP address.</para>
+
+<para>&lt; Reset retry count.</para>
 </section>
 <anchor xml:id="__wifi_8h_1a13bb3ba68519d8aa7c2a72cf22dc2b21"/><section>
     <title>wifi_init_ap_sta()</title>

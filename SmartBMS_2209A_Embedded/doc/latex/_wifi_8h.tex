@@ -1,5 +1,5 @@
 \doxysection{include/\+Wifi.h File Reference}
-\label{_wifi_8h}\index{include/Wifi.h@{include/Wifi.h}}
+\hypertarget{_wifi_8h}{}\label{_wifi_8h}\index{include/Wifi.h@{include/Wifi.h}}
 
 
 Wi-\/\+Fi configuration for ESP32 in AP+\+STA mode.  
@@ -23,36 +23,36 @@ Wi-\/\+Fi configuration for ESP32 in AP+\+STA mode.
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ WIFI\+\_\+\+CONNECTED\+\_\+\+BIT}~BIT0
+\#define \mbox{\hyperlink{_wifi_8h_ad552e7688532cbbecd3967538ced06ac}{WIFI\+\_\+\+CONNECTED\+\_\+\+BIT}}~BIT0
 \begin{DoxyCompactList}\small\item\em Event bit indicating a successful Wi-\/\+Fi connection. \end{DoxyCompactList}\item 
-\#define \textbf{ WIFI\+\_\+\+FAIL\+\_\+\+BIT}~BIT1
+\#define \mbox{\hyperlink{_wifi_8h_a7d013b55e50dfbda0904f5f933b63ec4}{WIFI\+\_\+\+FAIL\+\_\+\+BIT}}~BIT1
 \begin{DoxyCompactList}\small\item\em Event bit indicating a Wi-\/\+Fi connection failure. \end{DoxyCompactList}\item 
-\#define \textbf{ WIFI\+\_\+\+CONNECT}
+\#define \mbox{\hyperlink{_wifi_8h_a6c8693be8221ff82e61fb5b44ce18bfd}{WIFI\+\_\+\+CONNECT}}
 \begin{DoxyCompactList}\small\item\em Define this macro to enable Wi-\/\+Fi station connection. Comment it out to disable the Wi-\/\+Fi station functionality. \end{DoxyCompactList}\item 
-\#define \textbf{ AP\+\_\+\+SSID}~"{}Ottomotive\+\_\+\+BMS"{}
+\#define \mbox{\hyperlink{_wifi_8h_a56ee34255f5306176ee8fea2137397d4}{AP\+\_\+\+SSID}}~"{}Ottomotive\+\_\+\+BMS"{}
 \begin{DoxyCompactList}\small\item\em SSID for the Access Point. \end{DoxyCompactList}\item 
-\#define \textbf{ AP\+\_\+\+PASS}~"{}Ottomotive22$\ast$"{}
+\#define \mbox{\hyperlink{_wifi_8h_a85d4dac148bc7ac5dc9a716085308335}{AP\+\_\+\+PASS}}~"{}Ottomotive22\texorpdfstring{$\ast$}{*}"{}
 \begin{DoxyCompactList}\small\item\em Password for the Access Point. \end{DoxyCompactList}\item 
-\#define \textbf{ MAX\+\_\+\+STA\+\_\+\+CONN}~5
+\#define \mbox{\hyperlink{_wifi_8h_a428d6fc23e06208d09595c62b0a98aa9}{MAX\+\_\+\+STA\+\_\+\+CONN}}~5
 \begin{DoxyCompactList}\small\item\em Maximum number of stations that can connect to the Access Point. \end{DoxyCompactList}\item 
-\#define \textbf{ MAX\+\_\+\+RETRY}~5
+\#define \mbox{\hyperlink{_wifi_8h_a01c3892c16d6330e486637967ab0289b}{MAX\+\_\+\+RETRY}}~5
 \begin{DoxyCompactList}\small\item\em Maximum number of retry attempts for Wi-\/\+Fi connection. \end{DoxyCompactList}\item 
-\#define \textbf{ WIFI\+\_\+\+SSID}~"{}Poyrazwifi\+\_\+\+Calgin"{}
+\#define \mbox{\hyperlink{_wifi_8h_a586542b79d00e4db7e1d5a667ae83a2b}{WIFI\+\_\+\+SSID}}~"{}Poyrazwifi\+\_\+\+Calgin"{}
 \begin{DoxyCompactList}\small\item\em SSID for the Wi-\/\+Fi station connection. \end{DoxyCompactList}\item 
-\#define \textbf{ WIFI\+\_\+\+PASS}~"{}Ah487602"{}
+\#define \mbox{\hyperlink{_wifi_8h_a3c95561b03d0fcf9048b231ae2ba90fb}{WIFI\+\_\+\+PASS}}~"{}Ah487602"{}
 \begin{DoxyCompactList}\small\item\em Password for the Wi-\/\+Fi station connection. \end{DoxyCompactList}\item 
-\#define \textbf{ WIFI\+\_\+\+TIMEOUT\+\_\+\+MS}~10000
+\#define \mbox{\hyperlink{_wifi_8h_a4735ad9aef99f8584afd945f39260954}{WIFI\+\_\+\+TIMEOUT\+\_\+\+MS}}~10000
 \begin{DoxyCompactList}\small\item\em Timeout for Wi-\/\+Fi connection in milliseconds. \end{DoxyCompactList}\item 
-\#define \textbf{ ESP32\+\_\+\+AP\+\_\+\+CHANNEL}~3
+\#define \mbox{\hyperlink{_wifi_8h_a1462b09d5f5a986ad70c72cfe1ec2b05}{ESP32\+\_\+\+AP\+\_\+\+CHANNEL}}~3
 \begin{DoxyCompactList}\small\item\em Channel for the Access Point. \end{DoxyCompactList}\item 
-\#define \textbf{ ESP32\+\_\+\+MAX\+\_\+\+CONN}~3
+\#define \mbox{\hyperlink{_wifi_8h_a13f8ef7b9aee1f387999258af50f1543}{ESP32\+\_\+\+MAX\+\_\+\+CONN}}~3
 \begin{DoxyCompactList}\small\item\em Maximum number of simultaneous connections to the Access Point. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \textbf{ event\+\_\+handler} (void $\ast$arg, esp\+\_\+event\+\_\+base\+\_\+t event\+\_\+base, int32\+\_\+t event\+\_\+id, void $\ast$event\+\_\+data)
+void \mbox{\hyperlink{_wifi_8h_a729c8b3e4ebc79d753bd4887f2b25412}{event\+\_\+handler}} (void \texorpdfstring{$\ast$}{*}arg, esp\+\_\+event\+\_\+base\+\_\+t event\+\_\+base, int32\+\_\+t event\+\_\+id, void \texorpdfstring{$\ast$}{*}event\+\_\+data)
 \begin{DoxyCompactList}\small\item\em Handles Wi-\/\+Fi events. \end{DoxyCompactList}\item 
-void \textbf{ wifi\+\_\+init\+\_\+ap\+\_\+sta} (void)
+void \mbox{\hyperlink{_wifi_8h_a13bb3ba68519d8aa7c2a72cf22dc2b21}{wifi\+\_\+init\+\_\+ap\+\_\+sta}} (void)
 \begin{DoxyCompactList}\small\item\em Initializes the Wi-\/\+Fi in AP+\+STA mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -67,19 +67,19 @@ hakimmc
 
 
 \doxysubsection{Macro Definition Documentation}
-\index{Wifi.h@{Wifi.h}!AP\_PASS@{AP\_PASS}}
+\Hypertarget{_wifi_8h_a85d4dac148bc7ac5dc9a716085308335}\index{Wifi.h@{Wifi.h}!AP\_PASS@{AP\_PASS}}
 \index{AP\_PASS@{AP\_PASS}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{AP\_PASS}
+\doxysubsubsection{\texorpdfstring{AP\_PASS}{AP\_PASS}}
 {\footnotesize\ttfamily \label{_wifi_8h_a85d4dac148bc7ac5dc9a716085308335} 
-\#define AP\+\_\+\+PASS~"{}Ottomotive22$\ast$"{}}
+\#define AP\+\_\+\+PASS~"{}Ottomotive22\texorpdfstring{$\ast$}{*}"{}}
 
 
 
 Password for the Access Point. 
 
-\index{Wifi.h@{Wifi.h}!AP\_SSID@{AP\_SSID}}
+\Hypertarget{_wifi_8h_a56ee34255f5306176ee8fea2137397d4}\index{Wifi.h@{Wifi.h}!AP\_SSID@{AP\_SSID}}
 \index{AP\_SSID@{AP\_SSID}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{AP\_SSID}
+\doxysubsubsection{\texorpdfstring{AP\_SSID}{AP\_SSID}}
 {\footnotesize\ttfamily \label{_wifi_8h_a56ee34255f5306176ee8fea2137397d4} 
 \#define AP\+\_\+\+SSID~"{}Ottomotive\+\_\+\+BMS"{}}
 
@@ -87,9 +87,9 @@ Password for the Access Point.
 
 SSID for the Access Point. 
 
-\index{Wifi.h@{Wifi.h}!ESP32\_AP\_CHANNEL@{ESP32\_AP\_CHANNEL}}
+\Hypertarget{_wifi_8h_a1462b09d5f5a986ad70c72cfe1ec2b05}\index{Wifi.h@{Wifi.h}!ESP32\_AP\_CHANNEL@{ESP32\_AP\_CHANNEL}}
 \index{ESP32\_AP\_CHANNEL@{ESP32\_AP\_CHANNEL}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{ESP32\_AP\_CHANNEL}
+\doxysubsubsection{\texorpdfstring{ESP32\_AP\_CHANNEL}{ESP32\_AP\_CHANNEL}}
 {\footnotesize\ttfamily \label{_wifi_8h_a1462b09d5f5a986ad70c72cfe1ec2b05} 
 \#define ESP32\+\_\+\+AP\+\_\+\+CHANNEL~3}
 
@@ -97,9 +97,9 @@ SSID for the Access Point.
 
 Channel for the Access Point. 
 
-\index{Wifi.h@{Wifi.h}!ESP32\_MAX\_CONN@{ESP32\_MAX\_CONN}}
+\Hypertarget{_wifi_8h_a13f8ef7b9aee1f387999258af50f1543}\index{Wifi.h@{Wifi.h}!ESP32\_MAX\_CONN@{ESP32\_MAX\_CONN}}
 \index{ESP32\_MAX\_CONN@{ESP32\_MAX\_CONN}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{ESP32\_MAX\_CONN}
+\doxysubsubsection{\texorpdfstring{ESP32\_MAX\_CONN}{ESP32\_MAX\_CONN}}
 {\footnotesize\ttfamily \label{_wifi_8h_a13f8ef7b9aee1f387999258af50f1543} 
 \#define ESP32\+\_\+\+MAX\+\_\+\+CONN~3}
 
@@ -107,9 +107,9 @@ Channel for the Access Point.
 
 Maximum number of simultaneous connections to the Access Point. 
 
-\index{Wifi.h@{Wifi.h}!MAX\_RETRY@{MAX\_RETRY}}
+\Hypertarget{_wifi_8h_a01c3892c16d6330e486637967ab0289b}\index{Wifi.h@{Wifi.h}!MAX\_RETRY@{MAX\_RETRY}}
 \index{MAX\_RETRY@{MAX\_RETRY}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{MAX\_RETRY}
+\doxysubsubsection{\texorpdfstring{MAX\_RETRY}{MAX\_RETRY}}
 {\footnotesize\ttfamily \label{_wifi_8h_a01c3892c16d6330e486637967ab0289b} 
 \#define MAX\+\_\+\+RETRY~5}
 
@@ -117,9 +117,9 @@ Maximum number of simultaneous connections to the Access Point.
 
 Maximum number of retry attempts for Wi-\/\+Fi connection. 
 
-\index{Wifi.h@{Wifi.h}!MAX\_STA\_CONN@{MAX\_STA\_CONN}}
+\Hypertarget{_wifi_8h_a428d6fc23e06208d09595c62b0a98aa9}\index{Wifi.h@{Wifi.h}!MAX\_STA\_CONN@{MAX\_STA\_CONN}}
 \index{MAX\_STA\_CONN@{MAX\_STA\_CONN}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{MAX\_STA\_CONN}
+\doxysubsubsection{\texorpdfstring{MAX\_STA\_CONN}{MAX\_STA\_CONN}}
 {\footnotesize\ttfamily \label{_wifi_8h_a428d6fc23e06208d09595c62b0a98aa9} 
 \#define MAX\+\_\+\+STA\+\_\+\+CONN~5}
 
@@ -127,9 +127,9 @@ Maximum number of retry attempts for Wi-\/\+Fi connection.
 
 Maximum number of stations that can connect to the Access Point. 
 
-\index{Wifi.h@{Wifi.h}!WIFI\_CONNECT@{WIFI\_CONNECT}}
+\Hypertarget{_wifi_8h_a6c8693be8221ff82e61fb5b44ce18bfd}\index{Wifi.h@{Wifi.h}!WIFI\_CONNECT@{WIFI\_CONNECT}}
 \index{WIFI\_CONNECT@{WIFI\_CONNECT}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{WIFI\_CONNECT}
+\doxysubsubsection{\texorpdfstring{WIFI\_CONNECT}{WIFI\_CONNECT}}
 {\footnotesize\ttfamily \label{_wifi_8h_a6c8693be8221ff82e61fb5b44ce18bfd} 
 \#define WIFI\+\_\+\+CONNECT}
 
@@ -137,9 +137,9 @@ Maximum number of stations that can connect to the Access Point.
 
 Define this macro to enable Wi-\/\+Fi station connection. Comment it out to disable the Wi-\/\+Fi station functionality. 
 
-\index{Wifi.h@{Wifi.h}!WIFI\_CONNECTED\_BIT@{WIFI\_CONNECTED\_BIT}}
+\Hypertarget{_wifi_8h_ad552e7688532cbbecd3967538ced06ac}\index{Wifi.h@{Wifi.h}!WIFI\_CONNECTED\_BIT@{WIFI\_CONNECTED\_BIT}}
 \index{WIFI\_CONNECTED\_BIT@{WIFI\_CONNECTED\_BIT}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{WIFI\_CONNECTED\_BIT}
+\doxysubsubsection{\texorpdfstring{WIFI\_CONNECTED\_BIT}{WIFI\_CONNECTED\_BIT}}
 {\footnotesize\ttfamily \label{_wifi_8h_ad552e7688532cbbecd3967538ced06ac} 
 \#define WIFI\+\_\+\+CONNECTED\+\_\+\+BIT~BIT0}
 
@@ -147,9 +147,9 @@ Define this macro to enable Wi-\/\+Fi station connection. Comment it out to disa
 
 Event bit indicating a successful Wi-\/\+Fi connection. 
 
-\index{Wifi.h@{Wifi.h}!WIFI\_FAIL\_BIT@{WIFI\_FAIL\_BIT}}
+\Hypertarget{_wifi_8h_a7d013b55e50dfbda0904f5f933b63ec4}\index{Wifi.h@{Wifi.h}!WIFI\_FAIL\_BIT@{WIFI\_FAIL\_BIT}}
 \index{WIFI\_FAIL\_BIT@{WIFI\_FAIL\_BIT}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{WIFI\_FAIL\_BIT}
+\doxysubsubsection{\texorpdfstring{WIFI\_FAIL\_BIT}{WIFI\_FAIL\_BIT}}
 {\footnotesize\ttfamily \label{_wifi_8h_a7d013b55e50dfbda0904f5f933b63ec4} 
 \#define WIFI\+\_\+\+FAIL\+\_\+\+BIT~BIT1}
 
@@ -157,9 +157,9 @@ Event bit indicating a successful Wi-\/\+Fi connection.
 
 Event bit indicating a Wi-\/\+Fi connection failure. 
 
-\index{Wifi.h@{Wifi.h}!WIFI\_PASS@{WIFI\_PASS}}
+\Hypertarget{_wifi_8h_a3c95561b03d0fcf9048b231ae2ba90fb}\index{Wifi.h@{Wifi.h}!WIFI\_PASS@{WIFI\_PASS}}
 \index{WIFI\_PASS@{WIFI\_PASS}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{WIFI\_PASS}
+\doxysubsubsection{\texorpdfstring{WIFI\_PASS}{WIFI\_PASS}}
 {\footnotesize\ttfamily \label{_wifi_8h_a3c95561b03d0fcf9048b231ae2ba90fb} 
 \#define WIFI\+\_\+\+PASS~"{}Ah487602"{}}
 
@@ -167,9 +167,9 @@ Event bit indicating a Wi-\/\+Fi connection failure.
 
 Password for the Wi-\/\+Fi station connection. 
 
-\index{Wifi.h@{Wifi.h}!WIFI\_SSID@{WIFI\_SSID}}
+\Hypertarget{_wifi_8h_a586542b79d00e4db7e1d5a667ae83a2b}\index{Wifi.h@{Wifi.h}!WIFI\_SSID@{WIFI\_SSID}}
 \index{WIFI\_SSID@{WIFI\_SSID}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{WIFI\_SSID}
+\doxysubsubsection{\texorpdfstring{WIFI\_SSID}{WIFI\_SSID}}
 {\footnotesize\ttfamily \label{_wifi_8h_a586542b79d00e4db7e1d5a667ae83a2b} 
 \#define WIFI\+\_\+\+SSID~"{}Poyrazwifi\+\_\+\+Calgin"{}}
 
@@ -177,9 +177,9 @@ Password for the Wi-\/\+Fi station connection.
 
 SSID for the Wi-\/\+Fi station connection. 
 
-\index{Wifi.h@{Wifi.h}!WIFI\_TIMEOUT\_MS@{WIFI\_TIMEOUT\_MS}}
+\Hypertarget{_wifi_8h_a4735ad9aef99f8584afd945f39260954}\index{Wifi.h@{Wifi.h}!WIFI\_TIMEOUT\_MS@{WIFI\_TIMEOUT\_MS}}
 \index{WIFI\_TIMEOUT\_MS@{WIFI\_TIMEOUT\_MS}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{WIFI\_TIMEOUT\_MS}
+\doxysubsubsection{\texorpdfstring{WIFI\_TIMEOUT\_MS}{WIFI\_TIMEOUT\_MS}}
 {\footnotesize\ttfamily \label{_wifi_8h_a4735ad9aef99f8584afd945f39260954} 
 \#define WIFI\+\_\+\+TIMEOUT\+\_\+\+MS~10000}
 
@@ -190,11 +190,11 @@ Timeout for Wi-\/\+Fi connection in milliseconds.
 
 
 \doxysubsection{Function Documentation}
-\index{Wifi.h@{Wifi.h}!event\_handler@{event\_handler}}
+\Hypertarget{_wifi_8h_a729c8b3e4ebc79d753bd4887f2b25412}\index{Wifi.h@{Wifi.h}!event\_handler@{event\_handler}}
 \index{event\_handler@{event\_handler}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{event\_handler()}
-{\footnotesize\ttfamily \label{_wifi_8h_ab89f8a7d7357e4fb0e466836024c7f9c} 
-static void event\+\_\+handler (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg}{, }\item[{esp\+\_\+event\+\_\+base\+\_\+t}]{event\+\_\+base}{, }\item[{int32\+\_\+t}]{event\+\_\+id}{, }\item[{void $\ast$}]{event\+\_\+data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\doxysubsubsection{\texorpdfstring{event\_handler()}{event\_handler()}}
+{\footnotesize\ttfamily \label{_wifi_8h_a729c8b3e4ebc79d753bd4887f2b25412} 
+void event\+\_\+handler (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg}{, }\item[{esp\+\_\+event\+\_\+base\+\_\+t}]{event\+\_\+base}{, }\item[{int32\+\_\+t}]{event\+\_\+id}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{event\+\_\+data}{}\end{DoxyParamCaption})}
 
 
 
@@ -210,12 +210,33 @@ This function is called to process various Wi-\/\+Fi events, such as connection 
 \hline
 {\em event\+\_\+id} & Event ID specifying the exact event. \\
 \hline
-{\em event\+\_\+data} & Additional data associated with the event (optional). \\
+{\em event\+\_\+data} & Additional data associated with the event (optional).\\
 \hline
 \end{DoxyParams}
-\index{Wifi.h@{Wifi.h}!wifi\_init\_ap\_sta@{wifi\_init\_ap\_sta}}
+Handles Wi-\/\+Fi events.
+
+This function handles Wi-\/\+Fi and IP events, such as Wi-\/\+Fi connection status changes and obtaining an IP address. It also manages retry logic for Wi-\/\+Fi connection attempts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to additional arguments (unused). \\
+\hline
+{\em event\+\_\+base} & The event base (WIFI\+\_\+\+EVENT or IP\+\_\+\+EVENT). \\
+\hline
+{\em event\+\_\+id} & The event ID (such as WIFI\+\_\+\+EVENT\+\_\+\+STA\+\_\+\+START). \\
+\hline
+{\em event\+\_\+data} & Event data associated with the event. \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Start the Wi-\/\+Fi connection process.
+
+\texorpdfstring{$<$}{<} Retry the connection.
+
+\texorpdfstring{$<$}{<} Log obtained IP address.
+
+\texorpdfstring{$<$}{<} Reset retry count.\Hypertarget{_wifi_8h_a13bb3ba68519d8aa7c2a72cf22dc2b21}\index{Wifi.h@{Wifi.h}!wifi\_init\_ap\_sta@{wifi\_init\_ap\_sta}}
 \index{wifi\_init\_ap\_sta@{wifi\_init\_ap\_sta}!Wifi.h@{Wifi.h}}
-\doxysubsubsection{wifi\_init\_ap\_sta()}
+\doxysubsubsection{\texorpdfstring{wifi\_init\_ap\_sta()}{wifi\_init\_ap\_sta()}}
 {\footnotesize\ttfamily \label{_wifi_8h_a13bb3ba68519d8aa7c2a72cf22dc2b21} 
 void wifi\+\_\+init\+\_\+ap\+\_\+sta (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
@@ -232,36 +253,36 @@ This function initializes the Wi-\/\+Fi stack, configures the Wi-\/\+Fi interfac
 \begin{DoxyNote}{Note}
 This function configures the ESP32 in dual mode (AP and STA) and connects to a Wi-\/\+Fi network if {\ttfamily WIFI\+\_\+\+CONNECT} is defined. 
 \end{DoxyNote}
-$<$ Initialize network interface.
+\texorpdfstring{$<$}{<} Initialize network interface.
 
-$<$ Create the default event loop.
+\texorpdfstring{$<$}{<} Create the default event loop.
 
-$<$ Create the default Wi-\/\+Fi AP (Access Point) interface.
+\texorpdfstring{$<$}{<} Create the default Wi-\/\+Fi AP (Access Point) interface.
 
-$<$ Default Wi-\/\+Fi configuration.
+\texorpdfstring{$<$}{<} Default Wi-\/\+Fi configuration.
 
-$<$ Initialize Wi-\/\+Fi driver with the default configuration.
+\texorpdfstring{$<$}{<} Initialize Wi-\/\+Fi driver with the default configuration.
 
-$<$ Register Wi-\/\+Fi event handler.
+\texorpdfstring{$<$}{<} Register Wi-\/\+Fi event handler.
 
-$<$ Register IP event handler.
+\texorpdfstring{$<$}{<} Register IP event handler.
 
-$<$ AP SSID.
+\texorpdfstring{$<$}{<} AP SSID.
 
-$<$ AP password.
+\texorpdfstring{$<$}{<} AP password.
 
-$<$ Length of SSID.
+\texorpdfstring{$<$}{<} Length of SSID.
 
-$<$ AP channel.
+\texorpdfstring{$<$}{<} AP channel.
 
-$<$ Max connections to the AP.
+\texorpdfstring{$<$}{<} Max connections to the AP.
 
-$<$ WPA/\+WPA2 PSK authentication.
+\texorpdfstring{$<$}{<} WPA/\+WPA2 PSK authentication.
 
-$<$ Set Wi-\/\+Fi mode to AP only.
+\texorpdfstring{$<$}{<} Set Wi-\/\+Fi mode to AP only.
 
-$<$ Set AP configuration.
+\texorpdfstring{$<$}{<} Set AP configuration.
 
-$<$ Start the Wi-\/\+Fi driver.
+\texorpdfstring{$<$}{<} Start the Wi-\/\+Fi driver.
 
-$<$ Log completion of Wi-\/\+Fi initialization.
+\texorpdfstring{$<$}{<} Log completion of Wi-\/\+Fi initialization.

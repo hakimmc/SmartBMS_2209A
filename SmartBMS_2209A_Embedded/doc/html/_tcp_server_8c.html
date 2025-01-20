@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="78184751.png"/></td>
   <td id="projectalign">
    <div id="projectname">SmartBMS_2209A<span id="projectnumber">&#160;v1.0.0</span>
    </div>
@@ -115,11 +116,10 @@ $(function(){initNavTree('_tcp_server_8c.html',''); initResizable(true); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_tcp_server_8h_source.html">TcpServer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_wifi_8h_source.html">Wifi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="d2cc__lib_8h_source.html">d2cc_lib.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac42367fe5c999ec6650de83e9d72fe8c" id="r_ac42367fe5c999ec6650de83e9d72fe8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac42367fe5c999ec6650de83e9d72fe8c">SERVER_PORT</a>&#160;&#160;&#160;8080</td></tr>
-<tr class="separator:ac42367fe5c999ec6650de83e9d72fe8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef135ff19068a2ab235f21f2c833969b" id="r_aef135ff19068a2ab235f21f2c833969b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef135ff19068a2ab235f21f2c833969b">TCP_TAG</a>&#160;&#160;&#160;&quot;TCP_SERVER&quot;</td></tr>
 <tr class="separator:aef135ff19068a2ab235f21f2c833969b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -134,12 +134,20 @@ Functions</h2></td></tr>
 <tr class="memitem:a00e67904809f7a47e29ca050bcabbae2" id="r_a00e67904809f7a47e29ca050bcabbae2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00e67904809f7a47e29ca050bcabbae2">receive_data</a> (int sock, char *buffer, size_t size, uint8_t *timeout_counter, uint8_t max_timeout)</td></tr>
 <tr class="memdesc:a00e67904809f7a47e29ca050bcabbae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives data from the client socket.  <br /></td></tr>
 <tr class="separator:a00e67904809f7a47e29ca050bcabbae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af537437f191b86077cd5ae57370572b1" id="r_af537437f191b86077cd5ae57370572b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af537437f191b86077cd5ae57370572b1">ConvertToJson</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc, char *jsonString)</td></tr>
+<tr class="memdesc:af537437f191b86077cd5ae57370572b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to JSON function of Dbc Parameters.  <br /></td></tr>
+<tr class="separator:af537437f191b86077cd5ae57370572b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13ddbecdfd3a974bad6c7ff356cb4674" id="r_a13ddbecdfd3a974bad6c7ff356cb4674"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</a> ()</td></tr>
 <tr class="memdesc:a13ddbecdfd3a974bad6c7ff356cb4674"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the TCP server and starts listening for client connections.  <br /></td></tr>
 <tr class="separator:a13ddbecdfd3a974bad6c7ff356cb4674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:adabf6670e12fa284be00ec7af178f57d" id="r_adabf6670e12fa284be00ec7af178f57d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_dbc_struct.html">DbcStruct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adabf6670e12fa284be00ec7af178f57d">maindbc_struct</a></td></tr>
+<tr class="memdesc:adabf6670e12fa284be00ec7af178f57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold CAN message data.  <br /></td></tr>
+<tr class="separator:adabf6670e12fa284be00ec7af178f57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e7b00854cffece2f2025a20b30f4860" id="r_a9e7b00854cffece2f2025a20b30f4860"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e7b00854cffece2f2025a20b30f4860">struct_of_comm</a></td></tr>
+<tr class="separator:a9e7b00854cffece2f2025a20b30f4860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19bd4a5dc2066779c571dc423ee2e5fc" id="r_a19bd4a5dc2066779c571dc423ee2e5fc"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19bd4a5dc2066779c571dc423ee2e5fc">GUI_USER</a> = &quot;root&quot;</td></tr>
 <tr class="memdesc:a19bd4a5dc2066779c571dc423ee2e5fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Username for GUI authentication.  <br /></td></tr>
 <tr class="separator:a19bd4a5dc2066779c571dc423ee2e5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,21 +160,6 @@ Variables</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>18 December 2024 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>hakimmc </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ac42367fe5c999ec6650de83e9d72fe8c" name="ac42367fe5c999ec6650de83e9d72fe8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac42367fe5c999ec6650de83e9d72fe8c">&#9670;&#160;</a></span>SERVER_PORT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SERVER_PORT&#160;&#160;&#160;8080</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Port number for the TCP server </p>
-
-</div>
-</div>
 <a id="aef135ff19068a2ab235f21f2c833969b" name="aef135ff19068a2ab235f21f2c833969b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef135ff19068a2ab235f21f2c833969b">&#9670;&#160;</a></span>TCP_TAG</h2>
 
@@ -183,6 +176,30 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af537437f191b86077cd5ae57370572b1" name="af537437f191b86077cd5ae57370572b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af537437f191b86077cd5ae57370572b1">&#9670;&#160;</a></span>ConvertToJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConvertToJson </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *</td>          <td class="paramname"><span class="paramname"><em>dbc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>jsonString</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert to JSON function of Dbc Parameters. </p>
+<p>Converter for Dbc values to JSON. </p>
+
+</div>
+</div>
 <a id="a71663496e793fd4869a37af2eaeb9dfb" name="a71663496e793fd4869a37af2eaeb9dfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71663496e793fd4869a37af2eaeb9dfb">&#9670;&#160;</a></span>Create_Server()</h2>
 
@@ -340,6 +357,53 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Username for GUI authentication. </p>
+
+</div>
+</div>
+<a id="adabf6670e12fa284be00ec7af178f57d" name="adabf6670e12fa284be00ec7af178f57d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabf6670e12fa284be00ec7af178f57d">&#9670;&#160;</a></span>maindbc_struct</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> maindbc_struct</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Structure to hold CAN message data. </p>
+<p>Extern from main; Structure to hold CAN message data. </p>
+
+</div>
+</div>
+<a id="a9e7b00854cffece2f2025a20b30f4860" name="a9e7b00854cffece2f2025a20b30f4860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e7b00854cffece2f2025a20b30f4860">&#9670;&#160;</a></span>struct_of_comm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_dbc_struct.html">DbcStruct</a>* struct_of_comm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -146,54 +146,6 @@
         </inbodydescription>
         <location file="include/Can.h" line="43" column="9" bodyfile="include/Can.h" bodystart="43" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="_can_8h_1afd4f58c1a509cc8343774f0ca05c9061" prot="public" static="no">
-        <name>Can_Main_ID</name>
-        <initializer>0x100</initializer>
-        <briefdescription>
-<para>CAN ID for main messages. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/Can.h" line="49" column="9" bodyfile="include/Can.h" bodystart="49" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="_can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4" prot="public" static="no">
-        <name>Battery_Messages_ID</name>
-        <initializer>0x101</initializer>
-        <briefdescription>
-<para>CAN ID for battery messages. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/Can.h" line="55" column="9" bodyfile="include/Can.h" bodystart="55" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="_can_8h_1a1e870e11e6fd939606c6fff3b122d4fd" prot="public" static="no">
-        <name>Can_Battery_Voltages_ID</name>
-        <initializer>0x102</initializer>
-        <briefdescription>
-<para>CAN ID for battery voltage messages. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/Can.h" line="61" column="9" bodyfile="include/Can.h" bodystart="61" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="_can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e" prot="public" static="no">
-        <name>Can_Battery_Temperatures_ID</name>
-        <initializer>0x103</initializer>
-        <briefdescription>
-<para>CAN ID for battery temperature messages. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/Can.h" line="67" column="9" bodyfile="include/Can.h" bodystart="67" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="define" id="_can_8h_1ac5d0198b7447cc2c29044ccd56dd9443" prot="public" static="no">
         <name>CAN_DELAY</name>
         <initializer>250</initializer>
@@ -204,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Can.h" line="73" column="9" bodyfile="include/Can.h" bodystart="73" bodyend="-1"/>
+        <location file="include/Can.h" line="49" column="9" bodyfile="include/Can.h" bodystart="49" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -289,7 +241,7 @@ Initializes the CAN interface.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Can.h" line="85" column="9" bodyfile="src/Can.c" bodystart="21" bodyend="28" declfile="include/Can.h" declline="85" declcolumn="9"/>
+        <location file="include/Can.h" line="61" column="9" bodyfile="src/Can.c" bodystart="22" bodyend="29" declfile="include/Can.h" declline="61" declcolumn="9"/>
       </memberdef>
       <memberdef kind="function" id="_can_8h_1a51dc04f4c5f5a544e73c33e2d606193b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -353,7 +305,7 @@ Transmits a CAN message.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Can.h" line="96" column="9" bodyfile="src/Can.c" bodystart="37" bodyend="44" declfile="include/Can.h" declline="96" declcolumn="9"/>
+        <location file="include/Can.h" line="72" column="9" bodyfile="src/Can.c" bodystart="38" bodyend="45" declfile="include/Can.h" declline="72" declcolumn="9"/>
       </memberdef>
       <memberdef kind="function" id="_can_8h_1a99ef09684458d26b79a4185bc0af934b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -393,7 +345,7 @@ Task to report CAN messages.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Can.h" line="105" column="6" bodyfile="src/Can.c" bodystart="66" bodyend="88" declfile="include/Can.h" declline="105" declcolumn="6"/>
+        <location file="include/Can.h" line="81" column="6" bodyfile="src/Can.c" bodystart="62" bodyend="92" declfile="include/Can.h" declline="81" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -429,23 +381,15 @@ Task to report CAN messages.</para>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43" refid="_can_8h_1a4791c142b857f44449cc8ad8d22ef045" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAN_TAG<sp/>&quot;CAN_MASTER&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="_can_8h_1afd4f58c1a509cc8343774f0ca05c9061" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Can_Main_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_can_8h_1ac5d0198b7447cc2c29044ccd56dd9443" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAN_DELAY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>250<sp/></highlight><highlight class="comment">//<sp/>ms</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="_can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Battery_Messages_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x101</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="_can_8h_1a1e870e11e6fd939606c6fff3b122d4fd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Can_Battery_Voltages_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x102</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">uint8_t<sp/><ref refid="_can_8h_1a8920d0f7ab8095cccb447da8d5fae390" kindref="member">Can_Init</ref>(twai_general_config_t<sp/>can_gpio_config,<sp/>twai_timing_config_t<sp/>can_time_config,<sp/>twai_filter_config_t<sp/>can_filter_config);</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67" refid="_can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Can_Battery_Temperatures_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x103</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="_can_8h_1ac5d0198b7447cc2c29044ccd56dd9443" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAN_DELAY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>250<sp/></highlight><highlight class="comment">//<sp/>ms</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal">uint8_t<sp/><ref refid="_can_8h_1a8920d0f7ab8095cccb447da8d5fae390" kindref="member">Can_Init</ref>(twai_general_config_t<sp/>can_gpio_config,<sp/>twai_timing_config_t<sp/>can_time_config,<sp/>twai_filter_config_t<sp/>can_filter_config);</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal">uint8_t<sp/><ref refid="_can_8h_1a51dc04f4c5f5a544e73c33e2d606193b" kindref="member">Can_Transmit</ref>(twai_message_t<sp/>message,<sp/>uint8_t<sp/>data[]);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_can_8h_1a99ef09684458d26b79a4185bc0af934b" kindref="member">CanReporter</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pvParameter);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDE_CAN_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">uint8_t<sp/><ref refid="_can_8h_1a51dc04f4c5f5a544e73c33e2d606193b" kindref="member">Can_Transmit</ref>(twai_message_t<sp/>message,<sp/>uint8_t<sp/>data[]);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_can_8h_1a99ef09684458d26b79a4185bc0af934b" kindref="member">CanReporter</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pvParameter);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDE_CAN_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="include/Can.h"/>
   </compounddef>

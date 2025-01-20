@@ -7,6 +7,7 @@
 <chapter>
     <title>Class Documentation</title>
     <xi:include href="struct_dbc_struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_phys___value__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
 <chapter>
     <title>File Documentation</title>
@@ -30,7 +31,6 @@
     <xi:include href="d2cc__lib_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_led_task_init_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="main_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_tcp_server_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_uart_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_wifi_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

@@ -25,21 +25,13 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 38 
 43 <emphasis role="preprocessor">#define&#32;CAN_TAG&#32;&quot;CAN_MASTER&quot;</emphasis>
 44 
-49 <emphasis role="preprocessor">#define&#32;Can_Main_ID&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x100</emphasis>
+49 <emphasis role="preprocessor">#define&#32;CAN_DELAY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;250&#32;</emphasis><emphasis role="comment">//&#32;ms</emphasis>
 50 
-55 <emphasis role="preprocessor">#define&#32;Battery_Messages_ID&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x101</emphasis>
-56 
-61 <emphasis role="preprocessor">#define&#32;Can_Battery_Voltages_ID&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x102</emphasis>
+61 uint8_t&#32;<link linkend="__can_8h_1a8920d0f7ab8095cccb447da8d5fae390">Can_Init</link>(twai_general_config_t&#32;can_gpio_config,&#32;twai_timing_config_t&#32;can_time_config,&#32;twai_filter_config_t&#32;can_filter_config);
 62 
-67 <emphasis role="preprocessor">#define&#32;Can_Battery_Temperatures_ID&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x103</emphasis>
-68 
-73 <emphasis role="preprocessor">#define&#32;CAN_DELAY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;250&#32;</emphasis><emphasis role="comment">//&#32;ms</emphasis>
-74 
-85 uint8_t&#32;<link linkend="__can_8h_1a8920d0f7ab8095cccb447da8d5fae390">Can_Init</link>(twai_general_config_t&#32;can_gpio_config,&#32;twai_timing_config_t&#32;can_time_config,&#32;twai_filter_config_t&#32;can_filter_config);
-86 
-96 uint8_t&#32;<link linkend="__can_8h_1a51dc04f4c5f5a544e73c33e2d606193b">Can_Transmit</link>(twai_message_t&#32;message,&#32;uint8_t&#32;data[]);
-97 
-105 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__can_8h_1a99ef09684458d26b79a4185bc0af934b">CanReporter</link>(<emphasis role="keywordtype">void</emphasis>*&#32;pvParameter);
-106 
-107 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;INCLUDE_CAN_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+72 uint8_t&#32;<link linkend="__can_8h_1a51dc04f4c5f5a544e73c33e2d606193b">Can_Transmit</link>(twai_message_t&#32;message,&#32;uint8_t&#32;data[]);
+73 
+81 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__can_8h_1a99ef09684458d26b79a4185bc0af934b">CanReporter</link>(<emphasis role="keywordtype">void</emphasis>*&#32;pvParameter);
+82 
+83 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;INCLUDE_CAN_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
 </programlisting></section>

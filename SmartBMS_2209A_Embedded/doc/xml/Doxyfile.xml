@@ -4,7 +4,7 @@
   <option  id='PROJECT_NAME' default='no' type='string'><value><![CDATA[SmartBMS_2209A]]></value></option>
   <option  id='PROJECT_NUMBER' default='no' type='string'><value><![CDATA[v1.0.0]]></value></option>
   <option  id='PROJECT_BRIEF' default='no' type='string'><value><![CDATA["Battery Management System for Tubitak 2209A"]]></value></option>
-  <option  id='PROJECT_LOGO' default='yes' type='string'><value><![CDATA[]]></value></option>
+  <option  id='PROJECT_LOGO' default='no' type='string'><value><![CDATA[C:/Users/acalg/OneDrive/Belgeler/GitHub/SmartBMS_2209A/SmartBMS_2209A_Embedded/doc/78184751.png]]></value></option>
   <option  id='PROJECT_ICON' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='OUTPUT_DIRECTORY' default='no' type='string'><value><![CDATA[C:/Users/acalg/OneDrive/Belgeler/GitHub/SmartBMS_2209A/SmartBMS_2209A_Embedded/doc]]></value></option>
   <option  id='CREATE_SUBDIRS' default='yes' type='bool'><value>NO</value></option>
@@ -313,7 +313,7 @@
   </option>
   <option  id='LATEX_EXTRA_FILES' default='yes' type='stringlist'>
   </option>
-  <option  id='PDF_HYPERLINKS' default='no' type='bool'><value>NO</value></option>
+  <option  id='PDF_HYPERLINKS' default='yes' type='bool'><value>YES</value></option>
   <option  id='USE_PDFLATEX' default='yes' type='bool'><value>YES</value></option>
   <option  id='LATEX_BATCHMODE' default='yes' type='string'><value>NO</value></option>
   <option  id='LATEX_HIDE_INDICES' default='yes' type='bool'><value>NO</value></option>

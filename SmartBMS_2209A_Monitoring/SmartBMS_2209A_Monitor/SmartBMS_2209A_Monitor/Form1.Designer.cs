@@ -61,7 +61,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "SMART BMS";
             Load += Form1_Load;
             ResumeLayout(false);
         }

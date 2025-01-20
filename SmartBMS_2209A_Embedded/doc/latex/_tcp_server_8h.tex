@@ -1,5 +1,5 @@
 \doxysection{include/\+Tcp\+Server.h File Reference}
-\label{_tcp_server_8h}\index{include/TcpServer.h@{include/TcpServer.h}}
+\hypertarget{_tcp_server_8h}{}\label{_tcp_server_8h}\index{include/TcpServer.h@{include/TcpServer.h}}
 
 
 TCP server implementation for ESP32.  
@@ -23,24 +23,26 @@ TCP server implementation for ESP32.
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ WIFI\+\_\+\+CONNECTED\+\_\+\+BIT}~BIT0
+\#define \mbox{\hyperlink{_tcp_server_8h_ad552e7688532cbbecd3967538ced06ac}{WIFI\+\_\+\+CONNECTED\+\_\+\+BIT}}~BIT0
 \begin{DoxyCompactList}\small\item\em Uncomment the following line to enable Wi-\/\+Fi connection functionality. \end{DoxyCompactList}\item 
-\#define \textbf{ WIFI\+\_\+\+FAIL\+\_\+\+BIT}~BIT1
+\#define \mbox{\hyperlink{_tcp_server_8h_a7d013b55e50dfbda0904f5f933b63ec4}{WIFI\+\_\+\+FAIL\+\_\+\+BIT}}~BIT1
 \begin{DoxyCompactList}\small\item\em Event bit indicating a Wi-\/\+Fi connection failure. \end{DoxyCompactList}\item 
-\#define \textbf{ TCP\+\_\+\+TAG}~"{}TCP\+\_\+\+SERVER"{}
+\#define \mbox{\hyperlink{_tcp_server_8h_aef135ff19068a2ab235f21f2c833969b}{TCP\+\_\+\+TAG}}~"{}TCP\+\_\+\+SERVER"{}
 \begin{DoxyCompactList}\small\item\em Tag for logging TCP server messages. \end{DoxyCompactList}\item 
-\#define \textbf{ SERVER\+\_\+\+PORT}~5166
+\#define \mbox{\hyperlink{_tcp_server_8h_ac42367fe5c999ec6650de83e9d72fe8c}{SERVER\+\_\+\+PORT}}~5166
 \begin{DoxyCompactList}\small\item\em Port number for the TCP server. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ Handle\+\_\+\+Client} (void $\ast$args)
+void \mbox{\hyperlink{_tcp_server_8h_a423bc60f42ad6bf912e07cd5320b1948}{Handle\+\_\+\+Client}} (void \texorpdfstring{$\ast$}{*}args)
 \begin{DoxyCompactList}\small\item\em Handles client connections to the TCP server. \end{DoxyCompactList}\item 
-void \textbf{ Create\+\_\+\+Server} (void $\ast$pv\+Parameter)
+void \mbox{\hyperlink{_tcp_server_8h_a71663496e793fd4869a37af2eaeb9dfb}{Create\+\_\+\+Server}} (void \texorpdfstring{$\ast$}{*}pv\+Parameter)
 \begin{DoxyCompactList}\small\item\em Creates and starts the TCP server. \end{DoxyCompactList}\item 
-int \textbf{ receive\+\_\+data} (int sock, char $\ast$buffer, size\+\_\+t size, uint8\+\_\+t $\ast$timeout\+\_\+counter, uint8\+\_\+t max\+\_\+timeout)
+int \mbox{\hyperlink{_tcp_server_8h_a00e67904809f7a47e29ca050bcabbae2}{receive\+\_\+data}} (int sock, char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t size, uint8\+\_\+t \texorpdfstring{$\ast$}{*}timeout\+\_\+counter, uint8\+\_\+t max\+\_\+timeout)
 \begin{DoxyCompactList}\small\item\em Receives data from a connected client. \end{DoxyCompactList}\item 
-void \textbf{ Tcp\+\_\+\+Init} ()
+void \mbox{\hyperlink{_tcp_server_8h_af537437f191b86077cd5ae57370572b1}{Convert\+To\+Json}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc, char \texorpdfstring{$\ast$}{*}json\+String)
+\begin{DoxyCompactList}\small\item\em Converter for Dbc values to JSON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_tcp_server_8h_a13ddbecdfd3a974bad6c7ff356cb4674}{Tcp\+\_\+\+Init}} ()
 \begin{DoxyCompactList}\small\item\em Initializes the TCP server. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -55,9 +57,9 @@ hakimmc
 
 
 \doxysubsection{Macro Definition Documentation}
-\index{TcpServer.h@{TcpServer.h}!SERVER\_PORT@{SERVER\_PORT}}
+\Hypertarget{_tcp_server_8h_ac42367fe5c999ec6650de83e9d72fe8c}\index{TcpServer.h@{TcpServer.h}!SERVER\_PORT@{SERVER\_PORT}}
 \index{SERVER\_PORT@{SERVER\_PORT}!TcpServer.h@{TcpServer.h}}
-\doxysubsubsection{SERVER\_PORT}
+\doxysubsubsection{\texorpdfstring{SERVER\_PORT}{SERVER\_PORT}}
 {\footnotesize\ttfamily \label{_tcp_server_8h_ac42367fe5c999ec6650de83e9d72fe8c} 
 \#define SERVER\+\_\+\+PORT~5166}
 
@@ -65,9 +67,9 @@ hakimmc
 
 Port number for the TCP server. 
 
-\index{TcpServer.h@{TcpServer.h}!TCP\_TAG@{TCP\_TAG}}
+\Hypertarget{_tcp_server_8h_aef135ff19068a2ab235f21f2c833969b}\index{TcpServer.h@{TcpServer.h}!TCP\_TAG@{TCP\_TAG}}
 \index{TCP\_TAG@{TCP\_TAG}!TcpServer.h@{TcpServer.h}}
-\doxysubsubsection{TCP\_TAG}
+\doxysubsubsection{\texorpdfstring{TCP\_TAG}{TCP\_TAG}}
 {\footnotesize\ttfamily \label{_tcp_server_8h_aef135ff19068a2ab235f21f2c833969b} 
 \#define TCP\+\_\+\+TAG~"{}TCP\+\_\+\+SERVER"{}}
 
@@ -75,9 +77,9 @@ Port number for the TCP server.
 
 Tag for logging TCP server messages. 
 
-\index{TcpServer.h@{TcpServer.h}!WIFI\_CONNECTED\_BIT@{WIFI\_CONNECTED\_BIT}}
+\Hypertarget{_tcp_server_8h_ad552e7688532cbbecd3967538ced06ac}\index{TcpServer.h@{TcpServer.h}!WIFI\_CONNECTED\_BIT@{WIFI\_CONNECTED\_BIT}}
 \index{WIFI\_CONNECTED\_BIT@{WIFI\_CONNECTED\_BIT}!TcpServer.h@{TcpServer.h}}
-\doxysubsubsection{WIFI\_CONNECTED\_BIT}
+\doxysubsubsection{\texorpdfstring{WIFI\_CONNECTED\_BIT}{WIFI\_CONNECTED\_BIT}}
 {\footnotesize\ttfamily \label{_tcp_server_8h_ad552e7688532cbbecd3967538ced06ac} 
 \#define WIFI\+\_\+\+CONNECTED\+\_\+\+BIT~BIT0}
 
@@ -85,9 +87,9 @@ Tag for logging TCP server messages.
 
 Uncomment the following line to enable Wi-\/\+Fi connection functionality. 
 
-Event bit indicating a successful Wi-\/\+Fi connection. \index{TcpServer.h@{TcpServer.h}!WIFI\_FAIL\_BIT@{WIFI\_FAIL\_BIT}}
+Event bit indicating a successful Wi-\/\+Fi connection. \Hypertarget{_tcp_server_8h_a7d013b55e50dfbda0904f5f933b63ec4}\index{TcpServer.h@{TcpServer.h}!WIFI\_FAIL\_BIT@{WIFI\_FAIL\_BIT}}
 \index{WIFI\_FAIL\_BIT@{WIFI\_FAIL\_BIT}!TcpServer.h@{TcpServer.h}}
-\doxysubsubsection{WIFI\_FAIL\_BIT}
+\doxysubsubsection{\texorpdfstring{WIFI\_FAIL\_BIT}{WIFI\_FAIL\_BIT}}
 {\footnotesize\ttfamily \label{_tcp_server_8h_a7d013b55e50dfbda0904f5f933b63ec4} 
 \#define WIFI\+\_\+\+FAIL\+\_\+\+BIT~BIT1}
 
@@ -98,11 +100,30 @@ Event bit indicating a Wi-\/\+Fi connection failure.
 
 
 \doxysubsection{Function Documentation}
-\index{TcpServer.h@{TcpServer.h}!Create\_Server@{Create\_Server}}
+\Hypertarget{_tcp_server_8h_af537437f191b86077cd5ae57370572b1}\index{TcpServer.h@{TcpServer.h}!ConvertToJson@{ConvertToJson}}
+\index{ConvertToJson@{ConvertToJson}!TcpServer.h@{TcpServer.h}}
+\doxysubsubsection{\texorpdfstring{ConvertToJson()}{ConvertToJson()}}
+{\footnotesize\ttfamily \label{_tcp_server_8h_af537437f191b86077cd5ae57370572b1} 
+void Convert\+To\+Json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{json\+String}{}\end{DoxyParamCaption})}
+
+
+
+Converter for Dbc values to JSON. 
+
+j\+SON Converter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dbc} & dbcstruct pointer. \\
+\hline
+{\em json\+String} & json string.\\
+\hline
+\end{DoxyParams}
+Converter for Dbc values to JSON. \Hypertarget{_tcp_server_8h_a71663496e793fd4869a37af2eaeb9dfb}\index{TcpServer.h@{TcpServer.h}!Create\_Server@{Create\_Server}}
 \index{Create\_Server@{Create\_Server}!TcpServer.h@{TcpServer.h}}
-\doxysubsubsection{Create\_Server()}
+\doxysubsubsection{\texorpdfstring{Create\_Server()}{Create\_Server()}}
 {\footnotesize\ttfamily \label{_tcp_server_8h_a71663496e793fd4869a37af2eaeb9dfb} 
-void Create\+\_\+\+Server (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameter}{}\end{DoxyParamCaption})}
+void Create\+\_\+\+Server (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameter}{}\end{DoxyParamCaption})}
 
 
 
@@ -124,11 +145,11 @@ This function sets up a TCP socket, binds it to a specified address and port, an
 {\em pv\+Parameter} & Unused parameter for Free\+RTOS task. \\
 \hline
 \end{DoxyParams}
-\index{TcpServer.h@{TcpServer.h}!Handle\_Client@{Handle\_Client}}
+\Hypertarget{_tcp_server_8h_a423bc60f42ad6bf912e07cd5320b1948}\index{TcpServer.h@{TcpServer.h}!Handle\_Client@{Handle\_Client}}
 \index{Handle\_Client@{Handle\_Client}!TcpServer.h@{TcpServer.h}}
-\doxysubsubsection{Handle\_Client()}
+\doxysubsubsection{\texorpdfstring{Handle\_Client()}{Handle\_Client()}}
 {\footnotesize\ttfamily \label{_tcp_server_8h_a423bc60f42ad6bf912e07cd5320b1948} 
-void Handle\+\_\+\+Client (\begin{DoxyParamCaption}\item[{void $\ast$}]{args}{}\end{DoxyParamCaption})}
+void Handle\+\_\+\+Client (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{args}{}\end{DoxyParamCaption})}
 
 
 
@@ -150,11 +171,11 @@ This function receives and processes commands from the client, authenticates the
 {\em args} & Socket descriptor for the client. \\
 \hline
 \end{DoxyParams}
-\index{TcpServer.h@{TcpServer.h}!receive\_data@{receive\_data}}
+\Hypertarget{_tcp_server_8h_a00e67904809f7a47e29ca050bcabbae2}\index{TcpServer.h@{TcpServer.h}!receive\_data@{receive\_data}}
 \index{receive\_data@{receive\_data}!TcpServer.h@{TcpServer.h}}
-\doxysubsubsection{receive\_data()}
+\doxysubsubsection{\texorpdfstring{receive\_data()}{receive\_data()}}
 {\footnotesize\ttfamily \label{_tcp_server_8h_a00e67904809f7a47e29ca050bcabbae2} 
-int receive\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{sock}{, }\item[{char $\ast$}]{buffer}{, }\item[{size\+\_\+t}]{size}{, }\item[{uint8\+\_\+t $\ast$}]{timeout\+\_\+counter}{, }\item[{uint8\+\_\+t}]{max\+\_\+timeout}{}\end{DoxyParamCaption})}
+int receive\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{sock}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{size}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{timeout\+\_\+counter}{, }\item[{uint8\+\_\+t}]{max\+\_\+timeout}{}\end{DoxyParamCaption})}
 
 
 
@@ -198,9 +219,9 @@ This function receives data from the client and handles timeouts. If no data is 
 \begin{DoxyReturn}{Returns}
 Length of received data, -\/1 if timeout occurs, or -\/2 if maximum timeouts reached. 
 \end{DoxyReturn}
-\index{TcpServer.h@{TcpServer.h}!Tcp\_Init@{Tcp\_Init}}
+\Hypertarget{_tcp_server_8h_a13ddbecdfd3a974bad6c7ff356cb4674}\index{TcpServer.h@{TcpServer.h}!Tcp\_Init@{Tcp\_Init}}
 \index{Tcp\_Init@{Tcp\_Init}!TcpServer.h@{TcpServer.h}}
-\doxysubsubsection{Tcp\_Init()}
+\doxysubsubsection{\texorpdfstring{Tcp\_Init()}{Tcp\_Init()}}
 {\footnotesize\ttfamily \label{_tcp_server_8h_a13ddbecdfd3a974bad6c7ff356cb4674} 
 void Tcp\+\_\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -210,6 +231,6 @@ Initializes the TCP server.
 
 Configures the necessary components and prepares the ESP32 for running a TCP server.
 
-Initializes the TCP server. $<$ Initialize Wi-\/\+Fi in access point and station mode.
+Initializes the TCP server. \texorpdfstring{$<$}{<} Initialize Wi-\/\+Fi in access point and station mode.
 
-$<$ Start the TCP server task.
+\texorpdfstring{$<$}{<} Start the TCP server task.

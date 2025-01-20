@@ -6,11 +6,20 @@
     <includes local="yes">driver/gpio.h</includes>
     <includes local="yes">freertos/FreeRTOS.h</includes>
     <includes local="yes">freertos/task.h</includes>
+    <includes refid="d2cc__lib_8h" local="yes">d2cc_lib.h</includes>
     <incdepgraph>
       <node id="2">
         <label>LedTaskInit.h</label>
         <link refid="_led_task_init_8h"/>
         <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>d2cc_lib.h</label>
+        <link refid="d2cc__lib_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -24,6 +33,8 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>driver/gpio.h</label>
@@ -33,6 +44,9 @@
       </node>
       <node id="6">
         <label>freertos/task.h</label>
+      </node>
+      <node id="8">
+        <label>stdbool.h</label>
       </node>
       <node id="3">
         <label>stdint.h</label>
@@ -49,7 +63,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/LedTaskInit.c" line="14" column="9" bodyfile="src/LedTaskInit.c" bodystart="14" bodyend="-1"/>
+        <location file="src/LedTaskInit.c" line="15" column="9" bodyfile="src/LedTaskInit.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_led_task_init_8c_1adabf6670e12fa284be00ec7af178f57d" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>DbcStruct maindbc_struct</definition>
+        <argsstring></argsstring>
+        <name>maindbc_struct</name>
+        <briefdescription>
+<para>Extern from main; Structure to hold CAN message data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Extern from main; Structure to hold CAN message data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/LedTaskInit.c" line="18" column="18" bodyfile="src/main.c" bodystart="16" bodyend="-1" declfile="src/LedTaskInit.c" declline="18" declcolumn="18"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -86,7 +117,7 @@
 <para>&lt; Disable pull-down resistor.</para>
 <para>&lt; Disable pull-up resistor.</para>
         </inbodydescription>
-        <location file="src/LedTaskInit.c" line="23" column="6" bodyfile="src/LedTaskInit.c" bodystart="23" bodyend="34"/>
+        <location file="src/LedTaskInit.c" line="27" column="6" bodyfile="src/LedTaskInit.c" bodystart="27" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="_led_task_init_8c_1a1f53ce317fca339ddc6588adb1a457e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -120,8 +151,9 @@
 <para>&lt; Delay for 500 ms.</para>
 <para>&lt; Turn the LED off.</para>
 <para>&lt; Delay for 500 ms.</para>
+<para>&lt; Alive Counter.</para>
         </inbodydescription>
-        <location file="src/LedTaskInit.c" line="43" column="6" bodyfile="src/LedTaskInit.c" bodystart="43" bodyend="53"/>
+        <location file="src/LedTaskInit.c" line="47" column="6" bodyfile="src/LedTaskInit.c" bodystart="47" bodyend="64"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -141,33 +173,42 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/gpio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/FreeRTOS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/task.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_PIN<sp/>13</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_task_init_8c_1ac3698c9d80d8a1abde24708cc9fdb1ee" kindref="member">gpio_init</ref>(uint8_t<sp/>gpio_pin)</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config_t<sp/>io_conf;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.intr_type<sp/>=<sp/>GPIO_INTR_DISABLE;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.mode<sp/>=<sp/>GPIO_MODE_OUTPUT;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pin_bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/>gpio_pin);<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_down_en<sp/>=<sp/>GPIO_PULLDOWN_DISABLE;<sp/></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_up_en<sp/>=<sp/>GPIO_PULLUP_DISABLE;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>the<sp/>GPIO</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config(&amp;io_conf);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_task_init_8c_1a1f53ce317fca339ddc6588adb1a457e4" kindref="member">led_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pvParameter)</highlight></codeline>
-<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_led_task_init_8c_1ac3698c9d80d8a1abde24708cc9fdb1ee" kindref="member">gpio_init</ref>(<ref refid="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" kindref="member">LED_PIN</ref>);<sp/></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level(<ref refid="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" kindref="member">LED_PIN</ref>,<sp/>1);<sp/></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(pdMS_TO_TICKS(500));<sp/></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level(<ref refid="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" kindref="member">LED_PIN</ref>,<sp/>0);<sp/></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(pdMS_TO_TICKS(500));<sp/></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2cc__lib_8h" kindref="compound">d2cc_lib.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_PIN<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/><ref refid="_can_8c_1adabf6670e12fa284be00ec7af178f57d" kindref="member">maindbc_struct</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_task_init_8c_1ac3698c9d80d8a1abde24708cc9fdb1ee" kindref="member">gpio_init</ref>(uint8_t<sp/>gpio_pin)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config_t<sp/>io_conf;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.intr_type<sp/>=<sp/>GPIO_INTR_DISABLE;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.mode<sp/>=<sp/>GPIO_MODE_OUTPUT;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pin_bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/>gpio_pin);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_down_en<sp/>=<sp/>GPIO_PULLDOWN_DISABLE;<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_up_en<sp/>=<sp/>GPIO_PULLUP_DISABLE;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>the<sp/>GPIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config(&amp;io_conf);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_task_init_8c_1a1f53ce317fca339ddc6588adb1a457e4" kindref="member">led_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pvParameter)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_led_task_init_8c_1ac3698c9d80d8a1abde24708cc9fdb1ee" kindref="member">gpio_init</ref>(<ref refid="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" kindref="member">LED_PIN</ref>);<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level(<ref refid="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" kindref="member">LED_PIN</ref>,<sp/>1);<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(pdMS_TO_TICKS(100));<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level(<ref refid="_led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f" kindref="member">LED_PIN</ref>,<sp/>0);<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(pdMS_TO_TICKS(100));<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="_can_8c_1adabf6670e12fa284be00ec7af178f57d" kindref="member">maindbc_struct</ref>.Can_Main.Signal.AliveCounter<sp/>==<sp/>127){</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_can_8c_1adabf6670e12fa284be00ec7af178f57d" kindref="member">maindbc_struct</ref>.Can_Main.Signal.AliveCounter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_can_8c_1adabf6670e12fa284be00ec7af178f57d" kindref="member">maindbc_struct</ref>.Can_Main.Signal.AliveCounter++;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/LedTaskInit.c"/>
   </compounddef>

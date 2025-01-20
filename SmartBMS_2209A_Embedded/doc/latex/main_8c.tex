@@ -1,5 +1,5 @@
 \doxysection{src/main.c File Reference}
-\label{main_8c}\index{src/main.c@{src/main.c}}
+\hypertarget{main_8c}{}\label{main_8c}\index{src/main.c@{src/main.c}}
 
 
 Main application entry point for ESP32, initializing various tasks.  
@@ -14,13 +14,15 @@ Main application entry point for ESP32, initializing various tasks.
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ app\+\_\+main} ()
+void \mbox{\hyperlink{main_8c_abce06be17fc37d675118a678a8100a36}{app\+\_\+main}} ()
 \begin{DoxyCompactList}\small\item\em Application entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Dbc\+Struct} \textbf{ maindbc\+\_\+struct}
-\begin{DoxyCompactList}\small\item\em Structure to hold CAN message data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \mbox{\hyperlink{main_8c_adabf6670e12fa284be00ec7af178f57d}{maindbc\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em Structure to hold CAN message data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a9e7b00854cffece2f2025a20b30f4860}{struct\+\_\+of\+\_\+comm}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -35,9 +37,9 @@ hakimmc
 
 
 \doxysubsection{Function Documentation}
-\index{main.c@{main.c}!app\_main@{app\_main}}
+\Hypertarget{main_8c_abce06be17fc37d675118a678a8100a36}\index{main.c@{main.c}!app\_main@{app\_main}}
 \index{app\_main@{app\_main}!main.c@{main.c}}
-\doxysubsubsection{app\_main()}
+\doxysubsubsection{\texorpdfstring{app\_main()}{app\_main()}}
 {\footnotesize\ttfamily \label{main_8c_abce06be17fc37d675118a678a8100a36} 
 void app\+\_\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -45,16 +47,22 @@ void app\+\_\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Application entry point. 
 
-This function initializes non-\/volatile storage, sets up the TCP server, and creates tasks for CAN communication, LED toggling, and BQ76\+PL455 functionality. $<$ Print "{}helloworld"{} for testing.
+This function initializes non-\/volatile storage, sets up the TCP server, and creates tasks for CAN communication, LED toggling, and BQ76\+PL455 functionality. \texorpdfstring{$<$}{<} Print "{}helloworld"{} for testing.
 
 \doxysubsection{Variable Documentation}
-\index{main.c@{main.c}!maindbc\_struct@{maindbc\_struct}}
+\Hypertarget{main_8c_adabf6670e12fa284be00ec7af178f57d}\index{main.c@{main.c}!maindbc\_struct@{maindbc\_struct}}
 \index{maindbc\_struct@{maindbc\_struct}!main.c@{main.c}}
-\doxysubsubsection{maindbc\_struct}
+\doxysubsubsection{\texorpdfstring{maindbc\_struct}{maindbc\_struct}}
 {\footnotesize\ttfamily \label{main_8c_adabf6670e12fa284be00ec7af178f57d} 
-\textbf{ Dbc\+Struct} maindbc\+\_\+struct}
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} maindbc\+\_\+struct}
 
 
 
 Structure to hold CAN message data. 
+
+Extern from main; Structure to hold CAN message data. \Hypertarget{main_8c_a9e7b00854cffece2f2025a20b30f4860}\index{main.c@{main.c}!struct\_of\_comm@{struct\_of\_comm}}
+\index{struct\_of\_comm@{struct\_of\_comm}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{struct\_of\_comm}{struct\_of\_comm}}
+{\footnotesize\ttfamily \label{main_8c_a9e7b00854cffece2f2025a20b30f4860} 
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}}\texorpdfstring{$\ast$}{*} struct\+\_\+of\+\_\+comm\hspace{0.3cm}{\ttfamily [extern]}}
 

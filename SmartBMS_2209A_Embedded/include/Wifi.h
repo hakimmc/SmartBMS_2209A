@@ -115,7 +115,7 @@
  * @param event_id Event ID specifying the exact event.
  * @param event_data Additional data associated with the event (optional).
  */
-static void event_handler(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data);
+void event_handler(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data);
 
 /**
  * @brief Initializes the Wi-Fi in AP+STA mode.

@@ -85,7 +85,7 @@ Initializes a GPIO pin for LED control.</para>
 <para>&lt; Disable pull-down resistor.</para>
 <para>&lt; Disable pull-up resistor.</para>
         </inbodydescription>
-        <location file="include/LedTaskInit.h" line="24" column="6" bodyfile="src/LedTaskInit.c" bodystart="23" bodyend="34" declfile="include/LedTaskInit.h" declline="24" declcolumn="6"/>
+        <location file="include/LedTaskInit.h" line="24" column="6" bodyfile="src/LedTaskInit.c" bodystart="27" bodyend="38" declfile="include/LedTaskInit.h" declline="24" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="_led_task_init_8h_1a1f53ce317fca339ddc6588adb1a457e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -129,8 +129,9 @@ Task to initialize and control LED behavior.</para>
 <para>&lt; Delay for 500 ms.</para>
 <para>&lt; Turn the LED off.</para>
 <para>&lt; Delay for 500 ms.</para>
+<para>&lt; Alive Counter.</para>
         </inbodydescription>
-        <location file="include/LedTaskInit.h" line="34" column="6" bodyfile="src/LedTaskInit.c" bodystart="43" bodyend="53" declfile="include/LedTaskInit.h" declline="34" declcolumn="6"/>
+        <location file="include/LedTaskInit.h" line="34" column="6" bodyfile="src/LedTaskInit.c" bodystart="47" bodyend="64" declfile="include/LedTaskInit.h" declline="34" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="78184751.png"/></td>
   <td id="projectalign">
    <div id="projectname">SmartBMS_2209A<span id="projectnumber">&#160;v1.0.0</span>
    </div>
@@ -156,6 +157,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a00e67904809f7a47e29ca050bcabbae2" id="r_a00e67904809f7a47e29ca050bcabbae2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00e67904809f7a47e29ca050bcabbae2">receive_data</a> (int sock, char *buffer, size_t size, uint8_t *timeout_counter, uint8_t max_timeout)</td></tr>
 <tr class="memdesc:a00e67904809f7a47e29ca050bcabbae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives data from a connected client.  <br /></td></tr>
 <tr class="separator:a00e67904809f7a47e29ca050bcabbae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af537437f191b86077cd5ae57370572b1" id="r_af537437f191b86077cd5ae57370572b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af537437f191b86077cd5ae57370572b1">ConvertToJson</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc, char *jsonString)</td></tr>
+<tr class="memdesc:af537437f191b86077cd5ae57370572b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converter for Dbc values to JSON.  <br /></td></tr>
+<tr class="separator:af537437f191b86077cd5ae57370572b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13ddbecdfd3a974bad6c7ff356cb4674" id="r_a13ddbecdfd3a974bad6c7ff356cb4674"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</a> ()</td></tr>
 <tr class="memdesc:a13ddbecdfd3a974bad6c7ff356cb4674"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the TCP server.  <br /></td></tr>
 <tr class="separator:a13ddbecdfd3a974bad6c7ff356cb4674"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,6 +235,38 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af537437f191b86077cd5ae57370572b1" name="af537437f191b86077cd5ae57370572b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af537437f191b86077cd5ae57370572b1">&#9670;&#160;</a></span>ConvertToJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConvertToJson </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *</td>          <td class="paramname"><span class="paramname"><em>dbc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>jsonString</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converter for Dbc values to JSON. </p>
+<p>jSON Converter.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dbc</td><td>dbcstruct pointer. </td></tr>
+    <tr><td class="paramname">jsonString</td><td>json string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Converter for Dbc values to JSON. </p>
+
+</div>
+</div>
 <a id="a71663496e793fd4869a37af2eaeb9dfb" name="a71663496e793fd4869a37af2eaeb9dfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71663496e793fd4869a37af2eaeb9dfb">&#9670;&#160;</a></span>Create_Server()</h2>
 

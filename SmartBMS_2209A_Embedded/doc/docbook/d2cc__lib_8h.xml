@@ -2,40 +2,122 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_d2cc__lib_8h" xml:lang="en-US">
 <title>include/d2cc_lib.h File Reference</title>
 <indexterm><primary>include/d2cc_lib.h</primary></indexterm>
+<para>
+
+<para>Header file for the D2CC library. </para>
+ 
+</para>
 <programlisting linenumbering="unnumbered">#include &lt;stdint.h&gt;<?linebreak?>#include &lt;stdbool.h&gt;<?linebreak?></programlisting><simplesect>
     <title>Classes    </title>
         <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_phys___value__t">Phys_Value_t</link></para>
+
+<para>factor, offset and value variable structer for CAN messages structure for message. </para>
+</listitem>
             <listitem><para>struct <link linkend="_struct_dbc_struct">DbcStruct</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_d2cc__lib_8h_1ab46f9642beab36ac6b8624c11f4f5ed4">Battery_Messages_ID</link>&#160;&#160;&#160;257</para>
+
+<para>CAN ID for Battery_Messages messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_d2cc__lib_8h_1a28bfa34179cef8b6929e0b63798779cf">Battery_Messages_DLC</link>&#160;&#160;&#160;8</para>
+
+<para>CAN DLC for Battery_Messages messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_d2cc__lib_8h_1a4071ff4cd81d3b62ffb3be85fc1c4760">Battery_Temperatures_ID</link>&#160;&#160;&#160;260</para>
+
+<para>CAN ID for Battery_Temperatures messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_d2cc__lib_8h_1a12a5aca21c3b9316e0b20fac4557a16a">Battery_Temperatures_DLC</link>&#160;&#160;&#160;8</para>
+
+<para>CAN DLC for Battery_Temperatures messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_d2cc__lib_8h_1a38e80dd1e9f8cdf9735b54d79f2fdda9">Battery_Voltages_1_ID</link>&#160;&#160;&#160;258</para>
+
+<para>CAN ID for Battery_Voltages_1 messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_d2cc__lib_8h_1a58897864bf48b89b9777036c39420cef">Battery_Voltages_1_DLC</link>&#160;&#160;&#160;8</para>
+
+<para>CAN DLC for Battery_Voltages_1 messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_d2cc__lib_8h_1accc8765d8f8608052fd7ee753fd3793e">Battery_Voltages_2_ID</link>&#160;&#160;&#160;259</para>
+
+<para>CAN ID for Battery_Voltages_2 messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_d2cc__lib_8h_1a8c310afe9a8df00d32a008b5f06dbc16">Battery_Voltages_2_DLC</link>&#160;&#160;&#160;8</para>
+
+<para>CAN DLC for Battery_Voltages_2 messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_d2cc__lib_8h_1afd4f58c1a509cc8343774f0ca05c9061">Can_Main_ID</link>&#160;&#160;&#160;256</para>
+
+<para>CAN ID for Can_Main messages. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_d2cc__lib_8h_1abbb4c67f416eee84ceda3de370c5beb3">Can_Main_DLC</link>&#160;&#160;&#160;8</para>
+
+<para>CAN DLC for Can_Main messages. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <simplesect>
     <title>Enumerations    </title>
         <itemizedlist>
-            <listitem><para>enum <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link> { <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a">BatteryChemistry_LFP</link>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link> { <?linebreak?><link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a">BatteryChemistry_LFP</link>
 , <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1">BatteryChemistry_NMC</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a7415cd345a1e7b72e1624827e217e3eb">BatteryChemistry_NCA</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a9abf08acf06432de7e4778b98f7c991c">BatteryChemistry_LCO</link>
+, <?linebreak?><link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a3f7034da36f6d3f4430dfcdf0ddbc3d4">BatteryChemistry_LMO</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57ae9e1ed89a38e259c90612e49d5cb61e7">BatteryChemistry_LTO</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a7f7b968440395ea30f74ba35b4632e2f">BatteryChemistry_NiMH</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a4b4da73677657ab62ffafa3ad528b9f8">BatteryChemistry_NiCd</link>
+, <?linebreak?><link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a760bbb5f2aecf1f32c05d8b0ec81b3d6">BatteryChemistry_PbA</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57ab2e5d34668a702fc90922affc9136f15">BatteryChemistry_Zn_Air</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a584ffb461e323eea6fea389640269bfe">BatteryChemistry_Li_S</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a8a4cb8943fb8cdac21435ece19ff15c7">BatteryChemistry_Na_ion</link>
+, <?linebreak?><link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57aab4d599e3d5d32058a15da6f4026745d">BatteryChemistry_Zn_MnO2</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57ac9151876352044c97912ec6514a9a4fe">BatteryChemistry_VRLA</link>
+, <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57abf59a4ff67310168ecf6a8268f77318d">BatteryChemistry_Ag_Zn</link>
  }</para>
+
+<para>Enum for representing signal values for the BatteryChemistry signal. </para>
 </listitem>
-            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link> { <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5">CanBusEnable_Enable</link>
-, <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3">CanBusEnable_Disable</link>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link> { <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8afe5cab6293e618c2645852dbbeba66ea">WiFi_AP_Status_WiFi_Ap_Disconnected</link>
+, <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8af5bbea2d1323b30787a1211c231415c9">WiFi_AP_Status_WiFi_Ap_Connected</link>
  }</para>
+
+<para>Enum for representing signal values for the WiFi_AP_Status signal. </para>
 </listitem>
-            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</link> { <link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e">WiFiEnable_Enable</link>
-, <link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e">WiFiEnable_Disable</link>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link> { <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4afa23dab3ead685cbb6a195bdf72360b5">CanBusEnable_CAN_Driver_Disabled</link>
+, <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4a35888e8b36dc817a47cfba29797623dd">CanBusEnable_CAN_Driver_Enabled</link>
  }</para>
+
+<para>Enum for representing signal values for the CanBusEnable signal. </para>
 </listitem>
-            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link> { <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d">TcpEnable_Offline</link>
-, <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a">TcpEnable_Online</link>
-, <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475">TcpEnable_Connected</link>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link> { <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea8564b39d66be59e1e5a2e0c4f3a9049a">TcpEnable_TCP_Offline</link>
+, <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea44850b21528bd0c90f2fe51bef8c6972">TcpEnable_TCP_Online</link>
+, <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea597ff09266346fb6ab08f2af9f0a37b0">TcpEnable_TCP_Connected</link>
+, <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea6b4f18872cbdf486c5e126b3d80dbd39">TcpEnable_TCP_Error</link>
  }</para>
+
+<para>Enum for representing signal values for the TcpEnable signal. </para>
 </listitem>
-            <listitem><para>enum <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link> { <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7">VpnEnable_Enable</link>
-, <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b">VpnEnable_Disable</link>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link> { <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a05dd6a8c727c4612861d57dc58978f58">VpnEnable_VPN_Offline</link>
+, <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a16247ec944ba6e93575031f602f58eb5">VpnEnable_VPN_Online</link>
+, <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a4c33db4ae648d11dff5cb59a081b517c">VpnEnable_VPN_Connected</link>
+, <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4aa2d137d3b8b4a0c30b027620f093f670">VpnEnable_VPN_Error</link>
  }</para>
+
+<para>Enum for representing signal values for the VpnEnable signal. </para>
 </listitem>
-            <listitem><para>enum <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link> { <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3">WiFi_AP_Status_Enable</link>
-, <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d">WiFi_AP_Status_Disable</link>
+            <listitem><para>enum <link linkend="_d2cc__lib_8h_1ad00d3bb37c1d69ea203ae4019a832403">WiFi_ST_Status_enum</link> { <link linkend="_d2cc__lib_8h_1ad00d3bb37c1d69ea203ae4019a832403a44309aca0fa4d4cae66c68c991cfe25f">WiFi_ST_Status_WiFi_Ap_Disconnected</link>
+, <link linkend="_d2cc__lib_8h_1ad00d3bb37c1d69ea203ae4019a832403a535d52df00b0815ec4b6a8912a8a0d99">WiFi_ST_Status_WiFi_Ap_Connected</link>
  }</para>
+
+<para>Enum for representing signal values for the WiFi_ST_Status signal. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -43,26 +125,170 @@
     <title>Functions    </title>
         <itemizedlist>
             <listitem><para>void <link linkend="_d2cc__lib_8h_1add5678661f9e8fc392ab35a8369f8487">D2cc_Lib_Init</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *st)</para>
-</listitem>
-            <listitem><para>void <link linkend="_d2cc__lib_8h_1a1fc4968809341ee415d413feb9db80cb">ReadParse</link> (uint8_t *rx_data, uint32_t id, <link linkend="_struct_dbc_struct">DbcStruct</link> *st)</para>
+
+<para>Initializes the <link linkend="_struct_dbc_struct">DbcStruct</link> for CAN message processing. </para>
 </listitem>
             <listitem><para>void <link linkend="_d2cc__lib_8h_1a1a53ba345e601b7539ad8b1d3a60becf">CreateTable_Battery_Messages</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Creates the signal table for the specified CAN message. </para>
 </listitem>
             <listitem><para>void <link linkend="_d2cc__lib_8h_1acce29ea481884412fe82fde8cf8a3c73">CreateTable_Battery_Temperatures</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Creates the signal table for the specified CAN message. </para>
 </listitem>
-            <listitem><para>void <link linkend="_d2cc__lib_8h_1a3f4346eef40e3f6e0856a015bed8da2d">CreateTable_Battery_Voltages</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+            <listitem><para>void <link linkend="_d2cc__lib_8h_1a688095370440ce4b3816d2b712ed5b3b">CreateTable_Battery_Voltages_1</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8h_1a106990c5a8b489af5f21a3fa6f32d45c">CreateTable_Battery_Voltages_2</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Creates the signal table for the specified CAN message. </para>
 </listitem>
             <listitem><para>void <link linkend="_d2cc__lib_8h_1a3a8f6f06284c77bd13fc93c18115fd53">CreateTable_Can_Main</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_d2cc__lib_8h_1a265d29c5e976cf3716af95ecf2f7a49a">PHYS_TO_RAW</link> (int phys_value, <link linkend="_struct_phys___value__t">Phys_Value_t</link> *phys_struct)</para>
+
+<para>Converts a physical value to its corresponding raw CAN value. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_d2cc__lib_8h_1a3e00cecaf49f0e30f493be28bf2334bc">RAW_TO_PHYS</link> (int raw_value, <link linkend="_struct_phys___value__t">Phys_Value_t</link> *phys_struct)</para>
+
+<para>Converts a raw CAN value to its corresponding physical value. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file for the D2CC library. </para>
+
+<para><formalpara><title>Date</title>
+
+<para>2025-01-19 </para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>hakimmc </para>
+</formalpara>
+<formalpara><title>See also</title>
+
+<para><link xlink:href="https://www.linkedin.com/in/abdulhakim-calgin/">https://www.linkedin.com/in/abdulhakim-calgin/</link> </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_d2cc__lib_8h_1a28bfa34179cef8b6929e0b63798779cf"/><section>
+    <title>Battery_Messages_DLC</title>
+<indexterm><primary>Battery_Messages_DLC</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>Battery_Messages_DLC</secondary></indexterm>
+<para><computeroutput>#define Battery_Messages_DLC&#160;&#160;&#160;8</computeroutput></para><para>
+
+<para>CAN DLC for Battery_Messages messages. </para>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1ab46f9642beab36ac6b8624c11f4f5ed4"/><section>
+    <title>Battery_Messages_ID</title>
+<indexterm><primary>Battery_Messages_ID</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>Battery_Messages_ID</secondary></indexterm>
+<para><computeroutput>#define Battery_Messages_ID&#160;&#160;&#160;257</computeroutput></para><para>
+
+<para>CAN ID for Battery_Messages messages. </para>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a12a5aca21c3b9316e0b20fac4557a16a"/><section>
+    <title>Battery_Temperatures_DLC</title>
+<indexterm><primary>Battery_Temperatures_DLC</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>Battery_Temperatures_DLC</secondary></indexterm>
+<para><computeroutput>#define Battery_Temperatures_DLC&#160;&#160;&#160;8</computeroutput></para><para>
+
+<para>CAN DLC for Battery_Temperatures messages. </para>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a4071ff4cd81d3b62ffb3be85fc1c4760"/><section>
+    <title>Battery_Temperatures_ID</title>
+<indexterm><primary>Battery_Temperatures_ID</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>Battery_Temperatures_ID</secondary></indexterm>
+<para><computeroutput>#define Battery_Temperatures_ID&#160;&#160;&#160;260</computeroutput></para><para>
+
+<para>CAN ID for Battery_Temperatures messages. </para>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a58897864bf48b89b9777036c39420cef"/><section>
+    <title>Battery_Voltages_1_DLC</title>
+<indexterm><primary>Battery_Voltages_1_DLC</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>Battery_Voltages_1_DLC</secondary></indexterm>
+<para><computeroutput>#define Battery_Voltages_1_DLC&#160;&#160;&#160;8</computeroutput></para><para>
+
+<para>CAN DLC for Battery_Voltages_1 messages. </para>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a38e80dd1e9f8cdf9735b54d79f2fdda9"/><section>
+    <title>Battery_Voltages_1_ID</title>
+<indexterm><primary>Battery_Voltages_1_ID</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>Battery_Voltages_1_ID</secondary></indexterm>
+<para><computeroutput>#define Battery_Voltages_1_ID&#160;&#160;&#160;258</computeroutput></para><para>
+
+<para>CAN ID for Battery_Voltages_1 messages. </para>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a8c310afe9a8df00d32a008b5f06dbc16"/><section>
+    <title>Battery_Voltages_2_DLC</title>
+<indexterm><primary>Battery_Voltages_2_DLC</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>Battery_Voltages_2_DLC</secondary></indexterm>
+<para><computeroutput>#define Battery_Voltages_2_DLC&#160;&#160;&#160;8</computeroutput></para><para>
+
+<para>CAN DLC for Battery_Voltages_2 messages. </para>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1accc8765d8f8608052fd7ee753fd3793e"/><section>
+    <title>Battery_Voltages_2_ID</title>
+<indexterm><primary>Battery_Voltages_2_ID</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>Battery_Voltages_2_ID</secondary></indexterm>
+<para><computeroutput>#define Battery_Voltages_2_ID&#160;&#160;&#160;259</computeroutput></para><para>
+
+<para>CAN ID for Battery_Voltages_2 messages. </para>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1abbb4c67f416eee84ceda3de370c5beb3"/><section>
+    <title>Can_Main_DLC</title>
+<indexterm><primary>Can_Main_DLC</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>Can_Main_DLC</secondary></indexterm>
+<para><computeroutput>#define Can_Main_DLC&#160;&#160;&#160;8</computeroutput></para><para>
+
+<para>CAN DLC for Can_Main messages. </para>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1afd4f58c1a509cc8343774f0ca05c9061"/><section>
+    <title>Can_Main_ID</title>
+<indexterm><primary>Can_Main_ID</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>Can_Main_ID</secondary></indexterm>
+<para><computeroutput>#define Can_Main_ID&#160;&#160;&#160;256</computeroutput></para><para>
+
+<para>CAN ID for Can_Main messages. </para>
+</para>
+</section>
+</section>
 <section>
 <title>Enumeration Type Documentation</title>
 <anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57"/><section>
     <title>BatteryChemistry_enum</title>
 <indexterm><primary>BatteryChemistry_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_enum</secondary></indexterm>
-<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link></computeroutput></para><informaltable frame="all">
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link></computeroutput></para><para>
+
+<para>Enum for representing signal values for the BatteryChemistry signal. </para>
+</para>
+
+<para>This enum maps each value in the signal&apos;s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</para>
+
+<para><note><title>Note</title>
+
+<para>Ensure the signal values are aligned with the data type and expected range of the signal. </para>
+</note>
+</para>
+<informaltable frame="all">
 <title>Enumerator</title>
     <tgroup cols="2" align="left" colsep="1" rowsep="1">
       <colspec colname='c1'/>
@@ -70,9 +296,65 @@
 <tbody>
 <row><entry><indexterm><primary>BatteryChemistry_LFP</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_LFP</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a"/>BatteryChemistry_LFP</entry><entry></entry></row><row><entry><indexterm><primary>BatteryChemistry_NMC</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a"/>BatteryChemistry_LFP</entry><entry>
+<para>LFP. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_NMC</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_NMC</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1"/>BatteryChemistry_NMC</entry><entry></entry></row>    </tbody>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1"/>BatteryChemistry_NMC</entry><entry>
+<para>NMC. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_NCA</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_NCA</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a7415cd345a1e7b72e1624827e217e3eb"/>BatteryChemistry_NCA</entry><entry>
+<para>NCA. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_LCO</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_LCO</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a9abf08acf06432de7e4778b98f7c991c"/>BatteryChemistry_LCO</entry><entry>
+<para>LCO. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_LMO</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_LMO</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a3f7034da36f6d3f4430dfcdf0ddbc3d4"/>BatteryChemistry_LMO</entry><entry>
+<para>LMO. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_LTO</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_LTO</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57ae9e1ed89a38e259c90612e49d5cb61e7"/>BatteryChemistry_LTO</entry><entry>
+<para>LTO. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_NiMH</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_NiMH</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a7f7b968440395ea30f74ba35b4632e2f"/>BatteryChemistry_NiMH</entry><entry>
+<para>NiMH. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_NiCd</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_NiCd</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a4b4da73677657ab62ffafa3ad528b9f8"/>BatteryChemistry_NiCd</entry><entry>
+<para>NiCd. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_PbA</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_PbA</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a760bbb5f2aecf1f32c05d8b0ec81b3d6"/>BatteryChemistry_PbA</entry><entry>
+<para>PbA. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_Zn_Air</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_Zn_Air</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57ab2e5d34668a702fc90922affc9136f15"/>BatteryChemistry_Zn_Air</entry><entry>
+<para>Zn_Air. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_Li_S</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_Li_S</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a584ffb461e323eea6fea389640269bfe"/>BatteryChemistry_Li_S</entry><entry>
+<para>Li_S. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_Na_ion</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_Na_ion</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57a8a4cb8943fb8cdac21435ece19ff15c7"/>BatteryChemistry_Na_ion</entry><entry>
+<para>Na_ion. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_Zn_MnO2</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_Zn_MnO2</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57aab4d599e3d5d32058a15da6f4026745d"/>BatteryChemistry_Zn_MnO2</entry><entry>
+<para>Zn_MnO2. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_VRLA</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_VRLA</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57ac9151876352044c97912ec6514a9a4fe"/>BatteryChemistry_VRLA</entry><entry>
+<para>VRLA. </para>
+</entry></row><row><entry><indexterm><primary>BatteryChemistry_Ag_Zn</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>BatteryChemistry_Ag_Zn</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57abf59a4ff67310168ecf6a8268f77318d"/>BatteryChemistry_Ag_Zn</entry><entry>
+<para>Ag_Zn. </para>
+</entry></row>    </tbody>
     </tgroup>
 </informaltable>
 </section>
@@ -80,17 +362,33 @@
     <title>CanBusEnable_enum</title>
 <indexterm><primary>CanBusEnable_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>CanBusEnable_enum</secondary></indexterm>
-<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link></computeroutput></para><informaltable frame="all">
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link></computeroutput></para><para>
+
+<para>Enum for representing signal values for the CanBusEnable signal. </para>
+</para>
+
+<para>This enum maps each value in the signal&apos;s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</para>
+
+<para><note><title>Note</title>
+
+<para>Ensure the signal values are aligned with the data type and expected range of the signal. </para>
+</note>
+</para>
+<informaltable frame="all">
 <title>Enumerator</title>
     <tgroup cols="2" align="left" colsep="1" rowsep="1">
       <colspec colname='c1'/>
       <colspec colname='c2'/>
 <tbody>
-<row><entry><indexterm><primary>CanBusEnable_Enable</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>CanBusEnable_Enable</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5"/>CanBusEnable_Enable</entry><entry></entry></row><row><entry><indexterm><primary>CanBusEnable_Disable</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>CanBusEnable_Disable</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3"/>CanBusEnable_Disable</entry><entry></entry></row>    </tbody>
+<row><entry><indexterm><primary>CanBusEnable_CAN_Driver_Disabled</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CanBusEnable_CAN_Driver_Disabled</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4afa23dab3ead685cbb6a195bdf72360b5"/>CanBusEnable_CAN_Driver_Disabled</entry><entry>
+<para>CAN_Driver_Disabled. </para>
+</entry></row><row><entry><indexterm><primary>CanBusEnable_CAN_Driver_Enabled</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CanBusEnable_CAN_Driver_Enabled</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4a35888e8b36dc817a47cfba29797623dd"/>CanBusEnable_CAN_Driver_Enabled</entry><entry>
+<para>CAN_Driver_Enabled. </para>
+</entry></row>    </tbody>
     </tgroup>
 </informaltable>
 </section>
@@ -98,19 +396,41 @@
     <title>TcpEnable_enum</title>
 <indexterm><primary>TcpEnable_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_enum</secondary></indexterm>
-<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link></computeroutput></para><informaltable frame="all">
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link></computeroutput></para><para>
+
+<para>Enum for representing signal values for the TcpEnable signal. </para>
+</para>
+
+<para>This enum maps each value in the signal&apos;s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</para>
+
+<para><note><title>Note</title>
+
+<para>Ensure the signal values are aligned with the data type and expected range of the signal. </para>
+</note>
+</para>
+<informaltable frame="all">
 <title>Enumerator</title>
     <tgroup cols="2" align="left" colsep="1" rowsep="1">
       <colspec colname='c1'/>
       <colspec colname='c2'/>
 <tbody>
-<row><entry><indexterm><primary>TcpEnable_Offline</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_Offline</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d"/>TcpEnable_Offline</entry><entry></entry></row><row><entry><indexterm><primary>TcpEnable_Online</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_Online</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a"/>TcpEnable_Online</entry><entry></entry></row><row><entry><indexterm><primary>TcpEnable_Connected</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_Connected</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475"/>TcpEnable_Connected</entry><entry></entry></row>    </tbody>
+<row><entry><indexterm><primary>TcpEnable_TCP_Offline</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_TCP_Offline</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea8564b39d66be59e1e5a2e0c4f3a9049a"/>TcpEnable_TCP_Offline</entry><entry>
+<para>TCP_Offline. </para>
+</entry></row><row><entry><indexterm><primary>TcpEnable_TCP_Online</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_TCP_Online</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea44850b21528bd0c90f2fe51bef8c6972"/>TcpEnable_TCP_Online</entry><entry>
+<para>TCP_Online. </para>
+</entry></row><row><entry><indexterm><primary>TcpEnable_TCP_Connected</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_TCP_Connected</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea597ff09266346fb6ab08f2af9f0a37b0"/>TcpEnable_TCP_Connected</entry><entry>
+<para>TCP_Connected. </para>
+</entry></row><row><entry><indexterm><primary>TcpEnable_TCP_Error</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>TcpEnable_TCP_Error</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789ea6b4f18872cbdf486c5e126b3d80dbd39"/>TcpEnable_TCP_Error</entry><entry>
+<para>TCP_Error. </para>
+</entry></row>    </tbody>
     </tgroup>
 </informaltable>
 </section>
@@ -118,17 +438,41 @@
     <title>VpnEnable_enum</title>
 <indexterm><primary>VpnEnable_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>VpnEnable_enum</secondary></indexterm>
-<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link></computeroutput></para><informaltable frame="all">
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link></computeroutput></para><para>
+
+<para>Enum for representing signal values for the VpnEnable signal. </para>
+</para>
+
+<para>This enum maps each value in the signal&apos;s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</para>
+
+<para><note><title>Note</title>
+
+<para>Ensure the signal values are aligned with the data type and expected range of the signal. </para>
+</note>
+</para>
+<informaltable frame="all">
 <title>Enumerator</title>
     <tgroup cols="2" align="left" colsep="1" rowsep="1">
       <colspec colname='c1'/>
       <colspec colname='c2'/>
 <tbody>
-<row><entry><indexterm><primary>VpnEnable_Enable</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>VpnEnable_Enable</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7"/>VpnEnable_Enable</entry><entry></entry></row><row><entry><indexterm><primary>VpnEnable_Disable</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>VpnEnable_Disable</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b"/>VpnEnable_Disable</entry><entry></entry></row>    </tbody>
+<row><entry><indexterm><primary>VpnEnable_VPN_Offline</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>VpnEnable_VPN_Offline</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a05dd6a8c727c4612861d57dc58978f58"/>VpnEnable_VPN_Offline</entry><entry>
+<para>VPN_Offline. </para>
+</entry></row><row><entry><indexterm><primary>VpnEnable_VPN_Online</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>VpnEnable_VPN_Online</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a16247ec944ba6e93575031f602f58eb5"/>VpnEnable_VPN_Online</entry><entry>
+<para>VPN_Online. </para>
+</entry></row><row><entry><indexterm><primary>VpnEnable_VPN_Connected</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>VpnEnable_VPN_Connected</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4a4c33db4ae648d11dff5cb59a081b517c"/>VpnEnable_VPN_Connected</entry><entry>
+<para>VPN_Connected. </para>
+</entry></row><row><entry><indexterm><primary>VpnEnable_VPN_Error</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>VpnEnable_VPN_Error</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4aa2d137d3b8b4a0c30b027620f093f670"/>VpnEnable_VPN_Error</entry><entry>
+<para>VPN_Error. </para>
+</entry></row>    </tbody>
     </tgroup>
 </informaltable>
 </section>
@@ -136,35 +480,67 @@
     <title>WiFi_AP_Status_enum</title>
 <indexterm><primary>WiFi_AP_Status_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_AP_Status_enum</secondary></indexterm>
-<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link></computeroutput></para><informaltable frame="all">
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link></computeroutput></para><para>
+
+<para>Enum for representing signal values for the WiFi_AP_Status signal. </para>
+</para>
+
+<para>This enum maps each value in the signal&apos;s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</para>
+
+<para><note><title>Note</title>
+
+<para>Ensure the signal values are aligned with the data type and expected range of the signal. </para>
+</note>
+</para>
+<informaltable frame="all">
 <title>Enumerator</title>
     <tgroup cols="2" align="left" colsep="1" rowsep="1">
       <colspec colname='c1'/>
       <colspec colname='c2'/>
 <tbody>
-<row><entry><indexterm><primary>WiFi_AP_Status_Enable</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_AP_Status_Enable</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3"/>WiFi_AP_Status_Enable</entry><entry></entry></row><row><entry><indexterm><primary>WiFi_AP_Status_Disable</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_AP_Status_Disable</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d"/>WiFi_AP_Status_Disable</entry><entry></entry></row>    </tbody>
+<row><entry><indexterm><primary>WiFi_AP_Status_WiFi_Ap_Disconnected</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_AP_Status_WiFi_Ap_Disconnected</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8afe5cab6293e618c2645852dbbeba66ea"/>WiFi_AP_Status_WiFi_Ap_Disconnected</entry><entry>
+<para>WiFi_Ap_Disconnected. </para>
+</entry></row><row><entry><indexterm><primary>WiFi_AP_Status_WiFi_Ap_Connected</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_AP_Status_WiFi_Ap_Connected</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8af5bbea2d1323b30787a1211c231415c9"/>WiFi_AP_Status_WiFi_Ap_Connected</entry><entry>
+<para>WiFi_Ap_Connected. </para>
+</entry></row>    </tbody>
     </tgroup>
 </informaltable>
 </section>
-<anchor xml:id="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c"/><section>
-    <title>WiFiEnable_enum</title>
-<indexterm><primary>WiFiEnable_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>WiFiEnable_enum</secondary></indexterm>
-<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</link></computeroutput></para><informaltable frame="all">
+<anchor xml:id="_d2cc__lib_8h_1ad00d3bb37c1d69ea203ae4019a832403"/><section>
+    <title>WiFi_ST_Status_enum</title>
+<indexterm><primary>WiFi_ST_Status_enum</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_ST_Status_enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_d2cc__lib_8h_1ad00d3bb37c1d69ea203ae4019a832403">WiFi_ST_Status_enum</link></computeroutput></para><para>
+
+<para>Enum for representing signal values for the WiFi_ST_Status signal. </para>
+</para>
+
+<para>This enum maps each value in the signal&apos;s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</para>
+
+<para><note><title>Note</title>
+
+<para>Ensure the signal values are aligned with the data type and expected range of the signal. </para>
+</note>
+</para>
+<informaltable frame="all">
 <title>Enumerator</title>
     <tgroup cols="2" align="left" colsep="1" rowsep="1">
       <colspec colname='c1'/>
       <colspec colname='c2'/>
 <tbody>
-<row><entry><indexterm><primary>WiFiEnable_Enable</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>WiFiEnable_Enable</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e"/>WiFiEnable_Enable</entry><entry></entry></row><row><entry><indexterm><primary>WiFiEnable_Disable</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>WiFiEnable_Disable</secondary></indexterm>
-<anchor xml:id="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e"/>WiFiEnable_Disable</entry><entry></entry></row>    </tbody>
+<row><entry><indexterm><primary>WiFi_ST_Status_WiFi_Ap_Disconnected</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_ST_Status_WiFi_Ap_Disconnected</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1ad00d3bb37c1d69ea203ae4019a832403a44309aca0fa4d4cae66c68c991cfe25f"/>WiFi_ST_Status_WiFi_Ap_Disconnected</entry><entry>
+<para>WiFi_Ap_Disconnected. </para>
+</entry></row><row><entry><indexterm><primary>WiFi_ST_Status_WiFi_Ap_Connected</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>WiFi_ST_Status_WiFi_Ap_Connected</secondary></indexterm>
+<anchor xml:id="_d2cc__lib_8h_1ad00d3bb37c1d69ea203ae4019a832403a535d52df00b0815ec4b6a8912a8a0d99"/>WiFi_ST_Status_WiFi_Ap_Connected</entry><entry>
+<para>WiFi_Ap_Connected. </para>
+</entry></row>    </tbody>
     </tgroup>
 </informaltable>
 </section>
@@ -175,31 +551,444 @@
     <title>CreateTable_Battery_Messages()</title>
 <indexterm><primary>CreateTable_Battery_Messages</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>CreateTable_Battery_Messages</secondary></indexterm>
-<para><computeroutput>void CreateTable_Battery_Messages (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<para><computeroutput>void CreateTable_Battery_Messages (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</para>
+
+<para>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance that contains the CAN message.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Creates the signal table for the specified CAN message.</para>
+
+<para>This function is used to read CAN data and store it in the <link linkend="_struct_dbc_struct">DbcStruct</link>. It parses the data and converts physical values to raw CAN signal values based on the scaling factors and offsets defined in the <link linkend="_struct_dbc_struct">DbcStruct</link>.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>rx_data</entry><entry>
+<para>Pointer to the received CAN data to be parsed. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>CAN message ID for identifying which message to parse. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> where parsed data will be stored.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Creates the signal table for a specified CAN message in the <link linkend="_struct_dbc_struct">DbcStruct</link>.</para>
+
+<para>This function initializes the signal table for a specific message within the <link linkend="_struct_dbc_struct">DbcStruct</link>. Each signal is set to 0 initially, preparing it for further use.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> containing the CAN message and signals. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
 <anchor xml:id="_d2cc__lib_8h_1acce29ea481884412fe82fde8cf8a3c73"/><section>
     <title>CreateTable_Battery_Temperatures()</title>
 <indexterm><primary>CreateTable_Battery_Temperatures</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>CreateTable_Battery_Temperatures</secondary></indexterm>
-<para><computeroutput>void CreateTable_Battery_Temperatures (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
-<anchor xml:id="_d2cc__lib_8h_1a3f4346eef40e3f6e0856a015bed8da2d"/><section>
-    <title>CreateTable_Battery_Voltages()</title>
-<indexterm><primary>CreateTable_Battery_Voltages</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>CreateTable_Battery_Voltages</secondary></indexterm>
-<para><computeroutput>void CreateTable_Battery_Voltages (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<para><computeroutput>void CreateTable_Battery_Temperatures (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</para>
+
+<para>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance that contains the CAN message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a688095370440ce4b3816d2b712ed5b3b"/><section>
+    <title>CreateTable_Battery_Voltages_1()</title>
+<indexterm><primary>CreateTable_Battery_Voltages_1</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CreateTable_Battery_Voltages_1</secondary></indexterm>
+<para><computeroutput>void CreateTable_Battery_Voltages_1 (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</para>
+
+<para>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance that contains the CAN message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a106990c5a8b489af5f21a3fa6f32d45c"/><section>
+    <title>CreateTable_Battery_Voltages_2()</title>
+<indexterm><primary>CreateTable_Battery_Voltages_2</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>CreateTable_Battery_Voltages_2</secondary></indexterm>
+<para><computeroutput>void CreateTable_Battery_Voltages_2 (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</para>
+
+<para>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance that contains the CAN message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
 <anchor xml:id="_d2cc__lib_8h_1a3a8f6f06284c77bd13fc93c18115fd53"/><section>
     <title>CreateTable_Can_Main()</title>
 <indexterm><primary>CreateTable_Can_Main</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>CreateTable_Can_Main</secondary></indexterm>
-<para><computeroutput>void CreateTable_Can_Main (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<para><computeroutput>void CreateTable_Can_Main (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</para>
+
+<para>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance that contains the CAN message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
 <anchor xml:id="_d2cc__lib_8h_1add5678661f9e8fc392ab35a8369f8487"/><section>
     <title>D2cc_Lib_Init()</title>
 <indexterm><primary>D2cc_Lib_Init</primary><secondary>d2cc_lib.h</secondary></indexterm>
 <indexterm><primary>d2cc_lib.h</primary><secondary>D2cc_Lib_Init</secondary></indexterm>
-<para><computeroutput>void D2cc_Lib_Init (<link linkend="_struct_dbc_struct">DbcStruct</link> * st)</computeroutput></para></section>
-<anchor xml:id="_d2cc__lib_8h_1a1fc4968809341ee415d413feb9db80cb"/><section>
-    <title>ReadParse()</title>
-<indexterm><primary>ReadParse</primary><secondary>d2cc_lib.h</secondary></indexterm>
-<indexterm><primary>d2cc_lib.h</primary><secondary>ReadParse</secondary></indexterm>
-<para><computeroutput>void ReadParse (uint8_t * rx_data, uint32_t id, <link linkend="_struct_dbc_struct">DbcStruct</link> * st)</computeroutput></para></section>
+<para><computeroutput>void D2cc_Lib_Init (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Initializes the <link linkend="_struct_dbc_struct">DbcStruct</link> for CAN message processing. </para>
+</para>
+
+<para>This function should be called before using the <link linkend="_struct_dbc_struct">DbcStruct</link> to ensure that all message structures are properly initialized. It sets up necessary memory and configurations.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>st</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance that will be initialized.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Initializes the <link linkend="_struct_dbc_struct">DbcStruct</link> for CAN message processing.</para>
+
+<para>This function initializes the necessary fields in the <link linkend="_struct_dbc_struct">DbcStruct</link> based on the provided DBC messages. The signals&apos; physical factors and offsets are set accordingly.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance to be initialized. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a265d29c5e976cf3716af95ecf2f7a49a"/><section>
+    <title>PHYS_TO_RAW()</title>
+<indexterm><primary>PHYS_TO_RAW</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>PHYS_TO_RAW</secondary></indexterm>
+<para><computeroutput>uint32_t PHYS_TO_RAW (int phys_value, <link linkend="_struct_phys___value__t">Phys_Value_t</link> * phys_struct)</computeroutput></para><para>
+
+<para>Converts a physical value to its corresponding raw CAN value. </para>
+</para>
+
+<para>This function takes a physical value and applies the scaling factor and offset specified in the <computeroutput><link linkend="_struct_phys___value__t">Phys_Value_t</link></computeroutput> structure to convert it to the raw CAN signal value. The raw value can then be transmitted in a CAN message.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>phys_value</entry><entry>
+<para>The physical value to be converted. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>phys_struct</entry><entry>
+<para>Pointer to the <computeroutput><link linkend="_struct_phys___value__t">Phys_Value_t</link></computeroutput> structure containing scaling and offset information.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding raw CAN value.</para>
+</formalpara>
+Converts a physical value to its corresponding raw CAN value.</para>
+
+<para>This function converts a physical value (e.g., temperature) into a raw CAN signal value based on the scaling factor and offset stored in the <link linkend="_struct_phys___value__t">Phys_Value_t</link> structure.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>phys_value</entry><entry>
+<para>The physical value to convert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>phys_struct</entry><entry>
+<para>Pointer to the <link linkend="_struct_phys___value__t">Phys_Value_t</link> structure containing scaling factor and offset.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding raw CAN signal value. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8h_1a3e00cecaf49f0e30f493be28bf2334bc"/><section>
+    <title>RAW_TO_PHYS()</title>
+<indexterm><primary>RAW_TO_PHYS</primary><secondary>d2cc_lib.h</secondary></indexterm>
+<indexterm><primary>d2cc_lib.h</primary><secondary>RAW_TO_PHYS</secondary></indexterm>
+<para><computeroutput>uint32_t RAW_TO_PHYS (int raw_value, <link linkend="_struct_phys___value__t">Phys_Value_t</link> * phys_struct)</computeroutput></para><para>
+
+<para>Converts a raw CAN value to its corresponding physical value. </para>
+</para>
+
+<para>This function takes a raw CAN value and applies the scaling factor and offset specified in the <computeroutput><link linkend="_struct_phys___value__t">Phys_Value_t</link></computeroutput> structure to convert it to the physical signal value. The physical value represents the actual measured or calculated value of the signal.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>raw_value</entry><entry>
+<para>The raw CAN signal value to be converted. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>phys_struct</entry><entry>
+<para>Pointer to the <computeroutput><link linkend="_struct_phys___value__t">Phys_Value_t</link></computeroutput> structure containing scaling and offset information.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding physical value.</para>
+</formalpara>
+Converts a raw CAN value to its corresponding physical value.</para>
+
+<para>This function converts a raw CAN signal value to its corresponding physical value based on the scaling factor and offset stored in the <link linkend="_struct_phys___value__t">Phys_Value_t</link> structure.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>raw_value</entry><entry>
+<para>The raw CAN signal value to convert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>phys_struct</entry><entry>
+<para>Pointer to the <link linkend="_struct_phys___value__t">Phys_Value_t</link> structure containing scaling factor and offset.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding physical value. </para>
+</formalpara>
+</para>
+</section>
 </section>
 </section>

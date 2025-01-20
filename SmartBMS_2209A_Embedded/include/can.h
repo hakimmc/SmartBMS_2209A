@@ -43,30 +43,6 @@
 #define CAN_TAG "CAN_MASTER"
 
 /** 
- * @def Can_Main_ID
- * @brief CAN ID for main messages.
- */
-#define Can_Main_ID                             0x100
-
-/** 
- * @def Battery_Messages_ID
- * @brief CAN ID for battery messages.
- */
-#define Battery_Messages_ID                     0x101
-
-/** 
- * @def Can_Battery_Voltages_ID
- * @brief CAN ID for battery voltage messages.
- */
-#define Can_Battery_Voltages_ID                 0x102
-
-/** 
- * @def Can_Battery_Temperatures_ID
- * @brief CAN ID for battery temperature messages.
- */
-#define Can_Battery_Temperatures_ID             0x103
-
-/** 
  * @def CAN_DELAY
  * @brief Delay in milliseconds for CAN tasks.
  */

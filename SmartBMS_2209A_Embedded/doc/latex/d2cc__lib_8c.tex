@@ -1,57 +1,211 @@
 \doxysection{src/d2cc\+\_\+lib.c File Reference}
-\label{d2cc__lib_8c}\index{src/d2cc\_lib.c@{src/d2cc\_lib.c}}
+\hypertarget{d2cc__lib_8c}{}\label{d2cc__lib_8c}\index{src/d2cc\_lib.c@{src/d2cc\_lib.c}}
+
+
+Source file for the D2\+CC library.  
+
+
 {\ttfamily \#include "{}d2cc\+\_\+lib.\+h"{}}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ D2cc\+\_\+\+Lib\+\_\+\+Init} (\textbf{ Dbc\+Struct} $\ast$dbc)
-\item 
-void \textbf{ Read\+Parse} (uint8\+\_\+t $\ast$rx\+\_\+data, uint32\+\_\+t id, \textbf{ Dbc\+Struct} $\ast$dbc)
-\item 
-void \textbf{ Create\+Table\+\_\+\+Battery\+\_\+\+Messages} (\textbf{ Dbc\+Struct} $\ast$dbc)
-\item 
-void \textbf{ Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures} (\textbf{ Dbc\+Struct} $\ast$dbc)
-\item 
-void \textbf{ Create\+Table\+\_\+\+Battery\+\_\+\+Voltages} (\textbf{ Dbc\+Struct} $\ast$dbc)
-\item 
-void \textbf{ Create\+Table\+\_\+\+Can\+\_\+\+Main} (\textbf{ Dbc\+Struct} $\ast$dbc)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{d2cc__lib_8c_ae78f43f4aca692c377c75bc182baee88}{D2cc\+\_\+\+Lib\+\_\+\+Init}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{struct_dbc_struct}{Dbc\+Struct} with values from the parsed DBC file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{d2cc__lib_8c_a1a53ba345e601b7539ad8b1d3a60becf}{Create\+Table\+\_\+\+Battery\+\_\+\+Messages}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Reads and parses CAN data into the \doxylink{struct_dbc_struct}{Dbc\+Struct}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{d2cc__lib_8c_acce29ea481884412fe82fde8cf8a3c73}{Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Creates the signal table for the specified CAN message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{d2cc__lib_8c_a688095370440ce4b3816d2b712ed5b3b}{Create\+Table\+\_\+\+Battery\+\_\+\+Voltages\+\_\+1}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Creates the signal table for the specified CAN message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{d2cc__lib_8c_a106990c5a8b489af5f21a3fa6f32d45c}{Create\+Table\+\_\+\+Battery\+\_\+\+Voltages\+\_\+2}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Creates the signal table for the specified CAN message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{d2cc__lib_8c_a3a8f6f06284c77bd13fc93c18115fd53}{Create\+Table\+\_\+\+Can\+\_\+\+Main}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Creates the signal table for the specified CAN message. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{d2cc__lib_8c_a265d29c5e976cf3716af95ecf2f7a49a}{PHYS\+\_\+\+TO\+\_\+\+RAW}} (int phys\+\_\+value, \mbox{\hyperlink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}phys\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Converts a physical value to a raw CAN signal value. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{d2cc__lib_8c_a3e00cecaf49f0e30f493be28bf2334bc}{RAW\+\_\+\+TO\+\_\+\+PHYS}} (int raw\+\_\+value, \mbox{\hyperlink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}phys\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Converts a raw CAN signal value to a physical value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Source file for the D2\+CC library. 
+
+\begin{DoxyDate}{Date}
+2025-\/01-\/19 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+hakimmc 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.linkedin.com/in/abdulhakim-calgin/}{\texttt{ https\+://www.\+linkedin.\+com/in/abdulhakim-\/calgin/}} 
+\end{DoxySeeAlso}
 
 
 \doxysubsection{Function Documentation}
-\index{d2cc\_lib.c@{d2cc\_lib.c}!CreateTable\_Battery\_Messages@{CreateTable\_Battery\_Messages}}
+\Hypertarget{d2cc__lib_8c_a1a53ba345e601b7539ad8b1d3a60becf}\index{d2cc\_lib.c@{d2cc\_lib.c}!CreateTable\_Battery\_Messages@{CreateTable\_Battery\_Messages}}
 \index{CreateTable\_Battery\_Messages@{CreateTable\_Battery\_Messages}!d2cc\_lib.c@{d2cc\_lib.c}}
-\doxysubsubsection{CreateTable\_Battery\_Messages()}
+\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Messages()}{CreateTable\_Battery\_Messages()}}
 {\footnotesize\ttfamily \label{d2cc__lib_8c_a1a53ba345e601b7539ad8b1d3a60becf} 
-void Create\+Table\+\_\+\+Battery\+\_\+\+Messages (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
+void Create\+Table\+\_\+\+Battery\+\_\+\+Messages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
 
-\index{d2cc\_lib.c@{d2cc\_lib.c}!CreateTable\_Battery\_Temperatures@{CreateTable\_Battery\_Temperatures}}
+
+
+Reads and parses CAN data into the \doxylink{struct_dbc_struct}{Dbc\+Struct}. 
+
+Creates the signal table for the specified CAN message.
+
+This function is used to read CAN data and store it in the \doxylink{struct_dbc_struct}{Dbc\+Struct}. It parses the data and converts physical values to raw CAN signal values based on the scaling factors and offsets defined in the \doxylink{struct_dbc_struct}{Dbc\+Struct}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rx\+\_\+data} & Pointer to the received CAN data to be parsed. \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & CAN message ID for identifying which message to parse. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} where parsed data will be stored.\\
+\hline
+\end{DoxyParams}
+Creates the signal table for a specified CAN message in the \doxylink{struct_dbc_struct}{Dbc\+Struct}.
+
+This function initializes the signal table for a specific message within the \doxylink{struct_dbc_struct}{Dbc\+Struct}. Each signal is set to 0 initially, preparing it for further use.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} containing the CAN message and signals. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8c_acce29ea481884412fe82fde8cf8a3c73}\index{d2cc\_lib.c@{d2cc\_lib.c}!CreateTable\_Battery\_Temperatures@{CreateTable\_Battery\_Temperatures}}
 \index{CreateTable\_Battery\_Temperatures@{CreateTable\_Battery\_Temperatures}!d2cc\_lib.c@{d2cc\_lib.c}}
-\doxysubsubsection{CreateTable\_Battery\_Temperatures()}
+\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Temperatures()}{CreateTable\_Battery\_Temperatures()}}
 {\footnotesize\ttfamily \label{d2cc__lib_8c_acce29ea481884412fe82fde8cf8a3c73} 
-void Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
+void Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
 
-\index{d2cc\_lib.c@{d2cc\_lib.c}!CreateTable\_Battery\_Voltages@{CreateTable\_Battery\_Voltages}}
-\index{CreateTable\_Battery\_Voltages@{CreateTable\_Battery\_Voltages}!d2cc\_lib.c@{d2cc\_lib.c}}
-\doxysubsubsection{CreateTable\_Battery\_Voltages()}
-{\footnotesize\ttfamily \label{d2cc__lib_8c_a3f4346eef40e3f6e0856a015bed8da2d} 
-void Create\+Table\+\_\+\+Battery\+\_\+\+Voltages (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
 
-\index{d2cc\_lib.c@{d2cc\_lib.c}!CreateTable\_Can\_Main@{CreateTable\_Can\_Main}}
+
+Creates the signal table for the specified CAN message. 
+
+This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance that contains the CAN message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8c_a688095370440ce4b3816d2b712ed5b3b}\index{d2cc\_lib.c@{d2cc\_lib.c}!CreateTable\_Battery\_Voltages\_1@{CreateTable\_Battery\_Voltages\_1}}
+\index{CreateTable\_Battery\_Voltages\_1@{CreateTable\_Battery\_Voltages\_1}!d2cc\_lib.c@{d2cc\_lib.c}}
+\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Voltages\_1()}{CreateTable\_Battery\_Voltages\_1()}}
+{\footnotesize\ttfamily \label{d2cc__lib_8c_a688095370440ce4b3816d2b712ed5b3b} 
+void Create\+Table\+\_\+\+Battery\+\_\+\+Voltages\+\_\+1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
+
+
+
+Creates the signal table for the specified CAN message. 
+
+This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance that contains the CAN message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8c_a106990c5a8b489af5f21a3fa6f32d45c}\index{d2cc\_lib.c@{d2cc\_lib.c}!CreateTable\_Battery\_Voltages\_2@{CreateTable\_Battery\_Voltages\_2}}
+\index{CreateTable\_Battery\_Voltages\_2@{CreateTable\_Battery\_Voltages\_2}!d2cc\_lib.c@{d2cc\_lib.c}}
+\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Voltages\_2()}{CreateTable\_Battery\_Voltages\_2()}}
+{\footnotesize\ttfamily \label{d2cc__lib_8c_a106990c5a8b489af5f21a3fa6f32d45c} 
+void Create\+Table\+\_\+\+Battery\+\_\+\+Voltages\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
+
+
+
+Creates the signal table for the specified CAN message. 
+
+This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance that contains the CAN message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8c_a3a8f6f06284c77bd13fc93c18115fd53}\index{d2cc\_lib.c@{d2cc\_lib.c}!CreateTable\_Can\_Main@{CreateTable\_Can\_Main}}
 \index{CreateTable\_Can\_Main@{CreateTable\_Can\_Main}!d2cc\_lib.c@{d2cc\_lib.c}}
-\doxysubsubsection{CreateTable\_Can\_Main()}
+\doxysubsubsection{\texorpdfstring{CreateTable\_Can\_Main()}{CreateTable\_Can\_Main()}}
 {\footnotesize\ttfamily \label{d2cc__lib_8c_a3a8f6f06284c77bd13fc93c18115fd53} 
-void Create\+Table\+\_\+\+Can\+\_\+\+Main (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
+void Create\+Table\+\_\+\+Can\+\_\+\+Main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
 
-\index{d2cc\_lib.c@{d2cc\_lib.c}!D2cc\_Lib\_Init@{D2cc\_Lib\_Init}}
+
+
+Creates the signal table for the specified CAN message. 
+
+This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance that contains the CAN message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8c_ae78f43f4aca692c377c75bc182baee88}\index{d2cc\_lib.c@{d2cc\_lib.c}!D2cc\_Lib\_Init@{D2cc\_Lib\_Init}}
 \index{D2cc\_Lib\_Init@{D2cc\_Lib\_Init}!d2cc\_lib.c@{d2cc\_lib.c}}
-\doxysubsubsection{D2cc\_Lib\_Init()}
+\doxysubsubsection{\texorpdfstring{D2cc\_Lib\_Init()}{D2cc\_Lib\_Init()}}
 {\footnotesize\ttfamily \label{d2cc__lib_8c_ae78f43f4aca692c377c75bc182baee88} 
-void D2cc\+\_\+\+Lib\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
+void D2cc\+\_\+\+Lib\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
 
-\index{d2cc\_lib.c@{d2cc\_lib.c}!ReadParse@{ReadParse}}
-\index{ReadParse@{ReadParse}!d2cc\_lib.c@{d2cc\_lib.c}}
-\doxysubsubsection{ReadParse()}
-{\footnotesize\ttfamily \label{d2cc__lib_8c_ae5597b44f3f49cc3c016533bfa7a9374} 
-void Read\+Parse (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+data}{, }\item[{uint32\+\_\+t}]{id}{, }\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
 
+
+Initializes the \doxylink{struct_dbc_struct}{Dbc\+Struct} with values from the parsed DBC file. 
+
+Initializes the \doxylink{struct_dbc_struct}{Dbc\+Struct} for CAN message processing.
+
+This function initializes the necessary fields in the \doxylink{struct_dbc_struct}{Dbc\+Struct} based on the provided DBC messages. The signals\textquotesingle{} physical factors and offsets are set accordingly.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance to be initialized. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8c_a265d29c5e976cf3716af95ecf2f7a49a}\index{d2cc\_lib.c@{d2cc\_lib.c}!PHYS\_TO\_RAW@{PHYS\_TO\_RAW}}
+\index{PHYS\_TO\_RAW@{PHYS\_TO\_RAW}!d2cc\_lib.c@{d2cc\_lib.c}}
+\doxysubsubsection{\texorpdfstring{PHYS\_TO\_RAW()}{PHYS\_TO\_RAW()}}
+{\footnotesize\ttfamily \label{d2cc__lib_8c_a265d29c5e976cf3716af95ecf2f7a49a} 
+uint32\+\_\+t PHYS\+\_\+\+TO\+\_\+\+RAW (\begin{DoxyParamCaption}\item[{int}]{phys\+\_\+value}{, }\item[{\mbox{\hyperlink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{phys\+\_\+struct}{}\end{DoxyParamCaption})}
+
+
+
+Converts a physical value to a raw CAN signal value. 
+
+Converts a physical value to its corresponding raw CAN value.
+
+This function converts a physical value (e.\+g., temperature) into a raw CAN signal value based on the scaling factor and offset stored in the \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t} structure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em phys\+\_\+value} & The physical value to convert. \\
+\hline
+\mbox{\texttt{ in}}  & {\em phys\+\_\+struct} & Pointer to the \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t} structure containing scaling factor and offset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding raw CAN signal value. 
+\end{DoxyReturn}
+\Hypertarget{d2cc__lib_8c_a3e00cecaf49f0e30f493be28bf2334bc}\index{d2cc\_lib.c@{d2cc\_lib.c}!RAW\_TO\_PHYS@{RAW\_TO\_PHYS}}
+\index{RAW\_TO\_PHYS@{RAW\_TO\_PHYS}!d2cc\_lib.c@{d2cc\_lib.c}}
+\doxysubsubsection{\texorpdfstring{RAW\_TO\_PHYS()}{RAW\_TO\_PHYS()}}
+{\footnotesize\ttfamily \label{d2cc__lib_8c_a3e00cecaf49f0e30f493be28bf2334bc} 
+uint32\+\_\+t RAW\+\_\+\+TO\+\_\+\+PHYS (\begin{DoxyParamCaption}\item[{int}]{raw\+\_\+value}{, }\item[{\mbox{\hyperlink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{phys\+\_\+struct}{}\end{DoxyParamCaption})}
+
+
+
+Converts a raw CAN signal value to a physical value. 
+
+Converts a raw CAN value to its corresponding physical value.
+
+This function converts a raw CAN signal value to its corresponding physical value based on the scaling factor and offset stored in the \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t} structure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em raw\+\_\+value} & The raw CAN signal value to convert. \\
+\hline
+\mbox{\texttt{ in}}  & {\em phys\+\_\+struct} & Pointer to the \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t} structure containing scaling factor and offset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding physical value. 
+\end{DoxyReturn}

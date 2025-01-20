@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="78184751.png"/></td>
   <td id="projectalign">
    <div id="projectname">SmartBMS_2209A<span id="projectnumber">&#160;v1.0.0</span>
    </div>
@@ -137,18 +138,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a4791c142b857f44449cc8ad8d22ef045" id="r_a4791c142b857f44449cc8ad8d22ef045"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4791c142b857f44449cc8ad8d22ef045">CAN_TAG</a>&#160;&#160;&#160;&quot;CAN_MASTER&quot;</td></tr>
 <tr class="memdesc:a4791c142b857f44449cc8ad8d22ef045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag for logging CAN-related messages.  <br /></td></tr>
 <tr class="separator:a4791c142b857f44449cc8ad8d22ef045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd4f58c1a509cc8343774f0ca05c9061" id="r_afd4f58c1a509cc8343774f0ca05c9061"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd4f58c1a509cc8343774f0ca05c9061">Can_Main_ID</a>&#160;&#160;&#160;0x100</td></tr>
-<tr class="memdesc:afd4f58c1a509cc8343774f0ca05c9061"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN ID for main messages.  <br /></td></tr>
-<tr class="separator:afd4f58c1a509cc8343774f0ca05c9061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab46f9642beab36ac6b8624c11f4f5ed4" id="r_ab46f9642beab36ac6b8624c11f4f5ed4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab46f9642beab36ac6b8624c11f4f5ed4">Battery_Messages_ID</a>&#160;&#160;&#160;0x101</td></tr>
-<tr class="memdesc:ab46f9642beab36ac6b8624c11f4f5ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN ID for battery messages.  <br /></td></tr>
-<tr class="separator:ab46f9642beab36ac6b8624c11f4f5ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e870e11e6fd939606c6fff3b122d4fd" id="r_a1e870e11e6fd939606c6fff3b122d4fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e870e11e6fd939606c6fff3b122d4fd">Can_Battery_Voltages_ID</a>&#160;&#160;&#160;0x102</td></tr>
-<tr class="memdesc:a1e870e11e6fd939606c6fff3b122d4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN ID for battery voltage messages.  <br /></td></tr>
-<tr class="separator:a1e870e11e6fd939606c6fff3b122d4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22ff50c4de22c7bfc6240a2b7a478e3e" id="r_a22ff50c4de22c7bfc6240a2b7a478e3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22ff50c4de22c7bfc6240a2b7a478e3e">Can_Battery_Temperatures_ID</a>&#160;&#160;&#160;0x103</td></tr>
-<tr class="memdesc:a22ff50c4de22c7bfc6240a2b7a478e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN ID for battery temperature messages.  <br /></td></tr>
-<tr class="separator:a22ff50c4de22c7bfc6240a2b7a478e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5d0198b7447cc2c29044ccd56dd9443" id="r_ac5d0198b7447cc2c29044ccd56dd9443"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5d0198b7447cc2c29044ccd56dd9443">CAN_DELAY</a>&#160;&#160;&#160;250</td></tr>
 <tr class="memdesc:ac5d0198b7447cc2c29044ccd56dd9443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay in milliseconds for CAN tasks.  <br /></td></tr>
 <tr class="separator:ac5d0198b7447cc2c29044ccd56dd9443"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,54 +159,6 @@ Functions</h2></td></tr>
 <p>This header file provides declarations for initializing and managing CAN (Controller Area Network) communication on the ESP32 using the TWAI (Two-Wire Automotive Interface) driver.</p>
 <p>Created on: 18 Dec 2024 </p><dl class="section author"><dt>Author</dt><dd>hakimmc </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ab46f9642beab36ac6b8624c11f4f5ed4" name="ab46f9642beab36ac6b8624c11f4f5ed4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab46f9642beab36ac6b8624c11f4f5ed4">&#9670;&#160;</a></span>Battery_Messages_ID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define Battery_Messages_ID&#160;&#160;&#160;0x101</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>CAN ID for battery messages. </p>
-
-</div>
-</div>
-<a id="a22ff50c4de22c7bfc6240a2b7a478e3e" name="a22ff50c4de22c7bfc6240a2b7a478e3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22ff50c4de22c7bfc6240a2b7a478e3e">&#9670;&#160;</a></span>Can_Battery_Temperatures_ID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define Can_Battery_Temperatures_ID&#160;&#160;&#160;0x103</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>CAN ID for battery temperature messages. </p>
-
-</div>
-</div>
-<a id="a1e870e11e6fd939606c6fff3b122d4fd" name="a1e870e11e6fd939606c6fff3b122d4fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e870e11e6fd939606c6fff3b122d4fd">&#9670;&#160;</a></span>Can_Battery_Voltages_ID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define Can_Battery_Voltages_ID&#160;&#160;&#160;0x102</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>CAN ID for battery voltage messages. </p>
-
-</div>
-</div>
 <a id="ac5d0198b7447cc2c29044ccd56dd9443" name="ac5d0198b7447cc2c29044ccd56dd9443"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac5d0198b7447cc2c29044ccd56dd9443">&#9670;&#160;</a></span>CAN_DELAY</h2>
 
@@ -231,22 +172,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Delay in milliseconds for CAN tasks. </p>
-
-</div>
-</div>
-<a id="afd4f58c1a509cc8343774f0ca05c9061" name="afd4f58c1a509cc8343774f0ca05c9061"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd4f58c1a509cc8343774f0ca05c9061">&#9670;&#160;</a></span>Can_Main_ID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define Can_Main_ID&#160;&#160;&#160;0x100</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>CAN ID for main messages. </p>
 
 </div>
 </div>

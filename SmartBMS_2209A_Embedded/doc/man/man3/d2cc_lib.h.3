@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-include/d2cc_lib.h
+include/d2cc_lib.h \- Header file for the D2CC library\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -15,30 +16,84 @@ include/d2cc_lib.h
 
 .in +1c
 .ti -1c
+.RI "struct \fBPhys_Value_t\fP"
+.br
+.RI "factor, offset and value variable structer for CAN messages structure for message\&. "
+.ti -1c
 .RI "struct \fBDbcStruct\fP"
 .br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBBattery_Messages_ID\fP   257"
+.br
+.RI "CAN ID for Battery_Messages messages\&. "
+.ti -1c
+.RI "#define \fBBattery_Messages_DLC\fP   8"
+.br
+.RI "CAN DLC for Battery_Messages messages\&. "
+.ti -1c
+.RI "#define \fBBattery_Temperatures_ID\fP   260"
+.br
+.RI "CAN ID for Battery_Temperatures messages\&. "
+.ti -1c
+.RI "#define \fBBattery_Temperatures_DLC\fP   8"
+.br
+.RI "CAN DLC for Battery_Temperatures messages\&. "
+.ti -1c
+.RI "#define \fBBattery_Voltages_1_ID\fP   258"
+.br
+.RI "CAN ID for Battery_Voltages_1 messages\&. "
+.ti -1c
+.RI "#define \fBBattery_Voltages_1_DLC\fP   8"
+.br
+.RI "CAN DLC for Battery_Voltages_1 messages\&. "
+.ti -1c
+.RI "#define \fBBattery_Voltages_2_ID\fP   259"
+.br
+.RI "CAN ID for Battery_Voltages_2 messages\&. "
+.ti -1c
+.RI "#define \fBBattery_Voltages_2_DLC\fP   8"
+.br
+.RI "CAN DLC for Battery_Voltages_2 messages\&. "
+.ti -1c
+.RI "#define \fBCan_Main_ID\fP   256"
+.br
+.RI "CAN ID for Can_Main messages\&. "
+.ti -1c
+.RI "#define \fBCan_Main_DLC\fP   8"
+.br
+.RI "CAN DLC for Can_Main messages\&. "
 .in -1c
 .SS "Enumerations"
 
 .in +1c
 .ti -1c
-.RI "enum \fBBatteryChemistry_enum\fP { \fBBatteryChemistry_LFP\fP, \fBBatteryChemistry_NMC\fP }"
+.RI "enum \fBBatteryChemistry_enum\fP { \fBBatteryChemistry_LFP\fP, \fBBatteryChemistry_NMC\fP, \fBBatteryChemistry_NCA\fP, \fBBatteryChemistry_LCO\fP, \fBBatteryChemistry_LMO\fP, \fBBatteryChemistry_LTO\fP, \fBBatteryChemistry_NiMH\fP, \fBBatteryChemistry_NiCd\fP, \fBBatteryChemistry_PbA\fP, \fBBatteryChemistry_Zn_Air\fP, \fBBatteryChemistry_Li_S\fP, \fBBatteryChemistry_Na_ion\fP, \fBBatteryChemistry_Zn_MnO2\fP, \fBBatteryChemistry_VRLA\fP, \fBBatteryChemistry_Ag_Zn\fP }"
 .br
+.RI "Enum for representing signal values for the BatteryChemistry signal\&. "
 .ti -1c
-.RI "enum \fBCanBusEnable_enum\fP { \fBCanBusEnable_Enable\fP, \fBCanBusEnable_Disable\fP }"
+.RI "enum \fBWiFi_AP_Status_enum\fP { \fBWiFi_AP_Status_WiFi_Ap_Disconnected\fP, \fBWiFi_AP_Status_WiFi_Ap_Connected\fP }"
 .br
+.RI "Enum for representing signal values for the WiFi_AP_Status signal\&. "
 .ti -1c
-.RI "enum \fBWiFiEnable_enum\fP { \fBWiFiEnable_Enable\fP, \fBWiFiEnable_Disable\fP }"
+.RI "enum \fBCanBusEnable_enum\fP { \fBCanBusEnable_CAN_Driver_Disabled\fP, \fBCanBusEnable_CAN_Driver_Enabled\fP }"
 .br
+.RI "Enum for representing signal values for the CanBusEnable signal\&. "
 .ti -1c
-.RI "enum \fBTcpEnable_enum\fP { \fBTcpEnable_Offline\fP, \fBTcpEnable_Online\fP, \fBTcpEnable_Connected\fP }"
+.RI "enum \fBTcpEnable_enum\fP { \fBTcpEnable_TCP_Offline\fP, \fBTcpEnable_TCP_Online\fP, \fBTcpEnable_TCP_Connected\fP, \fBTcpEnable_TCP_Error\fP }"
 .br
+.RI "Enum for representing signal values for the TcpEnable signal\&. "
 .ti -1c
-.RI "enum \fBVpnEnable_enum\fP { \fBVpnEnable_Enable\fP, \fBVpnEnable_Disable\fP }"
+.RI "enum \fBVpnEnable_enum\fP { \fBVpnEnable_VPN_Offline\fP, \fBVpnEnable_VPN_Online\fP, \fBVpnEnable_VPN_Connected\fP, \fBVpnEnable_VPN_Error\fP }"
 .br
+.RI "Enum for representing signal values for the VpnEnable signal\&. "
 .ti -1c
-.RI "enum \fBWiFi_AP_Status_enum\fP { \fBWiFi_AP_Status_Enable\fP, \fBWiFi_AP_Status_Disable\fP }"
+.RI "enum \fBWiFi_ST_Status_enum\fP { \fBWiFi_ST_Status_WiFi_Ap_Disconnected\fP, \fBWiFi_ST_Status_WiFi_Ap_Connected\fP }"
 .br
+.RI "Enum for representing signal values for the WiFi_ST_Status signal\&. "
 .in -1c
 .SS "Functions"
 
@@ -46,93 +101,463 @@ include/d2cc_lib.h
 .ti -1c
 .RI "void \fBD2cc_Lib_Init\fP (\fBDbcStruct\fP *st)"
 .br
-.ti -1c
-.RI "void \fBReadParse\fP (uint8_t *rx_data, uint32_t id, \fBDbcStruct\fP *st)"
-.br
+.RI "Initializes the \fBDbcStruct\fP for CAN message processing\&. "
 .ti -1c
 .RI "void \fBCreateTable_Battery_Messages\fP (\fBDbcStruct\fP *dbc)"
 .br
+.RI "Creates the signal table for the specified CAN message\&. "
 .ti -1c
 .RI "void \fBCreateTable_Battery_Temperatures\fP (\fBDbcStruct\fP *dbc)"
 .br
+.RI "Creates the signal table for the specified CAN message\&. "
 .ti -1c
-.RI "void \fBCreateTable_Battery_Voltages\fP (\fBDbcStruct\fP *dbc)"
+.RI "void \fBCreateTable_Battery_Voltages_1\fP (\fBDbcStruct\fP *dbc)"
 .br
+.RI "Creates the signal table for the specified CAN message\&. "
+.ti -1c
+.RI "void \fBCreateTable_Battery_Voltages_2\fP (\fBDbcStruct\fP *dbc)"
+.br
+.RI "Creates the signal table for the specified CAN message\&. "
 .ti -1c
 .RI "void \fBCreateTable_Can_Main\fP (\fBDbcStruct\fP *dbc)"
 .br
+.RI "Creates the signal table for the specified CAN message\&. "
+.ti -1c
+.RI "uint32_t \fBPHYS_TO_RAW\fP (int phys_value, \fBPhys_Value_t\fP *phys_struct)"
+.br
+.RI "Converts a physical value to its corresponding raw CAN value\&. "
+.ti -1c
+.RI "uint32_t \fBRAW_TO_PHYS\fP (int raw_value, \fBPhys_Value_t\fP *phys_struct)"
+.br
+.RI "Converts a raw CAN value to its corresponding physical value\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Header file for the D2CC library\&. 
+
+
+.PP
+\fBDate\fP
+.RS 4
+2025-01-19 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+hakimmc 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+https://www.linkedin.com/in/abdulhakim-calgin/ 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define Battery_Messages_DLC   8"
+
+.PP
+CAN DLC for Battery_Messages messages\&. 
+.SS "#define Battery_Messages_ID   257"
+
+.PP
+CAN ID for Battery_Messages messages\&. 
+.SS "#define Battery_Temperatures_DLC   8"
+
+.PP
+CAN DLC for Battery_Temperatures messages\&. 
+.SS "#define Battery_Temperatures_ID   260"
+
+.PP
+CAN ID for Battery_Temperatures messages\&. 
+.SS "#define Battery_Voltages_1_DLC   8"
+
+.PP
+CAN DLC for Battery_Voltages_1 messages\&. 
+.SS "#define Battery_Voltages_1_ID   258"
+
+.PP
+CAN ID for Battery_Voltages_1 messages\&. 
+.SS "#define Battery_Voltages_2_DLC   8"
+
+.PP
+CAN DLC for Battery_Voltages_2 messages\&. 
+.SS "#define Battery_Voltages_2_ID   259"
+
+.PP
+CAN ID for Battery_Voltages_2 messages\&. 
+.SS "#define Can_Main_DLC   8"
+
+.PP
+CAN DLC for Can_Main messages\&. 
+.SS "#define Can_Main_ID   256"
+
+.PP
+CAN ID for Can_Main messages\&. 
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBBatteryChemistry_enum\fP"
+
+.PP
+Enum for representing signal values for the BatteryChemistry signal\&. This enum maps each value in the signal's value table to a corresponding identifier\&. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value\&.
+
+.PP
+\fBNote\fP
+.RS 4
+Ensure the signal values are aligned with the data type and expected range of the signal\&. 
+.RE
+.PP
 
 .PP
 \fBEnumerator\fP
 .in +1c
 .TP
 \f(BIBatteryChemistry_LFP \fP
+LFP\&. 
 .TP
 \f(BIBatteryChemistry_NMC \fP
+NMC\&. 
+.TP
+\f(BIBatteryChemistry_NCA \fP
+NCA\&. 
+.TP
+\f(BIBatteryChemistry_LCO \fP
+LCO\&. 
+.TP
+\f(BIBatteryChemistry_LMO \fP
+LMO\&. 
+.TP
+\f(BIBatteryChemistry_LTO \fP
+LTO\&. 
+.TP
+\f(BIBatteryChemistry_NiMH \fP
+NiMH\&. 
+.TP
+\f(BIBatteryChemistry_NiCd \fP
+NiCd\&. 
+.TP
+\f(BIBatteryChemistry_PbA \fP
+PbA\&. 
+.TP
+\f(BIBatteryChemistry_Zn_Air \fP
+Zn_Air\&. 
+.TP
+\f(BIBatteryChemistry_Li_S \fP
+Li_S\&. 
+.TP
+\f(BIBatteryChemistry_Na_ion \fP
+Na_ion\&. 
+.TP
+\f(BIBatteryChemistry_Zn_MnO2 \fP
+Zn_MnO2\&. 
+.TP
+\f(BIBatteryChemistry_VRLA \fP
+VRLA\&. 
+.TP
+\f(BIBatteryChemistry_Ag_Zn \fP
+Ag_Zn\&. 
 .SS "enum \fBCanBusEnable_enum\fP"
 
 .PP
+Enum for representing signal values for the CanBusEnable signal\&. This enum maps each value in the signal's value table to a corresponding identifier\&. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value\&.
+
+.PP
+\fBNote\fP
+.RS 4
+Ensure the signal values are aligned with the data type and expected range of the signal\&. 
+.RE
+.PP
+
+.PP
 \fBEnumerator\fP
 .in +1c
 .TP
-\f(BICanBusEnable_Enable \fP
+\f(BICanBusEnable_CAN_Driver_Disabled \fP
+CAN_Driver_Disabled\&. 
 .TP
-\f(BICanBusEnable_Disable \fP
+\f(BICanBusEnable_CAN_Driver_Enabled \fP
+CAN_Driver_Enabled\&. 
 .SS "enum \fBTcpEnable_enum\fP"
 
 .PP
+Enum for representing signal values for the TcpEnable signal\&. This enum maps each value in the signal's value table to a corresponding identifier\&. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value\&.
+
+.PP
+\fBNote\fP
+.RS 4
+Ensure the signal values are aligned with the data type and expected range of the signal\&. 
+.RE
+.PP
+
+.PP
 \fBEnumerator\fP
 .in +1c
 .TP
-\f(BITcpEnable_Offline \fP
+\f(BITcpEnable_TCP_Offline \fP
+TCP_Offline\&. 
 .TP
-\f(BITcpEnable_Online \fP
+\f(BITcpEnable_TCP_Online \fP
+TCP_Online\&. 
 .TP
-\f(BITcpEnable_Connected \fP
+\f(BITcpEnable_TCP_Connected \fP
+TCP_Connected\&. 
+.TP
+\f(BITcpEnable_TCP_Error \fP
+TCP_Error\&. 
 .SS "enum \fBVpnEnable_enum\fP"
 
 .PP
+Enum for representing signal values for the VpnEnable signal\&. This enum maps each value in the signal's value table to a corresponding identifier\&. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value\&.
+
+.PP
+\fBNote\fP
+.RS 4
+Ensure the signal values are aligned with the data type and expected range of the signal\&. 
+.RE
+.PP
+
+.PP
 \fBEnumerator\fP
 .in +1c
 .TP
-\f(BIVpnEnable_Enable \fP
+\f(BIVpnEnable_VPN_Offline \fP
+VPN_Offline\&. 
 .TP
-\f(BIVpnEnable_Disable \fP
+\f(BIVpnEnable_VPN_Online \fP
+VPN_Online\&. 
+.TP
+\f(BIVpnEnable_VPN_Connected \fP
+VPN_Connected\&. 
+.TP
+\f(BIVpnEnable_VPN_Error \fP
+VPN_Error\&. 
 .SS "enum \fBWiFi_AP_Status_enum\fP"
 
 .PP
-\fBEnumerator\fP
-.in +1c
-.TP
-\f(BIWiFi_AP_Status_Enable \fP
-.TP
-\f(BIWiFi_AP_Status_Disable \fP
-.SS "enum \fBWiFiEnable_enum\fP"
+Enum for representing signal values for the WiFi_AP_Status signal\&. This enum maps each value in the signal's value table to a corresponding identifier\&. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value\&.
+
+.PP
+\fBNote\fP
+.RS 4
+Ensure the signal values are aligned with the data type and expected range of the signal\&. 
+.RE
+.PP
 
 .PP
 \fBEnumerator\fP
 .in +1c
 .TP
-\f(BIWiFiEnable_Enable \fP
+\f(BIWiFi_AP_Status_WiFi_Ap_Disconnected \fP
+WiFi_Ap_Disconnected\&. 
 .TP
-\f(BIWiFiEnable_Disable \fP
+\f(BIWiFi_AP_Status_WiFi_Ap_Connected \fP
+WiFi_Ap_Connected\&. 
+.SS "enum \fBWiFi_ST_Status_enum\fP"
+
+.PP
+Enum for representing signal values for the WiFi_ST_Status signal\&. This enum maps each value in the signal's value table to a corresponding identifier\&. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value\&.
+
+.PP
+\fBNote\fP
+.RS 4
+Ensure the signal values are aligned with the data type and expected range of the signal\&. 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIWiFi_ST_Status_WiFi_Ap_Disconnected \fP
+WiFi_Ap_Disconnected\&. 
+.TP
+\f(BIWiFi_ST_Status_WiFi_Ap_Connected \fP
+WiFi_Ap_Connected\&. 
 .SH "Function Documentation"
 .PP 
 .SS "void CreateTable_Battery_Messages (\fBDbcStruct\fP * dbc)"
 
+.PP
+Creates the signal table for the specified CAN message\&. This function initializes the signal table for the given CAN message\&. It organizes and prepares the signals in the message to be ready for processing or encoding\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance that contains the CAN message\&.
+.RE
+.PP
+Creates the signal table for the specified CAN message\&.
+
+.PP
+This function is used to read CAN data and store it in the \fBDbcStruct\fP\&. It parses the data and converts physical values to raw CAN signal values based on the scaling factors and offsets defined in the \fBDbcStruct\fP\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIrx_data\fP Pointer to the received CAN data to be parsed\&. 
+.br
+\fIid\fP CAN message ID for identifying which message to parse\&. 
+.br
+\fIdbc\fP Pointer to the \fBDbcStruct\fP where parsed data will be stored\&.
+.RE
+.PP
+Creates the signal table for a specified CAN message in the \fBDbcStruct\fP\&.
+
+.PP
+This function initializes the signal table for a specific message within the \fBDbcStruct\fP\&. Each signal is set to 0 initially, preparing it for further use\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP containing the CAN message and signals\&. 
+.RE
+.PP
+
 .SS "void CreateTable_Battery_Temperatures (\fBDbcStruct\fP * dbc)"
 
-.SS "void CreateTable_Battery_Voltages (\fBDbcStruct\fP * dbc)"
+.PP
+Creates the signal table for the specified CAN message\&. This function initializes the signal table for the given CAN message\&. It organizes and prepares the signals in the message to be ready for processing or encoding\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance that contains the CAN message\&. 
+.RE
+.PP
+
+.SS "void CreateTable_Battery_Voltages_1 (\fBDbcStruct\fP * dbc)"
+
+.PP
+Creates the signal table for the specified CAN message\&. This function initializes the signal table for the given CAN message\&. It organizes and prepares the signals in the message to be ready for processing or encoding\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance that contains the CAN message\&. 
+.RE
+.PP
+
+.SS "void CreateTable_Battery_Voltages_2 (\fBDbcStruct\fP * dbc)"
+
+.PP
+Creates the signal table for the specified CAN message\&. This function initializes the signal table for the given CAN message\&. It organizes and prepares the signals in the message to be ready for processing or encoding\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance that contains the CAN message\&. 
+.RE
+.PP
 
 .SS "void CreateTable_Can_Main (\fBDbcStruct\fP * dbc)"
 
-.SS "void D2cc_Lib_Init (\fBDbcStruct\fP * st)"
+.PP
+Creates the signal table for the specified CAN message\&. This function initializes the signal table for the given CAN message\&. It organizes and prepares the signals in the message to be ready for processing or encoding\&.
 
-.SS "void ReadParse (uint8_t * rx_data, uint32_t id, \fBDbcStruct\fP * st)"
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance that contains the CAN message\&. 
+.RE
+.PP
+
+.SS "void D2cc_Lib_Init (\fBDbcStruct\fP * dbc)"
+
+.PP
+Initializes the \fBDbcStruct\fP for CAN message processing\&. This function should be called before using the \fBDbcStruct\fP to ensure that all message structures are properly initialized\&. It sets up necessary memory and configurations\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIst\fP Pointer to the \fBDbcStruct\fP instance that will be initialized\&.
+.RE
+.PP
+Initializes the \fBDbcStruct\fP for CAN message processing\&.
+
+.PP
+This function initializes the necessary fields in the \fBDbcStruct\fP based on the provided DBC messages\&. The signals' physical factors and offsets are set accordingly\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance to be initialized\&. 
+.RE
+.PP
+
+.SS "uint32_t PHYS_TO_RAW (int phys_value, \fBPhys_Value_t\fP * phys_struct)"
+
+.PP
+Converts a physical value to its corresponding raw CAN value\&. This function takes a physical value and applies the scaling factor and offset specified in the \fR\fBPhys_Value_t\fP\fP structure to convert it to the raw CAN signal value\&. The raw value can then be transmitted in a CAN message\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIphys_value\fP The physical value to be converted\&. 
+.br
+\fIphys_struct\fP Pointer to the \fR\fBPhys_Value_t\fP\fP structure containing scaling and offset information\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding raw CAN value\&.
+.RE
+.PP
+Converts a physical value to its corresponding raw CAN value\&.
+
+.PP
+This function converts a physical value (e\&.g\&., temperature) into a raw CAN signal value based on the scaling factor and offset stored in the \fBPhys_Value_t\fP structure\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIphys_value\fP The physical value to convert\&. 
+.br
+\fIphys_struct\fP Pointer to the \fBPhys_Value_t\fP structure containing scaling factor and offset\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding raw CAN signal value\&. 
+.RE
+.PP
+
+.SS "uint32_t RAW_TO_PHYS (int raw_value, \fBPhys_Value_t\fP * phys_struct)"
+
+.PP
+Converts a raw CAN value to its corresponding physical value\&. This function takes a raw CAN value and applies the scaling factor and offset specified in the \fR\fBPhys_Value_t\fP\fP structure to convert it to the physical signal value\&. The physical value represents the actual measured or calculated value of the signal\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIraw_value\fP The raw CAN signal value to be converted\&. 
+.br
+\fIphys_struct\fP Pointer to the \fR\fBPhys_Value_t\fP\fP structure containing scaling and offset information\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding physical value\&.
+.RE
+.PP
+Converts a raw CAN value to its corresponding physical value\&.
+
+.PP
+This function converts a raw CAN signal value to its corresponding physical value based on the scaling factor and offset stored in the \fBPhys_Value_t\fP structure\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIraw_value\fP The raw CAN signal value to convert\&. 
+.br
+\fIphys_struct\fP Pointer to the \fBPhys_Value_t\fP structure containing scaling factor and offset\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding physical value\&. 
+.RE
+.PP
 
 .SH "Author"
 .PP 

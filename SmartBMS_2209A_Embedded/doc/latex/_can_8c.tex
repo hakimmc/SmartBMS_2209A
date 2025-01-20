@@ -1,5 +1,5 @@
 \doxysection{src/\+Can.c File Reference}
-\label{_can_8c}\index{src/Can.c@{src/Can.c}}
+\hypertarget{_can_8c}{}\label{_can_8c}\index{src/Can.c@{src/Can.c}}
 
 
 CAN driver implementation for the ESP32 using the TWAI driver.  
@@ -10,32 +10,28 @@ CAN driver implementation for the ESP32 using the TWAI driver.
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-uint8\+\_\+t \textbf{ Can\+\_\+\+Init} (twai\+\_\+general\+\_\+config\+\_\+t can\+\_\+gpio\+\_\+config, twai\+\_\+timing\+\_\+config\+\_\+t can\+\_\+time\+\_\+config, twai\+\_\+filter\+\_\+config\+\_\+t can\+\_\+filter\+\_\+config)
+uint8\+\_\+t \mbox{\hyperlink{_can_8c_a8920d0f7ab8095cccb447da8d5fae390}{Can\+\_\+\+Init}} (twai\+\_\+general\+\_\+config\+\_\+t can\+\_\+gpio\+\_\+config, twai\+\_\+timing\+\_\+config\+\_\+t can\+\_\+time\+\_\+config, twai\+\_\+filter\+\_\+config\+\_\+t can\+\_\+filter\+\_\+config)
 \begin{DoxyCompactList}\small\item\em Initializes the CAN (TWAI) driver with the specified configurations. \end{DoxyCompactList}\item 
-uint8\+\_\+t \textbf{ Can\+\_\+\+Transmit} (twai\+\_\+message\+\_\+t message, uint8\+\_\+t data[$\,$])
+uint8\+\_\+t \mbox{\hyperlink{_can_8c_a51dc04f4c5f5a544e73c33e2d606193b}{Can\+\_\+\+Transmit}} (twai\+\_\+message\+\_\+t message, uint8\+\_\+t data\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Transmits a CAN message with the specified data. \end{DoxyCompactList}\item 
-void \textbf{ Can\+Reporter} (void $\ast$pv\+Parameter)
+void \mbox{\hyperlink{_can_8c_a99ef09684458d26b79a4185bc0af934b}{Can\+Reporter}} (void \texorpdfstring{$\ast$}{*}pv\+Parameter)
 \begin{DoxyCompactList}\small\item\em Task function to periodically report CAN messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Dbc\+Struct} \textbf{ maindbc\+\_\+struct}
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \mbox{\hyperlink{_can_8c_adabf6670e12fa284be00ec7af178f57d}{maindbc\+\_\+struct}}
 \begin{DoxyCompactList}\small\item\em Structure to hold CAN message data. \end{DoxyCompactList}\item 
-twai\+\_\+message\+\_\+t \textbf{ Can\+\_\+\+Main} = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \textbf{ Can\+\_\+\+Main\+\_\+\+ID}, .data\+\_\+length\+\_\+code = 8, .data = \{0\},\}
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_can_8c_a9e7b00854cffece2f2025a20b30f4860}{struct\+\_\+of\+\_\+comm}}
 \item 
-twai\+\_\+message\+\_\+t \textbf{ Battery\+\_\+\+Messages} = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \textbf{ Battery\+\_\+\+Messages\+\_\+\+ID}, .data\+\_\+length\+\_\+code = 8, .data = \{0\},\}
+twai\+\_\+message\+\_\+t \mbox{\hyperlink{_can_8c_a5ac86e7553816a53c292e55c741953bb}{Can\+\_\+\+Main}} = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \mbox{\hyperlink{d2cc__lib_8h_afd4f58c1a509cc8343774f0ca05c9061}{Can\+\_\+\+Main\+\_\+\+ID}}, .data\+\_\+length\+\_\+code = 8, .data = \{0\},\}
 \item 
-twai\+\_\+message\+\_\+t \textbf{ Battery\+\_\+\+Voltages} = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \textbf{ Can\+\_\+\+Battery\+\_\+\+Voltages\+\_\+\+ID}, .data\+\_\+length\+\_\+code = 8, .data = \{0\},\}
+twai\+\_\+message\+\_\+t \mbox{\hyperlink{_can_8c_a130a3010e507b1482a7aeb97e8b3fcc2}{Battery\+\_\+\+Messages}} = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \mbox{\hyperlink{d2cc__lib_8h_ab46f9642beab36ac6b8624c11f4f5ed4}{Battery\+\_\+\+Messages\+\_\+\+ID}}, .data\+\_\+length\+\_\+code = \mbox{\hyperlink{d2cc__lib_8h_a28bfa34179cef8b6929e0b63798779cf}{Battery\+\_\+\+Messages\+\_\+\+DLC}}, .data = \{0\},\}
 \item 
-twai\+\_\+message\+\_\+t \textbf{ Battery\+\_\+\+Temperatures} = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \textbf{ Can\+\_\+\+Battery\+\_\+\+Temperatures\+\_\+\+ID}, .data\+\_\+length\+\_\+code = 8, .data = \{0\},\}
+twai\+\_\+message\+\_\+t \mbox{\hyperlink{_can_8c_a68867de6953b17c2ebc6471a78d90117}{Battery\+\_\+\+Voltages\+\_\+1}} = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \mbox{\hyperlink{d2cc__lib_8h_a38e80dd1e9f8cdf9735b54d79f2fdda9}{Battery\+\_\+\+Voltages\+\_\+1\+\_\+\+ID}}, .data\+\_\+length\+\_\+code = \mbox{\hyperlink{d2cc__lib_8h_a58897864bf48b89b9777036c39420cef}{Battery\+\_\+\+Voltages\+\_\+1\+\_\+\+DLC}}, .data = \{0\},\}
 \item 
-uint8\+\_\+t \textbf{ Data\+\_\+\+Of\+\_\+\+Can\+\_\+\+Main} [8] = \{0, 1, 2, 3, 4, 5, 6, 7\}
+twai\+\_\+message\+\_\+t \mbox{\hyperlink{_can_8c_a2836a6a3e151c74248b0072f69604ef0}{Battery\+\_\+\+Voltages\+\_\+2}} = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \mbox{\hyperlink{d2cc__lib_8h_accc8765d8f8608052fd7ee753fd3793e}{Battery\+\_\+\+Voltages\+\_\+2\+\_\+\+ID}}, .data\+\_\+length\+\_\+code = \mbox{\hyperlink{d2cc__lib_8h_a8c310afe9a8df00d32a008b5f06dbc16}{Battery\+\_\+\+Voltages\+\_\+2\+\_\+\+DLC}}, .data = \{0\},\}
 \item 
-uint8\+\_\+t \textbf{ Data\+\_\+\+Of\+\_\+\+Battery\+\_\+\+Messages} [8] = \{8, 9, 10, 11, 12, 13, 14, 15\}
-\item 
-uint8\+\_\+t \textbf{ Data\+\_\+\+Of\+\_\+\+Battery\+\_\+\+Voltages} [8] = \{16, 17, 22, 32, 42, 52, 62, 72\}
-\item 
-uint8\+\_\+t \textbf{ Data\+\_\+\+Of\+\_\+\+Battery\+\_\+\+Temperatures} [8] = \{35, 13, 23, 33, 43, 53, 63, 73\}
+twai\+\_\+message\+\_\+t \mbox{\hyperlink{_can_8c_aeac6d1745e019aac057f6d092866ff46}{Battery\+\_\+\+Temperatures}} = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \mbox{\hyperlink{d2cc__lib_8h_a4071ff4cd81d3b62ffb3be85fc1c4760}{Battery\+\_\+\+Temperatures\+\_\+\+ID}}, .data\+\_\+length\+\_\+code = \mbox{\hyperlink{d2cc__lib_8h_a12a5aca21c3b9316e0b20fac4557a16a}{Battery\+\_\+\+Temperatures\+\_\+\+DLC}}, .data = \{0\},\}
 \end{DoxyCompactItemize}
 
 
@@ -51,9 +47,9 @@ hakimmc
 
 
 \doxysubsection{Function Documentation}
-\index{Can.c@{Can.c}!Can\_Init@{Can\_Init}}
+\Hypertarget{_can_8c_a8920d0f7ab8095cccb447da8d5fae390}\index{Can.c@{Can.c}!Can\_Init@{Can\_Init}}
 \index{Can\_Init@{Can\_Init}!Can.c@{Can.c}}
-\doxysubsubsection{Can\_Init()}
+\doxysubsubsection{\texorpdfstring{Can\_Init()}{Can\_Init()}}
 {\footnotesize\ttfamily \label{_can_8c_a8920d0f7ab8095cccb447da8d5fae390} 
 uint8\+\_\+t Can\+\_\+\+Init (\begin{DoxyParamCaption}\item[{twai\+\_\+general\+\_\+config\+\_\+t}]{can\+\_\+gpio\+\_\+config}{, }\item[{twai\+\_\+timing\+\_\+config\+\_\+t}]{can\+\_\+time\+\_\+config}{, }\item[{twai\+\_\+filter\+\_\+config\+\_\+t}]{can\+\_\+filter\+\_\+config}{}\end{DoxyParamCaption})}
 
@@ -75,11 +71,11 @@ Initializes the CAN interface.
 \begin{DoxyReturn}{Returns}
 uint8\+\_\+t Returns 1 if the driver is successfully initialized. 
 \end{DoxyReturn}
-\index{Can.c@{Can.c}!Can\_Transmit@{Can\_Transmit}}
+\Hypertarget{_can_8c_a51dc04f4c5f5a544e73c33e2d606193b}\index{Can.c@{Can.c}!Can\_Transmit@{Can\_Transmit}}
 \index{Can\_Transmit@{Can\_Transmit}!Can.c@{Can.c}}
-\doxysubsubsection{Can\_Transmit()}
+\doxysubsubsection{\texorpdfstring{Can\_Transmit()}{Can\_Transmit()}}
 {\footnotesize\ttfamily \label{_can_8c_a51dc04f4c5f5a544e73c33e2d606193b} 
-uint8\+\_\+t Can\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{twai\+\_\+message\+\_\+t}]{message}{, }\item[{uint8\+\_\+t}]{data}{[$\,$]}\end{DoxyParamCaption})}
+uint8\+\_\+t Can\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{twai\+\_\+message\+\_\+t}]{message}{, }\item[{uint8\+\_\+t}]{data}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
 
 
 
@@ -97,11 +93,11 @@ Transmits a CAN message.
 \begin{DoxyReturn}{Returns}
 uint8\+\_\+t Returns 1 if the transmission is successful. 
 \end{DoxyReturn}
-\index{Can.c@{Can.c}!CanReporter@{CanReporter}}
+\Hypertarget{_can_8c_a99ef09684458d26b79a4185bc0af934b}\index{Can.c@{Can.c}!CanReporter@{CanReporter}}
 \index{CanReporter@{CanReporter}!Can.c@{Can.c}}
-\doxysubsubsection{CanReporter()}
+\doxysubsubsection{\texorpdfstring{CanReporter()}{CanReporter()}}
 {\footnotesize\ttfamily \label{_can_8c_a99ef09684458d26b79a4185bc0af934b} 
-void Can\+Reporter (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameter}{}\end{DoxyParamCaption})}
+void Can\+Reporter (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameter}{}\end{DoxyParamCaption})}
 
 
 
@@ -109,7 +105,7 @@ Task function to periodically report CAN messages.
 
 Task to report CAN messages.
 
-This function initializes the CAN driver and repeatedly transmits preconfigured CAN messages, using data from the {\ttfamily \doxyref{Dbc\+Struct}{p.}{struct_dbc_struct}}.
+This function initializes the CAN driver and repeatedly transmits preconfigured CAN messages, using data from the {\ttfamily \doxylink{struct_dbc_struct}{Dbc\+Struct}}.
 
 
 \begin{DoxyParams}{Parameters}
@@ -119,61 +115,49 @@ This function initializes the CAN driver and repeatedly transmits preconfigured 
 
 
 \doxysubsection{Variable Documentation}
-\index{Can.c@{Can.c}!Battery\_Messages@{Battery\_Messages}}
+\Hypertarget{_can_8c_a130a3010e507b1482a7aeb97e8b3fcc2}\index{Can.c@{Can.c}!Battery\_Messages@{Battery\_Messages}}
 \index{Battery\_Messages@{Battery\_Messages}!Can.c@{Can.c}}
-\doxysubsubsection{Battery\_Messages}
+\doxysubsubsection{\texorpdfstring{Battery\_Messages}{Battery\_Messages}}
 {\footnotesize\ttfamily \label{_can_8c_a130a3010e507b1482a7aeb97e8b3fcc2} 
-twai\+\_\+message\+\_\+t Battery\+\_\+\+Messages = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \textbf{ Battery\+\_\+\+Messages\+\_\+\+ID}, .data\+\_\+length\+\_\+code = 8, .data = \{0\},\}}
+twai\+\_\+message\+\_\+t Battery\+\_\+\+Messages = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \mbox{\hyperlink{d2cc__lib_8h_ab46f9642beab36ac6b8624c11f4f5ed4}{Battery\+\_\+\+Messages\+\_\+\+ID}}, .data\+\_\+length\+\_\+code = \mbox{\hyperlink{d2cc__lib_8h_a28bfa34179cef8b6929e0b63798779cf}{Battery\+\_\+\+Messages\+\_\+\+DLC}}, .data = \{0\},\}}
 
-\index{Can.c@{Can.c}!Battery\_Temperatures@{Battery\_Temperatures}}
+\Hypertarget{_can_8c_aeac6d1745e019aac057f6d092866ff46}\index{Can.c@{Can.c}!Battery\_Temperatures@{Battery\_Temperatures}}
 \index{Battery\_Temperatures@{Battery\_Temperatures}!Can.c@{Can.c}}
-\doxysubsubsection{Battery\_Temperatures}
+\doxysubsubsection{\texorpdfstring{Battery\_Temperatures}{Battery\_Temperatures}}
 {\footnotesize\ttfamily \label{_can_8c_aeac6d1745e019aac057f6d092866ff46} 
-twai\+\_\+message\+\_\+t Battery\+\_\+\+Temperatures = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \textbf{ Can\+\_\+\+Battery\+\_\+\+Temperatures\+\_\+\+ID}, .data\+\_\+length\+\_\+code = 8, .data = \{0\},\}}
+twai\+\_\+message\+\_\+t Battery\+\_\+\+Temperatures = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \mbox{\hyperlink{d2cc__lib_8h_a4071ff4cd81d3b62ffb3be85fc1c4760}{Battery\+\_\+\+Temperatures\+\_\+\+ID}}, .data\+\_\+length\+\_\+code = \mbox{\hyperlink{d2cc__lib_8h_a12a5aca21c3b9316e0b20fac4557a16a}{Battery\+\_\+\+Temperatures\+\_\+\+DLC}}, .data = \{0\},\}}
 
-\index{Can.c@{Can.c}!Battery\_Voltages@{Battery\_Voltages}}
-\index{Battery\_Voltages@{Battery\_Voltages}!Can.c@{Can.c}}
-\doxysubsubsection{Battery\_Voltages}
-{\footnotesize\ttfamily \label{_can_8c_affc81c163d004c727041b42b732420f3} 
-twai\+\_\+message\+\_\+t Battery\+\_\+\+Voltages = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \textbf{ Can\+\_\+\+Battery\+\_\+\+Voltages\+\_\+\+ID}, .data\+\_\+length\+\_\+code = 8, .data = \{0\},\}}
+\Hypertarget{_can_8c_a68867de6953b17c2ebc6471a78d90117}\index{Can.c@{Can.c}!Battery\_Voltages\_1@{Battery\_Voltages\_1}}
+\index{Battery\_Voltages\_1@{Battery\_Voltages\_1}!Can.c@{Can.c}}
+\doxysubsubsection{\texorpdfstring{Battery\_Voltages\_1}{Battery\_Voltages\_1}}
+{\footnotesize\ttfamily \label{_can_8c_a68867de6953b17c2ebc6471a78d90117} 
+twai\+\_\+message\+\_\+t Battery\+\_\+\+Voltages\+\_\+1 = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \mbox{\hyperlink{d2cc__lib_8h_a38e80dd1e9f8cdf9735b54d79f2fdda9}{Battery\+\_\+\+Voltages\+\_\+1\+\_\+\+ID}}, .data\+\_\+length\+\_\+code = \mbox{\hyperlink{d2cc__lib_8h_a58897864bf48b89b9777036c39420cef}{Battery\+\_\+\+Voltages\+\_\+1\+\_\+\+DLC}}, .data = \{0\},\}}
 
-\index{Can.c@{Can.c}!Can\_Main@{Can\_Main}}
+\Hypertarget{_can_8c_a2836a6a3e151c74248b0072f69604ef0}\index{Can.c@{Can.c}!Battery\_Voltages\_2@{Battery\_Voltages\_2}}
+\index{Battery\_Voltages\_2@{Battery\_Voltages\_2}!Can.c@{Can.c}}
+\doxysubsubsection{\texorpdfstring{Battery\_Voltages\_2}{Battery\_Voltages\_2}}
+{\footnotesize\ttfamily \label{_can_8c_a2836a6a3e151c74248b0072f69604ef0} 
+twai\+\_\+message\+\_\+t Battery\+\_\+\+Voltages\+\_\+2 = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \mbox{\hyperlink{d2cc__lib_8h_accc8765d8f8608052fd7ee753fd3793e}{Battery\+\_\+\+Voltages\+\_\+2\+\_\+\+ID}}, .data\+\_\+length\+\_\+code = \mbox{\hyperlink{d2cc__lib_8h_a8c310afe9a8df00d32a008b5f06dbc16}{Battery\+\_\+\+Voltages\+\_\+2\+\_\+\+DLC}}, .data = \{0\},\}}
+
+\Hypertarget{_can_8c_a5ac86e7553816a53c292e55c741953bb}\index{Can.c@{Can.c}!Can\_Main@{Can\_Main}}
 \index{Can\_Main@{Can\_Main}!Can.c@{Can.c}}
-\doxysubsubsection{Can\_Main}
+\doxysubsubsection{\texorpdfstring{Can\_Main}{Can\_Main}}
 {\footnotesize\ttfamily \label{_can_8c_a5ac86e7553816a53c292e55c741953bb} 
-twai\+\_\+message\+\_\+t Can\+\_\+\+Main = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \textbf{ Can\+\_\+\+Main\+\_\+\+ID}, .data\+\_\+length\+\_\+code = 8, .data = \{0\},\}}
+twai\+\_\+message\+\_\+t Can\+\_\+\+Main = \{.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc\+\_\+non\+\_\+comp = 0, .identifier = \mbox{\hyperlink{d2cc__lib_8h_afd4f58c1a509cc8343774f0ca05c9061}{Can\+\_\+\+Main\+\_\+\+ID}}, .data\+\_\+length\+\_\+code = 8, .data = \{0\},\}}
 
-\index{Can.c@{Can.c}!Data\_Of\_Battery\_Messages@{Data\_Of\_Battery\_Messages}}
-\index{Data\_Of\_Battery\_Messages@{Data\_Of\_Battery\_Messages}!Can.c@{Can.c}}
-\doxysubsubsection{Data\_Of\_Battery\_Messages}
-{\footnotesize\ttfamily \label{_can_8c_aa0ee0676a6100daf2b3b1aad623bd07b} 
-uint8\+\_\+t Data\+\_\+\+Of\+\_\+\+Battery\+\_\+\+Messages[8] = \{8, 9, 10, 11, 12, 13, 14, 15\}}
-
-\index{Can.c@{Can.c}!Data\_Of\_Battery\_Temperatures@{Data\_Of\_Battery\_Temperatures}}
-\index{Data\_Of\_Battery\_Temperatures@{Data\_Of\_Battery\_Temperatures}!Can.c@{Can.c}}
-\doxysubsubsection{Data\_Of\_Battery\_Temperatures}
-{\footnotesize\ttfamily \label{_can_8c_a6674195f29972ad81603995168dbe0d3} 
-uint8\+\_\+t Data\+\_\+\+Of\+\_\+\+Battery\+\_\+\+Temperatures[8] = \{35, 13, 23, 33, 43, 53, 63, 73\}}
-
-\index{Can.c@{Can.c}!Data\_Of\_Battery\_Voltages@{Data\_Of\_Battery\_Voltages}}
-\index{Data\_Of\_Battery\_Voltages@{Data\_Of\_Battery\_Voltages}!Can.c@{Can.c}}
-\doxysubsubsection{Data\_Of\_Battery\_Voltages}
-{\footnotesize\ttfamily \label{_can_8c_a1f5180759945949348fed4c7a0bb56db} 
-uint8\+\_\+t Data\+\_\+\+Of\+\_\+\+Battery\+\_\+\+Voltages[8] = \{16, 17, 22, 32, 42, 52, 62, 72\}}
-
-\index{Can.c@{Can.c}!Data\_Of\_Can\_Main@{Data\_Of\_Can\_Main}}
-\index{Data\_Of\_Can\_Main@{Data\_Of\_Can\_Main}!Can.c@{Can.c}}
-\doxysubsubsection{Data\_Of\_Can\_Main}
-{\footnotesize\ttfamily \label{_can_8c_ad097fc803847532903674508f4286a2f} 
-uint8\+\_\+t Data\+\_\+\+Of\+\_\+\+Can\+\_\+\+Main[8] = \{0, 1, 2, 3, 4, 5, 6, 7\}}
-
-\index{Can.c@{Can.c}!maindbc\_struct@{maindbc\_struct}}
+\Hypertarget{_can_8c_adabf6670e12fa284be00ec7af178f57d}\index{Can.c@{Can.c}!maindbc\_struct@{maindbc\_struct}}
 \index{maindbc\_struct@{maindbc\_struct}!Can.c@{Can.c}}
-\doxysubsubsection{maindbc\_struct}
+\doxysubsubsection{\texorpdfstring{maindbc\_struct}{maindbc\_struct}}
 {\footnotesize\ttfamily \label{_can_8c_adabf6670e12fa284be00ec7af178f57d} 
-\textbf{ Dbc\+Struct} maindbc\+\_\+struct\hspace{0.3cm}{\ttfamily [extern]}}
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} maindbc\+\_\+struct\hspace{0.3cm}{\ttfamily [extern]}}
 
 
 
 Structure to hold CAN message data. 
+
+\Hypertarget{_can_8c_a9e7b00854cffece2f2025a20b30f4860}\index{Can.c@{Can.c}!struct\_of\_comm@{struct\_of\_comm}}
+\index{struct\_of\_comm@{struct\_of\_comm}!Can.c@{Can.c}}
+\doxysubsubsection{\texorpdfstring{struct\_of\_comm}{struct\_of\_comm}}
+{\footnotesize\ttfamily \label{_can_8c_a9e7b00854cffece2f2025a20b30f4860} 
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}}\texorpdfstring{$\ast$}{*} struct\+\_\+of\+\_\+comm}
 

@@ -36,28 +36,22 @@ src/Can.c \- CAN driver implementation for the ESP32 using the TWAI driver\&.
 .br
 .RI "Structure to hold CAN message data\&. "
 .ti -1c
+.RI "\fBDbcStruct\fP * \fBstruct_of_comm\fP"
+.br
+.ti -1c
 .RI "twai_message_t \fBCan_Main\fP = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBCan_Main_ID\fP, \&.data_length_code = 8, \&.data = {0},}"
 .br
 .ti -1c
-.RI "twai_message_t \fBBattery_Messages\fP = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBBattery_Messages_ID\fP, \&.data_length_code = 8, \&.data = {0},}"
+.RI "twai_message_t \fBBattery_Messages\fP = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBBattery_Messages_ID\fP, \&.data_length_code = \fBBattery_Messages_DLC\fP, \&.data = {0},}"
 .br
 .ti -1c
-.RI "twai_message_t \fBBattery_Voltages\fP = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBCan_Battery_Voltages_ID\fP, \&.data_length_code = 8, \&.data = {0},}"
+.RI "twai_message_t \fBBattery_Voltages_1\fP = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBBattery_Voltages_1_ID\fP, \&.data_length_code = \fBBattery_Voltages_1_DLC\fP, \&.data = {0},}"
 .br
 .ti -1c
-.RI "twai_message_t \fBBattery_Temperatures\fP = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBCan_Battery_Temperatures_ID\fP, \&.data_length_code = 8, \&.data = {0},}"
+.RI "twai_message_t \fBBattery_Voltages_2\fP = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBBattery_Voltages_2_ID\fP, \&.data_length_code = \fBBattery_Voltages_2_DLC\fP, \&.data = {0},}"
 .br
 .ti -1c
-.RI "uint8_t \fBData_Of_Can_Main\fP [8] = {0, 1, 2, 3, 4, 5, 6, 7}"
-.br
-.ti -1c
-.RI "uint8_t \fBData_Of_Battery_Messages\fP [8] = {8, 9, 10, 11, 12, 13, 14, 15}"
-.br
-.ti -1c
-.RI "uint8_t \fBData_Of_Battery_Voltages\fP [8] = {16, 17, 22, 32, 42, 52, 62, 72}"
-.br
-.ti -1c
-.RI "uint8_t \fBData_Of_Battery_Temperatures\fP [8] = {35, 13, 23, 33, 43, 53, 63, 73}"
+.RI "twai_message_t \fBBattery_Temperatures\fP = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBBattery_Temperatures_ID\fP, \&.data_length_code = \fBBattery_Temperatures_DLC\fP, \&.data = {0},}"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -136,26 +130,22 @@ This function initializes the CAN driver and repeatedly transmits preconfigured 
 
 .SH "Variable Documentation"
 .PP 
-.SS "twai_message_t Battery_Messages = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBBattery_Messages_ID\fP, \&.data_length_code = 8, \&.data = {0},}"
+.SS "twai_message_t Battery_Messages = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBBattery_Messages_ID\fP, \&.data_length_code = \fBBattery_Messages_DLC\fP, \&.data = {0},}"
 
-.SS "twai_message_t Battery_Temperatures = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBCan_Battery_Temperatures_ID\fP, \&.data_length_code = 8, \&.data = {0},}"
+.SS "twai_message_t Battery_Temperatures = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBBattery_Temperatures_ID\fP, \&.data_length_code = \fBBattery_Temperatures_DLC\fP, \&.data = {0},}"
 
-.SS "twai_message_t Battery_Voltages = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBCan_Battery_Voltages_ID\fP, \&.data_length_code = 8, \&.data = {0},}"
+.SS "twai_message_t Battery_Voltages_1 = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBBattery_Voltages_1_ID\fP, \&.data_length_code = \fBBattery_Voltages_1_DLC\fP, \&.data = {0},}"
+
+.SS "twai_message_t Battery_Voltages_2 = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBBattery_Voltages_2_ID\fP, \&.data_length_code = \fBBattery_Voltages_2_DLC\fP, \&.data = {0},}"
 
 .SS "twai_message_t Can_Main = {\&.extd = 0, \&.rtr = 0, \&.ss = 0, \&.self = 0, \&.dlc_non_comp = 0, \&.identifier = \fBCan_Main_ID\fP, \&.data_length_code = 8, \&.data = {0},}"
-
-.SS "uint8_t Data_Of_Battery_Messages[8] = {8, 9, 10, 11, 12, 13, 14, 15}"
-
-.SS "uint8_t Data_Of_Battery_Temperatures[8] = {35, 13, 23, 33, 43, 53, 63, 73}"
-
-.SS "uint8_t Data_Of_Battery_Voltages[8] = {16, 17, 22, 32, 42, 52, 62, 72}"
-
-.SS "uint8_t Data_Of_Can_Main[8] = {0, 1, 2, 3, 4, 5, 6, 7}"
 
 .SS "\fBDbcStruct\fP maindbc_struct\fR [extern]\fP"
 
 .PP
 Structure to hold CAN message data\&. 
+.SS "\fBDbcStruct\fP* struct_of_comm"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

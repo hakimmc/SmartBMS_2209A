@@ -11,13 +11,12 @@ src/TcpServer.c \- TCP server implementation to handle incoming client connectio
 .br
 \fR#include 'Wifi\&.h'\fP
 .br
+\fR#include 'd2cc_lib\&.h'\fP
+.br
 
 .SS "Macros"
 
 .in +1c
-.ti -1c
-.RI "#define \fBSERVER_PORT\fP   8080"
-.br
 .ti -1c
 .RI "#define \fBTCP_TAG\fP   'TCP_SERVER'"
 .br
@@ -38,6 +37,10 @@ src/TcpServer.c \- TCP server implementation to handle incoming client connectio
 .br
 .RI "Receives data from the client socket\&. "
 .ti -1c
+.RI "void \fBConvertToJson\fP (\fBDbcStruct\fP *dbc, char *jsonString)"
+.br
+.RI "Convert to JSON function of Dbc Parameters\&. "
+.ti -1c
 .RI "void \fBTcp_Init\fP ()"
 .br
 .RI "Initializes the TCP server and starts listening for client connections\&. "
@@ -45,6 +48,13 @@ src/TcpServer.c \- TCP server implementation to handle incoming client connectio
 .SS "Variables"
 
 .in +1c
+.ti -1c
+.RI "\fBDbcStruct\fP \fBmaindbc_struct\fP"
+.br
+.RI "Structure to hold CAN message data\&. "
+.ti -1c
+.RI "\fBDbcStruct\fP * \fBstruct_of_comm\fP"
+.br
 .ti -1c
 .RI "char * \fBGUI_USER\fP = 'root'"
 .br
@@ -73,12 +83,14 @@ hakimmc
 
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define SERVER_PORT   8080"
-Port number for the TCP server 
 .SS "#define TCP_TAG   'TCP_SERVER'"
 Tag for logging 
 .SH "Function Documentation"
 .PP 
+.SS "void ConvertToJson (\fBDbcStruct\fP * dbc, char * jsonString)"
+
+.PP
+Convert to JSON function of Dbc Parameters\&. Converter for Dbc values to JSON\&. 
 .SS "void Create_Server (void * pvParameter)"
 
 .PP
@@ -154,6 +166,12 @@ Password for GUI authentication\&.
 
 .PP
 Username for GUI authentication\&. 
+.SS "\fBDbcStruct\fP maindbc_struct\fR [extern]\fP"
+
+.PP
+Structure to hold CAN message data\&. Extern from main; Structure to hold CAN message data\&. 
+.SS "\fBDbcStruct\fP* struct_of_comm\fR [extern]\fP"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

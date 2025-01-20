@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="78184751.png"/></td>
   <td id="projectalign">
    <div id="projectname">SmartBMS_2209A<span id="projectnumber">&#160;v1.0.0</span>
    </div>
@@ -129,27 +130,19 @@ $(function(){initNavTree('_can_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="_can_8h.html#a4791c142b857f44449cc8ad8d22ef045">   43</a></span><span class="preprocessor">#define CAN_TAG &quot;CAN_MASTER&quot;</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_can_8h.html#afd4f58c1a509cc8343774f0ca05c9061">   49</a></span><span class="preprocessor">#define Can_Main_ID                             0x100</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_can_8h.html#ac5d0198b7447cc2c29044ccd56dd9443">   49</a></span><span class="preprocessor">#define CAN_DELAY                               250 </span><span class="comment">// ms</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_can_8h.html#ab46f9642beab36ac6b8624c11f4f5ed4">   55</a></span><span class="preprocessor">#define Battery_Messages_ID                     0x101</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="_can_8h.html#a1e870e11e6fd939606c6fff3b122d4fd">   61</a></span><span class="preprocessor">#define Can_Battery_Voltages_ID                 0x102</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>uint8_t <a class="code hl_function" href="_can_8h.html#a8920d0f7ab8095cccb447da8d5fae390">Can_Init</a>(twai_general_config_t can_gpio_config, twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="_can_8h.html#a22ff50c4de22c7bfc6240a2b7a478e3e">   67</a></span><span class="preprocessor">#define Can_Battery_Temperatures_ID             0x103</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="_can_8h.html#ac5d0198b7447cc2c29044ccd56dd9443">   73</a></span><span class="preprocessor">#define CAN_DELAY                               250 </span><span class="comment">// ms</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>uint8_t <a class="code hl_function" href="_can_8h.html#a8920d0f7ab8095cccb447da8d5fae390">Can_Init</a>(twai_general_config_t can_gpio_config, twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>uint8_t <a class="code hl_function" href="_can_8h.html#a51dc04f4c5f5a544e73c33e2d606193b">Can_Transmit</a>(twai_message_t message, uint8_t data[]);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keywordtype">void</span> <a class="code hl_function" href="_can_8h.html#a99ef09684458d26b79a4185bc0af934b">CanReporter</a>(<span class="keywordtype">void</span>* pvParameter);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_CAN_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="a_can_8h_html_a51dc04f4c5f5a544e73c33e2d606193b"><div class="ttname"><a href="_can_8h.html#a51dc04f4c5f5a544e73c33e2d606193b">Can_Transmit</a></div><div class="ttdeci">uint8_t Can_Transmit(twai_message_t message, uint8_t data[])</div><div class="ttdoc">Transmits a CAN message.</div><div class="ttdef"><b>Definition</b> Can.c:37</div></div>
-<div class="ttc" id="a_can_8h_html_a8920d0f7ab8095cccb447da8d5fae390"><div class="ttname"><a href="_can_8h.html#a8920d0f7ab8095cccb447da8d5fae390">Can_Init</a></div><div class="ttdeci">uint8_t Can_Init(twai_general_config_t can_gpio_config, twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config)</div><div class="ttdoc">Initializes the CAN interface.</div><div class="ttdef"><b>Definition</b> Can.c:21</div></div>
-<div class="ttc" id="a_can_8h_html_a99ef09684458d26b79a4185bc0af934b"><div class="ttname"><a href="_can_8h.html#a99ef09684458d26b79a4185bc0af934b">CanReporter</a></div><div class="ttdeci">void CanReporter(void *pvParameter)</div><div class="ttdoc">Task to report CAN messages.</div><div class="ttdef"><b>Definition</b> Can.c:66</div></div>
-<div class="ttc" id="ad2cc__lib_8h_html"><div class="ttname"><a href="d2cc__lib_8h.html">d2cc_lib.h</a></div></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>uint8_t <a class="code hl_function" href="_can_8h.html#a51dc04f4c5f5a544e73c33e2d606193b">Can_Transmit</a>(twai_message_t message, uint8_t data[]);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keywordtype">void</span> <a class="code hl_function" href="_can_8h.html#a99ef09684458d26b79a4185bc0af934b">CanReporter</a>(<span class="keywordtype">void</span>* pvParameter);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_CAN_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a_can_8h_html_a51dc04f4c5f5a544e73c33e2d606193b"><div class="ttname"><a href="_can_8h.html#a51dc04f4c5f5a544e73c33e2d606193b">Can_Transmit</a></div><div class="ttdeci">uint8_t Can_Transmit(twai_message_t message, uint8_t data[])</div><div class="ttdoc">Transmits a CAN message.</div><div class="ttdef"><b>Definition</b> Can.c:38</div></div>
+<div class="ttc" id="a_can_8h_html_a8920d0f7ab8095cccb447da8d5fae390"><div class="ttname"><a href="_can_8h.html#a8920d0f7ab8095cccb447da8d5fae390">Can_Init</a></div><div class="ttdeci">uint8_t Can_Init(twai_general_config_t can_gpio_config, twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config)</div><div class="ttdoc">Initializes the CAN interface.</div><div class="ttdef"><b>Definition</b> Can.c:22</div></div>
+<div class="ttc" id="a_can_8h_html_a99ef09684458d26b79a4185bc0af934b"><div class="ttname"><a href="_can_8h.html#a99ef09684458d26b79a4185bc0af934b">CanReporter</a></div><div class="ttdeci">void CanReporter(void *pvParameter)</div><div class="ttdoc">Task to report CAN messages.</div><div class="ttdef"><b>Definition</b> Can.c:62</div></div>
+<div class="ttc" id="ad2cc__lib_8h_html"><div class="ttname"><a href="d2cc__lib_8h.html">d2cc_lib.h</a></div><div class="ttdoc">Header file for the D2CC library.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

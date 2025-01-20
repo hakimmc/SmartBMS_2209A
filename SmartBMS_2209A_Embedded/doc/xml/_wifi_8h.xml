@@ -291,9 +291,9 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
-      <memberdef kind="function" id="_wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_wifi_8h_1a729c8b3e4ebc79d753bd4887f2b25412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void event_handler</definition>
+        <definition>void event_handler</definition>
         <argsstring>(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)</argsstring>
         <name>event_handler</name>
         <param>
@@ -346,15 +346,54 @@
 <parametername>event_data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Additional data associated with the event (optional). </para>
+<para>Additional data associated with the event (optional).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Handles Wi-Fi events.</para>
+<para>This function handles Wi-Fi and IP events, such as Wi-Fi connection status changes and obtaining an IP address. It also manages retry logic for Wi-Fi connection attempts.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to additional arguments (unused). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>event_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event base (WIFI_EVENT or IP_EVENT). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>event_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event ID (such as WIFI_EVENT_STA_START). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>event_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event data associated with the event. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; Start the Wi-Fi connection process.</para>
+<para>&lt; Retry the connection.</para>
+<para>&lt; Log obtained IP address.</para>
+<para>&lt; Reset retry count.</para>
         </inbodydescription>
-        <location file="include/Wifi.h" line="118" column="13" declfile="include/Wifi.h" declline="118" declcolumn="13"/>
+        <location file="include/Wifi.h" line="118" column="6" bodyfile="src/Wifi.c" bodystart="21" bodyend="39" declfile="include/Wifi.h" declline="118" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="_wifi_8h_1a13bb3ba68519d8aa7c2a72cf22dc2b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -455,7 +494,7 @@
 <codeline lineno="104" refid="_wifi_8h_1a13f8ef7b9aee1f387999258af50f1543" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ESP32_MAX_CONN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="118" refid="_wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c" kindref="member">event_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg,<sp/>esp_event_base_t<sp/>event_base,<sp/>int32_t<sp/>event_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*event_data);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_wifi_8h_1a729c8b3e4ebc79d753bd4887f2b25412" kindref="member">event_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg,<sp/>esp_event_base_t<sp/>event_base,<sp/>int32_t<sp/>event_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*event_data);</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_wifi_8h_1a13bb3ba68519d8aa7c2a72cf22dc2b21" kindref="member">wifi_init_ap_sta</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>

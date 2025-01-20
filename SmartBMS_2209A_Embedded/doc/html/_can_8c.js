@@ -5,11 +5,9 @@ var _can_8c =
     [ "CanReporter", "_can_8c.html#a99ef09684458d26b79a4185bc0af934b", null ],
     [ "Battery_Messages", "_can_8c.html#a130a3010e507b1482a7aeb97e8b3fcc2", null ],
     [ "Battery_Temperatures", "_can_8c.html#aeac6d1745e019aac057f6d092866ff46", null ],
-    [ "Battery_Voltages", "_can_8c.html#affc81c163d004c727041b42b732420f3", null ],
+    [ "Battery_Voltages_1", "_can_8c.html#a68867de6953b17c2ebc6471a78d90117", null ],
+    [ "Battery_Voltages_2", "_can_8c.html#a2836a6a3e151c74248b0072f69604ef0", null ],
     [ "Can_Main", "_can_8c.html#a5ac86e7553816a53c292e55c741953bb", null ],
-    [ "Data_Of_Battery_Messages", "_can_8c.html#aa0ee0676a6100daf2b3b1aad623bd07b", null ],
-    [ "Data_Of_Battery_Temperatures", "_can_8c.html#a6674195f29972ad81603995168dbe0d3", null ],
-    [ "Data_Of_Battery_Voltages", "_can_8c.html#a1f5180759945949348fed4c7a0bb56db", null ],
-    [ "Data_Of_Can_Main", "_can_8c.html#ad097fc803847532903674508f4286a2f", null ],
-    [ "maindbc_struct", "_can_8c.html#adabf6670e12fa284be00ec7af178f57d", null ]
+    [ "maindbc_struct", "_can_8c.html#adabf6670e12fa284be00ec7af178f57d", null ],
+    [ "struct_of_comm", "_can_8c.html#a9e7b00854cffece2f2025a20b30f4860", null ]
 ];

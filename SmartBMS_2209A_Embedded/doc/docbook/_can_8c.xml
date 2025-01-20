@@ -31,21 +31,17 @@
 
 <para>Structure to hold CAN message data. </para>
 </listitem>
-            <listitem><para>twai_message_t <link linkend="__can_8c_1a5ac86e7553816a53c292e55c741953bb">Can_Main</link> = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="__can_8h_1afd4f58c1a509cc8343774f0ca05c9061">Can_Main_ID</link>, .data_length_code = 8, .data = {0},}</para>
+            <listitem><para><link linkend="_struct_dbc_struct">DbcStruct</link> * <link linkend="__can_8c_1a9e7b00854cffece2f2025a20b30f4860">struct_of_comm</link></para>
 </listitem>
-            <listitem><para>twai_message_t <link linkend="__can_8c_1a130a3010e507b1482a7aeb97e8b3fcc2">Battery_Messages</link> = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="__can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4">Battery_Messages_ID</link>, .data_length_code = 8, .data = {0},}</para>
+            <listitem><para>twai_message_t <link linkend="__can_8c_1a5ac86e7553816a53c292e55c741953bb">Can_Main</link> = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="_d2cc__lib_8h_1afd4f58c1a509cc8343774f0ca05c9061">Can_Main_ID</link>, .data_length_code = 8, .data = {0},}</para>
 </listitem>
-            <listitem><para>twai_message_t <link linkend="__can_8c_1affc81c163d004c727041b42b732420f3">Battery_Voltages</link> = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="__can_8h_1a1e870e11e6fd939606c6fff3b122d4fd">Can_Battery_Voltages_ID</link>, .data_length_code = 8, .data = {0},}</para>
+            <listitem><para>twai_message_t <link linkend="__can_8c_1a130a3010e507b1482a7aeb97e8b3fcc2">Battery_Messages</link> = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="_d2cc__lib_8h_1ab46f9642beab36ac6b8624c11f4f5ed4">Battery_Messages_ID</link>, .data_length_code = <link linkend="_d2cc__lib_8h_1a28bfa34179cef8b6929e0b63798779cf">Battery_Messages_DLC</link>, .data = {0},}</para>
 </listitem>
-            <listitem><para>twai_message_t <link linkend="__can_8c_1aeac6d1745e019aac057f6d092866ff46">Battery_Temperatures</link> = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="__can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e">Can_Battery_Temperatures_ID</link>, .data_length_code = 8, .data = {0},}</para>
+            <listitem><para>twai_message_t <link linkend="__can_8c_1a68867de6953b17c2ebc6471a78d90117">Battery_Voltages_1</link> = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="_d2cc__lib_8h_1a38e80dd1e9f8cdf9735b54d79f2fdda9">Battery_Voltages_1_ID</link>, .data_length_code = <link linkend="_d2cc__lib_8h_1a58897864bf48b89b9777036c39420cef">Battery_Voltages_1_DLC</link>, .data = {0},}</para>
 </listitem>
-            <listitem><para>uint8_t <link linkend="__can_8c_1ad097fc803847532903674508f4286a2f">Data_Of_Can_Main</link> [8] = {0, 1, 2, 3, 4, 5, 6, 7}</para>
+            <listitem><para>twai_message_t <link linkend="__can_8c_1a2836a6a3e151c74248b0072f69604ef0">Battery_Voltages_2</link> = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="_d2cc__lib_8h_1accc8765d8f8608052fd7ee753fd3793e">Battery_Voltages_2_ID</link>, .data_length_code = <link linkend="_d2cc__lib_8h_1a8c310afe9a8df00d32a008b5f06dbc16">Battery_Voltages_2_DLC</link>, .data = {0},}</para>
 </listitem>
-            <listitem><para>uint8_t <link linkend="__can_8c_1aa0ee0676a6100daf2b3b1aad623bd07b">Data_Of_Battery_Messages</link> [8] = {8, 9, 10, 11, 12, 13, 14, 15}</para>
-</listitem>
-            <listitem><para>uint8_t <link linkend="__can_8c_1a1f5180759945949348fed4c7a0bb56db">Data_Of_Battery_Voltages</link> [8] = {16, 17, 22, 32, 42, 52, 62, 72}</para>
-</listitem>
-            <listitem><para>uint8_t <link linkend="__can_8c_1a6674195f29972ad81603995168dbe0d3">Data_Of_Battery_Temperatures</link> [8] = {35, 13, 23, 33, 43, 53, 63, 73}</para>
+            <listitem><para>twai_message_t <link linkend="__can_8c_1aeac6d1745e019aac057f6d092866ff46">Battery_Temperatures</link> = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="_d2cc__lib_8h_1a4071ff4cd81d3b62ffb3be85fc1c4760">Battery_Temperatures_ID</link>, .data_length_code = <link linkend="_d2cc__lib_8h_1a12a5aca21c3b9316e0b20fac4557a16a">Battery_Temperatures_DLC</link>, .data = {0},}</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -197,42 +193,27 @@ Parameters</title>
     <title>Battery_Messages</title>
 <indexterm><primary>Battery_Messages</primary><secondary>Can.c</secondary></indexterm>
 <indexterm><primary>Can.c</primary><secondary>Battery_Messages</secondary></indexterm>
-<para><computeroutput>twai_message_t Battery_Messages = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="__can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4">Battery_Messages_ID</link>, .data_length_code = 8, .data = {0},}</computeroutput></para></section>
+<para><computeroutput>twai_message_t Battery_Messages = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="_d2cc__lib_8h_1ab46f9642beab36ac6b8624c11f4f5ed4">Battery_Messages_ID</link>, .data_length_code = <link linkend="_d2cc__lib_8h_1a28bfa34179cef8b6929e0b63798779cf">Battery_Messages_DLC</link>, .data = {0},}</computeroutput></para></section>
 <anchor xml:id="__can_8c_1aeac6d1745e019aac057f6d092866ff46"/><section>
     <title>Battery_Temperatures</title>
 <indexterm><primary>Battery_Temperatures</primary><secondary>Can.c</secondary></indexterm>
 <indexterm><primary>Can.c</primary><secondary>Battery_Temperatures</secondary></indexterm>
-<para><computeroutput>twai_message_t Battery_Temperatures = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="__can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e">Can_Battery_Temperatures_ID</link>, .data_length_code = 8, .data = {0},}</computeroutput></para></section>
-<anchor xml:id="__can_8c_1affc81c163d004c727041b42b732420f3"/><section>
-    <title>Battery_Voltages</title>
-<indexterm><primary>Battery_Voltages</primary><secondary>Can.c</secondary></indexterm>
-<indexterm><primary>Can.c</primary><secondary>Battery_Voltages</secondary></indexterm>
-<para><computeroutput>twai_message_t Battery_Voltages = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="__can_8h_1a1e870e11e6fd939606c6fff3b122d4fd">Can_Battery_Voltages_ID</link>, .data_length_code = 8, .data = {0},}</computeroutput></para></section>
+<para><computeroutput>twai_message_t Battery_Temperatures = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="_d2cc__lib_8h_1a4071ff4cd81d3b62ffb3be85fc1c4760">Battery_Temperatures_ID</link>, .data_length_code = <link linkend="_d2cc__lib_8h_1a12a5aca21c3b9316e0b20fac4557a16a">Battery_Temperatures_DLC</link>, .data = {0},}</computeroutput></para></section>
+<anchor xml:id="__can_8c_1a68867de6953b17c2ebc6471a78d90117"/><section>
+    <title>Battery_Voltages_1</title>
+<indexterm><primary>Battery_Voltages_1</primary><secondary>Can.c</secondary></indexterm>
+<indexterm><primary>Can.c</primary><secondary>Battery_Voltages_1</secondary></indexterm>
+<para><computeroutput>twai_message_t Battery_Voltages_1 = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="_d2cc__lib_8h_1a38e80dd1e9f8cdf9735b54d79f2fdda9">Battery_Voltages_1_ID</link>, .data_length_code = <link linkend="_d2cc__lib_8h_1a58897864bf48b89b9777036c39420cef">Battery_Voltages_1_DLC</link>, .data = {0},}</computeroutput></para></section>
+<anchor xml:id="__can_8c_1a2836a6a3e151c74248b0072f69604ef0"/><section>
+    <title>Battery_Voltages_2</title>
+<indexterm><primary>Battery_Voltages_2</primary><secondary>Can.c</secondary></indexterm>
+<indexterm><primary>Can.c</primary><secondary>Battery_Voltages_2</secondary></indexterm>
+<para><computeroutput>twai_message_t Battery_Voltages_2 = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="_d2cc__lib_8h_1accc8765d8f8608052fd7ee753fd3793e">Battery_Voltages_2_ID</link>, .data_length_code = <link linkend="_d2cc__lib_8h_1a8c310afe9a8df00d32a008b5f06dbc16">Battery_Voltages_2_DLC</link>, .data = {0},}</computeroutput></para></section>
 <anchor xml:id="__can_8c_1a5ac86e7553816a53c292e55c741953bb"/><section>
     <title>Can_Main</title>
 <indexterm><primary>Can_Main</primary><secondary>Can.c</secondary></indexterm>
 <indexterm><primary>Can.c</primary><secondary>Can_Main</secondary></indexterm>
-<para><computeroutput>twai_message_t Can_Main = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="__can_8h_1afd4f58c1a509cc8343774f0ca05c9061">Can_Main_ID</link>, .data_length_code = 8, .data = {0},}</computeroutput></para></section>
-<anchor xml:id="__can_8c_1aa0ee0676a6100daf2b3b1aad623bd07b"/><section>
-    <title>Data_Of_Battery_Messages</title>
-<indexterm><primary>Data_Of_Battery_Messages</primary><secondary>Can.c</secondary></indexterm>
-<indexterm><primary>Can.c</primary><secondary>Data_Of_Battery_Messages</secondary></indexterm>
-<para><computeroutput>uint8_t Data_Of_Battery_Messages[8] = {8, 9, 10, 11, 12, 13, 14, 15}</computeroutput></para></section>
-<anchor xml:id="__can_8c_1a6674195f29972ad81603995168dbe0d3"/><section>
-    <title>Data_Of_Battery_Temperatures</title>
-<indexterm><primary>Data_Of_Battery_Temperatures</primary><secondary>Can.c</secondary></indexterm>
-<indexterm><primary>Can.c</primary><secondary>Data_Of_Battery_Temperatures</secondary></indexterm>
-<para><computeroutput>uint8_t Data_Of_Battery_Temperatures[8] = {35, 13, 23, 33, 43, 53, 63, 73}</computeroutput></para></section>
-<anchor xml:id="__can_8c_1a1f5180759945949348fed4c7a0bb56db"/><section>
-    <title>Data_Of_Battery_Voltages</title>
-<indexterm><primary>Data_Of_Battery_Voltages</primary><secondary>Can.c</secondary></indexterm>
-<indexterm><primary>Can.c</primary><secondary>Data_Of_Battery_Voltages</secondary></indexterm>
-<para><computeroutput>uint8_t Data_Of_Battery_Voltages[8] = {16, 17, 22, 32, 42, 52, 62, 72}</computeroutput></para></section>
-<anchor xml:id="__can_8c_1ad097fc803847532903674508f4286a2f"/><section>
-    <title>Data_Of_Can_Main</title>
-<indexterm><primary>Data_Of_Can_Main</primary><secondary>Can.c</secondary></indexterm>
-<indexterm><primary>Can.c</primary><secondary>Data_Of_Can_Main</secondary></indexterm>
-<para><computeroutput>uint8_t Data_Of_Can_Main[8] = {0, 1, 2, 3, 4, 5, 6, 7}</computeroutput></para></section>
+<para><computeroutput>twai_message_t Can_Main = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = <link linkend="_d2cc__lib_8h_1afd4f58c1a509cc8343774f0ca05c9061">Can_Main_ID</link>, .data_length_code = 8, .data = {0},}</computeroutput></para></section>
 <anchor xml:id="__can_8c_1adabf6670e12fa284be00ec7af178f57d"/><section>
     <title>maindbc_struct</title>
 <indexterm><primary>maindbc_struct</primary><secondary>Can.c</secondary></indexterm>
@@ -242,5 +223,10 @@ Parameters</title>
 <para>Structure to hold CAN message data. </para>
 </para>
 </section>
+<anchor xml:id="__can_8c_1a9e7b00854cffece2f2025a20b30f4860"/><section>
+    <title>struct_of_comm</title>
+<indexterm><primary>struct_of_comm</primary><secondary>Can.c</secondary></indexterm>
+<indexterm><primary>Can.c</primary><secondary>struct_of_comm</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_dbc_struct">DbcStruct</link>* struct_of_comm</computeroutput></para></section>
 </section>
 </section>

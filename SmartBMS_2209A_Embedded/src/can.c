@@ -9,6 +9,7 @@
 #include "d2cc_lib.h"
 
 extern DbcStruct maindbc_struct;
+DbcStruct *struct_of_comm;
 
 /**
  * @brief Initializes the CAN (TWAI) driver with the specified configurations.
@@ -45,15 +46,10 @@ uint8_t Can_Transmit(twai_message_t message, uint8_t data[])
 
 // Predefined CAN message structures
 twai_message_t Can_Main = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = Can_Main_ID, .data_length_code = 8, .data = {0},};
-twai_message_t Battery_Messages = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = Battery_Messages_ID, .data_length_code = 8, .data = {0},};
-twai_message_t Battery_Voltages = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = Can_Battery_Voltages_ID, .data_length_code = 8, .data = {0},};
-twai_message_t Battery_Temperatures = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = Can_Battery_Temperatures_ID, .data_length_code = 8, .data = {0},};
-
-// Predefined data arrays for CAN messages
-uint8_t Data_Of_Can_Main[8] = {0, 1, 2, 3, 4, 5, 6, 7};
-uint8_t Data_Of_Battery_Messages[8] = {8, 9, 10, 11, 12, 13, 14, 15};
-uint8_t Data_Of_Battery_Voltages[8] = {16, 17, 22, 32, 42, 52, 62, 72};
-uint8_t Data_Of_Battery_Temperatures[8] = {35, 13, 23, 33, 43, 53, 63, 73};
+twai_message_t Battery_Messages = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = Battery_Messages_ID, .data_length_code = Battery_Messages_DLC, .data = {0},};
+twai_message_t Battery_Voltages_1 = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = Battery_Voltages_1_ID, .data_length_code = Battery_Voltages_1_DLC, .data = {0},};
+twai_message_t Battery_Voltages_2 = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = Battery_Voltages_2_ID, .data_length_code = Battery_Voltages_2_DLC, .data = {0},};
+twai_message_t Battery_Temperatures = {.extd = 0, .rtr = 0, .ss = 0, .self = 0, .dlc_non_comp = 0, .identifier = Battery_Temperatures_ID, .data_length_code = Battery_Temperatures_DLC, .data = {0},};
 
 /**
  * @brief Task function to periodically report CAN messages.
@@ -65,24 +61,32 @@ uint8_t Data_Of_Battery_Temperatures[8] = {35, 13, 23, 33, 43, 53, 63, 73};
  */
 void CanReporter(void* pvParameter)
 {
+    // Predefined CAN timings, rules and pins for CAN messages
     twai_timing_config_t tconf = TWAI_TIMING_CONFIG_500KBITS();
     twai_filter_config_t fconf = TWAI_FILTER_CONFIG_ACCEPT_ALL();
     twai_general_config_t gconf = TWAI_GENERAL_CONFIG_DEFAULT(5, 4, TWAI_MODE_NORMAL);
 
-    DbcStruct *struct_of_comm = &maindbc_struct;
-
+    
+    uint8_t tx_error = 0;
     Can_Init(gconf, tconf, fconf);
+    maindbc_struct.Can_Main.Signal.CanBusEnable = CanBusEnable_CAN_Driver_Enabled;
     while (1) {
-        Can_Transmit(Can_Main, struct_of_comm->Can_Main.Data);
-        Can_Transmit(Battery_Messages, struct_of_comm->Battery_Messages.Data);
-        Can_Transmit(Battery_Voltages, struct_of_comm->Battery_Voltages.Data);
-        Can_Transmit(Battery_Temperatures, struct_of_comm->Battery_Temperatures.Data);
-        
-        printf("Data : {");
-        for (int i = 0; i < 8; i++) {
-            printf("[%d]", struct_of_comm->Battery_Messages.Data[i]);
-        }
-        printf("}");
+
+        if (Can_Transmit(Can_Main, struct_of_comm->Can_Main.Data) != ESP_OK) tx_error=1;
+        if (Can_Transmit(Battery_Messages, struct_of_comm->Battery_Messages.Data) != ESP_OK) tx_error=1;
+        if (Can_Transmit(Battery_Voltages_1, struct_of_comm->Battery_Voltages_1.Data) != ESP_OK) tx_error=1;
+        if (Can_Transmit(Battery_Voltages_2, struct_of_comm->Battery_Voltages_2.Data) != ESP_OK) tx_error=1;
+        if (Can_Transmit(Battery_Temperatures, struct_of_comm->Battery_Temperatures.Data) != ESP_OK) tx_error=1;
+
         vTaskDelay(pdMS_TO_TICKS(CAN_DELAY));
+
+        if(tx_error){
+            maindbc_struct.Can_Main.Signal.CanBusEnable = CanBusEnable_CAN_Driver_Disabled;
+            twai_stop();
+            twai_driver_uninstall();
+            Can_Init(gconf, tconf, fconf);
+            tx_error=0;
+            maindbc_struct.Can_Main.Signal.CanBusEnable = CanBusEnable_CAN_Driver_Enabled;
+        }
     }
 }

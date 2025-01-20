@@ -23,6 +23,8 @@
 
 <para>Structure to hold CAN message data. </para>
 </listitem>
+            <listitem><para><link linkend="_struct_dbc_struct">DbcStruct</link> * <link linkend="_main_8c_1a9e7b00854cffece2f2025a20b30f4860">struct_of_comm</link></para>
+</listitem>
         </itemizedlist>
 </simplesect>
 <section>
@@ -66,6 +68,13 @@
 
 <para>Structure to hold CAN message data. </para>
 </para>
+
+<para>Extern from main; Structure to hold CAN message data. </para>
 </section>
+<anchor xml:id="_main_8c_1a9e7b00854cffece2f2025a20b30f4860"/><section>
+    <title>struct_of_comm</title>
+<indexterm><primary>struct_of_comm</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>struct_of_comm</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_dbc_struct">DbcStruct</link>* struct_of_comm<computeroutput>[extern]</computeroutput></computeroutput></para></section>
 </section>
 </section>

@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="78184751.png"/></td>
   <td id="projectalign">
    <div id="projectname">SmartBMS_2209A<span id="projectnumber">&#160;v1.0.0</span>
    </div>
@@ -145,15 +146,21 @@ $(function(){initNavTree('_tcp_server_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keywordtype">int</span> <a class="code hl_function" href="_tcp_server_8h.html#a00e67904809f7a47e29ca050bcabbae2">receive_data</a>(<span class="keywordtype">int</span> sock, <span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> size, uint8_t* timeout_counter, uint8_t max_timeout);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keywordtype">void</span> <a class="code hl_function" href="_tcp_server_8h.html#a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</a>();</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_TCPSERVER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="a_tcp_server_8h_html_a00e67904809f7a47e29ca050bcabbae2"><div class="ttname"><a href="_tcp_server_8h.html#a00e67904809f7a47e29ca050bcabbae2">receive_data</a></div><div class="ttdeci">int receive_data(int sock, char *buffer, size_t size, uint8_t *timeout_counter, uint8_t max_timeout)</div><div class="ttdoc">Receives data from a connected client.</div><div class="ttdef"><b>Definition</b> TcpServer.c:222</div></div>
-<div class="ttc" id="a_tcp_server_8h_html_a13ddbecdfd3a974bad6c7ff356cb4674"><div class="ttname"><a href="_tcp_server_8h.html#a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</a></div><div class="ttdeci">void Tcp_Init()</div><div class="ttdoc">Initializes the TCP server.</div><div class="ttdef"><b>Definition</b> TcpServer.c:239</div></div>
-<div class="ttc" id="a_tcp_server_8h_html_a423bc60f42ad6bf912e07cd5320b1948"><div class="ttname"><a href="_tcp_server_8h.html#a423bc60f42ad6bf912e07cd5320b1948">Handle_Client</a></div><div class="ttdeci">void Handle_Client(void *args)</div><div class="ttdoc">Handles client connections to the TCP server.</div><div class="ttdef"><b>Definition</b> TcpServer.c:90</div></div>
-<div class="ttc" id="a_tcp_server_8h_html_a71663496e793fd4869a37af2eaeb9dfb"><div class="ttname"><a href="_tcp_server_8h.html#a71663496e793fd4869a37af2eaeb9dfb">Create_Server</a></div><div class="ttdeci">void Create_Server(void *pvParameter)</div><div class="ttdoc">Creates and starts the TCP server.</div><div class="ttdef"><b>Definition</b> TcpServer.c:28</div></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keywordtype">void</span> <a class="code hl_function" href="_tcp_server_8h.html#a71663496e793fd4869a37af2eaeb9dfb">Create_Server</a>(<span class="keywordtype">void</span>* pvParameter);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordtype">void</span> <a class="code hl_function" href="_tcp_server_8h.html#af537437f191b86077cd5ae57370572b1">ConvertToJson</a>(<a class="code hl_struct" href="struct_dbc_struct.html">DbcStruct</a> *dbc, <span class="keywordtype">char</span> *jsonString);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keywordtype">void</span> <a class="code hl_function" href="_tcp_server_8h.html#a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_TCPSERVER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a_tcp_server_8h_html_a00e67904809f7a47e29ca050bcabbae2"><div class="ttname"><a href="_tcp_server_8h.html#a00e67904809f7a47e29ca050bcabbae2">receive_data</a></div><div class="ttdeci">int receive_data(int sock, char *buffer, size_t size, uint8_t *timeout_counter, uint8_t max_timeout)</div><div class="ttdoc">Receives data from a connected client.</div><div class="ttdef"><b>Definition</b> TcpServer.c:239</div></div>
+<div class="ttc" id="a_tcp_server_8h_html_a13ddbecdfd3a974bad6c7ff356cb4674"><div class="ttname"><a href="_tcp_server_8h.html#a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</a></div><div class="ttdeci">void Tcp_Init()</div><div class="ttdoc">Initializes the TCP server.</div><div class="ttdef"><b>Definition</b> TcpServer.c:371</div></div>
+<div class="ttc" id="a_tcp_server_8h_html_a423bc60f42ad6bf912e07cd5320b1948"><div class="ttname"><a href="_tcp_server_8h.html#a423bc60f42ad6bf912e07cd5320b1948">Handle_Client</a></div><div class="ttdeci">void Handle_Client(void *args)</div><div class="ttdoc">Handles client connections to the TCP server.</div><div class="ttdef"><b>Definition</b> TcpServer.c:96</div></div>
+<div class="ttc" id="a_tcp_server_8h_html_a71663496e793fd4869a37af2eaeb9dfb"><div class="ttname"><a href="_tcp_server_8h.html#a71663496e793fd4869a37af2eaeb9dfb">Create_Server</a></div><div class="ttdeci">void Create_Server(void *pvParameter)</div><div class="ttdoc">Creates and starts the TCP server.</div><div class="ttdef"><b>Definition</b> TcpServer.c:32</div></div>
+<div class="ttc" id="a_tcp_server_8h_html_af537437f191b86077cd5ae57370572b1"><div class="ttname"><a href="_tcp_server_8h.html#af537437f191b86077cd5ae57370572b1">ConvertToJson</a></div><div class="ttdeci">void ConvertToJson(DbcStruct *dbc, char *jsonString)</div><div class="ttdoc">Converter for Dbc values to JSON.</div><div class="ttdef"><b>Definition</b> TcpServer.c:256</div></div>
 <div class="ttc" id="a_wifi_8h_html"><div class="ttname"><a href="_wifi_8h.html">Wifi.h</a></div><div class="ttdoc">Wi-Fi configuration for ESP32 in AP+STA mode.</div></div>
-<div class="ttc" id="ad2cc__lib_8h_html"><div class="ttname"><a href="d2cc__lib_8h.html">d2cc_lib.h</a></div></div>
+<div class="ttc" id="ad2cc__lib_8h_html"><div class="ttname"><a href="d2cc__lib_8h.html">d2cc_lib.h</a></div><div class="ttdoc">Header file for the D2CC library.</div></div>
+<div class="ttc" id="astruct_dbc_struct_html"><div class="ttname"><a href="struct_dbc_struct.html">DbcStruct</a></div><div class="ttdef"><b>Definition</b> d2cc_lib.h:206</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

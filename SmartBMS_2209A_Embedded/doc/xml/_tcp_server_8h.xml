@@ -272,7 +272,7 @@ Handles client connections to the TCP server.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/TcpServer.h" line="71" column="6" bodyfile="src/TcpServer.c" bodystart="90" bodyend="206" declfile="include/TcpServer.h" declline="71" declcolumn="6"/>
+        <location file="include/TcpServer.h" line="71" column="6" bodyfile="src/TcpServer.c" bodystart="96" bodyend="223" declfile="include/TcpServer.h" declline="71" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="_tcp_server_8h_1a71663496e793fd4869a37af2eaeb9dfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -312,7 +312,7 @@ Creates and starts the TCP server.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/TcpServer.h" line="81" column="6" bodyfile="src/TcpServer.c" bodystart="28" bodyend="80" declfile="include/TcpServer.h" declline="81" declcolumn="6"/>
+        <location file="include/TcpServer.h" line="81" column="6" bodyfile="src/TcpServer.c" bodystart="32" bodyend="86" declfile="include/TcpServer.h" declline="81" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="_tcp_server_8h_1a00e67904809f7a47e29ca050bcabbae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -436,7 +436,48 @@ Receives data from a connected client.</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/TcpServer.h" line="96" column="5" bodyfile="src/TcpServer.c" bodystart="222" bodyend="234" declfile="include/TcpServer.h" declline="96" declcolumn="5"/>
+        <location file="include/TcpServer.h" line="96" column="5" bodyfile="src/TcpServer.c" bodystart="239" bodyend="251" declfile="include/TcpServer.h" declline="96" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_tcp_server_8h_1af537437f191b86077cd5ae57370572b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConvertToJson</definition>
+        <argsstring>(DbcStruct *dbc, char *jsonString)</argsstring>
+        <name>ConvertToJson</name>
+        <param>
+          <type><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref> *</type>
+          <declname>dbc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>jsonString</declname>
+        </param>
+        <briefdescription>
+<para>Converter for Dbc values to JSON. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>jSON Converter.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dbc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dbcstruct pointer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jsonString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>json string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Converter for Dbc values to JSON. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/TcpServer.h" line="116" column="6" bodyfile="src/TcpServer.c" bodystart="256" bodyend="365" declfile="include/TcpServer.h" declline="116" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="_tcp_server_8h_1a13ddbecdfd3a974bad6c7ff356cb4674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -454,7 +495,7 @@ Receives data from a connected client.</para>
 <para>&lt; Initialize Wi-Fi in access point and station mode.</para>
 <para>&lt; Start the TCP server task.</para>
         </inbodydescription>
-        <location file="include/TcpServer.h" line="103" column="6" bodyfile="src/TcpServer.c" bodystart="239" bodyend="244" declfile="include/TcpServer.h" declline="103" declcolumn="6"/>
+        <location file="include/TcpServer.h" line="123" column="6" bodyfile="src/TcpServer.c" bodystart="371" bodyend="378" declfile="include/TcpServer.h" declline="123" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -506,9 +547,13 @@ Receives data from a connected client.</para>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_tcp_server_8h_1a00e67904809f7a47e29ca050bcabbae2" kindref="member">receive_data</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sock,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/>uint8_t*<sp/>timeout_counter,<sp/>uint8_t<sp/>max_timeout);</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_tcp_server_8h_1a13ddbecdfd3a974bad6c7ff356cb4674" kindref="member">Tcp_Init</ref>();</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDE_TCPSERVER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_tcp_server_8h_1a71663496e793fd4869a37af2eaeb9dfb" kindref="member">Create_Server</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pvParameter);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_tcp_server_8h_1af537437f191b86077cd5ae57370572b1" kindref="member">ConvertToJson</ref>(<ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/>*dbc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*jsonString);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_tcp_server_8h_1a13ddbecdfd3a974bad6c7ff356cb4674" kindref="member">Tcp_Init</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDE_TCPSERVER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="include/TcpServer.h"/>
   </compounddef>

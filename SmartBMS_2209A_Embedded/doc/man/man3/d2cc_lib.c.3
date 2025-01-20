@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-src/d2cc_lib.c
+src/d2cc_lib.c \- Source file for the D2CC library\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -15,35 +16,196 @@ src/d2cc_lib.c
 .ti -1c
 .RI "void \fBD2cc_Lib_Init\fP (\fBDbcStruct\fP *dbc)"
 .br
-.ti -1c
-.RI "void \fBReadParse\fP (uint8_t *rx_data, uint32_t id, \fBDbcStruct\fP *dbc)"
-.br
+.RI "Initializes the \fBDbcStruct\fP with values from the parsed DBC file\&. "
 .ti -1c
 .RI "void \fBCreateTable_Battery_Messages\fP (\fBDbcStruct\fP *dbc)"
 .br
+.RI "Reads and parses CAN data into the \fBDbcStruct\fP\&. "
 .ti -1c
 .RI "void \fBCreateTable_Battery_Temperatures\fP (\fBDbcStruct\fP *dbc)"
 .br
+.RI "Creates the signal table for the specified CAN message\&. "
 .ti -1c
-.RI "void \fBCreateTable_Battery_Voltages\fP (\fBDbcStruct\fP *dbc)"
+.RI "void \fBCreateTable_Battery_Voltages_1\fP (\fBDbcStruct\fP *dbc)"
 .br
+.RI "Creates the signal table for the specified CAN message\&. "
+.ti -1c
+.RI "void \fBCreateTable_Battery_Voltages_2\fP (\fBDbcStruct\fP *dbc)"
+.br
+.RI "Creates the signal table for the specified CAN message\&. "
 .ti -1c
 .RI "void \fBCreateTable_Can_Main\fP (\fBDbcStruct\fP *dbc)"
 .br
+.RI "Creates the signal table for the specified CAN message\&. "
+.ti -1c
+.RI "uint32_t \fBPHYS_TO_RAW\fP (int phys_value, \fBPhys_Value_t\fP *phys_struct)"
+.br
+.RI "Converts a physical value to a raw CAN signal value\&. "
+.ti -1c
+.RI "uint32_t \fBRAW_TO_PHYS\fP (int raw_value, \fBPhys_Value_t\fP *phys_struct)"
+.br
+.RI "Converts a raw CAN signal value to a physical value\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Source file for the D2CC library\&. 
+
+
+.PP
+\fBDate\fP
+.RS 4
+2025-01-19 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+hakimmc 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+https://www.linkedin.com/in/abdulhakim-calgin/ 
+.RE
+.PP
+
 .SH "Function Documentation"
 .PP 
 .SS "void CreateTable_Battery_Messages (\fBDbcStruct\fP * dbc)"
 
+.PP
+Reads and parses CAN data into the \fBDbcStruct\fP\&. Creates the signal table for the specified CAN message\&.
+
+.PP
+This function is used to read CAN data and store it in the \fBDbcStruct\fP\&. It parses the data and converts physical values to raw CAN signal values based on the scaling factors and offsets defined in the \fBDbcStruct\fP\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIrx_data\fP Pointer to the received CAN data to be parsed\&. 
+.br
+\fIid\fP CAN message ID for identifying which message to parse\&. 
+.br
+\fIdbc\fP Pointer to the \fBDbcStruct\fP where parsed data will be stored\&.
+.RE
+.PP
+Creates the signal table for a specified CAN message in the \fBDbcStruct\fP\&.
+
+.PP
+This function initializes the signal table for a specific message within the \fBDbcStruct\fP\&. Each signal is set to 0 initially, preparing it for further use\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP containing the CAN message and signals\&. 
+.RE
+.PP
+
 .SS "void CreateTable_Battery_Temperatures (\fBDbcStruct\fP * dbc)"
 
-.SS "void CreateTable_Battery_Voltages (\fBDbcStruct\fP * dbc)"
+.PP
+Creates the signal table for the specified CAN message\&. This function initializes the signal table for the given CAN message\&. It organizes and prepares the signals in the message to be ready for processing or encoding\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance that contains the CAN message\&. 
+.RE
+.PP
+
+.SS "void CreateTable_Battery_Voltages_1 (\fBDbcStruct\fP * dbc)"
+
+.PP
+Creates the signal table for the specified CAN message\&. This function initializes the signal table for the given CAN message\&. It organizes and prepares the signals in the message to be ready for processing or encoding\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance that contains the CAN message\&. 
+.RE
+.PP
+
+.SS "void CreateTable_Battery_Voltages_2 (\fBDbcStruct\fP * dbc)"
+
+.PP
+Creates the signal table for the specified CAN message\&. This function initializes the signal table for the given CAN message\&. It organizes and prepares the signals in the message to be ready for processing or encoding\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance that contains the CAN message\&. 
+.RE
+.PP
 
 .SS "void CreateTable_Can_Main (\fBDbcStruct\fP * dbc)"
 
+.PP
+Creates the signal table for the specified CAN message\&. This function initializes the signal table for the given CAN message\&. It organizes and prepares the signals in the message to be ready for processing or encoding\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance that contains the CAN message\&. 
+.RE
+.PP
+
 .SS "void D2cc_Lib_Init (\fBDbcStruct\fP * dbc)"
 
-.SS "void ReadParse (uint8_t * rx_data, uint32_t id, \fBDbcStruct\fP * dbc)"
+.PP
+Initializes the \fBDbcStruct\fP with values from the parsed DBC file\&. Initializes the \fBDbcStruct\fP for CAN message processing\&.
+
+.PP
+This function initializes the necessary fields in the \fBDbcStruct\fP based on the provided DBC messages\&. The signals' physical factors and offsets are set accordingly\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP Pointer to the \fBDbcStruct\fP instance to be initialized\&. 
+.RE
+.PP
+
+.SS "uint32_t PHYS_TO_RAW (int phys_value, \fBPhys_Value_t\fP * phys_struct)"
+
+.PP
+Converts a physical value to a raw CAN signal value\&. Converts a physical value to its corresponding raw CAN value\&.
+
+.PP
+This function converts a physical value (e\&.g\&., temperature) into a raw CAN signal value based on the scaling factor and offset stored in the \fBPhys_Value_t\fP structure\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIphys_value\fP The physical value to convert\&. 
+.br
+\fIphys_struct\fP Pointer to the \fBPhys_Value_t\fP structure containing scaling factor and offset\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding raw CAN signal value\&. 
+.RE
+.PP
+
+.SS "uint32_t RAW_TO_PHYS (int raw_value, \fBPhys_Value_t\fP * phys_struct)"
+
+.PP
+Converts a raw CAN signal value to a physical value\&. Converts a raw CAN value to its corresponding physical value\&.
+
+.PP
+This function converts a raw CAN signal value to its corresponding physical value based on the scaling factor and offset stored in the \fBPhys_Value_t\fP structure\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIraw_value\fP The raw CAN signal value to convert\&. 
+.br
+\fIphys_struct\fP Pointer to the \fBPhys_Value_t\fP structure containing scaling factor and offset\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding physical value\&. 
+.RE
+.PP
 
 .SH "Author"
 .PP 

@@ -43,6 +43,10 @@
 
 <para>Receives data from a connected client. </para>
 </listitem>
+            <listitem><para>void <link linkend="__tcp_server_8h_1af537437f191b86077cd5ae57370572b1">ConvertToJson</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc, char *jsonString)</para>
+
+<para>Converter for Dbc values to JSON. </para>
+</listitem>
             <listitem><para>void <link linkend="__tcp_server_8h_1a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</link> ()</para>
 
 <para>Initializes the TCP server. </para>
@@ -105,6 +109,44 @@
 </section>
 <section>
 <title>Function Documentation</title>
+<anchor xml:id="__tcp_server_8h_1af537437f191b86077cd5ae57370572b1"/><section>
+    <title>ConvertToJson()</title>
+<indexterm><primary>ConvertToJson</primary><secondary>TcpServer.h</secondary></indexterm>
+<indexterm><primary>TcpServer.h</primary><secondary>ConvertToJson</secondary></indexterm>
+<para><computeroutput>void ConvertToJson (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc, char * jsonString)</computeroutput></para><para>
+
+<para>Converter for Dbc values to JSON. </para>
+</para>
+
+<para>jSON Converter.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>dbc</entry><entry>
+<para>dbcstruct pointer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>jsonString</entry><entry>
+<para>json string.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Converter for Dbc values to JSON. </para>
+</section>
 <anchor xml:id="__tcp_server_8h_1a71663496e793fd4869a37af2eaeb9dfb"/><section>
     <title>Create_Server()</title>
 <indexterm><primary>Create_Server</primary><secondary>TcpServer.h</secondary></indexterm>

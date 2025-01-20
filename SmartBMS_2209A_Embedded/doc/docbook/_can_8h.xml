@@ -22,22 +22,6 @@
 
 <para>Tag for logging CAN-related messages. </para>
 </listitem>
-            <listitem><para>#define <link linkend="__can_8h_1afd4f58c1a509cc8343774f0ca05c9061">Can_Main_ID</link>&#160;&#160;&#160;0x100</para>
-
-<para>CAN ID for main messages. </para>
-</listitem>
-            <listitem><para>#define <link linkend="__can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4">Battery_Messages_ID</link>&#160;&#160;&#160;0x101</para>
-
-<para>CAN ID for battery messages. </para>
-</listitem>
-            <listitem><para>#define <link linkend="__can_8h_1a1e870e11e6fd939606c6fff3b122d4fd">Can_Battery_Voltages_ID</link>&#160;&#160;&#160;0x102</para>
-
-<para>CAN ID for battery voltage messages. </para>
-</listitem>
-            <listitem><para>#define <link linkend="__can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e">Can_Battery_Temperatures_ID</link>&#160;&#160;&#160;0x103</para>
-
-<para>CAN ID for battery temperature messages. </para>
-</listitem>
             <listitem><para>#define <link linkend="__can_8h_1ac5d0198b7447cc2c29044ccd56dd9443">CAN_DELAY</link>&#160;&#160;&#160;250</para>
 
 <para>Delay in milliseconds for CAN tasks. </para>
@@ -76,33 +60,6 @@
 </section>
 <section>
 <title>Macro Definition Documentation</title>
-<anchor xml:id="__can_8h_1ab46f9642beab36ac6b8624c11f4f5ed4"/><section>
-    <title>Battery_Messages_ID</title>
-<indexterm><primary>Battery_Messages_ID</primary><secondary>Can.h</secondary></indexterm>
-<indexterm><primary>Can.h</primary><secondary>Battery_Messages_ID</secondary></indexterm>
-<para><computeroutput>#define Battery_Messages_ID&#160;&#160;&#160;0x101</computeroutput></para><para>
-
-<para>CAN ID for battery messages. </para>
-</para>
-</section>
-<anchor xml:id="__can_8h_1a22ff50c4de22c7bfc6240a2b7a478e3e"/><section>
-    <title>Can_Battery_Temperatures_ID</title>
-<indexterm><primary>Can_Battery_Temperatures_ID</primary><secondary>Can.h</secondary></indexterm>
-<indexterm><primary>Can.h</primary><secondary>Can_Battery_Temperatures_ID</secondary></indexterm>
-<para><computeroutput>#define Can_Battery_Temperatures_ID&#160;&#160;&#160;0x103</computeroutput></para><para>
-
-<para>CAN ID for battery temperature messages. </para>
-</para>
-</section>
-<anchor xml:id="__can_8h_1a1e870e11e6fd939606c6fff3b122d4fd"/><section>
-    <title>Can_Battery_Voltages_ID</title>
-<indexterm><primary>Can_Battery_Voltages_ID</primary><secondary>Can.h</secondary></indexterm>
-<indexterm><primary>Can.h</primary><secondary>Can_Battery_Voltages_ID</secondary></indexterm>
-<para><computeroutput>#define Can_Battery_Voltages_ID&#160;&#160;&#160;0x102</computeroutput></para><para>
-
-<para>CAN ID for battery voltage messages. </para>
-</para>
-</section>
 <anchor xml:id="__can_8h_1ac5d0198b7447cc2c29044ccd56dd9443"/><section>
     <title>CAN_DELAY</title>
 <indexterm><primary>CAN_DELAY</primary><secondary>Can.h</secondary></indexterm>
@@ -110,15 +67,6 @@
 <para><computeroutput>#define CAN_DELAY&#160;&#160;&#160;250</computeroutput></para><para>
 
 <para>Delay in milliseconds for CAN tasks. </para>
-</para>
-</section>
-<anchor xml:id="__can_8h_1afd4f58c1a509cc8343774f0ca05c9061"/><section>
-    <title>Can_Main_ID</title>
-<indexterm><primary>Can_Main_ID</primary><secondary>Can.h</secondary></indexterm>
-<indexterm><primary>Can.h</primary><secondary>Can_Main_ID</secondary></indexterm>
-<para><computeroutput>#define Can_Main_ID&#160;&#160;&#160;0x100</computeroutput></para><para>
-
-<para>CAN ID for main messages. </para>
 </para>
 </section>
 <anchor xml:id="__can_8h_1a4791c142b857f44449cc8ad8d22ef045"/><section>

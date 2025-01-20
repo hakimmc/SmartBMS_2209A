@@ -14,6 +14,7 @@
 
 /** @brief Structure to hold CAN message data. */
 DbcStruct maindbc_struct;
+extern DbcStruct *struct_of_comm;
 
 /**
  * @brief Application entry point.
@@ -25,6 +26,16 @@ void app_main()
 {
     printf("\nhelloworld\n"); /**< Print "helloworld" for testing. */
     
+    // Initialize CAN messages
+    struct_of_comm = &maindbc_struct;
+
+    D2cc_Lib_Init(struct_of_comm);
+    CreateTable_Can_Main(struct_of_comm);
+    CreateTable_Battery_Messages(struct_of_comm);
+    CreateTable_Battery_Voltages_1(struct_of_comm);
+    CreateTable_Battery_Voltages_2(struct_of_comm);
+    CreateTable_Battery_Temperatures(struct_of_comm);
+
     // Initialize NVS for persistent storage
     nvs_flash_init();  
     

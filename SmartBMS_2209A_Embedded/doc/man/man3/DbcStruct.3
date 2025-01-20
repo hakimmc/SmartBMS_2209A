@@ -15,17 +15,43 @@ DbcStruct
 .RI "struct {"
 .br
 .ti -1c
-.RI "   uint32_t \fBID\fP"
-.br
-.ti -1c
-.RI "   uint8_t \fBDLC\fP"
-.br
-.ti -1c
 .RI "   union {"
 .br
 .ti -1c
 .RI "      struct {"
 .br
+.ti -1c
+.RI "         \fBBatteryChemistry_enum\fP \fBBatteryChemistry\fP:4"
+.br
+.RI "Signal BatteryChemistry enum type\&. "
+.ti -1c
+.RI "         uint8_t \fBBattery_Count\fP:4"
+.br
+.RI "Battery_Count signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryBalance_MaxVoltage\fP:8"
+.br
+.RI "BatteryBalance_MaxVoltage signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryBalance_MinVoltage\fP:8"
+.br
+.RI "BatteryBalance_MinVoltage signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryBalance_MaxTemp\fP:8"
+.br
+.RI "BatteryBalance_MaxTemp signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryBalance_MinTemp\fP:8"
+.br
+.RI "BatteryBalance_MinTemp signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatterySOC\fP:8"
+.br
+.RI "BatterySOC signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint16_t \fBOCV_Voltages\fP:16"
+.br
+.RI "OCV_Voltages signal with 16-bit length\&. "
 .ti -1c
 .RI "      } \fBSignal\fP"
 .br
@@ -36,16 +62,51 @@ DbcStruct
 .RI "   } "
 .br
 .ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBattery_Count\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryBalance_MaxVoltage\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryBalance_MinVoltage\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryBalance_MinTemp\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
 .RI "} \fBBattery_Messages\fP"
 .br
+.RI "CAN message structure for message Battery_Messages\&. "
 .ti -1c
 .RI "struct {"
-.br
-.ti -1c
-.RI "   uint32_t \fBID\fP"
-.br
-.ti -1c
-.RI "   uint8_t \fBDLC\fP"
 .br
 .ti -1c
 .RI "   union {"
@@ -53,6 +114,38 @@ DbcStruct
 .ti -1c
 .RI "      struct {"
 .br
+.ti -1c
+.RI "         uint8_t \fBBattery_Temp_AUX0\fP:8"
+.br
+.RI "Battery_Temp_AUX0 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBattery_Temp_AUX1\fP:8"
+.br
+.RI "Battery_Temp_AUX1 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBattery_Temp_AUX2\fP:8"
+.br
+.RI "Battery_Temp_AUX2 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBattery_Temp_AUX3\fP:8"
+.br
+.RI "Battery_Temp_AUX3 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBattery_Temp_AUX4\fP:8"
+.br
+.RI "Battery_Temp_AUX4 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBattery_Temp_AUX5\fP:8"
+.br
+.RI "Battery_Temp_AUX5 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBattery_Temp_AUX6\fP:8"
+.br
+.RI "Battery_Temp_AUX6 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBattery_Temp_AUX7\fP:8"
+.br
+.RI "Battery_Temp_AUX7 signal with 8-bit length\&. "
 .ti -1c
 .RI "      } \fBSignal\fP"
 .br
@@ -65,14 +158,9 @@ DbcStruct
 .ti -1c
 .RI "} \fBBattery_Temperatures\fP"
 .br
+.RI "CAN message structure for message Battery_Temperatures\&. "
 .ti -1c
 .RI "struct {"
-.br
-.ti -1c
-.RI "   uint32_t \fBID\fP"
-.br
-.ti -1c
-.RI "   uint8_t \fBDLC\fP"
 .br
 .ti -1c
 .RI "   union {"
@@ -80,6 +168,38 @@ DbcStruct
 .ti -1c
 .RI "      struct {"
 .br
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_1\fP:8"
+.br
+.RI "BatteryVoltage_1 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_2\fP:8"
+.br
+.RI "BatteryVoltage_2 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_3\fP:8"
+.br
+.RI "BatteryVoltage_3 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_4\fP:8"
+.br
+.RI "BatteryVoltage_4 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_5\fP:8"
+.br
+.RI "BatteryVoltage_5 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_6\fP:8"
+.br
+.RI "BatteryVoltage_6 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_7\fP:8"
+.br
+.RI "BatteryVoltage_7 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_8\fP:8"
+.br
+.RI "BatteryVoltage_8 signal with 8-bit length\&. "
 .ti -1c
 .RI "      } \fBSignal\fP"
 .br
@@ -90,16 +210,225 @@ DbcStruct
 .RI "   } "
 .br
 .ti -1c
-.RI "} \fBBattery_Voltages\fP"
+.RI "   struct {"
 .br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_1\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_2\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_3\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_4\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_5\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_6\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_7\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_8\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "} \fBBattery_Voltages_1\fP"
+.br
+.RI "CAN message structure for message Battery_Voltages_1\&. "
 .ti -1c
 .RI "struct {"
 .br
 .ti -1c
-.RI "   uint32_t \fBID\fP"
+.RI "   union {"
 .br
 .ti -1c
-.RI "   uint8_t \fBDLC\fP"
+.RI "      struct {"
+.br
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_9\fP:8"
+.br
+.RI "BatteryVoltage_9 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_10\fP:8"
+.br
+.RI "BatteryVoltage_10 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_11\fP:8"
+.br
+.RI "BatteryVoltage_11 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_12\fP:8"
+.br
+.RI "BatteryVoltage_12 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_13\fP:8"
+.br
+.RI "BatteryVoltage_13 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_14\fP:8"
+.br
+.RI "BatteryVoltage_14 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_15\fP:8"
+.br
+.RI "BatteryVoltage_15 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBBatteryVoltage_16\fP:8"
+.br
+.RI "BatteryVoltage_16 signal with 8-bit length\&. "
+.ti -1c
+.RI "      } \fBSignal\fP"
+.br
+.ti -1c
+.RI "      uint8_t \fBData\fP [8]"
+.br
+.ti -1c
+.RI "   } "
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_9\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_10\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_11\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_12\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_13\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_14\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_15\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBPhys_Value_t\fP \fBPhys_Value\fP"
+.br
+.ti -1c
+.RI "   } \fBBatteryVoltage_16\fP"
+.br
+.RI "Factor for scaling the raw signal value\&. "
+.ti -1c
+.RI "} \fBBattery_Voltages_2\fP"
+.br
+.RI "CAN message structure for message Battery_Voltages_2\&. "
+.ti -1c
+.RI "struct {"
 .br
 .ti -1c
 .RI "   union {"
@@ -110,48 +439,55 @@ DbcStruct
 .ti -1c
 .RI "         uint8_t \fBAliveCounter\fP:7"
 .br
+.RI "AliveCounter signal with 8-bit length\&. "
 .ti -1c
-.RI "         \fBBatteryChemistry_enum\fP \fBBatteryChemistry\fP:1"
+.RI "         \fBWiFi_AP_Status_enum\fP \fBWiFi_AP_Status\fP:1"
 .br
-.ti -1c
-.RI "         uint8_t \fBBatteryBalance_MaxVoltage\fP:8"
-.br
-.ti -1c
-.RI "         uint8_t \fBBatteryBalance_MinVoltage\fP:8"
-.br
-.ti -1c
-.RI "         uint8_t \fBBatteryBalance_MaxTemp\fP:8"
-.br
-.ti -1c
-.RI "         uint8_t \fBBatteryBalance_MinTemp\fP:8"
-.br
-.ti -1c
-.RI "         uint8_t \fBSwVersionMajor\fP:2"
-.br
-.ti -1c
-.RI "         uint8_t \fBSwVersionMinor\fP:2"
-.br
-.ti -1c
-.RI "         uint8_t \fBSwVersionBugfix\fP:4"
-.br
-.ti -1c
-.RI "         \fBCanBusEnable_enum\fP \fBCanBusEnable\fP:1"
-.br
-.ti -1c
-.RI "         \fBWiFiEnable_enum\fP \fBWiFiEnable\fP:1"
-.br
-.ti -1c
-.RI "         \fBTcpEnable_enum\fP \fBTcpEnable\fP:2"
-.br
-.ti -1c
-.RI "         \fBVpnEnable_enum\fP \fBVpnEnable\fP:1"
-.br
-.ti -1c
-.RI "         \fBWiFi_AP_Status_enum\fP \fBWiFi_AP_Status\fP:2"
-.br
+.RI "Signal WiFi_AP_Status enum type\&. "
 .ti -1c
 .RI "         uint8_t \fBTcpClientCount\fP:8"
 .br
+.RI "TcpClientCount signal with 8-bit length\&. "
+.ti -1c
+.RI "         \fBCanBusEnable_enum\fP \fBCanBusEnable\fP:1"
+.br
+.RI "Signal CanBusEnable enum type\&. "
+.ti -1c
+.RI "         \fBTcpEnable_enum\fP \fBTcpEnable\fP:2"
+.br
+.RI "Signal TcpEnable enum type\&. "
+.ti -1c
+.RI "         \fBVpnEnable_enum\fP \fBVpnEnable\fP:2"
+.br
+.RI "Signal VpnEnable enum type\&. "
+.ti -1c
+.RI "         \fBWiFi_ST_Status_enum\fP \fBWiFi_ST_Status\fP:2"
+.br
+.RI "Signal WiFi_ST_Status enum type\&. "
+.ti -1c
+.RI "         uint8_t \fBReserved_1\fP:1"
+.br
+.RI "Reserved_1 signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint16_t \fBWiFi_AP_IP_Adrress\fP:16"
+.br
+.RI "WiFi_AP_IP_Adrress signal with 16-bit length\&. "
+.ti -1c
+.RI "         uint16_t \fBWiFi_ST_IP_Address\fP:16"
+.br
+.RI "WiFi_ST_IP_Address signal with 16-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBSwVersionMajor\fP:2"
+.br
+.RI "SwVersionMajor signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBSwVersionMinor\fP:2"
+.br
+.RI "SwVersionMinor signal with 8-bit length\&. "
+.ti -1c
+.RI "         uint8_t \fBSwVersionBugfix\fP:4"
+.br
+.RI "SwVersionBugfix signal with 8-bit length\&. "
 .ti -1c
 .RI "      } \fBSignal\fP"
 .br
@@ -162,117 +498,257 @@ DbcStruct
 .RI "   } "
 .br
 .ti -1c
-.RI "   struct {"
-.br
-.ti -1c
-.RI "      struct {"
-.br
-.ti -1c
-.RI "         float \fBfactor\fP"
-.br
-.ti -1c
-.RI "         int \fBoffset\fP"
-.br
-.ti -1c
-.RI "         float \fBvalue\fP"
-.br
-.ti -1c
-.RI "      } \fBPhys_Value\fP"
-.br
-.ti -1c
-.RI "   } \fBBatteryBalance_MaxVoltage\fP"
-.br
-.ti -1c
-.RI "   struct {"
-.br
-.ti -1c
-.RI "      struct {"
-.br
-.ti -1c
-.RI "         float \fBfactor\fP"
-.br
-.ti -1c
-.RI "         int \fBoffset\fP"
-.br
-.ti -1c
-.RI "         float \fBvalue\fP"
-.br
-.ti -1c
-.RI "      } \fBPhys_Value\fP"
-.br
-.ti -1c
-.RI "   } \fBBatteryBalance_MinVoltage\fP"
-.br
-.ti -1c
-.RI "   struct {"
-.br
-.ti -1c
-.RI "      struct {"
-.br
-.ti -1c
-.RI "         float \fBfactor\fP"
-.br
-.ti -1c
-.RI "         int \fBoffset\fP"
-.br
-.ti -1c
-.RI "         float \fBvalue\fP"
-.br
-.ti -1c
-.RI "      } \fBPhys_Value\fP"
-.br
-.ti -1c
-.RI "   } \fBBatteryBalance_MinTemp\fP"
-.br
-.ti -1c
 .RI "} \fBCan_Main\fP"
 .br
+.RI "CAN message structure for message Can_Main\&. "
 .in -1c
 .SH "Member Data Documentation"
 .PP 
 .SS "uint8_t DbcStruct::AliveCounter"
 
+.PP
+AliveCounter signal with 8-bit length\&. 
+.SS "uint8_t DbcStruct::Battery_Count"
+
+.PP
+Battery_Count signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::Battery_Count"
+
+.PP
+Factor for scaling the raw signal value\&. 
 .SS "struct  { \&.\&.\&. }  DbcStruct::Battery_Messages"
 
+.PP
+CAN message structure for message Battery_Messages\&. This structure represents the CAN message, including the signals and their values\&. 
+.SS "uint8_t DbcStruct::Battery_Temp_AUX0"
+
+.PP
+Battery_Temp_AUX0 signal with 8-bit length\&. 
+.SS "uint8_t DbcStruct::Battery_Temp_AUX1"
+
+.PP
+Battery_Temp_AUX1 signal with 8-bit length\&. 
+.SS "uint8_t DbcStruct::Battery_Temp_AUX2"
+
+.PP
+Battery_Temp_AUX2 signal with 8-bit length\&. 
+.SS "uint8_t DbcStruct::Battery_Temp_AUX3"
+
+.PP
+Battery_Temp_AUX3 signal with 8-bit length\&. 
+.SS "uint8_t DbcStruct::Battery_Temp_AUX4"
+
+.PP
+Battery_Temp_AUX4 signal with 8-bit length\&. 
+.SS "uint8_t DbcStruct::Battery_Temp_AUX5"
+
+.PP
+Battery_Temp_AUX5 signal with 8-bit length\&. 
+.SS "uint8_t DbcStruct::Battery_Temp_AUX6"
+
+.PP
+Battery_Temp_AUX6 signal with 8-bit length\&. 
+.SS "uint8_t DbcStruct::Battery_Temp_AUX7"
+
+.PP
+Battery_Temp_AUX7 signal with 8-bit length\&. 
 .SS "struct  { \&.\&.\&. }  DbcStruct::Battery_Temperatures"
 
-.SS "struct  { \&.\&.\&. }  DbcStruct::Battery_Voltages"
+.PP
+CAN message structure for message Battery_Temperatures\&. This structure represents the CAN message, including the signals and their values\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::Battery_Voltages_1"
 
+.PP
+CAN message structure for message Battery_Voltages_1\&. This structure represents the CAN message, including the signals and their values\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::Battery_Voltages_2"
+
+.PP
+CAN message structure for message Battery_Voltages_2\&. This structure represents the CAN message, including the signals and their values\&. 
 .SS "uint8_t DbcStruct::BatteryBalance_MaxTemp"
 
+.PP
+BatteryBalance_MaxTemp signal with 8-bit length\&. 
 .SS "uint8_t DbcStruct::BatteryBalance_MaxVoltage"
 
+.PP
+BatteryBalance_MaxVoltage signal with 8-bit length\&. 
 .SS "struct  { \&.\&.\&. }  DbcStruct::BatteryBalance_MaxVoltage"
 
+.PP
+Factor for scaling the raw signal value\&. 
 .SS "uint8_t DbcStruct::BatteryBalance_MinTemp"
 
+.PP
+BatteryBalance_MinTemp signal with 8-bit length\&. 
 .SS "struct  { \&.\&.\&. }  DbcStruct::BatteryBalance_MinTemp"
 
+.PP
+Factor for scaling the raw signal value\&. 
 .SS "uint8_t DbcStruct::BatteryBalance_MinVoltage"
 
+.PP
+BatteryBalance_MinVoltage signal with 8-bit length\&. 
 .SS "struct  { \&.\&.\&. }  DbcStruct::BatteryBalance_MinVoltage"
 
+.PP
+Factor for scaling the raw signal value\&. 
 .SS "\fBBatteryChemistry_enum\fP DbcStruct::BatteryChemistry"
 
+.PP
+Signal BatteryChemistry enum type\&. 
+.SS "uint8_t DbcStruct::BatterySOC"
+
+.PP
+BatterySOC signal with 8-bit length\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_1"
+
+.PP
+BatteryVoltage_1 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_1"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_10"
+
+.PP
+BatteryVoltage_10 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_10"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_11"
+
+.PP
+BatteryVoltage_11 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_11"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_12"
+
+.PP
+BatteryVoltage_12 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_12"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_13"
+
+.PP
+BatteryVoltage_13 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_13"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_14"
+
+.PP
+BatteryVoltage_14 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_14"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_15"
+
+.PP
+BatteryVoltage_15 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_15"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_16"
+
+.PP
+BatteryVoltage_16 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_16"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_2"
+
+.PP
+BatteryVoltage_2 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_2"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_3"
+
+.PP
+BatteryVoltage_3 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_3"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_4"
+
+.PP
+BatteryVoltage_4 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_4"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_5"
+
+.PP
+BatteryVoltage_5 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_5"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_6"
+
+.PP
+BatteryVoltage_6 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_6"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_7"
+
+.PP
+BatteryVoltage_7 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_7"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_8"
+
+.PP
+BatteryVoltage_8 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_8"
+
+.PP
+Factor for scaling the raw signal value\&. 
+.SS "uint8_t DbcStruct::BatteryVoltage_9"
+
+.PP
+BatteryVoltage_9 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::BatteryVoltage_9"
+
+.PP
+Factor for scaling the raw signal value\&. 
 .SS "struct  { \&.\&.\&. }  DbcStruct::Can_Main"
 
+.PP
+CAN message structure for message Can_Main\&. This structure represents the CAN message, including the signals and their values\&. 
 .SS "\fBCanBusEnable_enum\fP DbcStruct::CanBusEnable"
 
+.PP
+Signal CanBusEnable enum type\&. 
 .SS "uint8_t DbcStruct::Data[8]"
 
-.SS "uint8_t DbcStruct::DLC"
+.SS "uint16_t DbcStruct::OCV_Voltages"
 
-.SS "float DbcStruct::factor"
+.PP
+OCV_Voltages signal with 16-bit length\&. 
+.SS "\fBPhys_Value_t\fP DbcStruct::Phys_Value"
 
-.SS "uint32_t DbcStruct::ID"
+.SS "uint8_t DbcStruct::Reserved_1"
 
-.SS "int DbcStruct::offset"
-
-.SS "struct  { \&.\&.\&. }  DbcStruct::Phys_Value"
-
-.SS "struct  { \&.\&.\&. }  DbcStruct::Phys_Value"
-
-.SS "struct  { \&.\&.\&. }  DbcStruct::Phys_Value"
+.PP
+Reserved_1 signal with 8-bit length\&. 
+.SS "struct  { \&.\&.\&. }  DbcStruct::Signal"
 
 .SS "struct  { \&.\&.\&. }  DbcStruct::Signal"
 
@@ -284,22 +760,44 @@ DbcStruct
 
 .SS "uint8_t DbcStruct::SwVersionBugfix"
 
+.PP
+SwVersionBugfix signal with 8-bit length\&. 
 .SS "uint8_t DbcStruct::SwVersionMajor"
 
+.PP
+SwVersionMajor signal with 8-bit length\&. 
 .SS "uint8_t DbcStruct::SwVersionMinor"
 
+.PP
+SwVersionMinor signal with 8-bit length\&. 
 .SS "uint8_t DbcStruct::TcpClientCount"
 
+.PP
+TcpClientCount signal with 8-bit length\&. 
 .SS "\fBTcpEnable_enum\fP DbcStruct::TcpEnable"
 
-.SS "float DbcStruct::value"
-
+.PP
+Signal TcpEnable enum type\&. 
 .SS "\fBVpnEnable_enum\fP DbcStruct::VpnEnable"
 
+.PP
+Signal VpnEnable enum type\&. 
+.SS "uint16_t DbcStruct::WiFi_AP_IP_Adrress"
+
+.PP
+WiFi_AP_IP_Adrress signal with 16-bit length\&. 
 .SS "\fBWiFi_AP_Status_enum\fP DbcStruct::WiFi_AP_Status"
 
-.SS "\fBWiFiEnable_enum\fP DbcStruct::WiFiEnable"
+.PP
+Signal WiFi_AP_Status enum type\&. 
+.SS "uint16_t DbcStruct::WiFi_ST_IP_Address"
 
+.PP
+WiFi_ST_IP_Address signal with 16-bit length\&. 
+.SS "\fBWiFi_ST_Status_enum\fP DbcStruct::WiFi_ST_Status"
+
+.PP
+Signal WiFi_ST_Status enum type\&. 
 
 .SH "Author"
 .PP 

@@ -1,5 +1,5 @@
 \doxysection{src/\+Tcp\+Server.c File Reference}
-\label{_tcp_server_8c}\index{src/TcpServer.c@{src/TcpServer.c}}
+\hypertarget{_tcp_server_8c}{}\label{_tcp_server_8c}\index{src/TcpServer.c@{src/TcpServer.c}}
 
 
 TCP server implementation to handle incoming client connections, authenticate, and exchange data.  
@@ -7,30 +7,35 @@ TCP server implementation to handle incoming client connections, authenticate, a
 
 {\ttfamily \#include "{}Tcp\+Server.\+h"{}}\newline
 {\ttfamily \#include "{}Wifi.\+h"{}}\newline
+{\ttfamily \#include "{}d2cc\+\_\+lib.\+h"{}}\newline
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ SERVER\+\_\+\+PORT}~8080
-\item 
-\#define \textbf{ TCP\+\_\+\+TAG}~"{}TCP\+\_\+\+SERVER"{}
+\#define \mbox{\hyperlink{_tcp_server_8c_aef135ff19068a2ab235f21f2c833969b}{TCP\+\_\+\+TAG}}~"{}TCP\+\_\+\+SERVER"{}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ Create\+\_\+\+Server} (void $\ast$pv\+Parameter)
+void \mbox{\hyperlink{_tcp_server_8c_a71663496e793fd4869a37af2eaeb9dfb}{Create\+\_\+\+Server}} (void \texorpdfstring{$\ast$}{*}pv\+Parameter)
 \begin{DoxyCompactList}\small\item\em Creates and starts a TCP server to listen for client connections. \end{DoxyCompactList}\item 
-void \textbf{ Handle\+\_\+\+Client} (void $\ast$args)
+void \mbox{\hyperlink{_tcp_server_8c_a423bc60f42ad6bf912e07cd5320b1948}{Handle\+\_\+\+Client}} (void \texorpdfstring{$\ast$}{*}args)
 \begin{DoxyCompactList}\small\item\em Handles communication with a single client. \end{DoxyCompactList}\item 
-int \textbf{ receive\+\_\+data} (int sock, char $\ast$buffer, size\+\_\+t size, uint8\+\_\+t $\ast$timeout\+\_\+counter, uint8\+\_\+t max\+\_\+timeout)
+int \mbox{\hyperlink{_tcp_server_8c_a00e67904809f7a47e29ca050bcabbae2}{receive\+\_\+data}} (int sock, char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t size, uint8\+\_\+t \texorpdfstring{$\ast$}{*}timeout\+\_\+counter, uint8\+\_\+t max\+\_\+timeout)
 \begin{DoxyCompactList}\small\item\em Receives data from the client socket. \end{DoxyCompactList}\item 
-void \textbf{ Tcp\+\_\+\+Init} ()
+void \mbox{\hyperlink{_tcp_server_8c_af537437f191b86077cd5ae57370572b1}{Convert\+To\+Json}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc, char \texorpdfstring{$\ast$}{*}json\+String)
+\begin{DoxyCompactList}\small\item\em Convert to JSON function of Dbc Parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_tcp_server_8c_a13ddbecdfd3a974bad6c7ff356cb4674}{Tcp\+\_\+\+Init}} ()
 \begin{DoxyCompactList}\small\item\em Initializes the TCP server and starts listening for client connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-char $\ast$ \textbf{ GUI\+\_\+\+USER} = "{}root"{}
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \mbox{\hyperlink{_tcp_server_8c_adabf6670e12fa284be00ec7af178f57d}{maindbc\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em Structure to hold CAN message data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_tcp_server_8c_a9e7b00854cffece2f2025a20b30f4860}{struct\+\_\+of\+\_\+comm}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_tcp_server_8c_a19bd4a5dc2066779c571dc423ee2e5fc}{GUI\+\_\+\+USER}} = "{}root"{}
 \begin{DoxyCompactList}\small\item\em Username for GUI authentication. \end{DoxyCompactList}\item 
-char $\ast$ \textbf{ GUI\+\_\+\+PASS} = "{}otto"{}
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_tcp_server_8c_a35d706daa4dcd113099247f519235595}{GUI\+\_\+\+PASS}} = "{}otto"{}
 \begin{DoxyCompactList}\small\item\em Password for GUI authentication. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -46,26 +51,30 @@ hakimmc
 
 
 \doxysubsection{Macro Definition Documentation}
-\index{TcpServer.c@{TcpServer.c}!SERVER\_PORT@{SERVER\_PORT}}
-\index{SERVER\_PORT@{SERVER\_PORT}!TcpServer.c@{TcpServer.c}}
-\doxysubsubsection{SERVER\_PORT}
-{\footnotesize\ttfamily \label{_tcp_server_8c_ac42367fe5c999ec6650de83e9d72fe8c} 
-\#define SERVER\+\_\+\+PORT~8080}
-
-Port number for the TCP server \index{TcpServer.c@{TcpServer.c}!TCP\_TAG@{TCP\_TAG}}
+\Hypertarget{_tcp_server_8c_aef135ff19068a2ab235f21f2c833969b}\index{TcpServer.c@{TcpServer.c}!TCP\_TAG@{TCP\_TAG}}
 \index{TCP\_TAG@{TCP\_TAG}!TcpServer.c@{TcpServer.c}}
-\doxysubsubsection{TCP\_TAG}
+\doxysubsubsection{\texorpdfstring{TCP\_TAG}{TCP\_TAG}}
 {\footnotesize\ttfamily \label{_tcp_server_8c_aef135ff19068a2ab235f21f2c833969b} 
 \#define TCP\+\_\+\+TAG~"{}TCP\+\_\+\+SERVER"{}}
 
 Tag for logging 
 
 \doxysubsection{Function Documentation}
-\index{TcpServer.c@{TcpServer.c}!Create\_Server@{Create\_Server}}
+\Hypertarget{_tcp_server_8c_af537437f191b86077cd5ae57370572b1}\index{TcpServer.c@{TcpServer.c}!ConvertToJson@{ConvertToJson}}
+\index{ConvertToJson@{ConvertToJson}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{ConvertToJson()}{ConvertToJson()}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_af537437f191b86077cd5ae57370572b1} 
+void Convert\+To\+Json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{json\+String}{}\end{DoxyParamCaption})}
+
+
+
+Convert to JSON function of Dbc Parameters. 
+
+Converter for Dbc values to JSON. \Hypertarget{_tcp_server_8c_a71663496e793fd4869a37af2eaeb9dfb}\index{TcpServer.c@{TcpServer.c}!Create\_Server@{Create\_Server}}
 \index{Create\_Server@{Create\_Server}!TcpServer.c@{TcpServer.c}}
-\doxysubsubsection{Create\_Server()}
+\doxysubsubsection{\texorpdfstring{Create\_Server()}{Create\_Server()}}
 {\footnotesize\ttfamily \label{_tcp_server_8c_a71663496e793fd4869a37af2eaeb9dfb} 
-void Create\+\_\+\+Server (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameter}{}\end{DoxyParamCaption})}
+void Create\+\_\+\+Server (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameter}{}\end{DoxyParamCaption})}
 
 
 
@@ -80,11 +89,11 @@ This function sets up a TCP socket, binds it to a specified address and port, an
 {\em pv\+Parameter} & Unused parameter for Free\+RTOS task. \\
 \hline
 \end{DoxyParams}
-\index{TcpServer.c@{TcpServer.c}!Handle\_Client@{Handle\_Client}}
+\Hypertarget{_tcp_server_8c_a423bc60f42ad6bf912e07cd5320b1948}\index{TcpServer.c@{TcpServer.c}!Handle\_Client@{Handle\_Client}}
 \index{Handle\_Client@{Handle\_Client}!TcpServer.c@{TcpServer.c}}
-\doxysubsubsection{Handle\_Client()}
+\doxysubsubsection{\texorpdfstring{Handle\_Client()}{Handle\_Client()}}
 {\footnotesize\ttfamily \label{_tcp_server_8c_a423bc60f42ad6bf912e07cd5320b1948} 
-void Handle\+\_\+\+Client (\begin{DoxyParamCaption}\item[{void $\ast$}]{args}{}\end{DoxyParamCaption})}
+void Handle\+\_\+\+Client (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{args}{}\end{DoxyParamCaption})}
 
 
 
@@ -99,11 +108,11 @@ This function receives and processes commands from the client, authenticates the
 {\em args} & Socket descriptor for the client. \\
 \hline
 \end{DoxyParams}
-\index{TcpServer.c@{TcpServer.c}!receive\_data@{receive\_data}}
+\Hypertarget{_tcp_server_8c_a00e67904809f7a47e29ca050bcabbae2}\index{TcpServer.c@{TcpServer.c}!receive\_data@{receive\_data}}
 \index{receive\_data@{receive\_data}!TcpServer.c@{TcpServer.c}}
-\doxysubsubsection{receive\_data()}
+\doxysubsubsection{\texorpdfstring{receive\_data()}{receive\_data()}}
 {\footnotesize\ttfamily \label{_tcp_server_8c_a00e67904809f7a47e29ca050bcabbae2} 
-int receive\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{sock}{, }\item[{char $\ast$}]{buffer}{, }\item[{size\+\_\+t}]{size}{, }\item[{uint8\+\_\+t $\ast$}]{timeout\+\_\+counter}{, }\item[{uint8\+\_\+t}]{max\+\_\+timeout}{}\end{DoxyParamCaption})}
+int receive\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{sock}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{size}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{timeout\+\_\+counter}{, }\item[{uint8\+\_\+t}]{max\+\_\+timeout}{}\end{DoxyParamCaption})}
 
 
 
@@ -129,9 +138,9 @@ This function receives data from the client and handles timeouts. If no data is 
 \begin{DoxyReturn}{Returns}
 Length of received data, -\/1 if timeout occurs, or -\/2 if maximum timeouts reached. 
 \end{DoxyReturn}
-\index{TcpServer.c@{TcpServer.c}!Tcp\_Init@{Tcp\_Init}}
+\Hypertarget{_tcp_server_8c_a13ddbecdfd3a974bad6c7ff356cb4674}\index{TcpServer.c@{TcpServer.c}!Tcp\_Init@{Tcp\_Init}}
 \index{Tcp\_Init@{Tcp\_Init}!TcpServer.c@{TcpServer.c}}
-\doxysubsubsection{Tcp\_Init()}
+\doxysubsubsection{\texorpdfstring{Tcp\_Init()}{Tcp\_Init()}}
 {\footnotesize\ttfamily \label{_tcp_server_8c_a13ddbecdfd3a974bad6c7ff356cb4674} 
 void Tcp\+\_\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -139,28 +148,44 @@ void Tcp\+\_\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Initializes the TCP server and starts listening for client connections. 
 
-Initializes the TCP server. $<$ Initialize Wi-\/\+Fi in access point and station mode.
+Initializes the TCP server. \texorpdfstring{$<$}{<} Initialize Wi-\/\+Fi in access point and station mode.
 
-$<$ Start the TCP server task.
+\texorpdfstring{$<$}{<} Start the TCP server task.
 
 \doxysubsection{Variable Documentation}
-\index{TcpServer.c@{TcpServer.c}!GUI\_PASS@{GUI\_PASS}}
+\Hypertarget{_tcp_server_8c_a35d706daa4dcd113099247f519235595}\index{TcpServer.c@{TcpServer.c}!GUI\_PASS@{GUI\_PASS}}
 \index{GUI\_PASS@{GUI\_PASS}!TcpServer.c@{TcpServer.c}}
-\doxysubsubsection{GUI\_PASS}
+\doxysubsubsection{\texorpdfstring{GUI\_PASS}{GUI\_PASS}}
 {\footnotesize\ttfamily \label{_tcp_server_8c_a35d706daa4dcd113099247f519235595} 
-char$\ast$ GUI\+\_\+\+PASS = "{}otto"{}}
+char\texorpdfstring{$\ast$}{*} GUI\+\_\+\+PASS = "{}otto"{}}
 
 
 
 Password for GUI authentication. 
 
-\index{TcpServer.c@{TcpServer.c}!GUI\_USER@{GUI\_USER}}
+\Hypertarget{_tcp_server_8c_a19bd4a5dc2066779c571dc423ee2e5fc}\index{TcpServer.c@{TcpServer.c}!GUI\_USER@{GUI\_USER}}
 \index{GUI\_USER@{GUI\_USER}!TcpServer.c@{TcpServer.c}}
-\doxysubsubsection{GUI\_USER}
+\doxysubsubsection{\texorpdfstring{GUI\_USER}{GUI\_USER}}
 {\footnotesize\ttfamily \label{_tcp_server_8c_a19bd4a5dc2066779c571dc423ee2e5fc} 
-char$\ast$ GUI\+\_\+\+USER = "{}root"{}}
+char\texorpdfstring{$\ast$}{*} GUI\+\_\+\+USER = "{}root"{}}
 
 
 
 Username for GUI authentication. 
+
+\Hypertarget{_tcp_server_8c_adabf6670e12fa284be00ec7af178f57d}\index{TcpServer.c@{TcpServer.c}!maindbc\_struct@{maindbc\_struct}}
+\index{maindbc\_struct@{maindbc\_struct}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{maindbc\_struct}{maindbc\_struct}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_adabf6670e12fa284be00ec7af178f57d} 
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} maindbc\+\_\+struct\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Structure to hold CAN message data. 
+
+Extern from main; Structure to hold CAN message data. \Hypertarget{_tcp_server_8c_a9e7b00854cffece2f2025a20b30f4860}\index{TcpServer.c@{TcpServer.c}!struct\_of\_comm@{struct\_of\_comm}}
+\index{struct\_of\_comm@{struct\_of\_comm}!TcpServer.c@{TcpServer.c}}
+\doxysubsubsection{\texorpdfstring{struct\_of\_comm}{struct\_of\_comm}}
+{\footnotesize\ttfamily \label{_tcp_server_8c_a9e7b00854cffece2f2025a20b30f4860} 
+\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}}\texorpdfstring{$\ast$}{*} struct\+\_\+of\+\_\+comm\hspace{0.3cm}{\ttfamily [extern]}}
 

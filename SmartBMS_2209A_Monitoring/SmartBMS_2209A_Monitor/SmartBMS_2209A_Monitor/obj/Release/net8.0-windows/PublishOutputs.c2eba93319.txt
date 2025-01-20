@@ -1,0 +1,6 @@
+C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\bin\Release\net8.0-windows\publish\SmartBMS_2209A_Monitor.exe
+C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\bin\Release\net8.0-windows\publish\SmartBMS_2209A_Monitor.dll
+C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\bin\Release\net8.0-windows\publish\SmartBMS_2209A_Monitor.deps.json
+C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\bin\Release\net8.0-windows\publish\SmartBMS_2209A_Monitor.runtimeconfig.json
+C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\bin\Release\net8.0-windows\publish\SmartBMS_2209A_Monitor.pdb
+C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\bin\Release\net8.0-windows\publish\Newtonsoft.Json.dll

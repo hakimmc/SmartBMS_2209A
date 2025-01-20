@@ -35,6 +35,9 @@ src/main.c \- Main application entry point for ESP32, initializing various tasks
 .RI "\fBDbcStruct\fP \fBmaindbc_struct\fP"
 .br
 .RI "Structure to hold CAN message data\&. "
+.ti -1c
+.RI "\fBDbcStruct\fP * \fBstruct_of_comm\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -64,7 +67,9 @@ Application entry point\&. This function initializes non-volatile storage, sets 
 .SS "\fBDbcStruct\fP maindbc_struct"
 
 .PP
-Structure to hold CAN message data\&. 
+Structure to hold CAN message data\&. Extern from main; Structure to hold CAN message data\&. 
+.SS "\fBDbcStruct\fP* struct_of_comm\fR [extern]\fP"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for SmartBMS_2209A from the source code\&.

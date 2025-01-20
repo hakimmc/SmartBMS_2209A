@@ -74,6 +74,10 @@ include/TcpServer.h \- TCP server implementation for ESP32\&.
 .br
 .RI "Receives data from a connected client\&. "
 .ti -1c
+.RI "void \fBConvertToJson\fP (\fBDbcStruct\fP *dbc, char *jsonString)"
+.br
+.RI "Converter for Dbc values to JSON\&. "
+.ti -1c
 .RI "void \fBTcp_Init\fP ()"
 .br
 .RI "Initializes the TCP server\&. "
@@ -113,6 +117,20 @@ Uncomment the following line to enable Wi-Fi connection functionality\&. Event b
 Event bit indicating a Wi-Fi connection failure\&. 
 .SH "Function Documentation"
 .PP 
+.SS "void ConvertToJson (\fBDbcStruct\fP * dbc, char * jsonString)"
+
+.PP
+Converter for Dbc values to JSON\&. jSON Converter\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbc\fP dbcstruct pointer\&. 
+.br
+\fIjsonString\fP json string\&.
+.RE
+.PP
+Converter for Dbc values to JSON\&. 
 .SS "void Create_Server (void * pvParameter)"
 
 .PP

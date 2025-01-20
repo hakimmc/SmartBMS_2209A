@@ -7,8 +7,12 @@
 
 #include "TcpServer.h"
 #include "Wifi.h"
+#include "d2cc_lib.h"
 
-#define SERVER_PORT 8080 /**< Port number for the TCP server */
+/** @brief Structure to hold CAN message data. */
+extern DbcStruct maindbc_struct;
+extern DbcStruct *struct_of_comm;
+
 #define TCP_TAG "TCP_SERVER" /**< Tag for logging */
 
 /** @brief Username for GUI authentication */
@@ -71,6 +75,8 @@ void Create_Server(void* pvParameter)
             break;
         }
         ESP_LOGI(TCP_TAG, "Socket accepted");
+        maindbc_struct.Can_Main.Signal.TcpEnable = TcpEnable_TCP_Connected;
+        maindbc_struct.Can_Main.Signal.TcpClientCount++;
 
         TaskHandle_t xHandle = NULL;
         xTaskCreate(Handle_Client, "Client_Handler", 4096, (void*)sock, (UBaseType_t)1, &xHandle);
@@ -175,18 +181,26 @@ void Handle_Client(void* args)
                 if (len != -2 || len != -1) {
                     rx_buffer[len] = '\0';
                     if (!memcmp(rx_buffer, "data", 4)) {
-                        send(sock, "OK", 2, 0);
+                        //send(sock, "OK", 2, 0); full data
+                        char jsonString[2048];
+                        ConvertToJson(struct_of_comm, jsonString);
+                        send(sock, jsonString, strlen(jsonString), 0);
                     }
                     else if (!memcmp(rx_buffer, "exit", 4)) {
                         state = 3;
                     }
-                    memset(rx_buffer, 0, sizeof(rx_buffer));
+                    rx_buffer[0] = 'r';
+                    //memset(, 0, sizeof(rx_buffer));
                 }
                 break;
             }
 
             case 3: {
                 send(sock, "ER", 2, 0);
+                maindbc_struct.Can_Main.Signal.TcpClientCount--;
+                if(maindbc_struct.Can_Main.Signal.TcpClientCount == 0){
+                    maindbc_struct.Can_Main.Signal.TcpEnable = TcpEnable_TCP_Online;
+                }
                 close(sock);
                 vTaskDelete(NULL);
                 break;
@@ -194,13 +208,16 @@ void Handle_Client(void* args)
 
             case 4: {
                 send(sock, "TO", 2, 0);
+                maindbc_struct.Can_Main.Signal.TcpClientCount--;
+                if(maindbc_struct.Can_Main.Signal.TcpClientCount == 0){
+                    maindbc_struct.Can_Main.Signal.TcpEnable = TcpEnable_TCP_Online;
+                }
                 close(sock);
                 vTaskDelete(NULL);
                 break;
             }
         }
     }
-
     close(sock);
     vTaskDelete(NULL);
 }
@@ -234,11 +251,130 @@ int receive_data(int sock, char* buffer, size_t size, uint8_t* timeout_counter, 
 }
 
 /**
+ * @brief Convert to JSON function of Dbc Parameters.
+ */
+void ConvertToJson(DbcStruct *dbc, char *jsonString) {
+    sprintf(jsonString, 
+        "{"
+            "\"Battery_Messages\": {"
+                "\"BatteryChemistry\": %d, "
+                "\"Battery_Count\": %d, "
+                "\"BatteryBalance_MaxVoltage\": %d, "
+                "\"BatteryBalance_MinVoltage\": %d, "
+                "\"BatteryBalance_MaxTemp\": %d, "
+                "\"BatteryBalance_MinTemp\": %d, "
+                "\"BatterySOC\": %d, "
+                "\"OCV_Voltages\": %d"
+            "}, "
+            "\"Battery_Temperatures\": {"
+                "\"Battery_Temp_AUX0\": %d, "
+                "\"Battery_Temp_AUX1\": %d, "
+                "\"Battery_Temp_AUX2\": %d, "
+                "\"Battery_Temp_AUX3\": %d, "
+                "\"Battery_Temp_AUX4\": %d, "
+                "\"Battery_Temp_AUX5\": %d, "
+                "\"Battery_Temp_AUX6\": %d, "
+                "\"Battery_Temp_AUX7\": %d"
+            "}, "
+            "\"Battery_Voltages_1\": {"
+                "\"BatteryVoltage_1\": %d, "
+                "\"BatteryVoltage_2\": %d, "
+                "\"BatteryVoltage_3\": %d, "
+                "\"BatteryVoltage_4\": %d, "
+                "\"BatteryVoltage_5\": %d, "
+                "\"BatteryVoltage_6\": %d, "
+                "\"BatteryVoltage_7\": %d, "
+                "\"BatteryVoltage_8\": %d"
+            "}, "
+            "\"Battery_Voltages_2\": {"
+                "\"BatteryVoltage_9\": %d, "
+                "\"BatteryVoltage_10\": %d, "
+                "\"BatteryVoltage_11\": %d, "
+                "\"BatteryVoltage_12\": %d, "
+                "\"BatteryVoltage_13\": %d, "
+                "\"BatteryVoltage_14\": %d, "
+                "\"BatteryVoltage_15\": %d, "
+                "\"BatteryVoltage_16\": %d"
+            "}, "
+            "\"Can_Main\": {"
+                "\"AliveCounter\": %d, "
+                "\"WiFi_AP_Status\": %d, "
+                "\"TcpClientCount\": %d, "
+                "\"CanBusEnable\": %d, "
+                "\"TcpEnable\": %d, "
+                "\"VpnEnable\": %d, "
+                "\"WiFi_ST_Status\": %d, "
+                "\"Reserved_1\": %d, "
+                "\"WiFi_AP_IP_Adrress\": %d, "
+                "\"WiFi_ST_IP_Address\": %d, "
+                "\"SwVersionMajor\": %d, "
+                "\"SwVersionMinor\": %d, "
+                "\"SwVersionBugfix\": %d"
+            "}"
+        "}", 
+        dbc->Battery_Messages.Signal.BatteryChemistry,
+        dbc->Battery_Messages.Signal.Battery_Count,
+        dbc->Battery_Messages.Signal.BatteryBalance_MaxVoltage,
+        dbc->Battery_Messages.Signal.BatteryBalance_MinVoltage,
+        dbc->Battery_Messages.Signal.BatteryBalance_MaxTemp,
+        dbc->Battery_Messages.Signal.BatteryBalance_MinTemp,
+        dbc->Battery_Messages.Signal.BatterySOC,
+        dbc->Battery_Messages.Signal.OCV_Voltages,
+
+        dbc->Battery_Temperatures.Signal.Battery_Temp_AUX0,
+        dbc->Battery_Temperatures.Signal.Battery_Temp_AUX1,
+        dbc->Battery_Temperatures.Signal.Battery_Temp_AUX2,
+        dbc->Battery_Temperatures.Signal.Battery_Temp_AUX3,
+        dbc->Battery_Temperatures.Signal.Battery_Temp_AUX4,
+        dbc->Battery_Temperatures.Signal.Battery_Temp_AUX5,
+        dbc->Battery_Temperatures.Signal.Battery_Temp_AUX6,
+        dbc->Battery_Temperatures.Signal.Battery_Temp_AUX7,
+
+        dbc->Battery_Voltages_1.Signal.BatteryVoltage_1,
+        dbc->Battery_Voltages_1.Signal.BatteryVoltage_2,
+        dbc->Battery_Voltages_1.Signal.BatteryVoltage_3,
+        dbc->Battery_Voltages_1.Signal.BatteryVoltage_4,
+        dbc->Battery_Voltages_1.Signal.BatteryVoltage_5,
+        dbc->Battery_Voltages_1.Signal.BatteryVoltage_6,
+        dbc->Battery_Voltages_1.Signal.BatteryVoltage_7,
+        dbc->Battery_Voltages_1.Signal.BatteryVoltage_8,
+
+        dbc->Battery_Voltages_2.Signal.BatteryVoltage_9,
+        dbc->Battery_Voltages_2.Signal.BatteryVoltage_10,
+        dbc->Battery_Voltages_2.Signal.BatteryVoltage_11,
+        dbc->Battery_Voltages_2.Signal.BatteryVoltage_12,
+        dbc->Battery_Voltages_2.Signal.BatteryVoltage_13,
+        dbc->Battery_Voltages_2.Signal.BatteryVoltage_14,
+        dbc->Battery_Voltages_2.Signal.BatteryVoltage_15,
+        dbc->Battery_Voltages_2.Signal.BatteryVoltage_16,
+
+        dbc->Can_Main.Signal.AliveCounter,
+        dbc->Can_Main.Signal.WiFi_AP_Status,
+        dbc->Can_Main.Signal.TcpClientCount,
+        dbc->Can_Main.Signal.CanBusEnable,
+        dbc->Can_Main.Signal.TcpEnable,
+        dbc->Can_Main.Signal.VpnEnable,
+        dbc->Can_Main.Signal.WiFi_ST_Status,
+        dbc->Can_Main.Signal.Reserved_1,
+        dbc->Can_Main.Signal.WiFi_AP_IP_Adrress,
+        dbc->Can_Main.Signal.WiFi_ST_IP_Address,
+        dbc->Can_Main.Signal.SwVersionMajor,
+        dbc->Can_Main.Signal.SwVersionMinor,
+        dbc->Can_Main.Signal.SwVersionBugfix
+    );
+}
+
+
+/**
  * @brief Initializes the TCP server and starts listening for client connections.
  */
 void Tcp_Init()
 {
     wifi_init_ap_sta(); /**< Initialize Wi-Fi in access point and station mode. */
-
+    maindbc_struct.Can_Main.Signal.WiFi_AP_Status = WiFi_AP_Status_WiFi_Ap_Connected;
+    maindbc_struct.Can_Main.Signal.WiFi_ST_Status = WiFi_ST_Status_WiFi_Ap_Connected;
+    maindbc_struct.Can_Main.Signal.TcpEnable = TcpEnable_TCP_Online;
     xTaskCreate(Create_Server, "tcp_server", 4096, NULL, (UBaseType_t)5, NULL); /**< Start the TCP server task. */
 }
+
+

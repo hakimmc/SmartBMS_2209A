@@ -7,7 +7,7 @@
 <para>Implementation of LED blinking task using ESP32 GPIO. </para>
  
 </para>
-<programlisting linenumbering="unnumbered">#include &quot;LedTaskInit.h&quot;<?linebreak?>#include &quot;driver/gpio.h&quot;<?linebreak?>#include &quot;freertos/FreeRTOS.h&quot;<?linebreak?>#include &quot;freertos/task.h&quot;<?linebreak?></programlisting><simplesect>
+<programlisting linenumbering="unnumbered">#include &quot;LedTaskInit.h&quot;<?linebreak?>#include &quot;driver/gpio.h&quot;<?linebreak?>#include &quot;freertos/FreeRTOS.h&quot;<?linebreak?>#include &quot;freertos/task.h&quot;<?linebreak?>#include &quot;d2cc_lib.h&quot;<?linebreak?></programlisting><simplesect>
     <title>Macros    </title>
         <itemizedlist>
             <listitem><para>#define <link linkend="__led_task_init_8c_1ab4553be4db9860d940f81d7447173b2f">LED_PIN</link>&#160;&#160;&#160;13</para>
@@ -26,6 +26,15 @@
             <listitem><para>void <link linkend="__led_task_init_8c_1a1f53ce317fca339ddc6588adb1a457e4">led_init</link> (void *pvParameter)</para>
 
 <para>LED blinking task. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_dbc_struct">DbcStruct</link> <link linkend="__led_task_init_8c_1adabf6670e12fa284be00ec7af178f57d">maindbc_struct</link></para>
+
+<para>Extern from main; Structure to hold CAN message data. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -147,6 +156,22 @@ Parameters</title>
 <para>&lt; Turn the LED off.</para>
 
 <para>&lt; Delay for 500 ms.</para>
+
+<para>&lt; Alive Counter.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__led_task_init_8c_1adabf6670e12fa284be00ec7af178f57d"/><section>
+    <title>maindbc_struct</title>
+<indexterm><primary>maindbc_struct</primary><secondary>LedTaskInit.c</secondary></indexterm>
+<indexterm><primary>LedTaskInit.c</primary><secondary>maindbc_struct</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_dbc_struct">DbcStruct</link> maindbc_struct<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+
+<para>Extern from main; Structure to hold CAN message data. </para>
+</para>
+
+<para>Extern from main; Structure to hold CAN message data. </para>
 </section>
 </section>
 </section>

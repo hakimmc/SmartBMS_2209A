@@ -4,35 +4,135 @@
     <compoundname>DbcStruct</compoundname>
     <includes refid="d2cc__lib_8h" local="no">d2cc_lib.h</includes>
     <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af" prot="public" static="no" mutable="no">
-        <type>uint32_t</type>
-        <definition>uint32_t DbcStruct::ID</definition>
+      <memberdef kind="variable" id="struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8" prot="public" static="no" mutable="no">
+        <type><ref refid="d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57" kindref="member">BatteryChemistry_enum</ref></type>
+        <definition>BatteryChemistry_enum DbcStruct::BatteryChemistry</definition>
         <argsstring></argsstring>
-        <name>ID</name>
-        <qualifiedname>DbcStruct::ID</qualifiedname>
+        <name>BatteryChemistry</name>
+        <qualifiedname>DbcStruct::BatteryChemistry</qualifiedname>
+        <bitfield>4</bitfield>
         <briefdescription>
+<para>Signal BatteryChemistry enum type. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="50" column="10" bodyfile="include/d2cc_lib.h" bodystart="50" bodyend="-1"/>
+        <location file="include/d2cc_lib.h" line="217" column="23" bodyfile="include/d2cc_lib.h" bodystart="217" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_dbc_struct_1a6f1a768f91a5f4a7efbd8332b0054a51" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
-        <definition>uint8_t DbcStruct::DLC</definition>
+        <definition>uint8_t DbcStruct::Battery_Count</definition>
         <argsstring></argsstring>
-        <name>DLC</name>
-        <qualifiedname>DbcStruct::DLC</qualifiedname>
+        <name>Battery_Count</name>
+        <qualifiedname>DbcStruct::Battery_Count</qualifiedname>
+        <bitfield>4</bitfield>
         <briefdescription>
+<para>Battery_Count signal with 8-bit length. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="51" column="9" bodyfile="include/d2cc_lib.h" bodystart="51" bodyend="-1"/>
+        <location file="include/d2cc_lib.h" line="219" column="9" bodyfile="include/d2cc_lib.h" bodystart="219" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryBalance_MaxVoltage</definition>
+        <argsstring></argsstring>
+        <name>BatteryBalance_MaxVoltage</name>
+        <qualifiedname>DbcStruct::BatteryBalance_MaxVoltage</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryBalance_MaxVoltage signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="221" column="9" bodyfile="include/d2cc_lib.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryBalance_MinVoltage</definition>
+        <argsstring></argsstring>
+        <name>BatteryBalance_MinVoltage</name>
+        <qualifiedname>DbcStruct::BatteryBalance_MinVoltage</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryBalance_MinVoltage signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="223" column="9" bodyfile="include/d2cc_lib.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryBalance_MaxTemp</definition>
+        <argsstring></argsstring>
+        <name>BatteryBalance_MaxTemp</name>
+        <qualifiedname>DbcStruct::BatteryBalance_MaxTemp</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryBalance_MaxTemp signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="225" column="9" bodyfile="include/d2cc_lib.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryBalance_MinTemp</definition>
+        <argsstring></argsstring>
+        <name>BatteryBalance_MinTemp</name>
+        <qualifiedname>DbcStruct::BatteryBalance_MinTemp</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryBalance_MinTemp signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="227" column="9" bodyfile="include/d2cc_lib.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a1d3bcb9e8972d1aa1ff1a2cb63fa5e67" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatterySOC</definition>
+        <argsstring></argsstring>
+        <name>BatterySOC</name>
+        <qualifiedname>DbcStruct::BatterySOC</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatterySOC signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="229" column="9" bodyfile="include/d2cc_lib.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a423f591df1d0e40cfa745d61e4d3b8d5" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t DbcStruct::OCV_Voltages</definition>
+        <argsstring></argsstring>
+        <name>OCV_Voltages</name>
+        <qualifiedname>DbcStruct::OCV_Voltages</qualifiedname>
+        <bitfield>16</bitfield>
+        <briefdescription>
+<para>OCV_Voltages signal with 16-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="231" column="10" bodyfile="include/d2cc_lib.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ae386297eca66f54a6da88c162813e6dc" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
         <definition>struct DbcStruct DbcStruct::Signal</definition>
         <argsstring></argsstring>
@@ -44,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="54" column="7"/>
+        <location file="include/d2cc_lib.h" line="232" column="7"/>
       </memberdef>
       <memberdef kind="variable" id="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -58,7 +158,81 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="55" column="9" bodyfile="include/d2cc_lib.h" bodystart="55" bodyend="-1"/>
+        <location file="include/d2cc_lib.h" line="233" column="9" bodyfile="include/d2cc_lib.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_phys___value__t" kindref="compound">Phys_Value_t</ref></type>
+        <definition>Phys_Value_t DbcStruct::Phys_Value</definition>
+        <argsstring></argsstring>
+        <name>Phys_Value</name>
+        <qualifiedname>DbcStruct::Phys_Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="237" column="14" bodyfile="include/d2cc_lib.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1acbf2a6a0e22fff9189162b517bc5fc54" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::Battery_Count</definition>
+        <argsstring></argsstring>
+        <name>Battery_Count</name>
+        <qualifiedname>DbcStruct::Battery_Count</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="238" column="14"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a1ce53ead6be1b4b2182616078c3b86a4" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryBalance_MaxVoltage</definition>
+        <argsstring></argsstring>
+        <name>BatteryBalance_MaxVoltage</name>
+        <qualifiedname>DbcStruct::BatteryBalance_MaxVoltage</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="242" column="26"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a0690107a9e9e7a974e94aed2bc013177" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryBalance_MinVoltage</definition>
+        <argsstring></argsstring>
+        <name>BatteryBalance_MinVoltage</name>
+        <qualifiedname>DbcStruct::BatteryBalance_MinVoltage</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="246" column="26"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1af0dc83ddba8d12f6330af6b7eda2934d" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryBalance_MinTemp</definition>
+        <argsstring></argsstring>
+        <name>BatteryBalance_MinTemp</name>
+        <qualifiedname>DbcStruct::BatteryBalance_MinTemp</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="250" column="23"/>
       </memberdef>
       <memberdef kind="variable" id="struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
@@ -67,14 +241,144 @@
         <name>Battery_Messages</name>
         <qualifiedname>DbcStruct::Battery_Messages</qualifiedname>
         <briefdescription>
+<para>CAN message structure for message Battery_Messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This structure represents the CAN message, including the signals and their values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="251" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a1a640baa84507339bfba02cc7bf31ad7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::Battery_Temp_AUX0</definition>
+        <argsstring></argsstring>
+        <name>Battery_Temp_AUX0</name>
+        <qualifiedname>DbcStruct::Battery_Temp_AUX0</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>Battery_Temp_AUX0 signal with 8-bit length. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="57" column="17"/>
+        <location file="include/d2cc_lib.h" line="265" column="9" bodyfile="include/d2cc_lib.h" bodystart="265" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1ac02fab03e10a73ab3026bc900ec0c807" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_dbc_struct_1a3be4db5c5288d77a2ffa6f0db21f3fea" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::Battery_Temp_AUX1</definition>
+        <argsstring></argsstring>
+        <name>Battery_Temp_AUX1</name>
+        <qualifiedname>DbcStruct::Battery_Temp_AUX1</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>Battery_Temp_AUX1 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="267" column="9" bodyfile="include/d2cc_lib.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a22c4dffa9e3e3ac53ec970d97ec747c2" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::Battery_Temp_AUX2</definition>
+        <argsstring></argsstring>
+        <name>Battery_Temp_AUX2</name>
+        <qualifiedname>DbcStruct::Battery_Temp_AUX2</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>Battery_Temp_AUX2 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="269" column="9" bodyfile="include/d2cc_lib.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1af25f603c7a7904294c6f2077b32781ee" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::Battery_Temp_AUX3</definition>
+        <argsstring></argsstring>
+        <name>Battery_Temp_AUX3</name>
+        <qualifiedname>DbcStruct::Battery_Temp_AUX3</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>Battery_Temp_AUX3 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="271" column="9" bodyfile="include/d2cc_lib.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a83c3d131f348c17f5d12de4c9700d028" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::Battery_Temp_AUX4</definition>
+        <argsstring></argsstring>
+        <name>Battery_Temp_AUX4</name>
+        <qualifiedname>DbcStruct::Battery_Temp_AUX4</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>Battery_Temp_AUX4 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="273" column="9" bodyfile="include/d2cc_lib.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1acc07b2fd0e5db28e1de340e1d4654046" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::Battery_Temp_AUX5</definition>
+        <argsstring></argsstring>
+        <name>Battery_Temp_AUX5</name>
+        <qualifiedname>DbcStruct::Battery_Temp_AUX5</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>Battery_Temp_AUX5 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="275" column="9" bodyfile="include/d2cc_lib.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a39855c4f5479dddc01dc1a66b49d3efe" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::Battery_Temp_AUX6</definition>
+        <argsstring></argsstring>
+        <name>Battery_Temp_AUX6</name>
+        <qualifiedname>DbcStruct::Battery_Temp_AUX6</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>Battery_Temp_AUX6 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="277" column="9" bodyfile="include/d2cc_lib.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1addab4cd6e4fe7e9b2d12f88189475623" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::Battery_Temp_AUX7</definition>
+        <argsstring></argsstring>
+        <name>Battery_Temp_AUX7</name>
+        <qualifiedname>DbcStruct::Battery_Temp_AUX7</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>Battery_Temp_AUX7 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="279" column="9" bodyfile="include/d2cc_lib.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a04d0ea7b7d8770e9afb917f073e5965c" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
         <definition>struct DbcStruct DbcStruct::Signal</definition>
         <argsstring></argsstring>
@@ -86,7 +390,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="67" column="7"/>
+        <location file="include/d2cc_lib.h" line="280" column="7"/>
       </memberdef>
       <memberdef kind="variable" id="struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
@@ -95,14 +399,144 @@
         <name>Battery_Temperatures</name>
         <qualifiedname>DbcStruct::Battery_Temperatures</qualifiedname>
         <briefdescription>
+<para>CAN message structure for message Battery_Temperatures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This structure represents the CAN message, including the signals and their values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="283" column="21"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a8705a64cae747f9fbb1244e2760df0d2" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_1</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_1</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_1</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_1 signal with 8-bit length. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="70" column="21"/>
+        <location file="include/d2cc_lib.h" line="297" column="9" bodyfile="include/d2cc_lib.h" bodystart="297" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1ab957d591284e13f130a259219c65197b" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_dbc_struct_1a6fe7067367840e901fe89d114f22c189" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_2</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_2</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_2</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_2 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="299" column="9" bodyfile="include/d2cc_lib.h" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a193c15c2163830869c835c9caa7daf4b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_3</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_3</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_3</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_3 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="301" column="9" bodyfile="include/d2cc_lib.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ae545ca583ee7ac6ff1eb085eed35092e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_4</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_4</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_4</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_4 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="303" column="9" bodyfile="include/d2cc_lib.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a6598e1d949075cd2caa869b58dcefa66" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_5</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_5</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_5</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_5 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="305" column="9" bodyfile="include/d2cc_lib.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a01ac4c7d571306e0603ac9b1bdb259cb" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_6</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_6</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_6</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_6 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="307" column="9" bodyfile="include/d2cc_lib.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ac1f0836457f5d4220230ea4541e7c4e7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_7</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_7</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_7</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_7 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="309" column="9" bodyfile="include/d2cc_lib.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a80cffe4315498627e4d30ad49b31474b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_8</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_8</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_8</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_8 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="311" column="9" bodyfile="include/d2cc_lib.h" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a5ebdfbfc233e67f7eccb31b64953a3c4" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
         <definition>struct DbcStruct DbcStruct::Signal</definition>
         <argsstring></argsstring>
@@ -114,21 +548,421 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="80" column="7"/>
+        <location file="include/d2cc_lib.h" line="312" column="7"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_dbc_struct_1a647e2b19ffb49b2ed5459b8696faee31" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
-        <definition>struct DbcStruct DbcStruct::Battery_Voltages</definition>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_1</definition>
         <argsstring></argsstring>
-        <name>Battery_Voltages</name>
-        <qualifiedname>DbcStruct::Battery_Voltages</qualifiedname>
+        <name>BatteryVoltage_1</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_1</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="318" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1aaed6aec8a59b2b4d6d02f93b47baa3ef" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_2</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_2</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_2</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="322" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a252931bb6cdda058f4562e27293681fc" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_3</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_3</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_3</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="326" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ad660b1aa24222584e2e6d20ff244c0ee" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_4</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_4</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_4</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="330" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ac01706109e3f5940872c8c0192b4aa48" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_5</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_5</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_5</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="334" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a66e2053ad6cdd71f8d240a1033987837" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_6</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_6</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_6</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="338" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a6eefdea491ee74e704fccf45e290373f" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_7</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_7</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_7</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="342" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a414874fba7f67423a52b5fa009881832" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_8</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_8</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_8</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="346" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ac0df264728127a2bc9cd5b7ba288ee17" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::Battery_Voltages_1</definition>
+        <argsstring></argsstring>
+        <name>Battery_Voltages_1</name>
+        <qualifiedname>DbcStruct::Battery_Voltages_1</qualifiedname>
+        <briefdescription>
+<para>CAN message structure for message Battery_Voltages_1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This structure represents the CAN message, including the signals and their values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="347" column="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1acca054e9ab7d7105afaebdd7d98084bc" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_9</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_9</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_9</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_9 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="361" column="9" bodyfile="include/d2cc_lib.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a0edf95266999cda26bfa64415ab66c11" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_10</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_10</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_10</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_10 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="363" column="9" bodyfile="include/d2cc_lib.h" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1abd9596c665802a643fb055f93553c787" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_11</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_11</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_11</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_11 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="365" column="9" bodyfile="include/d2cc_lib.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1aa8eb502120446487b97cfb290b071824" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_12</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_12</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_12</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_12 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="367" column="9" bodyfile="include/d2cc_lib.h" bodystart="367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a4297e252aa775556c232c478883f8299" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_13</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_13</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_13</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_13 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="369" column="9" bodyfile="include/d2cc_lib.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a479d68e2ca89d790dbefd39a71faa281" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_14</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_14</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_14</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_14 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="371" column="9" bodyfile="include/d2cc_lib.h" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ab12c5eecedc581c2760d28755c4015ba" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_15</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_15</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_15</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_15 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="373" column="9" bodyfile="include/d2cc_lib.h" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a47b822293e314d119ffc67e6d767cafe" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::BatteryVoltage_16</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_16</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_16</qualifiedname>
+        <bitfield>8</bitfield>
+        <briefdescription>
+<para>BatteryVoltage_16 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="375" column="9" bodyfile="include/d2cc_lib.h" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ac1c3621532e78bbc51a5597d29372bf9" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::Signal</definition>
+        <argsstring></argsstring>
+        <name>Signal</name>
+        <qualifiedname>DbcStruct::Signal</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="83" column="17"/>
+        <location file="include/d2cc_lib.h" line="376" column="7"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a44d0ab0e881a06380b14a439f3f5b103" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_9</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_9</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_9</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="382" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a54ac6b3ac10d953840c9159f275cabb5" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_10</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_10</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_10</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="386" column="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ad7e265d7d74987490439dee645489dab" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_11</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_11</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_11</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="390" column="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a33dfe9cb100417b34f922ae6b264828b" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_12</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_12</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_12</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="394" column="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a96476ad62db559e7b7ec99b18e156727" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_13</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_13</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_13</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="398" column="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a4c71b805ceff9f5da3638ac8f7f309f6" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_14</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_14</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_14</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="402" column="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a430ab60426ad7e19c9806fcd9d9edce4" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_15</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_15</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_15</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="406" column="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ae3649ee2164afa735376a1aa043c16db" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::BatteryVoltage_16</definition>
+        <argsstring></argsstring>
+        <name>BatteryVoltage_16</name>
+        <qualifiedname>DbcStruct::BatteryVoltage_16</qualifiedname>
+        <briefdescription>
+<para>Factor for scaling the raw signal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="410" column="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1aa89001e2fb3b0d46bdab24ae246c3b97" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
+        <definition>struct DbcStruct DbcStruct::Battery_Voltages_2</definition>
+        <argsstring></argsstring>
+        <name>Battery_Voltages_2</name>
+        <qualifiedname>DbcStruct::Battery_Voltages_2</qualifiedname>
+        <briefdescription>
+<para>CAN message structure for message Battery_Voltages_2. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This structure represents the CAN message, including the signals and their values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="411" column="19"/>
       </memberdef>
       <memberdef kind="variable" id="struct_dbc_struct_1aafdcafa59c0375ecd8b2bf9e3a53ab53" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -138,192 +972,13 @@
         <qualifiedname>DbcStruct::AliveCounter</qualifiedname>
         <bitfield>7</bitfield>
         <briefdescription>
+<para>AliveCounter signal with 8-bit length. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="93" column="9" bodyfile="include/d2cc_lib.h" bodystart="93" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8" prot="public" static="no" mutable="no">
-        <type><ref refid="d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57" kindref="member">BatteryChemistry_enum</ref></type>
-        <definition>BatteryChemistry_enum DbcStruct::BatteryChemistry</definition>
-        <argsstring></argsstring>
-        <name>BatteryChemistry</name>
-        <qualifiedname>DbcStruct::BatteryChemistry</qualifiedname>
-        <bitfield>1</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="94" column="23" bodyfile="include/d2cc_lib.h" bodystart="94" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" prot="public" static="no" mutable="no">
-        <type>uint8_t</type>
-        <definition>uint8_t DbcStruct::BatteryBalance_MaxVoltage</definition>
-        <argsstring></argsstring>
-        <name>BatteryBalance_MaxVoltage</name>
-        <qualifiedname>DbcStruct::BatteryBalance_MaxVoltage</qualifiedname>
-        <bitfield>8</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="95" column="9" bodyfile="include/d2cc_lib.h" bodystart="95" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab" prot="public" static="no" mutable="no">
-        <type>uint8_t</type>
-        <definition>uint8_t DbcStruct::BatteryBalance_MinVoltage</definition>
-        <argsstring></argsstring>
-        <name>BatteryBalance_MinVoltage</name>
-        <qualifiedname>DbcStruct::BatteryBalance_MinVoltage</qualifiedname>
-        <bitfield>8</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="96" column="9" bodyfile="include/d2cc_lib.h" bodystart="96" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be" prot="public" static="no" mutable="no">
-        <type>uint8_t</type>
-        <definition>uint8_t DbcStruct::BatteryBalance_MaxTemp</definition>
-        <argsstring></argsstring>
-        <name>BatteryBalance_MaxTemp</name>
-        <qualifiedname>DbcStruct::BatteryBalance_MaxTemp</qualifiedname>
-        <bitfield>8</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="97" column="9" bodyfile="include/d2cc_lib.h" bodystart="97" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d" prot="public" static="no" mutable="no">
-        <type>uint8_t</type>
-        <definition>uint8_t DbcStruct::BatteryBalance_MinTemp</definition>
-        <argsstring></argsstring>
-        <name>BatteryBalance_MinTemp</name>
-        <qualifiedname>DbcStruct::BatteryBalance_MinTemp</qualifiedname>
-        <bitfield>8</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="98" column="9" bodyfile="include/d2cc_lib.h" bodystart="98" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a" prot="public" static="no" mutable="no">
-        <type>uint8_t</type>
-        <definition>uint8_t DbcStruct::SwVersionMajor</definition>
-        <argsstring></argsstring>
-        <name>SwVersionMajor</name>
-        <qualifiedname>DbcStruct::SwVersionMajor</qualifiedname>
-        <bitfield>2</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="99" column="9" bodyfile="include/d2cc_lib.h" bodystart="99" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21" prot="public" static="no" mutable="no">
-        <type>uint8_t</type>
-        <definition>uint8_t DbcStruct::SwVersionMinor</definition>
-        <argsstring></argsstring>
-        <name>SwVersionMinor</name>
-        <qualifiedname>DbcStruct::SwVersionMinor</qualifiedname>
-        <bitfield>2</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="100" column="9" bodyfile="include/d2cc_lib.h" bodystart="100" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1ab712e03d069028bd782d5a3bf63fbbcd" prot="public" static="no" mutable="no">
-        <type>uint8_t</type>
-        <definition>uint8_t DbcStruct::SwVersionBugfix</definition>
-        <argsstring></argsstring>
-        <name>SwVersionBugfix</name>
-        <qualifiedname>DbcStruct::SwVersionBugfix</qualifiedname>
-        <bitfield>4</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="101" column="9" bodyfile="include/d2cc_lib.h" bodystart="101" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad" prot="public" static="no" mutable="no">
-        <type><ref refid="d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4" kindref="member">CanBusEnable_enum</ref></type>
-        <definition>CanBusEnable_enum DbcStruct::CanBusEnable</definition>
-        <argsstring></argsstring>
-        <name>CanBusEnable</name>
-        <qualifiedname>DbcStruct::CanBusEnable</qualifiedname>
-        <bitfield>1</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="102" column="19" bodyfile="include/d2cc_lib.h" bodystart="102" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a1ca872211a78ead331d094d0b45c0499" prot="public" static="no" mutable="no">
-        <type><ref refid="d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c" kindref="member">WiFiEnable_enum</ref></type>
-        <definition>WiFiEnable_enum DbcStruct::WiFiEnable</definition>
-        <argsstring></argsstring>
-        <name>WiFiEnable</name>
-        <qualifiedname>DbcStruct::WiFiEnable</qualifiedname>
-        <bitfield>1</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="103" column="17" bodyfile="include/d2cc_lib.h" bodystart="103" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a" prot="public" static="no" mutable="no">
-        <type><ref refid="d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e" kindref="member">TcpEnable_enum</ref></type>
-        <definition>TcpEnable_enum DbcStruct::TcpEnable</definition>
-        <argsstring></argsstring>
-        <name>TcpEnable</name>
-        <qualifiedname>DbcStruct::TcpEnable</qualifiedname>
-        <bitfield>2</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="104" column="16" bodyfile="include/d2cc_lib.h" bodystart="104" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54" prot="public" static="no" mutable="no">
-        <type><ref refid="d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4" kindref="member">VpnEnable_enum</ref></type>
-        <definition>VpnEnable_enum DbcStruct::VpnEnable</definition>
-        <argsstring></argsstring>
-        <name>VpnEnable</name>
-        <qualifiedname>DbcStruct::VpnEnable</qualifiedname>
-        <bitfield>1</bitfield>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="105" column="16" bodyfile="include/d2cc_lib.h" bodystart="105" bodyend="-1"/>
+        <location file="include/d2cc_lib.h" line="425" column="9" bodyfile="include/d2cc_lib.h" bodystart="425" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_dbc_struct_1a9e27bd50ce2d239ca6f1d5f7cb023de7" prot="public" static="no" mutable="no">
         <type><ref refid="d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8" kindref="member">WiFi_AP_Status_enum</ref></type>
@@ -331,14 +986,15 @@
         <argsstring></argsstring>
         <name>WiFi_AP_Status</name>
         <qualifiedname>DbcStruct::WiFi_AP_Status</qualifiedname>
-        <bitfield>2</bitfield>
+        <bitfield>1</bitfield>
         <briefdescription>
+<para>Signal WiFi_AP_Status enum type. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="106" column="21" bodyfile="include/d2cc_lib.h" bodystart="106" bodyend="-1"/>
+        <location file="include/d2cc_lib.h" line="427" column="21" bodyfile="include/d2cc_lib.h" bodystart="427" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_dbc_struct_1a9040957d9669218f0117644dcbc7f1c2" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -348,14 +1004,175 @@
         <qualifiedname>DbcStruct::TcpClientCount</qualifiedname>
         <bitfield>8</bitfield>
         <briefdescription>
+<para>TcpClientCount signal with 8-bit length. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="107" column="9" bodyfile="include/d2cc_lib.h" bodystart="107" bodyend="-1"/>
+        <location file="include/d2cc_lib.h" line="429" column="9" bodyfile="include/d2cc_lib.h" bodystart="429" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a6893b0165e1bcc78faf0c175d45b0689" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad" prot="public" static="no" mutable="no">
+        <type><ref refid="d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4" kindref="member">CanBusEnable_enum</ref></type>
+        <definition>CanBusEnable_enum DbcStruct::CanBusEnable</definition>
+        <argsstring></argsstring>
+        <name>CanBusEnable</name>
+        <qualifiedname>DbcStruct::CanBusEnable</qualifiedname>
+        <bitfield>1</bitfield>
+        <briefdescription>
+<para>Signal CanBusEnable enum type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="431" column="19" bodyfile="include/d2cc_lib.h" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a" prot="public" static="no" mutable="no">
+        <type><ref refid="d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e" kindref="member">TcpEnable_enum</ref></type>
+        <definition>TcpEnable_enum DbcStruct::TcpEnable</definition>
+        <argsstring></argsstring>
+        <name>TcpEnable</name>
+        <qualifiedname>DbcStruct::TcpEnable</qualifiedname>
+        <bitfield>2</bitfield>
+        <briefdescription>
+<para>Signal TcpEnable enum type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="433" column="16" bodyfile="include/d2cc_lib.h" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54" prot="public" static="no" mutable="no">
+        <type><ref refid="d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4" kindref="member">VpnEnable_enum</ref></type>
+        <definition>VpnEnable_enum DbcStruct::VpnEnable</definition>
+        <argsstring></argsstring>
+        <name>VpnEnable</name>
+        <qualifiedname>DbcStruct::VpnEnable</qualifiedname>
+        <bitfield>2</bitfield>
+        <briefdescription>
+<para>Signal VpnEnable enum type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="435" column="16" bodyfile="include/d2cc_lib.h" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a4b524004290f7eff13d1280a150bc416" prot="public" static="no" mutable="no">
+        <type><ref refid="d2cc__lib_8h_1ad00d3bb37c1d69ea203ae4019a832403" kindref="member">WiFi_ST_Status_enum</ref></type>
+        <definition>WiFi_ST_Status_enum DbcStruct::WiFi_ST_Status</definition>
+        <argsstring></argsstring>
+        <name>WiFi_ST_Status</name>
+        <qualifiedname>DbcStruct::WiFi_ST_Status</qualifiedname>
+        <bitfield>2</bitfield>
+        <briefdescription>
+<para>Signal WiFi_ST_Status enum type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="437" column="21" bodyfile="include/d2cc_lib.h" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1aea70d67acc702c88ae08d881a525b194" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::Reserved_1</definition>
+        <argsstring></argsstring>
+        <name>Reserved_1</name>
+        <qualifiedname>DbcStruct::Reserved_1</qualifiedname>
+        <bitfield>1</bitfield>
+        <briefdescription>
+<para>Reserved_1 signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="439" column="9" bodyfile="include/d2cc_lib.h" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1a8f3b2251faf8a9f0240027876c23a975" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t DbcStruct::WiFi_AP_IP_Adrress</definition>
+        <argsstring></argsstring>
+        <name>WiFi_AP_IP_Adrress</name>
+        <qualifiedname>DbcStruct::WiFi_AP_IP_Adrress</qualifiedname>
+        <bitfield>16</bitfield>
+        <briefdescription>
+<para>WiFi_AP_IP_Adrress signal with 16-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="441" column="10" bodyfile="include/d2cc_lib.h" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ad6902200ed6c439d771df6641d267682" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t DbcStruct::WiFi_ST_IP_Address</definition>
+        <argsstring></argsstring>
+        <name>WiFi_ST_IP_Address</name>
+        <qualifiedname>DbcStruct::WiFi_ST_IP_Address</qualifiedname>
+        <bitfield>16</bitfield>
+        <briefdescription>
+<para>WiFi_ST_IP_Address signal with 16-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="443" column="10" bodyfile="include/d2cc_lib.h" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::SwVersionMajor</definition>
+        <argsstring></argsstring>
+        <name>SwVersionMajor</name>
+        <qualifiedname>DbcStruct::SwVersionMajor</qualifiedname>
+        <bitfield>2</bitfield>
+        <briefdescription>
+<para>SwVersionMajor signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="445" column="9" bodyfile="include/d2cc_lib.h" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::SwVersionMinor</definition>
+        <argsstring></argsstring>
+        <name>SwVersionMinor</name>
+        <qualifiedname>DbcStruct::SwVersionMinor</qualifiedname>
+        <bitfield>2</bitfield>
+        <briefdescription>
+<para>SwVersionMinor signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="447" column="9" bodyfile="include/d2cc_lib.h" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1ab712e03d069028bd782d5a3bf63fbbcd" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DbcStruct::SwVersionBugfix</definition>
+        <argsstring></argsstring>
+        <name>SwVersionBugfix</name>
+        <qualifiedname>DbcStruct::SwVersionBugfix</qualifiedname>
+        <bitfield>4</bitfield>
+        <briefdescription>
+<para>SwVersionBugfix signal with 8-bit length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/d2cc_lib.h" line="449" column="9" bodyfile="include/d2cc_lib.h" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_dbc_struct_1afd07ef47a256612af2d7497af19d630c" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
         <definition>struct DbcStruct DbcStruct::Signal</definition>
         <argsstring></argsstring>
@@ -367,190 +1184,121 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="108" column="7"/>
+        <location file="include/d2cc_lib.h" line="450" column="7"/>
       </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b" prot="public" static="no" mutable="no">
-        <type>float</type>
-        <definition>float DbcStruct::factor</definition>
-        <argsstring></argsstring>
-        <name>factor</name>
-        <qualifiedname>DbcStruct::factor</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="113" column="7" bodyfile="include/d2cc_lib.h" bodystart="113" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int DbcStruct::offset</definition>
-        <argsstring></argsstring>
-        <name>offset</name>
-        <qualifiedname>DbcStruct::offset</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="114" column="5" bodyfile="include/d2cc_lib.h" bodystart="114" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1aacb347996a1291b562b366fa764aa041" prot="public" static="no" mutable="no">
-        <type>float</type>
-        <definition>float DbcStruct::value</definition>
-        <argsstring></argsstring>
-        <name>value</name>
-        <qualifiedname>DbcStruct::value</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="115" column="7" bodyfile="include/d2cc_lib.h" bodystart="115" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a39ef3d0f181193d908a3d957569f53e9" prot="public" static="no" mutable="no">
-        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
-        <definition>struct DbcStruct DbcStruct::Phys_Value</definition>
-        <argsstring></argsstring>
-        <name>Phys_Value</name>
-        <qualifiedname>DbcStruct::Phys_Value</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="116" column="11"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1ab926cf2e04c76fe31d1b0ddbded7666f" prot="public" static="no" mutable="no">
-        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
-        <definition>struct DbcStruct DbcStruct::BatteryBalance_MaxVoltage</definition>
-        <argsstring></argsstring>
-        <name>BatteryBalance_MaxVoltage</name>
-        <qualifiedname>DbcStruct::BatteryBalance_MaxVoltage</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="117" column="26"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1ac4b14f88a9116417c5247ea986ba72ab" prot="public" static="no" mutable="no">
-        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
-        <definition>struct DbcStruct DbcStruct::Phys_Value</definition>
-        <argsstring></argsstring>
-        <name>Phys_Value</name>
-        <qualifiedname>DbcStruct::Phys_Value</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="123" column="11"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1ac90174b4db5494409edf52628b1c9301" prot="public" static="no" mutable="no">
-        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
-        <definition>struct DbcStruct DbcStruct::BatteryBalance_MinVoltage</definition>
-        <argsstring></argsstring>
-        <name>BatteryBalance_MinVoltage</name>
-        <qualifiedname>DbcStruct::BatteryBalance_MinVoltage</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="124" column="26"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1ae49571f5b09c005a992e49b14d2649b6" prot="public" static="no" mutable="no">
-        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
-        <definition>struct DbcStruct DbcStruct::Phys_Value</definition>
-        <argsstring></argsstring>
-        <name>Phys_Value</name>
-        <qualifiedname>DbcStruct::Phys_Value</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="130" column="11"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1a1596535fa5514019cf0cf3aef02d817f" prot="public" static="no" mutable="no">
-        <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
-        <definition>struct DbcStruct DbcStruct::BatteryBalance_MinTemp</definition>
-        <argsstring></argsstring>
-        <name>BatteryBalance_MinTemp</name>
-        <qualifiedname>DbcStruct::BatteryBalance_MinTemp</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/d2cc_lib.h" line="131" column="23"/>
-      </memberdef>
-      <memberdef kind="variable" id="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_dbc_struct_1afad3e459a38651a13db4dd06594bd382" prot="public" static="no" mutable="no">
         <type>struct <ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref></type>
         <definition>struct DbcStruct DbcStruct::Can_Main</definition>
         <argsstring></argsstring>
         <name>Can_Main</name>
         <qualifiedname>DbcStruct::Can_Main</qualifiedname>
         <briefdescription>
+<para>CAN message structure for message Can_Main. </para>
         </briefdescription>
         <detaileddescription>
+<para>This structure represents the CAN message, including the signals and their values. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/d2cc_lib.h" line="132" column="9"/>
+        <location file="include/d2cc_lib.h" line="453" column="9"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/d2cc_lib.h" line="47" column="1" bodyfile="include/d2cc_lib.h" bodystart="47" bodyend="136"/>
+    <collaborationgraph>
+      <node id="1">
+        <label>DbcStruct</label>
+        <link refid="struct_dbc_struct"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Phys_Value</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Phys_Value_t</label>
+        <link refid="struct_phys___value__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/d2cc_lib.h" line="206" column="1" bodyfile="include/d2cc_lib.h" bodystart="206" bodyend="457"/>
     <listofallmembers>
       <member refid="struct_dbc_struct_1aafdcafa59c0375ecd8b2bf9e3a53ab53" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>AliveCounter</name></member>
+      <member refid="struct_dbc_struct_1a6f1a768f91a5f4a7efbd8332b0054a51" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Count</name></member>
+      <member refid="struct_dbc_struct_1acbf2a6a0e22fff9189162b517bc5fc54" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Count</name></member>
       <member refid="struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Messages</name></member>
+      <member refid="struct_dbc_struct_1a1a640baa84507339bfba02cc7bf31ad7" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Temp_AUX0</name></member>
+      <member refid="struct_dbc_struct_1a3be4db5c5288d77a2ffa6f0db21f3fea" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Temp_AUX1</name></member>
+      <member refid="struct_dbc_struct_1a22c4dffa9e3e3ac53ec970d97ec747c2" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Temp_AUX2</name></member>
+      <member refid="struct_dbc_struct_1af25f603c7a7904294c6f2077b32781ee" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Temp_AUX3</name></member>
+      <member refid="struct_dbc_struct_1a83c3d131f348c17f5d12de4c9700d028" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Temp_AUX4</name></member>
+      <member refid="struct_dbc_struct_1acc07b2fd0e5db28e1de340e1d4654046" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Temp_AUX5</name></member>
+      <member refid="struct_dbc_struct_1a39855c4f5479dddc01dc1a66b49d3efe" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Temp_AUX6</name></member>
+      <member refid="struct_dbc_struct_1addab4cd6e4fe7e9b2d12f88189475623" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Temp_AUX7</name></member>
       <member refid="struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Temperatures</name></member>
-      <member refid="struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Voltages</name></member>
+      <member refid="struct_dbc_struct_1ac0df264728127a2bc9cd5b7ba288ee17" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Voltages_1</name></member>
+      <member refid="struct_dbc_struct_1aa89001e2fb3b0d46bdab24ae246c3b97" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Battery_Voltages_2</name></member>
       <member refid="struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryBalance_MaxTemp</name></member>
       <member refid="struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryBalance_MaxVoltage</name></member>
-      <member refid="struct_dbc_struct_1ab926cf2e04c76fe31d1b0ddbded7666f" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryBalance_MaxVoltage</name></member>
+      <member refid="struct_dbc_struct_1a1ce53ead6be1b4b2182616078c3b86a4" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryBalance_MaxVoltage</name></member>
       <member refid="struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryBalance_MinTemp</name></member>
-      <member refid="struct_dbc_struct_1a1596535fa5514019cf0cf3aef02d817f" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryBalance_MinTemp</name></member>
+      <member refid="struct_dbc_struct_1af0dc83ddba8d12f6330af6b7eda2934d" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryBalance_MinTemp</name></member>
       <member refid="struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryBalance_MinVoltage</name></member>
-      <member refid="struct_dbc_struct_1ac90174b4db5494409edf52628b1c9301" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryBalance_MinVoltage</name></member>
+      <member refid="struct_dbc_struct_1a0690107a9e9e7a974e94aed2bc013177" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryBalance_MinVoltage</name></member>
       <member refid="struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryChemistry</name></member>
-      <member refid="struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Can_Main</name></member>
+      <member refid="struct_dbc_struct_1a1d3bcb9e8972d1aa1ff1a2cb63fa5e67" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatterySOC</name></member>
+      <member refid="struct_dbc_struct_1a8705a64cae747f9fbb1244e2760df0d2" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_1</name></member>
+      <member refid="struct_dbc_struct_1a647e2b19ffb49b2ed5459b8696faee31" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_1</name></member>
+      <member refid="struct_dbc_struct_1a0edf95266999cda26bfa64415ab66c11" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_10</name></member>
+      <member refid="struct_dbc_struct_1a54ac6b3ac10d953840c9159f275cabb5" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_10</name></member>
+      <member refid="struct_dbc_struct_1abd9596c665802a643fb055f93553c787" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_11</name></member>
+      <member refid="struct_dbc_struct_1ad7e265d7d74987490439dee645489dab" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_11</name></member>
+      <member refid="struct_dbc_struct_1aa8eb502120446487b97cfb290b071824" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_12</name></member>
+      <member refid="struct_dbc_struct_1a33dfe9cb100417b34f922ae6b264828b" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_12</name></member>
+      <member refid="struct_dbc_struct_1a4297e252aa775556c232c478883f8299" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_13</name></member>
+      <member refid="struct_dbc_struct_1a96476ad62db559e7b7ec99b18e156727" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_13</name></member>
+      <member refid="struct_dbc_struct_1a479d68e2ca89d790dbefd39a71faa281" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_14</name></member>
+      <member refid="struct_dbc_struct_1a4c71b805ceff9f5da3638ac8f7f309f6" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_14</name></member>
+      <member refid="struct_dbc_struct_1ab12c5eecedc581c2760d28755c4015ba" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_15</name></member>
+      <member refid="struct_dbc_struct_1a430ab60426ad7e19c9806fcd9d9edce4" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_15</name></member>
+      <member refid="struct_dbc_struct_1a47b822293e314d119ffc67e6d767cafe" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_16</name></member>
+      <member refid="struct_dbc_struct_1ae3649ee2164afa735376a1aa043c16db" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_16</name></member>
+      <member refid="struct_dbc_struct_1a6fe7067367840e901fe89d114f22c189" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_2</name></member>
+      <member refid="struct_dbc_struct_1aaed6aec8a59b2b4d6d02f93b47baa3ef" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_2</name></member>
+      <member refid="struct_dbc_struct_1a193c15c2163830869c835c9caa7daf4b" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_3</name></member>
+      <member refid="struct_dbc_struct_1a252931bb6cdda058f4562e27293681fc" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_3</name></member>
+      <member refid="struct_dbc_struct_1ae545ca583ee7ac6ff1eb085eed35092e" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_4</name></member>
+      <member refid="struct_dbc_struct_1ad660b1aa24222584e2e6d20ff244c0ee" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_4</name></member>
+      <member refid="struct_dbc_struct_1a6598e1d949075cd2caa869b58dcefa66" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_5</name></member>
+      <member refid="struct_dbc_struct_1ac01706109e3f5940872c8c0192b4aa48" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_5</name></member>
+      <member refid="struct_dbc_struct_1a01ac4c7d571306e0603ac9b1bdb259cb" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_6</name></member>
+      <member refid="struct_dbc_struct_1a66e2053ad6cdd71f8d240a1033987837" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_6</name></member>
+      <member refid="struct_dbc_struct_1ac1f0836457f5d4220230ea4541e7c4e7" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_7</name></member>
+      <member refid="struct_dbc_struct_1a6eefdea491ee74e704fccf45e290373f" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_7</name></member>
+      <member refid="struct_dbc_struct_1a80cffe4315498627e4d30ad49b31474b" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_8</name></member>
+      <member refid="struct_dbc_struct_1a414874fba7f67423a52b5fa009881832" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_8</name></member>
+      <member refid="struct_dbc_struct_1acca054e9ab7d7105afaebdd7d98084bc" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_9</name></member>
+      <member refid="struct_dbc_struct_1a44d0ab0e881a06380b14a439f3f5b103" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>BatteryVoltage_9</name></member>
+      <member refid="struct_dbc_struct_1afad3e459a38651a13db4dd06594bd382" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Can_Main</name></member>
       <member refid="struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>CanBusEnable</name></member>
       <member refid="struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Data</name></member>
-      <member refid="struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>DLC</name></member>
-      <member refid="struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>factor</name></member>
-      <member refid="struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>ID</name></member>
-      <member refid="struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>offset</name></member>
-      <member refid="struct_dbc_struct_1a39ef3d0f181193d908a3d957569f53e9" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Phys_Value</name></member>
-      <member refid="struct_dbc_struct_1ac4b14f88a9116417c5247ea986ba72ab" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Phys_Value</name></member>
-      <member refid="struct_dbc_struct_1ae49571f5b09c005a992e49b14d2649b6" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Phys_Value</name></member>
-      <member refid="struct_dbc_struct_1a69808b27e62d3066841098480113bdf8" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Signal</name></member>
-      <member refid="struct_dbc_struct_1ac02fab03e10a73ab3026bc900ec0c807" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Signal</name></member>
-      <member refid="struct_dbc_struct_1ab957d591284e13f130a259219c65197b" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Signal</name></member>
-      <member refid="struct_dbc_struct_1a6893b0165e1bcc78faf0c175d45b0689" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Signal</name></member>
+      <member refid="struct_dbc_struct_1a423f591df1d0e40cfa745d61e4d3b8d5" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>OCV_Voltages</name></member>
+      <member refid="struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Phys_Value</name></member>
+      <member refid="struct_dbc_struct_1aea70d67acc702c88ae08d881a525b194" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Reserved_1</name></member>
+      <member refid="struct_dbc_struct_1ae386297eca66f54a6da88c162813e6dc" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Signal</name></member>
+      <member refid="struct_dbc_struct_1a04d0ea7b7d8770e9afb917f073e5965c" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Signal</name></member>
+      <member refid="struct_dbc_struct_1a5ebdfbfc233e67f7eccb31b64953a3c4" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Signal</name></member>
+      <member refid="struct_dbc_struct_1ac1c3621532e78bbc51a5597d29372bf9" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Signal</name></member>
+      <member refid="struct_dbc_struct_1afd07ef47a256612af2d7497af19d630c" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>Signal</name></member>
       <member refid="struct_dbc_struct_1ab712e03d069028bd782d5a3bf63fbbcd" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>SwVersionBugfix</name></member>
       <member refid="struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>SwVersionMajor</name></member>
       <member refid="struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>SwVersionMinor</name></member>
       <member refid="struct_dbc_struct_1a9040957d9669218f0117644dcbc7f1c2" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>TcpClientCount</name></member>
       <member refid="struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>TcpEnable</name></member>
-      <member refid="struct_dbc_struct_1aacb347996a1291b562b366fa764aa041" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>value</name></member>
       <member refid="struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>VpnEnable</name></member>
+      <member refid="struct_dbc_struct_1a8f3b2251faf8a9f0240027876c23a975" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>WiFi_AP_IP_Adrress</name></member>
       <member refid="struct_dbc_struct_1a9e27bd50ce2d239ca6f1d5f7cb023de7" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>WiFi_AP_Status</name></member>
-      <member refid="struct_dbc_struct_1a1ca872211a78ead331d094d0b45c0499" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>WiFiEnable</name></member>
+      <member refid="struct_dbc_struct_1ad6902200ed6c439d771df6641d267682" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>WiFi_ST_IP_Address</name></member>
+      <member refid="struct_dbc_struct_1a4b524004290f7eff13d1280a150bc416" prot="public" virt="non-virtual"><scope>DbcStruct</scope><name>WiFi_ST_Status</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

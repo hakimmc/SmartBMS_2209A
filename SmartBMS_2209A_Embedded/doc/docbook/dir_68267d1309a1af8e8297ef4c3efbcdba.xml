@@ -14,6 +14,8 @@
 <para>CAN driver implementation for the ESP32 using the TWAI driver. </para>
 </listitem>
             <listitem><para>file <link linkend="_d2cc__lib_8c">d2cc_lib.c</link></para>
+
+<para>Source file for the D2CC library. </para>
 </listitem>
             <listitem><para>file <link linkend="__led_task_init_8c">LedTaskInit.c</link></para>
 
@@ -37,15 +39,4 @@
 </listitem>
         </itemizedlist>
 </simplesect>
-<section>
-<title>Detailed Description</title>
-
-<para><itemizedlist>
-<listitem>
-<para>C API is exposed via <link xlink:href="../include/ZeroTierSockets.h">include/ZeroTierSockets.h</link></para>
-</listitem><listitem>
-<para><link xlink:href="./bindings">bindings/</link> Contains the source for wrappers in various languages. See <link xlink:href="../examples/">examples/</link> for their usage. </para>
-</listitem></itemizedlist>
-</para>
-</section>
 </section>

@@ -50,7 +50,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 104 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#define&#32;ESP32_MAX_CONN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3</emphasis>
 105 <emphasis role="preprocessor">#endif</emphasis>
 106 
-118 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__wifi_8h_1ab89f8a7d7357e4fb0e466836024c7f9c">event_handler</link>(<emphasis role="keywordtype">void</emphasis>&#32;*arg,&#32;esp_event_base_t&#32;event_base,&#32;int32_t&#32;event_id,&#32;<emphasis role="keywordtype">void</emphasis>&#32;*event_data);
+118 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__wifi_8h_1a729c8b3e4ebc79d753bd4887f2b25412">event_handler</link>(<emphasis role="keywordtype">void</emphasis>&#32;*arg,&#32;esp_event_base_t&#32;event_base,&#32;int32_t&#32;event_id,&#32;<emphasis role="keywordtype">void</emphasis>&#32;*event_data);
 119 
 126 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__wifi_8h_1a13bb3ba68519d8aa7c2a72cf22dc2b21">wifi_init_ap_sta</link>(<emphasis role="keywordtype">void</emphasis>);
 127 

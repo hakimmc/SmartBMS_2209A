@@ -12,6 +12,6 @@ var _wifi_8h =
     [ "WIFI_PASS", "_wifi_8h.html#a3c95561b03d0fcf9048b231ae2ba90fb", null ],
     [ "WIFI_SSID", "_wifi_8h.html#a586542b79d00e4db7e1d5a667ae83a2b", null ],
     [ "WIFI_TIMEOUT_MS", "_wifi_8h.html#a4735ad9aef99f8584afd945f39260954", null ],
-    [ "event_handler", "_wifi_8h.html#ab89f8a7d7357e4fb0e466836024c7f9c", null ],
+    [ "event_handler", "_wifi_8h.html#a729c8b3e4ebc79d753bd4887f2b25412", null ],
     [ "wifi_init_ap_sta", "_wifi_8h.html#a13bb3ba68519d8aa7c2a72cf22dc2b21", null ]
 ];

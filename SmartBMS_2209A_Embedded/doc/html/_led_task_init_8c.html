@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="78184751.png"/></td>
   <td id="projectalign">
    <div id="projectname">SmartBMS_2209A<span id="projectnumber">&#160;v1.0.0</span>
    </div>
@@ -105,7 +106,8 @@ $(function(){initNavTree('_led_task_init_8c.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">LedTaskInit.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -116,6 +118,7 @@ $(function(){initNavTree('_led_task_init_8c.html',''); initResizable(true); });
 <code>#include &quot;driver/gpio.h&quot;</code><br />
 <code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
 <code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="d2cc__lib_8h_source.html">d2cc_lib.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -131,6 +134,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a1f53ce317fca339ddc6588adb1a457e4" id="r_a1f53ce317fca339ddc6588adb1a457e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f53ce317fca339ddc6588adb1a457e4">led_init</a> (void *pvParameter)</td></tr>
 <tr class="memdesc:a1f53ce317fca339ddc6588adb1a457e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED blinking task.  <br /></td></tr>
 <tr class="separator:a1f53ce317fca339ddc6588adb1a457e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:adabf6670e12fa284be00ec7af178f57d" id="r_adabf6670e12fa284be00ec7af178f57d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_dbc_struct.html">DbcStruct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adabf6670e12fa284be00ec7af178f57d">maindbc_struct</a></td></tr>
+<tr class="memdesc:adabf6670e12fa284be00ec7af178f57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extern from main; Structure to hold CAN message data.  <br /></td></tr>
+<tr class="separator:adabf6670e12fa284be00ec7af178f57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of LED blinking task using ESP32 GPIO. </p>
@@ -215,6 +224,33 @@ Functions</h2></td></tr>
 <p>&lt; Delay for 500 ms.</p>
 <p>&lt; Turn the LED off.</p>
 <p>&lt; Delay for 500 ms.</p>
+<p>&lt; Alive Counter.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="adabf6670e12fa284be00ec7af178f57d" name="adabf6670e12fa284be00ec7af178f57d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabf6670e12fa284be00ec7af178f57d">&#9670;&#160;</a></span>maindbc_struct</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> maindbc_struct</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extern from main; Structure to hold CAN message data. </p>
+<p>Extern from main; Structure to hold CAN message data. </p>
 
 </div>
 </div>

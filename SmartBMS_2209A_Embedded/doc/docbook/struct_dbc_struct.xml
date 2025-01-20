@@ -10,15 +10,45 @@
         <itemizedlist>
             <listitem><para>struct {</para>
         <itemizedlist>
-            <listitem><para>&#160;&#160;&#160;uint32_t <link linkend="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af">ID</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f">DLC</link></para>
-</listitem>
             <listitem><para>&#160;&#160;&#160;union {</para>
         <itemizedlist>
             <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link> <link linkend="_struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8">BatteryChemistry</link>:4</para>
+
+<para>Signal BatteryChemistry enum type. </para>
 </listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a69808b27e62d3066841098480113bdf8">Signal</link></para>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6f1a768f91a5f4a7efbd8332b0054a51">Battery_Count</link>:4</para>
+
+<para>Battery_Count signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74">BatteryBalance_MaxVoltage</link>:8</para>
+
+<para>BatteryBalance_MaxVoltage signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab">BatteryBalance_MinVoltage</link>:8</para>
+
+<para>BatteryBalance_MinVoltage signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be">BatteryBalance_MaxTemp</link>:8</para>
+
+<para>BatteryBalance_MaxTemp signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d">BatteryBalance_MinTemp</link>:8</para>
+
+<para>BatteryBalance_MinTemp signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a1d3bcb9e8972d1aa1ff1a2cb63fa5e67">BatterySOC</link>:8</para>
+
+<para>BatterySOC signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint16_t <link linkend="_struct_dbc_struct_1a423f591df1d0e40cfa745d61e4d3b8d5">OCV_Voltages</link>:16</para>
+
+<para>OCV_Voltages signal with 16-bit length. </para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ae386297eca66f54a6da88c162813e6dc">Signal</link></para>
 </listitem>
             <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd">Data</link> [8]</para>
 </listitem>
@@ -26,21 +56,93 @@
 </listitem>
             <listitem><para>&#160;&#160;&#160;} </para>
 </listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1acbf2a6a0e22fff9189162b517bc5fc54">Battery_Count</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a1ce53ead6be1b4b2182616078c3b86a4">BatteryBalance_MaxVoltage</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a0690107a9e9e7a974e94aed2bc013177">BatteryBalance_MinVoltage</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1af0dc83ddba8d12f6330af6b7eda2934d">BatteryBalance_MinTemp</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
         </itemizedlist>
 </listitem>
             <listitem><para>} <link linkend="_struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb">Battery_Messages</link></para>
+
+<para>CAN message structure for message Battery_Messages. </para>
 </listitem>
             <listitem><para>struct {</para>
         <itemizedlist>
-            <listitem><para>&#160;&#160;&#160;uint32_t <link linkend="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af">ID</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f">DLC</link></para>
-</listitem>
             <listitem><para>&#160;&#160;&#160;union {</para>
         <itemizedlist>
             <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a1a640baa84507339bfba02cc7bf31ad7">Battery_Temp_AUX0</link>:8</para>
+
+<para>Battery_Temp_AUX0 signal with 8-bit length. </para>
 </listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ac02fab03e10a73ab3026bc900ec0c807">Signal</link></para>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a3be4db5c5288d77a2ffa6f0db21f3fea">Battery_Temp_AUX1</link>:8</para>
+
+<para>Battery_Temp_AUX1 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a22c4dffa9e3e3ac53ec970d97ec747c2">Battery_Temp_AUX2</link>:8</para>
+
+<para>Battery_Temp_AUX2 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1af25f603c7a7904294c6f2077b32781ee">Battery_Temp_AUX3</link>:8</para>
+
+<para>Battery_Temp_AUX3 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a83c3d131f348c17f5d12de4c9700d028">Battery_Temp_AUX4</link>:8</para>
+
+<para>Battery_Temp_AUX4 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1acc07b2fd0e5db28e1de340e1d4654046">Battery_Temp_AUX5</link>:8</para>
+
+<para>Battery_Temp_AUX5 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a39855c4f5479dddc01dc1a66b49d3efe">Battery_Temp_AUX6</link>:8</para>
+
+<para>Battery_Temp_AUX6 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1addab4cd6e4fe7e9b2d12f88189475623">Battery_Temp_AUX7</link>:8</para>
+
+<para>Battery_Temp_AUX7 signal with 8-bit length. </para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a04d0ea7b7d8770e9afb917f073e5965c">Signal</link></para>
 </listitem>
             <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd">Data</link> [8]</para>
 </listitem>
@@ -51,18 +153,50 @@
         </itemizedlist>
 </listitem>
             <listitem><para>} <link linkend="_struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b">Battery_Temperatures</link></para>
+
+<para>CAN message structure for message Battery_Temperatures. </para>
 </listitem>
             <listitem><para>struct {</para>
         <itemizedlist>
-            <listitem><para>&#160;&#160;&#160;uint32_t <link linkend="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af">ID</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f">DLC</link></para>
-</listitem>
             <listitem><para>&#160;&#160;&#160;union {</para>
         <itemizedlist>
             <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a8705a64cae747f9fbb1244e2760df0d2">BatteryVoltage_1</link>:8</para>
+
+<para>BatteryVoltage_1 signal with 8-bit length. </para>
 </listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ab957d591284e13f130a259219c65197b">Signal</link></para>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6fe7067367840e901fe89d114f22c189">BatteryVoltage_2</link>:8</para>
+
+<para>BatteryVoltage_2 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a193c15c2163830869c835c9caa7daf4b">BatteryVoltage_3</link>:8</para>
+
+<para>BatteryVoltage_3 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1ae545ca583ee7ac6ff1eb085eed35092e">BatteryVoltage_4</link>:8</para>
+
+<para>BatteryVoltage_4 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6598e1d949075cd2caa869b58dcefa66">BatteryVoltage_5</link>:8</para>
+
+<para>BatteryVoltage_5 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a01ac4c7d571306e0603ac9b1bdb259cb">BatteryVoltage_6</link>:8</para>
+
+<para>BatteryVoltage_6 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1ac1f0836457f5d4220230ea4541e7c4e7">BatteryVoltage_7</link>:8</para>
+
+<para>BatteryVoltage_7 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a80cffe4315498627e4d30ad49b31474b">BatteryVoltage_8</link>:8</para>
+
+<para>BatteryVoltage_8 signal with 8-bit length. </para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a5ebdfbfc233e67f7eccb31b64953a3c4">Signal</link></para>
 </listitem>
             <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd">Data</link> [8]</para>
 </listitem>
@@ -70,53 +204,287 @@
 </listitem>
             <listitem><para>&#160;&#160;&#160;} </para>
 </listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
         </itemizedlist>
 </listitem>
-            <listitem><para>} <link linkend="_struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc">Battery_Voltages</link></para>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a647e2b19ffb49b2ed5459b8696faee31">BatteryVoltage_1</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1aaed6aec8a59b2b4d6d02f93b47baa3ef">BatteryVoltage_2</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a252931bb6cdda058f4562e27293681fc">BatteryVoltage_3</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ad660b1aa24222584e2e6d20ff244c0ee">BatteryVoltage_4</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ac01706109e3f5940872c8c0192b4aa48">BatteryVoltage_5</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a66e2053ad6cdd71f8d240a1033987837">BatteryVoltage_6</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a6eefdea491ee74e704fccf45e290373f">BatteryVoltage_7</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a414874fba7f67423a52b5fa009881832">BatteryVoltage_8</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_struct_dbc_struct_1ac0df264728127a2bc9cd5b7ba288ee17">Battery_Voltages_1</link></para>
+
+<para>CAN message structure for message Battery_Voltages_1. </para>
 </listitem>
             <listitem><para>struct {</para>
         <itemizedlist>
-            <listitem><para>&#160;&#160;&#160;uint32_t <link linkend="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af">ID</link></para>
+            <listitem><para>&#160;&#160;&#160;union {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1acca054e9ab7d7105afaebdd7d98084bc">BatteryVoltage_9</link>:8</para>
+
+<para>BatteryVoltage_9 signal with 8-bit length. </para>
 </listitem>
-            <listitem><para>&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f">DLC</link></para>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a0edf95266999cda26bfa64415ab66c11">BatteryVoltage_10</link>:8</para>
+
+<para>BatteryVoltage_10 signal with 8-bit length. </para>
 </listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1abd9596c665802a643fb055f93553c787">BatteryVoltage_11</link>:8</para>
+
+<para>BatteryVoltage_11 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aa8eb502120446487b97cfb290b071824">BatteryVoltage_12</link>:8</para>
+
+<para>BatteryVoltage_12 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a4297e252aa775556c232c478883f8299">BatteryVoltage_13</link>:8</para>
+
+<para>BatteryVoltage_13 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a479d68e2ca89d790dbefd39a71faa281">BatteryVoltage_14</link>:8</para>
+
+<para>BatteryVoltage_14 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1ab12c5eecedc581c2760d28755c4015ba">BatteryVoltage_15</link>:8</para>
+
+<para>BatteryVoltage_15 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a47b822293e314d119ffc67e6d767cafe">BatteryVoltage_16</link>:8</para>
+
+<para>BatteryVoltage_16 signal with 8-bit length. </para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ac1c3621532e78bbc51a5597d29372bf9">Signal</link></para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd">Data</link> [8]</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a44d0ab0e881a06380b14a439f3f5b103">BatteryVoltage_9</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a54ac6b3ac10d953840c9159f275cabb5">BatteryVoltage_10</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ad7e265d7d74987490439dee645489dab">BatteryVoltage_11</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a33dfe9cb100417b34f922ae6b264828b">BatteryVoltage_12</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a96476ad62db559e7b7ec99b18e156727">BatteryVoltage_13</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a4c71b805ceff9f5da3638ac8f7f309f6">BatteryVoltage_14</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a430ab60426ad7e19c9806fcd9d9edce4">BatteryVoltage_15</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_struct_phys___value__t">Phys_Value_t</link> <link linkend="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0">Phys_Value</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ae3649ee2164afa735376a1aa043c16db">BatteryVoltage_16</link></para>
+
+<para>Factor for scaling the raw signal value. </para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_struct_dbc_struct_1aa89001e2fb3b0d46bdab24ae246c3b97">Battery_Voltages_2</link></para>
+
+<para>CAN message structure for message Battery_Voltages_2. </para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
             <listitem><para>&#160;&#160;&#160;union {</para>
         <itemizedlist>
             <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
         <itemizedlist>
             <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aafdcafa59c0375ecd8b2bf9e3a53ab53">AliveCounter</link>:7</para>
+
+<para>AliveCounter signal with 8-bit length. </para>
 </listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link> <link linkend="_struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8">BatteryChemistry</link>:1</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74">BatteryBalance_MaxVoltage</link>:8</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab">BatteryBalance_MinVoltage</link>:8</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be">BatteryBalance_MaxTemp</link>:8</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d">BatteryBalance_MinTemp</link>:8</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a">SwVersionMajor</link>:2</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21">SwVersionMinor</link>:2</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1ab712e03d069028bd782d5a3bf63fbbcd">SwVersionBugfix</link>:4</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link> <link linkend="_struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad">CanBusEnable</link>:1</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</link> <link linkend="_struct_dbc_struct_1a1ca872211a78ead331d094d0b45c0499">WiFiEnable</link>:1</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link> <link linkend="_struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a">TcpEnable</link>:2</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link> <link linkend="_struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54">VpnEnable</link>:1</para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link> <link linkend="_struct_dbc_struct_1a9e27bd50ce2d239ca6f1d5f7cb023de7">WiFi_AP_Status</link>:2</para>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link> <link linkend="_struct_dbc_struct_1a9e27bd50ce2d239ca6f1d5f7cb023de7">WiFi_AP_Status</link>:1</para>
+
+<para>Signal WiFi_AP_Status enum type. </para>
 </listitem>
             <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1a9040957d9669218f0117644dcbc7f1c2">TcpClientCount</link>:8</para>
+
+<para>TcpClientCount signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link> <link linkend="_struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad">CanBusEnable</link>:1</para>
+
+<para>Signal CanBusEnable enum type. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link> <link linkend="_struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a">TcpEnable</link>:2</para>
+
+<para>Signal TcpEnable enum type. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link> <link linkend="_struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54">VpnEnable</link>:2</para>
+
+<para>Signal VpnEnable enum type. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_d2cc__lib_8h_1ad00d3bb37c1d69ea203ae4019a832403">WiFi_ST_Status_enum</link> <link linkend="_struct_dbc_struct_1a4b524004290f7eff13d1280a150bc416">WiFi_ST_Status</link>:2</para>
+
+<para>Signal WiFi_ST_Status enum type. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aea70d67acc702c88ae08d881a525b194">Reserved_1</link>:1</para>
+
+<para>Reserved_1 signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint16_t <link linkend="_struct_dbc_struct_1a8f3b2251faf8a9f0240027876c23a975">WiFi_AP_IP_Adrress</link>:16</para>
+
+<para>WiFi_AP_IP_Adrress signal with 16-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint16_t <link linkend="_struct_dbc_struct_1ad6902200ed6c439d771df6641d267682">WiFi_ST_IP_Address</link>:16</para>
+
+<para>WiFi_ST_IP_Address signal with 16-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a">SwVersionMajor</link>:2</para>
+
+<para>SwVersionMajor signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21">SwVersionMinor</link>:2</para>
+
+<para>SwVersionMinor signal with 8-bit length. </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1ab712e03d069028bd782d5a3bf63fbbcd">SwVersionBugfix</link>:4</para>
+
+<para>SwVersionBugfix signal with 8-bit length. </para>
 </listitem>
         </itemizedlist>
 </listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a6893b0165e1bcc78faf0c175d45b0689">Signal</link></para>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1afd07ef47a256612af2d7497af19d630c">Signal</link></para>
 </listitem>
             <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint8_t <link linkend="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd">Data</link> [8]</para>
 </listitem>
@@ -124,63 +492,11 @@
 </listitem>
             <listitem><para>&#160;&#160;&#160;} </para>
 </listitem>
-            <listitem><para>&#160;&#160;&#160;struct {</para>
-        <itemizedlist>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
-        <itemizedlist>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b">factor</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;int <link linkend="_struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7">offset</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1aacb347996a1291b562b366fa764aa041">value</link></para>
-</listitem>
         </itemizedlist>
 </listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a39ef3d0f181193d908a3d957569f53e9">Phys_Value</link></para>
-</listitem>
-        </itemizedlist>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ab926cf2e04c76fe31d1b0ddbded7666f">BatteryBalance_MaxVoltage</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;struct {</para>
-        <itemizedlist>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
-        <itemizedlist>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b">factor</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;int <link linkend="_struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7">offset</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1aacb347996a1291b562b366fa764aa041">value</link></para>
-</listitem>
-        </itemizedlist>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ac4b14f88a9116417c5247ea986ba72ab">Phys_Value</link></para>
-</listitem>
-        </itemizedlist>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ac90174b4db5494409edf52628b1c9301">BatteryBalance_MinVoltage</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;struct {</para>
-        <itemizedlist>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;struct {</para>
-        <itemizedlist>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b">factor</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;int <link linkend="_struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7">offset</link></para>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;float <link linkend="_struct_dbc_struct_1aacb347996a1291b562b366fa764aa041">value</link></para>
-</listitem>
-        </itemizedlist>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1ae49571f5b09c005a992e49b14d2649b6">Phys_Value</link></para>
-</listitem>
-        </itemizedlist>
-</listitem>
-            <listitem><para>&#160;&#160;&#160;} <link linkend="_struct_dbc_struct_1a1596535fa5514019cf0cf3aef02d817f">BatteryBalance_MinTemp</link></para>
-</listitem>
-        </itemizedlist>
-</listitem>
-            <listitem><para>} <link linkend="_struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c">Can_Main</link></para>
+            <listitem><para>} <link linkend="_struct_dbc_struct_1afad3e459a38651a13db4dd06594bd382">Can_Main</link></para>
+
+<para>CAN message structure for message Can_Main. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -190,129 +506,584 @@
     <title>AliveCounter</title>
 <indexterm><primary>AliveCounter</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>AliveCounter</secondary></indexterm>
-<para><computeroutput>uint8_t DbcStruct::AliveCounter</computeroutput></para></section>
+<para><computeroutput>uint8_t DbcStruct::AliveCounter</computeroutput></para><para>
+
+<para>AliveCounter signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a6f1a768f91a5f4a7efbd8332b0054a51"/><section>
+    <title>Battery_Count<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Battery_Count</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Count</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Battery_Count</computeroutput></para><para>
+
+<para>Battery_Count signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1acbf2a6a0e22fff9189162b517bc5fc54"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Battery_Count</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Count</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Battery_Count</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1a5a8965da558df8ef6ec7892fd3515ccb"/><section>
     <title>[struct]</title>
 <indexterm><primary>Battery_Messages</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>Battery_Messages</secondary></indexterm>
-<para><computeroutput>struct  { ... }  DbcStruct::Battery_Messages</computeroutput></para></section>
+<para><computeroutput>struct  { ... }  DbcStruct::Battery_Messages</computeroutput></para><para>
+
+<para>CAN message structure for message Battery_Messages. </para>
+</para>
+
+<para>This structure represents the CAN message, including the signals and their values. </para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a1a640baa84507339bfba02cc7bf31ad7"/><section>
+    <title>Battery_Temp_AUX0</title>
+<indexterm><primary>Battery_Temp_AUX0</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Temp_AUX0</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Battery_Temp_AUX0</computeroutput></para><para>
+
+<para>Battery_Temp_AUX0 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a3be4db5c5288d77a2ffa6f0db21f3fea"/><section>
+    <title>Battery_Temp_AUX1</title>
+<indexterm><primary>Battery_Temp_AUX1</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Temp_AUX1</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Battery_Temp_AUX1</computeroutput></para><para>
+
+<para>Battery_Temp_AUX1 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a22c4dffa9e3e3ac53ec970d97ec747c2"/><section>
+    <title>Battery_Temp_AUX2</title>
+<indexterm><primary>Battery_Temp_AUX2</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Temp_AUX2</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Battery_Temp_AUX2</computeroutput></para><para>
+
+<para>Battery_Temp_AUX2 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1af25f603c7a7904294c6f2077b32781ee"/><section>
+    <title>Battery_Temp_AUX3</title>
+<indexterm><primary>Battery_Temp_AUX3</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Temp_AUX3</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Battery_Temp_AUX3</computeroutput></para><para>
+
+<para>Battery_Temp_AUX3 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a83c3d131f348c17f5d12de4c9700d028"/><section>
+    <title>Battery_Temp_AUX4</title>
+<indexterm><primary>Battery_Temp_AUX4</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Temp_AUX4</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Battery_Temp_AUX4</computeroutput></para><para>
+
+<para>Battery_Temp_AUX4 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1acc07b2fd0e5db28e1de340e1d4654046"/><section>
+    <title>Battery_Temp_AUX5</title>
+<indexterm><primary>Battery_Temp_AUX5</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Temp_AUX5</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Battery_Temp_AUX5</computeroutput></para><para>
+
+<para>Battery_Temp_AUX5 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a39855c4f5479dddc01dc1a66b49d3efe"/><section>
+    <title>Battery_Temp_AUX6</title>
+<indexterm><primary>Battery_Temp_AUX6</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Temp_AUX6</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Battery_Temp_AUX6</computeroutput></para><para>
+
+<para>Battery_Temp_AUX6 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1addab4cd6e4fe7e9b2d12f88189475623"/><section>
+    <title>Battery_Temp_AUX7</title>
+<indexterm><primary>Battery_Temp_AUX7</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Temp_AUX7</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Battery_Temp_AUX7</computeroutput></para><para>
+
+<para>Battery_Temp_AUX7 signal with 8-bit length. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1a714a42ccae458b2dae901e11c57c248b"/><section>
     <title>[struct]</title>
 <indexterm><primary>Battery_Temperatures</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>Battery_Temperatures</secondary></indexterm>
-<para><computeroutput>struct  { ... }  DbcStruct::Battery_Temperatures</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1a09a5231350c6bc3f80623091f49e9dcc"/><section>
+<para><computeroutput>struct  { ... }  DbcStruct::Battery_Temperatures</computeroutput></para><para>
+
+<para>CAN message structure for message Battery_Temperatures. </para>
+</para>
+
+<para>This structure represents the CAN message, including the signals and their values. </para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1ac0df264728127a2bc9cd5b7ba288ee17"/><section>
     <title>[struct]</title>
-<indexterm><primary>Battery_Voltages</primary><secondary>DbcStruct</secondary></indexterm>
-<indexterm><primary>DbcStruct</primary><secondary>Battery_Voltages</secondary></indexterm>
-<para><computeroutput>struct  { ... }  DbcStruct::Battery_Voltages</computeroutput></para></section>
+<indexterm><primary>Battery_Voltages_1</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Voltages_1</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Battery_Voltages_1</computeroutput></para><para>
+
+<para>CAN message structure for message Battery_Voltages_1. </para>
+</para>
+
+<para>This structure represents the CAN message, including the signals and their values. </para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1aa89001e2fb3b0d46bdab24ae246c3b97"/><section>
+    <title>[struct]</title>
+<indexterm><primary>Battery_Voltages_2</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Battery_Voltages_2</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Battery_Voltages_2</computeroutput></para><para>
+
+<para>CAN message structure for message Battery_Voltages_2. </para>
+</para>
+
+<para>This structure represents the CAN message, including the signals and their values. </para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1ad64cfb03672b0c31c2eb92612c8741be"/><section>
     <title>BatteryBalance_MaxTemp</title>
 <indexterm><primary>BatteryBalance_MaxTemp</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MaxTemp</secondary></indexterm>
-<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MaxTemp</computeroutput></para></section>
+<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MaxTemp</computeroutput></para><para>
+
+<para>BatteryBalance_MaxTemp signal with 8-bit length. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1a448ff1f8f3fec4b0cd1ae1da34b72e74"/><section>
     <title>BatteryBalance_MaxVoltage<computeroutput>[1/2]</computeroutput></title>
 <indexterm><primary>BatteryBalance_MaxVoltage</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MaxVoltage</secondary></indexterm>
-<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MaxVoltage</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1ab926cf2e04c76fe31d1b0ddbded7666f"/><section>
+<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MaxVoltage</computeroutput></para><para>
+
+<para>BatteryBalance_MaxVoltage signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a1ce53ead6be1b4b2182616078c3b86a4"/><section>
     <title>[struct]<computeroutput>[2/2]</computeroutput></title>
 <indexterm><primary>BatteryBalance_MaxVoltage</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MaxVoltage</secondary></indexterm>
-<para><computeroutput>struct  { ... }  DbcStruct::BatteryBalance_MaxVoltage</computeroutput></para></section>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryBalance_MaxVoltage</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1a642f31176bf356e0ef022cdf036a143d"/><section>
     <title>BatteryBalance_MinTemp<computeroutput>[1/2]</computeroutput></title>
 <indexterm><primary>BatteryBalance_MinTemp</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MinTemp</secondary></indexterm>
-<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MinTemp</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1a1596535fa5514019cf0cf3aef02d817f"/><section>
+<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MinTemp</computeroutput></para><para>
+
+<para>BatteryBalance_MinTemp signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1af0dc83ddba8d12f6330af6b7eda2934d"/><section>
     <title>[struct]<computeroutput>[2/2]</computeroutput></title>
 <indexterm><primary>BatteryBalance_MinTemp</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MinTemp</secondary></indexterm>
-<para><computeroutput>struct  { ... }  DbcStruct::BatteryBalance_MinTemp</computeroutput></para></section>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryBalance_MinTemp</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1a924f2f712aa30711ca07c571e8e51eab"/><section>
     <title>BatteryBalance_MinVoltage<computeroutput>[1/2]</computeroutput></title>
 <indexterm><primary>BatteryBalance_MinVoltage</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MinVoltage</secondary></indexterm>
-<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MinVoltage</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1ac90174b4db5494409edf52628b1c9301"/><section>
+<para><computeroutput>uint8_t DbcStruct::BatteryBalance_MinVoltage</computeroutput></para><para>
+
+<para>BatteryBalance_MinVoltage signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a0690107a9e9e7a974e94aed2bc013177"/><section>
     <title>[struct]<computeroutput>[2/2]</computeroutput></title>
 <indexterm><primary>BatteryBalance_MinVoltage</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>BatteryBalance_MinVoltage</secondary></indexterm>
-<para><computeroutput>struct  { ... }  DbcStruct::BatteryBalance_MinVoltage</computeroutput></para></section>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryBalance_MinVoltage</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1a7a06730f35cb4de82713855e2c0ae1e8"/><section>
     <title>BatteryChemistry</title>
 <indexterm><primary>BatteryChemistry</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>BatteryChemistry</secondary></indexterm>
-<para><computeroutput><link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link> DbcStruct::BatteryChemistry</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1afd4a56b9222da287807b10650d4c902c"/><section>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</link> DbcStruct::BatteryChemistry</computeroutput></para><para>
+
+<para>Signal BatteryChemistry enum type. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a1d3bcb9e8972d1aa1ff1a2cb63fa5e67"/><section>
+    <title>BatterySOC</title>
+<indexterm><primary>BatterySOC</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatterySOC</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatterySOC</computeroutput></para><para>
+
+<para>BatterySOC signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a8705a64cae747f9fbb1244e2760df0d2"/><section>
+    <title>BatteryVoltage_1<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_1</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_1</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_1</computeroutput></para><para>
+
+<para>BatteryVoltage_1 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a647e2b19ffb49b2ed5459b8696faee31"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_1</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_1</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_1</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a0edf95266999cda26bfa64415ab66c11"/><section>
+    <title>BatteryVoltage_10<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_10</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_10</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_10</computeroutput></para><para>
+
+<para>BatteryVoltage_10 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a54ac6b3ac10d953840c9159f275cabb5"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_10</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_10</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_10</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1abd9596c665802a643fb055f93553c787"/><section>
+    <title>BatteryVoltage_11<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_11</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_11</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_11</computeroutput></para><para>
+
+<para>BatteryVoltage_11 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1ad7e265d7d74987490439dee645489dab"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_11</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_11</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_11</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1aa8eb502120446487b97cfb290b071824"/><section>
+    <title>BatteryVoltage_12<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_12</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_12</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_12</computeroutput></para><para>
+
+<para>BatteryVoltage_12 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a33dfe9cb100417b34f922ae6b264828b"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_12</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_12</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_12</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a4297e252aa775556c232c478883f8299"/><section>
+    <title>BatteryVoltage_13<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_13</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_13</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_13</computeroutput></para><para>
+
+<para>BatteryVoltage_13 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a96476ad62db559e7b7ec99b18e156727"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_13</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_13</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_13</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a479d68e2ca89d790dbefd39a71faa281"/><section>
+    <title>BatteryVoltage_14<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_14</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_14</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_14</computeroutput></para><para>
+
+<para>BatteryVoltage_14 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a4c71b805ceff9f5da3638ac8f7f309f6"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_14</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_14</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_14</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1ab12c5eecedc581c2760d28755c4015ba"/><section>
+    <title>BatteryVoltage_15<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_15</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_15</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_15</computeroutput></para><para>
+
+<para>BatteryVoltage_15 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a430ab60426ad7e19c9806fcd9d9edce4"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_15</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_15</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_15</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a47b822293e314d119ffc67e6d767cafe"/><section>
+    <title>BatteryVoltage_16<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_16</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_16</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_16</computeroutput></para><para>
+
+<para>BatteryVoltage_16 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1ae3649ee2164afa735376a1aa043c16db"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_16</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_16</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_16</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a6fe7067367840e901fe89d114f22c189"/><section>
+    <title>BatteryVoltage_2<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_2</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_2</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_2</computeroutput></para><para>
+
+<para>BatteryVoltage_2 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1aaed6aec8a59b2b4d6d02f93b47baa3ef"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_2</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_2</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_2</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a193c15c2163830869c835c9caa7daf4b"/><section>
+    <title>BatteryVoltage_3<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_3</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_3</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_3</computeroutput></para><para>
+
+<para>BatteryVoltage_3 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a252931bb6cdda058f4562e27293681fc"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_3</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_3</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_3</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1ae545ca583ee7ac6ff1eb085eed35092e"/><section>
+    <title>BatteryVoltage_4<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_4</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_4</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_4</computeroutput></para><para>
+
+<para>BatteryVoltage_4 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1ad660b1aa24222584e2e6d20ff244c0ee"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_4</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_4</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_4</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a6598e1d949075cd2caa869b58dcefa66"/><section>
+    <title>BatteryVoltage_5<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_5</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_5</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_5</computeroutput></para><para>
+
+<para>BatteryVoltage_5 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1ac01706109e3f5940872c8c0192b4aa48"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_5</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_5</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_5</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a01ac4c7d571306e0603ac9b1bdb259cb"/><section>
+    <title>BatteryVoltage_6<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_6</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_6</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_6</computeroutput></para><para>
+
+<para>BatteryVoltage_6 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a66e2053ad6cdd71f8d240a1033987837"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_6</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_6</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_6</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1ac1f0836457f5d4220230ea4541e7c4e7"/><section>
+    <title>BatteryVoltage_7<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_7</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_7</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_7</computeroutput></para><para>
+
+<para>BatteryVoltage_7 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a6eefdea491ee74e704fccf45e290373f"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_7</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_7</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_7</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a80cffe4315498627e4d30ad49b31474b"/><section>
+    <title>BatteryVoltage_8<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_8</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_8</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_8</computeroutput></para><para>
+
+<para>BatteryVoltage_8 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a414874fba7f67423a52b5fa009881832"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_8</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_8</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_8</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1acca054e9ab7d7105afaebdd7d98084bc"/><section>
+    <title>BatteryVoltage_9<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_9</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_9</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::BatteryVoltage_9</computeroutput></para><para>
+
+<para>BatteryVoltage_9 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a44d0ab0e881a06380b14a439f3f5b103"/><section>
+    <title>[struct]<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BatteryVoltage_9</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>BatteryVoltage_9</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::BatteryVoltage_9</computeroutput></para><para>
+
+<para>Factor for scaling the raw signal value. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1afad3e459a38651a13db4dd06594bd382"/><section>
     <title>[struct]</title>
 <indexterm><primary>Can_Main</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>Can_Main</secondary></indexterm>
-<para><computeroutput>struct  { ... }  DbcStruct::Can_Main</computeroutput></para></section>
+<para><computeroutput>struct  { ... }  DbcStruct::Can_Main</computeroutput></para><para>
+
+<para>CAN message structure for message Can_Main. </para>
+</para>
+
+<para>This structure represents the CAN message, including the signals and their values. </para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1a96f0ecd6a7074aca0fcfd72592245fad"/><section>
     <title>CanBusEnable</title>
 <indexterm><primary>CanBusEnable</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>CanBusEnable</secondary></indexterm>
-<para><computeroutput><link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link> DbcStruct::CanBusEnable</computeroutput></para></section>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</link> DbcStruct::CanBusEnable</computeroutput></para><para>
+
+<para>Signal CanBusEnable enum type. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1aeade4ab284b79f71689506788e7481dd"/><section>
     <title>Data</title>
 <indexterm><primary>Data</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>Data</secondary></indexterm>
 <para><computeroutput>uint8_t DbcStruct::Data[8]</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1a6911c520e7c91105dac30c798b81033f"/><section>
-    <title>DLC</title>
-<indexterm><primary>DLC</primary><secondary>DbcStruct</secondary></indexterm>
-<indexterm><primary>DbcStruct</primary><secondary>DLC</secondary></indexterm>
-<para><computeroutput>uint8_t DbcStruct::DLC</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1a1003abb8f5969cce5ea2949d4128f16b"/><section>
-    <title>factor</title>
-<indexterm><primary>factor</primary><secondary>DbcStruct</secondary></indexterm>
-<indexterm><primary>DbcStruct</primary><secondary>factor</secondary></indexterm>
-<para><computeroutput>float DbcStruct::factor</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1a0b24f67210c02a92c019021bba07f1af"/><section>
-    <title>ID</title>
-<indexterm><primary>ID</primary><secondary>DbcStruct</secondary></indexterm>
-<indexterm><primary>DbcStruct</primary><secondary>ID</secondary></indexterm>
-<para><computeroutput>uint32_t DbcStruct::ID</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1afe6c37d7e5b15901c0d388aca1bee4e7"/><section>
-    <title>offset</title>
-<indexterm><primary>offset</primary><secondary>DbcStruct</secondary></indexterm>
-<indexterm><primary>DbcStruct</primary><secondary>offset</secondary></indexterm>
-<para><computeroutput>int DbcStruct::offset</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1a39ef3d0f181193d908a3d957569f53e9"/><section>
-    <title>[struct]<computeroutput>[1/3]</computeroutput></title>
+<anchor xml:id="_struct_dbc_struct_1a423f591df1d0e40cfa745d61e4d3b8d5"/><section>
+    <title>OCV_Voltages</title>
+<indexterm><primary>OCV_Voltages</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>OCV_Voltages</secondary></indexterm>
+<para><computeroutput>uint16_t DbcStruct::OCV_Voltages</computeroutput></para><para>
+
+<para>OCV_Voltages signal with 16-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1afe43f7814a8852ab5b323cfd83593aa0"/><section>
+    <title>Phys_Value</title>
 <indexterm><primary>Phys_Value</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>Phys_Value</secondary></indexterm>
-<para><computeroutput>struct  { ... }  DbcStruct::Phys_Value</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1ac4b14f88a9116417c5247ea986ba72ab"/><section>
-    <title>[struct]<computeroutput>[2/3]</computeroutput></title>
-<indexterm><primary>Phys_Value</primary><secondary>DbcStruct</secondary></indexterm>
-<indexterm><primary>DbcStruct</primary><secondary>Phys_Value</secondary></indexterm>
-<para><computeroutput>struct  { ... }  DbcStruct::Phys_Value</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1ae49571f5b09c005a992e49b14d2649b6"/><section>
-    <title>[struct]<computeroutput>[3/3]</computeroutput></title>
-<indexterm><primary>Phys_Value</primary><secondary>DbcStruct</secondary></indexterm>
-<indexterm><primary>DbcStruct</primary><secondary>Phys_Value</secondary></indexterm>
-<para><computeroutput>struct  { ... }  DbcStruct::Phys_Value</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1a69808b27e62d3066841098480113bdf8"/><section>
-    <title>[struct]<computeroutput>[1/4]</computeroutput></title>
+<para><computeroutput><link linkend="_struct_phys___value__t">Phys_Value_t</link> DbcStruct::Phys_Value</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1aea70d67acc702c88ae08d881a525b194"/><section>
+    <title>Reserved_1</title>
+<indexterm><primary>Reserved_1</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Reserved_1</secondary></indexterm>
+<para><computeroutput>uint8_t DbcStruct::Reserved_1</computeroutput></para><para>
+
+<para>Reserved_1 signal with 8-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1ae386297eca66f54a6da88c162813e6dc"/><section>
+    <title>[struct]<computeroutput>[1/5]</computeroutput></title>
 <indexterm><primary>Signal</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>Signal</secondary></indexterm>
 <para><computeroutput>struct  { ... }  DbcStruct::Signal</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1ac02fab03e10a73ab3026bc900ec0c807"/><section>
-    <title>[struct]<computeroutput>[2/4]</computeroutput></title>
+<anchor xml:id="_struct_dbc_struct_1a04d0ea7b7d8770e9afb917f073e5965c"/><section>
+    <title>[struct]<computeroutput>[2/5]</computeroutput></title>
 <indexterm><primary>Signal</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>Signal</secondary></indexterm>
 <para><computeroutput>struct  { ... }  DbcStruct::Signal</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1ab957d591284e13f130a259219c65197b"/><section>
-    <title>[struct]<computeroutput>[3/4]</computeroutput></title>
+<anchor xml:id="_struct_dbc_struct_1a5ebdfbfc233e67f7eccb31b64953a3c4"/><section>
+    <title>[struct]<computeroutput>[3/5]</computeroutput></title>
 <indexterm><primary>Signal</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>Signal</secondary></indexterm>
 <para><computeroutput>struct  { ... }  DbcStruct::Signal</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1a6893b0165e1bcc78faf0c175d45b0689"/><section>
-    <title>[struct]<computeroutput>[4/4]</computeroutput></title>
+<anchor xml:id="_struct_dbc_struct_1ac1c3621532e78bbc51a5597d29372bf9"/><section>
+    <title>[struct]<computeroutput>[4/5]</computeroutput></title>
+<indexterm><primary>Signal</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>Signal</secondary></indexterm>
+<para><computeroutput>struct  { ... }  DbcStruct::Signal</computeroutput></para></section>
+<anchor xml:id="_struct_dbc_struct_1afd07ef47a256612af2d7497af19d630c"/><section>
+    <title>[struct]<computeroutput>[5/5]</computeroutput></title>
 <indexterm><primary>Signal</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>Signal</secondary></indexterm>
 <para><computeroutput>struct  { ... }  DbcStruct::Signal</computeroutput></para></section>
@@ -320,47 +1091,92 @@
     <title>SwVersionBugfix</title>
 <indexterm><primary>SwVersionBugfix</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>SwVersionBugfix</secondary></indexterm>
-<para><computeroutput>uint8_t DbcStruct::SwVersionBugfix</computeroutput></para></section>
+<para><computeroutput>uint8_t DbcStruct::SwVersionBugfix</computeroutput></para><para>
+
+<para>SwVersionBugfix signal with 8-bit length. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1acd25bf8ccca66642eec649623550c36a"/><section>
     <title>SwVersionMajor</title>
 <indexterm><primary>SwVersionMajor</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>SwVersionMajor</secondary></indexterm>
-<para><computeroutput>uint8_t DbcStruct::SwVersionMajor</computeroutput></para></section>
+<para><computeroutput>uint8_t DbcStruct::SwVersionMajor</computeroutput></para><para>
+
+<para>SwVersionMajor signal with 8-bit length. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1aef00c82a9c81580820ff10e499b6ed21"/><section>
     <title>SwVersionMinor</title>
 <indexterm><primary>SwVersionMinor</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>SwVersionMinor</secondary></indexterm>
-<para><computeroutput>uint8_t DbcStruct::SwVersionMinor</computeroutput></para></section>
+<para><computeroutput>uint8_t DbcStruct::SwVersionMinor</computeroutput></para><para>
+
+<para>SwVersionMinor signal with 8-bit length. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1a9040957d9669218f0117644dcbc7f1c2"/><section>
     <title>TcpClientCount</title>
 <indexterm><primary>TcpClientCount</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>TcpClientCount</secondary></indexterm>
-<para><computeroutput>uint8_t DbcStruct::TcpClientCount</computeroutput></para></section>
+<para><computeroutput>uint8_t DbcStruct::TcpClientCount</computeroutput></para><para>
+
+<para>TcpClientCount signal with 8-bit length. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1a2270f5d54c5392a398ef141186d3366a"/><section>
     <title>TcpEnable</title>
 <indexterm><primary>TcpEnable</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>TcpEnable</secondary></indexterm>
-<para><computeroutput><link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link> DbcStruct::TcpEnable</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1aacb347996a1291b562b366fa764aa041"/><section>
-    <title>value</title>
-<indexterm><primary>value</primary><secondary>DbcStruct</secondary></indexterm>
-<indexterm><primary>DbcStruct</primary><secondary>value</secondary></indexterm>
-<para><computeroutput>float DbcStruct::value</computeroutput></para></section>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</link> DbcStruct::TcpEnable</computeroutput></para><para>
+
+<para>Signal TcpEnable enum type. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1ab631e49f6f05106ef5180c4a8db81e54"/><section>
     <title>VpnEnable</title>
 <indexterm><primary>VpnEnable</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>VpnEnable</secondary></indexterm>
-<para><computeroutput><link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link> DbcStruct::VpnEnable</computeroutput></para></section>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</link> DbcStruct::VpnEnable</computeroutput></para><para>
+
+<para>Signal VpnEnable enum type. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a8f3b2251faf8a9f0240027876c23a975"/><section>
+    <title>WiFi_AP_IP_Adrress</title>
+<indexterm><primary>WiFi_AP_IP_Adrress</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>WiFi_AP_IP_Adrress</secondary></indexterm>
+<para><computeroutput>uint16_t DbcStruct::WiFi_AP_IP_Adrress</computeroutput></para><para>
+
+<para>WiFi_AP_IP_Adrress signal with 16-bit length. </para>
+</para>
+</section>
 <anchor xml:id="_struct_dbc_struct_1a9e27bd50ce2d239ca6f1d5f7cb023de7"/><section>
     <title>WiFi_AP_Status</title>
 <indexterm><primary>WiFi_AP_Status</primary><secondary>DbcStruct</secondary></indexterm>
 <indexterm><primary>DbcStruct</primary><secondary>WiFi_AP_Status</secondary></indexterm>
-<para><computeroutput><link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link> DbcStruct::WiFi_AP_Status</computeroutput></para></section>
-<anchor xml:id="_struct_dbc_struct_1a1ca872211a78ead331d094d0b45c0499"/><section>
-    <title>WiFiEnable</title>
-<indexterm><primary>WiFiEnable</primary><secondary>DbcStruct</secondary></indexterm>
-<indexterm><primary>DbcStruct</primary><secondary>WiFiEnable</secondary></indexterm>
-<para><computeroutput><link linkend="_d2cc__lib_8h_1a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</link> DbcStruct::WiFiEnable</computeroutput></para></section>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</link> DbcStruct::WiFi_AP_Status</computeroutput></para><para>
+
+<para>Signal WiFi_AP_Status enum type. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1ad6902200ed6c439d771df6641d267682"/><section>
+    <title>WiFi_ST_IP_Address</title>
+<indexterm><primary>WiFi_ST_IP_Address</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>WiFi_ST_IP_Address</secondary></indexterm>
+<para><computeroutput>uint16_t DbcStruct::WiFi_ST_IP_Address</computeroutput></para><para>
+
+<para>WiFi_ST_IP_Address signal with 16-bit length. </para>
+</para>
+</section>
+<anchor xml:id="_struct_dbc_struct_1a4b524004290f7eff13d1280a150bc416"/><section>
+    <title>WiFi_ST_Status</title>
+<indexterm><primary>WiFi_ST_Status</primary><secondary>DbcStruct</secondary></indexterm>
+<indexterm><primary>DbcStruct</primary><secondary>WiFi_ST_Status</secondary></indexterm>
+<para><computeroutput><link linkend="_d2cc__lib_8h_1ad00d3bb37c1d69ea203ae4019a832403">WiFi_ST_Status_enum</link> DbcStruct::WiFi_ST_Status</computeroutput></para><para>
+
+<para>Signal WiFi_ST_Status enum type. </para>
+</para>
+</section>
 <para>
 The documentation for this struct was generated from the following file:</para>
 include/<link linkend="_d2cc__lib_8h">d2cc_lib.h</link></section>

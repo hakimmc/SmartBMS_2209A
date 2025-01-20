@@ -96,6 +96,26 @@ void Create_Server(void* pvParameter);
 int receive_data(int sock, char* buffer, size_t size, uint8_t* timeout_counter, uint8_t max_timeout);
 
 /**
+ * @brief Creates and starts the TCP server.
+ *
+ * Sets up the TCP server to listen for incoming client connections and handle them
+ * using the specified parameters.
+ *
+ * @param pvParameter Pointer to additional parameters for server setup (optional).
+ */
+void Create_Server(void* pvParameter);
+
+/**
+ * @brief Converter for Dbc values to JSON.
+ *
+ * jSON Converter.
+ *
+ * @param dbc dbcstruct pointer.
+ * @param jsonString json string.
+ */
+void ConvertToJson(DbcStruct *dbc, char *jsonString);
+
+/**
  * @brief Initializes the TCP server.
  *
  * Configures the necessary components and prepares the ESP32 for running a TCP server.

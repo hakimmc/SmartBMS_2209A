@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_phys___value__t" xml:lang="en-US">
+<title>Phys_Value_t Struct Reference</title>
+<indexterm><primary>Phys_Value_t</primary></indexterm>
+<para>
+
+<para>factor, offset and value variable structer for CAN messages structure for message. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;d2cc_lib.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_struct_phys___value__t_1a6a7418ae1da17f4b52060ea7eba529b0">factor</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_phys___value__t_1a9ceab2420e464b9f8bc3a055cce243fb">offset</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_phys___value__t_1a04c21f779d58169296145eeae50e424b">value</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>factor, offset and value variable structer for CAN messages structure for message. </para>
+
+
+
+<para>This structure including factor, offset and value variables. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_phys___value__t_1a6a7418ae1da17f4b52060ea7eba529b0"/><section>
+    <title>factor</title>
+<indexterm><primary>factor</primary><secondary>Phys_Value_t</secondary></indexterm>
+<indexterm><primary>Phys_Value_t</primary><secondary>factor</secondary></indexterm>
+<para><computeroutput>float Phys_Value_t::factor</computeroutput></para></section>
+<anchor xml:id="_struct_phys___value__t_1a9ceab2420e464b9f8bc3a055cce243fb"/><section>
+    <title>offset</title>
+<indexterm><primary>offset</primary><secondary>Phys_Value_t</secondary></indexterm>
+<indexterm><primary>Phys_Value_t</primary><secondary>offset</secondary></indexterm>
+<para><computeroutput>int Phys_Value_t::offset</computeroutput></para></section>
+<anchor xml:id="_struct_phys___value__t_1a04c21f779d58169296145eeae50e424b"/><section>
+    <title>value</title>
+<indexterm><primary>value</primary><secondary>Phys_Value_t</secondary></indexterm>
+<indexterm><primary>Phys_Value_t</primary><secondary>value</secondary></indexterm>
+<para><computeroutput>float Phys_Value_t::value</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+include/<link linkend="_d2cc__lib_8h">d2cc_lib.h</link></section>
+</section>

@@ -94,7 +94,7 @@ include/Wifi.h \- Wi-Fi configuration for ESP32 in AP+STA mode\&.
 
 .in +1c
 .ti -1c
-.RI "static void \fBevent_handler\fP (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)"
+.RI "void \fBevent_handler\fP (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)"
 .br
 .RI "Handles Wi-Fi events\&. "
 .ti -1c
@@ -169,7 +169,7 @@ SSID for the Wi-Fi station connection\&.
 Timeout for Wi-Fi connection in milliseconds\&. 
 .SH "Function Documentation"
 .PP 
-.SS "static void event_handler (void * arg, esp_event_base_t event_base, int32_t event_id, void * event_data)\fR [static]\fP"
+.SS "void event_handler (void * arg, esp_event_base_t event_base, int32_t event_id, void * event_data)"
 
 .PP
 Handles Wi-Fi events\&. This function is called to process various Wi-Fi events, such as connection establishment and disconnection\&.
@@ -183,10 +183,36 @@ Handles Wi-Fi events\&. This function is called to process various Wi-Fi events,
 .br
 \fIevent_id\fP Event ID specifying the exact event\&. 
 .br
-\fIevent_data\fP Additional data associated with the event (optional)\&. 
+\fIevent_data\fP Additional data associated with the event (optional)\&.
 .RE
 .PP
+Handles Wi-Fi events\&.
 
+.PP
+This function handles Wi-Fi and IP events, such as Wi-Fi connection status changes and obtaining an IP address\&. It also manages retry logic for Wi-Fi connection attempts\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg\fP Pointer to additional arguments (unused)\&. 
+.br
+\fIevent_base\fP The event base (WIFI_EVENT or IP_EVENT)\&. 
+.br
+\fIevent_id\fP The event ID (such as WIFI_EVENT_STA_START)\&. 
+.br
+\fIevent_data\fP Event data associated with the event\&. 
+.RE
+.PP
+< Start the Wi-Fi connection process\&.
+
+.PP
+< Retry the connection\&.
+
+.PP
+< Log obtained IP address\&.
+
+.PP
+< Reset retry count\&.
 .SS "void wifi_init_ap_sta (void )"
 
 .PP

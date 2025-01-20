@@ -14,6 +14,8 @@
 <para>CAN communication interface for ESP32. </para>
 </listitem>
             <listitem><para>file <link linkend="_d2cc__lib_8h">d2cc_lib.h</link></para>
+
+<para>Header file for the D2CC library. </para>
 </listitem>
             <listitem><para>file <link linkend="__led_task_init_8h">LedTaskInit.h</link></para>
 

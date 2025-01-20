@@ -41,7 +41,11 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 82 
 96 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__tcp_server_8h_1a00e67904809f7a47e29ca050bcabbae2">receive_data</link>(<emphasis role="keywordtype">int</emphasis>&#32;sock,&#32;<emphasis role="keywordtype">char</emphasis>*&#32;buffer,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;size,&#32;uint8_t*&#32;timeout_counter,&#32;uint8_t&#32;max_timeout);
 97 
-103 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__tcp_server_8h_1a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</link>();
-104 
-105 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;INCLUDE_TCPSERVER_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+106 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__tcp_server_8h_1a71663496e793fd4869a37af2eaeb9dfb">Create_Server</link>(<emphasis role="keywordtype">void</emphasis>*&#32;pvParameter);
+107 
+116 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__tcp_server_8h_1af537437f191b86077cd5ae57370572b1">ConvertToJson</link>(<link linkend="_struct_dbc_struct">DbcStruct</link>&#32;*dbc,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*jsonString);
+117 
+123 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__tcp_server_8h_1a13ddbecdfd3a974bad6c7ff356cb4674">Tcp_Init</link>();
+124 
+125 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;INCLUDE_TCPSERVER_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
 </programlisting></section>

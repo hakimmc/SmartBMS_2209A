@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="78184751.png"/></td>
   <td id="projectalign">
    <div id="projectname">SmartBMS_2209A<span id="projectnumber">&#160;v1.0.0</span>
    </div>
@@ -105,11 +106,15 @@ $(function(){initNavTree('d2cc__lib_8h.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">d2cc_lib.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Header file for the D2CC library.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 </div>
@@ -117,52 +122,293 @@ $(function(){initNavTree('d2cc__lib_8h.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_phys___value__t.html">Phys_Value_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">factor, offset and value variable structer for CAN messages structure for message.  <a href="struct_phys___value__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dbc_struct.html">DbcStruct</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ab46f9642beab36ac6b8624c11f4f5ed4" id="r_ab46f9642beab36ac6b8624c11f4f5ed4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab46f9642beab36ac6b8624c11f4f5ed4">Battery_Messages_ID</a>&#160;&#160;&#160;257</td></tr>
+<tr class="memdesc:ab46f9642beab36ac6b8624c11f4f5ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN ID for Battery_Messages messages.  <br /></td></tr>
+<tr class="separator:ab46f9642beab36ac6b8624c11f4f5ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28bfa34179cef8b6929e0b63798779cf" id="r_a28bfa34179cef8b6929e0b63798779cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28bfa34179cef8b6929e0b63798779cf">Battery_Messages_DLC</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a28bfa34179cef8b6929e0b63798779cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN DLC for Battery_Messages messages.  <br /></td></tr>
+<tr class="separator:a28bfa34179cef8b6929e0b63798779cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4071ff4cd81d3b62ffb3be85fc1c4760" id="r_a4071ff4cd81d3b62ffb3be85fc1c4760"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4071ff4cd81d3b62ffb3be85fc1c4760">Battery_Temperatures_ID</a>&#160;&#160;&#160;260</td></tr>
+<tr class="memdesc:a4071ff4cd81d3b62ffb3be85fc1c4760"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN ID for Battery_Temperatures messages.  <br /></td></tr>
+<tr class="separator:a4071ff4cd81d3b62ffb3be85fc1c4760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a5aca21c3b9316e0b20fac4557a16a" id="r_a12a5aca21c3b9316e0b20fac4557a16a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12a5aca21c3b9316e0b20fac4557a16a">Battery_Temperatures_DLC</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a12a5aca21c3b9316e0b20fac4557a16a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN DLC for Battery_Temperatures messages.  <br /></td></tr>
+<tr class="separator:a12a5aca21c3b9316e0b20fac4557a16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e80dd1e9f8cdf9735b54d79f2fdda9" id="r_a38e80dd1e9f8cdf9735b54d79f2fdda9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e80dd1e9f8cdf9735b54d79f2fdda9">Battery_Voltages_1_ID</a>&#160;&#160;&#160;258</td></tr>
+<tr class="memdesc:a38e80dd1e9f8cdf9735b54d79f2fdda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN ID for Battery_Voltages_1 messages.  <br /></td></tr>
+<tr class="separator:a38e80dd1e9f8cdf9735b54d79f2fdda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58897864bf48b89b9777036c39420cef" id="r_a58897864bf48b89b9777036c39420cef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58897864bf48b89b9777036c39420cef">Battery_Voltages_1_DLC</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a58897864bf48b89b9777036c39420cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN DLC for Battery_Voltages_1 messages.  <br /></td></tr>
+<tr class="separator:a58897864bf48b89b9777036c39420cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc8765d8f8608052fd7ee753fd3793e" id="r_accc8765d8f8608052fd7ee753fd3793e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accc8765d8f8608052fd7ee753fd3793e">Battery_Voltages_2_ID</a>&#160;&#160;&#160;259</td></tr>
+<tr class="memdesc:accc8765d8f8608052fd7ee753fd3793e"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN ID for Battery_Voltages_2 messages.  <br /></td></tr>
+<tr class="separator:accc8765d8f8608052fd7ee753fd3793e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c310afe9a8df00d32a008b5f06dbc16" id="r_a8c310afe9a8df00d32a008b5f06dbc16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c310afe9a8df00d32a008b5f06dbc16">Battery_Voltages_2_DLC</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a8c310afe9a8df00d32a008b5f06dbc16"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN DLC for Battery_Voltages_2 messages.  <br /></td></tr>
+<tr class="separator:a8c310afe9a8df00d32a008b5f06dbc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4f58c1a509cc8343774f0ca05c9061" id="r_afd4f58c1a509cc8343774f0ca05c9061"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd4f58c1a509cc8343774f0ca05c9061">Can_Main_ID</a>&#160;&#160;&#160;256</td></tr>
+<tr class="memdesc:afd4f58c1a509cc8343774f0ca05c9061"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN ID for Can_Main messages.  <br /></td></tr>
+<tr class="separator:afd4f58c1a509cc8343774f0ca05c9061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb4c67f416eee84ceda3de370c5beb3" id="r_abbb4c67f416eee84ceda3de370c5beb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbb4c67f416eee84ceda3de370c5beb3">Can_Main_DLC</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:abbb4c67f416eee84ceda3de370c5beb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN DLC for Can_Main messages.  <br /></td></tr>
+<tr class="separator:abbb4c67f416eee84ceda3de370c5beb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:abc354ec37af201f0ebb8f4bde71ddd57" id="r_abc354ec37af201f0ebb8f4bde71ddd57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</a> { <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a">BatteryChemistry_LFP</a>
+<tr class="memitem:abc354ec37af201f0ebb8f4bde71ddd57" id="r_abc354ec37af201f0ebb8f4bde71ddd57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57">BatteryChemistry_enum</a> { <br />
+&#160;&#160;<a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a">BatteryChemistry_LFP</a>
 , <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1">BatteryChemistry_NMC</a>
+, <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a7415cd345a1e7b72e1624827e217e3eb">BatteryChemistry_NCA</a>
+, <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a9abf08acf06432de7e4778b98f7c991c">BatteryChemistry_LCO</a>
+, <br />
+&#160;&#160;<a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a3f7034da36f6d3f4430dfcdf0ddbc3d4">BatteryChemistry_LMO</a>
+, <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57ae9e1ed89a38e259c90612e49d5cb61e7">BatteryChemistry_LTO</a>
+, <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a7f7b968440395ea30f74ba35b4632e2f">BatteryChemistry_NiMH</a>
+, <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a4b4da73677657ab62ffafa3ad528b9f8">BatteryChemistry_NiCd</a>
+, <br />
+&#160;&#160;<a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a760bbb5f2aecf1f32c05d8b0ec81b3d6">BatteryChemistry_PbA</a>
+, <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57ab2e5d34668a702fc90922affc9136f15">BatteryChemistry_Zn_Air</a>
+, <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a584ffb461e323eea6fea389640269bfe">BatteryChemistry_Li_S</a>
+, <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57a8a4cb8943fb8cdac21435ece19ff15c7">BatteryChemistry_Na_ion</a>
+, <br />
+&#160;&#160;<a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57aab4d599e3d5d32058a15da6f4026745d">BatteryChemistry_Zn_MnO2</a>
+, <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57ac9151876352044c97912ec6514a9a4fe">BatteryChemistry_VRLA</a>
+, <a class="el" href="#abc354ec37af201f0ebb8f4bde71ddd57abf59a4ff67310168ecf6a8268f77318d">BatteryChemistry_Ag_Zn</a>
+<br />
  }</td></tr>
+<tr class="memdesc:abc354ec37af201f0ebb8f4bde71ddd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for representing signal values for the BatteryChemistry signal.  <a href="#abc354ec37af201f0ebb8f4bde71ddd57">More...</a><br /></td></tr>
 <tr class="separator:abc354ec37af201f0ebb8f4bde71ddd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d95e9716ce91a56d20fe3c984f060d4" id="r_a5d95e9716ce91a56d20fe3c984f060d4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</a> { <a class="el" href="#a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5">CanBusEnable_Enable</a>
-, <a class="el" href="#a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3">CanBusEnable_Disable</a>
+<tr class="memitem:a0dfaaec7a9710a611afee9a79657d4b8" id="r_a0dfaaec7a9710a611afee9a79657d4b8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</a> { <a class="el" href="#a0dfaaec7a9710a611afee9a79657d4b8afe5cab6293e618c2645852dbbeba66ea">WiFi_AP_Status_WiFi_Ap_Disconnected</a>
+, <a class="el" href="#a0dfaaec7a9710a611afee9a79657d4b8af5bbea2d1323b30787a1211c231415c9">WiFi_AP_Status_WiFi_Ap_Connected</a>
  }</td></tr>
-<tr class="separator:a5d95e9716ce91a56d20fe3c984f060d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77bd5871fc8e207867631f7b6e753a0c" id="r_a77bd5871fc8e207867631f7b6e753a0c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</a> { <a class="el" href="#a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e">WiFiEnable_Enable</a>
-, <a class="el" href="#a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e">WiFiEnable_Disable</a>
- }</td></tr>
-<tr class="separator:a77bd5871fc8e207867631f7b6e753a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dcf3e762a96610c3ecfc09dbc3b789e" id="r_a4dcf3e762a96610c3ecfc09dbc3b789e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</a> { <a class="el" href="#a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d">TcpEnable_Offline</a>
-, <a class="el" href="#a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a">TcpEnable_Online</a>
-, <a class="el" href="#a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475">TcpEnable_Connected</a>
- }</td></tr>
-<tr class="separator:a4dcf3e762a96610c3ecfc09dbc3b789e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e026c06c5b0d34bb8b82f0a0c35ae4" id="r_ad9e026c06c5b0d34bb8b82f0a0c35ae4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</a> { <a class="el" href="#ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7">VpnEnable_Enable</a>
-, <a class="el" href="#ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b">VpnEnable_Disable</a>
- }</td></tr>
-<tr class="separator:ad9e026c06c5b0d34bb8b82f0a0c35ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dfaaec7a9710a611afee9a79657d4b8" id="r_a0dfaaec7a9710a611afee9a79657d4b8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dfaaec7a9710a611afee9a79657d4b8">WiFi_AP_Status_enum</a> { <a class="el" href="#a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3">WiFi_AP_Status_Enable</a>
-, <a class="el" href="#a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d">WiFi_AP_Status_Disable</a>
- }</td></tr>
+<tr class="memdesc:a0dfaaec7a9710a611afee9a79657d4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for representing signal values for the WiFi_AP_Status signal.  <a href="#a0dfaaec7a9710a611afee9a79657d4b8">More...</a><br /></td></tr>
 <tr class="separator:a0dfaaec7a9710a611afee9a79657d4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d95e9716ce91a56d20fe3c984f060d4" id="r_a5d95e9716ce91a56d20fe3c984f060d4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d95e9716ce91a56d20fe3c984f060d4">CanBusEnable_enum</a> { <a class="el" href="#a5d95e9716ce91a56d20fe3c984f060d4afa23dab3ead685cbb6a195bdf72360b5">CanBusEnable_CAN_Driver_Disabled</a>
+, <a class="el" href="#a5d95e9716ce91a56d20fe3c984f060d4a35888e8b36dc817a47cfba29797623dd">CanBusEnable_CAN_Driver_Enabled</a>
+ }</td></tr>
+<tr class="memdesc:a5d95e9716ce91a56d20fe3c984f060d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for representing signal values for the CanBusEnable signal.  <a href="#a5d95e9716ce91a56d20fe3c984f060d4">More...</a><br /></td></tr>
+<tr class="separator:a5d95e9716ce91a56d20fe3c984f060d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dcf3e762a96610c3ecfc09dbc3b789e" id="r_a4dcf3e762a96610c3ecfc09dbc3b789e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dcf3e762a96610c3ecfc09dbc3b789e">TcpEnable_enum</a> { <a class="el" href="#a4dcf3e762a96610c3ecfc09dbc3b789ea8564b39d66be59e1e5a2e0c4f3a9049a">TcpEnable_TCP_Offline</a>
+, <a class="el" href="#a4dcf3e762a96610c3ecfc09dbc3b789ea44850b21528bd0c90f2fe51bef8c6972">TcpEnable_TCP_Online</a>
+, <a class="el" href="#a4dcf3e762a96610c3ecfc09dbc3b789ea597ff09266346fb6ab08f2af9f0a37b0">TcpEnable_TCP_Connected</a>
+, <a class="el" href="#a4dcf3e762a96610c3ecfc09dbc3b789ea6b4f18872cbdf486c5e126b3d80dbd39">TcpEnable_TCP_Error</a>
+ }</td></tr>
+<tr class="memdesc:a4dcf3e762a96610c3ecfc09dbc3b789e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for representing signal values for the TcpEnable signal.  <a href="#a4dcf3e762a96610c3ecfc09dbc3b789e">More...</a><br /></td></tr>
+<tr class="separator:a4dcf3e762a96610c3ecfc09dbc3b789e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e026c06c5b0d34bb8b82f0a0c35ae4" id="r_ad9e026c06c5b0d34bb8b82f0a0c35ae4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9e026c06c5b0d34bb8b82f0a0c35ae4">VpnEnable_enum</a> { <a class="el" href="#ad9e026c06c5b0d34bb8b82f0a0c35ae4a05dd6a8c727c4612861d57dc58978f58">VpnEnable_VPN_Offline</a>
+, <a class="el" href="#ad9e026c06c5b0d34bb8b82f0a0c35ae4a16247ec944ba6e93575031f602f58eb5">VpnEnable_VPN_Online</a>
+, <a class="el" href="#ad9e026c06c5b0d34bb8b82f0a0c35ae4a4c33db4ae648d11dff5cb59a081b517c">VpnEnable_VPN_Connected</a>
+, <a class="el" href="#ad9e026c06c5b0d34bb8b82f0a0c35ae4aa2d137d3b8b4a0c30b027620f093f670">VpnEnable_VPN_Error</a>
+ }</td></tr>
+<tr class="memdesc:ad9e026c06c5b0d34bb8b82f0a0c35ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for representing signal values for the VpnEnable signal.  <a href="#ad9e026c06c5b0d34bb8b82f0a0c35ae4">More...</a><br /></td></tr>
+<tr class="separator:ad9e026c06c5b0d34bb8b82f0a0c35ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad00d3bb37c1d69ea203ae4019a832403" id="r_ad00d3bb37c1d69ea203ae4019a832403"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad00d3bb37c1d69ea203ae4019a832403">WiFi_ST_Status_enum</a> { <a class="el" href="#ad00d3bb37c1d69ea203ae4019a832403a44309aca0fa4d4cae66c68c991cfe25f">WiFi_ST_Status_WiFi_Ap_Disconnected</a>
+, <a class="el" href="#ad00d3bb37c1d69ea203ae4019a832403a535d52df00b0815ec4b6a8912a8a0d99">WiFi_ST_Status_WiFi_Ap_Connected</a>
+ }</td></tr>
+<tr class="memdesc:ad00d3bb37c1d69ea203ae4019a832403"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for representing signal values for the WiFi_ST_Status signal.  <a href="#ad00d3bb37c1d69ea203ae4019a832403">More...</a><br /></td></tr>
+<tr class="separator:ad00d3bb37c1d69ea203ae4019a832403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:add5678661f9e8fc392ab35a8369f8487" id="r_add5678661f9e8fc392ab35a8369f8487"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add5678661f9e8fc392ab35a8369f8487">D2cc_Lib_Init</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *st)</td></tr>
+<tr class="memdesc:add5678661f9e8fc392ab35a8369f8487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> for CAN message processing.  <br /></td></tr>
 <tr class="separator:add5678661f9e8fc392ab35a8369f8487"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fc4968809341ee415d413feb9db80cb" id="r_a1fc4968809341ee415d413feb9db80cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fc4968809341ee415d413feb9db80cb">ReadParse</a> (uint8_t *rx_data, uint32_t id, <a class="el" href="struct_dbc_struct.html">DbcStruct</a> *st)</td></tr>
-<tr class="separator:a1fc4968809341ee415d413feb9db80cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a53ba345e601b7539ad8b1d3a60becf" id="r_a1a53ba345e601b7539ad8b1d3a60becf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a53ba345e601b7539ad8b1d3a60becf">CreateTable_Battery_Messages</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:a1a53ba345e601b7539ad8b1d3a60becf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the signal table for the specified CAN message.  <br /></td></tr>
 <tr class="separator:a1a53ba345e601b7539ad8b1d3a60becf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce29ea481884412fe82fde8cf8a3c73" id="r_acce29ea481884412fe82fde8cf8a3c73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acce29ea481884412fe82fde8cf8a3c73">CreateTable_Battery_Temperatures</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:acce29ea481884412fe82fde8cf8a3c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the signal table for the specified CAN message.  <br /></td></tr>
 <tr class="separator:acce29ea481884412fe82fde8cf8a3c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f4346eef40e3f6e0856a015bed8da2d" id="r_a3f4346eef40e3f6e0856a015bed8da2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f4346eef40e3f6e0856a015bed8da2d">CreateTable_Battery_Voltages</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
-<tr class="separator:a3f4346eef40e3f6e0856a015bed8da2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688095370440ce4b3816d2b712ed5b3b" id="r_a688095370440ce4b3816d2b712ed5b3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a688095370440ce4b3816d2b712ed5b3b">CreateTable_Battery_Voltages_1</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:a688095370440ce4b3816d2b712ed5b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the signal table for the specified CAN message.  <br /></td></tr>
+<tr class="separator:a688095370440ce4b3816d2b712ed5b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a106990c5a8b489af5f21a3fa6f32d45c" id="r_a106990c5a8b489af5f21a3fa6f32d45c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a106990c5a8b489af5f21a3fa6f32d45c">CreateTable_Battery_Voltages_2</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:a106990c5a8b489af5f21a3fa6f32d45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the signal table for the specified CAN message.  <br /></td></tr>
+<tr class="separator:a106990c5a8b489af5f21a3fa6f32d45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a8f6f06284c77bd13fc93c18115fd53" id="r_a3a8f6f06284c77bd13fc93c18115fd53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a8f6f06284c77bd13fc93c18115fd53">CreateTable_Can_Main</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:a3a8f6f06284c77bd13fc93c18115fd53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the signal table for the specified CAN message.  <br /></td></tr>
 <tr class="separator:a3a8f6f06284c77bd13fc93c18115fd53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a265d29c5e976cf3716af95ecf2f7a49a" id="r_a265d29c5e976cf3716af95ecf2f7a49a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a265d29c5e976cf3716af95ecf2f7a49a">PHYS_TO_RAW</a> (int phys_value, <a class="el" href="struct_phys___value__t.html">Phys_Value_t</a> *phys_struct)</td></tr>
+<tr class="memdesc:a265d29c5e976cf3716af95ecf2f7a49a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a physical value to its corresponding raw CAN value.  <br /></td></tr>
+<tr class="separator:a265d29c5e976cf3716af95ecf2f7a49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e00cecaf49f0e30f493be28bf2334bc" id="r_a3e00cecaf49f0e30f493be28bf2334bc"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e00cecaf49f0e30f493be28bf2334bc">RAW_TO_PHYS</a> (int raw_value, <a class="el" href="struct_phys___value__t.html">Phys_Value_t</a> *phys_struct)</td></tr>
+<tr class="memdesc:a3e00cecaf49f0e30f493be28bf2334bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a raw CAN value to its corresponding physical value.  <br /></td></tr>
+<tr class="separator:a3e00cecaf49f0e30f493be28bf2334bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Header file for the D2CC library. </p>
+<dl class="section date"><dt>Date</dt><dd>2025-01-19 </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>hakimmc </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://www.linkedin.com/in/abdulhakim-calgin/">https://www.linkedin.com/in/abdulhakim-calgin/</a> </dd></dl>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a28bfa34179cef8b6929e0b63798779cf" name="a28bfa34179cef8b6929e0b63798779cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28bfa34179cef8b6929e0b63798779cf">&#9670;&#160;</a></span>Battery_Messages_DLC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Battery_Messages_DLC&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN DLC for Battery_Messages messages. </p>
+
+</div>
+</div>
+<a id="ab46f9642beab36ac6b8624c11f4f5ed4" name="ab46f9642beab36ac6b8624c11f4f5ed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab46f9642beab36ac6b8624c11f4f5ed4">&#9670;&#160;</a></span>Battery_Messages_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Battery_Messages_ID&#160;&#160;&#160;257</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN ID for Battery_Messages messages. </p>
+
+</div>
+</div>
+<a id="a12a5aca21c3b9316e0b20fac4557a16a" name="a12a5aca21c3b9316e0b20fac4557a16a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12a5aca21c3b9316e0b20fac4557a16a">&#9670;&#160;</a></span>Battery_Temperatures_DLC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Battery_Temperatures_DLC&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN DLC for Battery_Temperatures messages. </p>
+
+</div>
+</div>
+<a id="a4071ff4cd81d3b62ffb3be85fc1c4760" name="a4071ff4cd81d3b62ffb3be85fc1c4760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4071ff4cd81d3b62ffb3be85fc1c4760">&#9670;&#160;</a></span>Battery_Temperatures_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Battery_Temperatures_ID&#160;&#160;&#160;260</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN ID for Battery_Temperatures messages. </p>
+
+</div>
+</div>
+<a id="a58897864bf48b89b9777036c39420cef" name="a58897864bf48b89b9777036c39420cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58897864bf48b89b9777036c39420cef">&#9670;&#160;</a></span>Battery_Voltages_1_DLC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Battery_Voltages_1_DLC&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN DLC for Battery_Voltages_1 messages. </p>
+
+</div>
+</div>
+<a id="a38e80dd1e9f8cdf9735b54d79f2fdda9" name="a38e80dd1e9f8cdf9735b54d79f2fdda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e80dd1e9f8cdf9735b54d79f2fdda9">&#9670;&#160;</a></span>Battery_Voltages_1_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Battery_Voltages_1_ID&#160;&#160;&#160;258</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN ID for Battery_Voltages_1 messages. </p>
+
+</div>
+</div>
+<a id="a8c310afe9a8df00d32a008b5f06dbc16" name="a8c310afe9a8df00d32a008b5f06dbc16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c310afe9a8df00d32a008b5f06dbc16">&#9670;&#160;</a></span>Battery_Voltages_2_DLC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Battery_Voltages_2_DLC&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN DLC for Battery_Voltages_2 messages. </p>
+
+</div>
+</div>
+<a id="accc8765d8f8608052fd7ee753fd3793e" name="accc8765d8f8608052fd7ee753fd3793e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc8765d8f8608052fd7ee753fd3793e">&#9670;&#160;</a></span>Battery_Voltages_2_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Battery_Voltages_2_ID&#160;&#160;&#160;259</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN ID for Battery_Voltages_2 messages. </p>
+
+</div>
+</div>
+<a id="abbb4c67f416eee84ceda3de370c5beb3" name="abbb4c67f416eee84ceda3de370c5beb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb4c67f416eee84ceda3de370c5beb3">&#9670;&#160;</a></span>Can_Main_DLC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Can_Main_DLC&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN DLC for Can_Main messages. </p>
+
+</div>
+</div>
+<a id="afd4f58c1a509cc8343774f0ca05c9061" name="afd4f58c1a509cc8343774f0ca05c9061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd4f58c1a509cc8343774f0ca05c9061">&#9670;&#160;</a></span>Can_Main_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Can_Main_ID&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN ID for Can_Main messages. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="abc354ec37af201f0ebb8f4bde71ddd57" name="abc354ec37af201f0ebb8f4bde71ddd57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc354ec37af201f0ebb8f4bde71ddd57">&#9670;&#160;</a></span>BatteryChemistry_enum</h2>
@@ -175,9 +421,41 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum for representing signal values for the BatteryChemistry signal. </p>
+<p>This enum maps each value in the signal's value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</p>
+<dl class="section note"><dt>Note</dt><dd>Ensure the signal values are aligned with the data type and expected range of the signal. </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a" name="abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a"></a>BatteryChemistry_LFP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1" name="abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1"></a>BatteryChemistry_NMC&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a" name="abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a"></a>BatteryChemistry_LFP&#160;</td><td class="fielddoc"><p>LFP. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1" name="abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1"></a>BatteryChemistry_NMC&#160;</td><td class="fielddoc"><p>NMC. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a7415cd345a1e7b72e1624827e217e3eb" name="abc354ec37af201f0ebb8f4bde71ddd57a7415cd345a1e7b72e1624827e217e3eb"></a>BatteryChemistry_NCA&#160;</td><td class="fielddoc"><p>NCA. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a9abf08acf06432de7e4778b98f7c991c" name="abc354ec37af201f0ebb8f4bde71ddd57a9abf08acf06432de7e4778b98f7c991c"></a>BatteryChemistry_LCO&#160;</td><td class="fielddoc"><p>LCO. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a3f7034da36f6d3f4430dfcdf0ddbc3d4" name="abc354ec37af201f0ebb8f4bde71ddd57a3f7034da36f6d3f4430dfcdf0ddbc3d4"></a>BatteryChemistry_LMO&#160;</td><td class="fielddoc"><p>LMO. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57ae9e1ed89a38e259c90612e49d5cb61e7" name="abc354ec37af201f0ebb8f4bde71ddd57ae9e1ed89a38e259c90612e49d5cb61e7"></a>BatteryChemistry_LTO&#160;</td><td class="fielddoc"><p>LTO. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a7f7b968440395ea30f74ba35b4632e2f" name="abc354ec37af201f0ebb8f4bde71ddd57a7f7b968440395ea30f74ba35b4632e2f"></a>BatteryChemistry_NiMH&#160;</td><td class="fielddoc"><p>NiMH. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a4b4da73677657ab62ffafa3ad528b9f8" name="abc354ec37af201f0ebb8f4bde71ddd57a4b4da73677657ab62ffafa3ad528b9f8"></a>BatteryChemistry_NiCd&#160;</td><td class="fielddoc"><p>NiCd. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a760bbb5f2aecf1f32c05d8b0ec81b3d6" name="abc354ec37af201f0ebb8f4bde71ddd57a760bbb5f2aecf1f32c05d8b0ec81b3d6"></a>BatteryChemistry_PbA&#160;</td><td class="fielddoc"><p>PbA. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57ab2e5d34668a702fc90922affc9136f15" name="abc354ec37af201f0ebb8f4bde71ddd57ab2e5d34668a702fc90922affc9136f15"></a>BatteryChemistry_Zn_Air&#160;</td><td class="fielddoc"><p>Zn_Air. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a584ffb461e323eea6fea389640269bfe" name="abc354ec37af201f0ebb8f4bde71ddd57a584ffb461e323eea6fea389640269bfe"></a>BatteryChemistry_Li_S&#160;</td><td class="fielddoc"><p>Li_S. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57a8a4cb8943fb8cdac21435ece19ff15c7" name="abc354ec37af201f0ebb8f4bde71ddd57a8a4cb8943fb8cdac21435ece19ff15c7"></a>BatteryChemistry_Na_ion&#160;</td><td class="fielddoc"><p>Na_ion. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57aab4d599e3d5d32058a15da6f4026745d" name="abc354ec37af201f0ebb8f4bde71ddd57aab4d599e3d5d32058a15da6f4026745d"></a>BatteryChemistry_Zn_MnO2&#160;</td><td class="fielddoc"><p>Zn_MnO2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57ac9151876352044c97912ec6514a9a4fe" name="abc354ec37af201f0ebb8f4bde71ddd57ac9151876352044c97912ec6514a9a4fe"></a>BatteryChemistry_VRLA&#160;</td><td class="fielddoc"><p>VRLA. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc354ec37af201f0ebb8f4bde71ddd57abf59a4ff67310168ecf6a8268f77318d" name="abc354ec37af201f0ebb8f4bde71ddd57abf59a4ff67310168ecf6a8268f77318d"></a>BatteryChemistry_Ag_Zn&#160;</td><td class="fielddoc"><p>Ag_Zn. </p>
+</td></tr>
 </table>
 
 </div>
@@ -193,9 +471,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum for representing signal values for the CanBusEnable signal. </p>
+<p>This enum maps each value in the signal's value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</p>
+<dl class="section note"><dt>Note</dt><dd>Ensure the signal values are aligned with the data type and expected range of the signal. </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5" name="a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5"></a>CanBusEnable_Enable&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3" name="a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3"></a>CanBusEnable_Disable&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5d95e9716ce91a56d20fe3c984f060d4afa23dab3ead685cbb6a195bdf72360b5" name="a5d95e9716ce91a56d20fe3c984f060d4afa23dab3ead685cbb6a195bdf72360b5"></a>CanBusEnable_CAN_Driver_Disabled&#160;</td><td class="fielddoc"><p>CAN_Driver_Disabled. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d95e9716ce91a56d20fe3c984f060d4a35888e8b36dc817a47cfba29797623dd" name="a5d95e9716ce91a56d20fe3c984f060d4a35888e8b36dc817a47cfba29797623dd"></a>CanBusEnable_CAN_Driver_Enabled&#160;</td><td class="fielddoc"><p>CAN_Driver_Enabled. </p>
+</td></tr>
 </table>
 
 </div>
@@ -211,10 +495,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum for representing signal values for the TcpEnable signal. </p>
+<p>This enum maps each value in the signal's value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</p>
+<dl class="section note"><dt>Note</dt><dd>Ensure the signal values are aligned with the data type and expected range of the signal. </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d" name="a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d"></a>TcpEnable_Offline&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a" name="a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a"></a>TcpEnable_Online&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475" name="a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475"></a>TcpEnable_Connected&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4dcf3e762a96610c3ecfc09dbc3b789ea8564b39d66be59e1e5a2e0c4f3a9049a" name="a4dcf3e762a96610c3ecfc09dbc3b789ea8564b39d66be59e1e5a2e0c4f3a9049a"></a>TcpEnable_TCP_Offline&#160;</td><td class="fielddoc"><p>TCP_Offline. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4dcf3e762a96610c3ecfc09dbc3b789ea44850b21528bd0c90f2fe51bef8c6972" name="a4dcf3e762a96610c3ecfc09dbc3b789ea44850b21528bd0c90f2fe51bef8c6972"></a>TcpEnable_TCP_Online&#160;</td><td class="fielddoc"><p>TCP_Online. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4dcf3e762a96610c3ecfc09dbc3b789ea597ff09266346fb6ab08f2af9f0a37b0" name="a4dcf3e762a96610c3ecfc09dbc3b789ea597ff09266346fb6ab08f2af9f0a37b0"></a>TcpEnable_TCP_Connected&#160;</td><td class="fielddoc"><p>TCP_Connected. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4dcf3e762a96610c3ecfc09dbc3b789ea6b4f18872cbdf486c5e126b3d80dbd39" name="a4dcf3e762a96610c3ecfc09dbc3b789ea6b4f18872cbdf486c5e126b3d80dbd39"></a>TcpEnable_TCP_Error&#160;</td><td class="fielddoc"><p>TCP_Error. </p>
+</td></tr>
 </table>
 
 </div>
@@ -230,9 +523,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum for representing signal values for the VpnEnable signal. </p>
+<p>This enum maps each value in the signal's value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</p>
+<dl class="section note"><dt>Note</dt><dd>Ensure the signal values are aligned with the data type and expected range of the signal. </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7" name="ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7"></a>VpnEnable_Enable&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b" name="ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b"></a>VpnEnable_Disable&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad9e026c06c5b0d34bb8b82f0a0c35ae4a05dd6a8c727c4612861d57dc58978f58" name="ad9e026c06c5b0d34bb8b82f0a0c35ae4a05dd6a8c727c4612861d57dc58978f58"></a>VpnEnable_VPN_Offline&#160;</td><td class="fielddoc"><p>VPN_Offline. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad9e026c06c5b0d34bb8b82f0a0c35ae4a16247ec944ba6e93575031f602f58eb5" name="ad9e026c06c5b0d34bb8b82f0a0c35ae4a16247ec944ba6e93575031f602f58eb5"></a>VpnEnable_VPN_Online&#160;</td><td class="fielddoc"><p>VPN_Online. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad9e026c06c5b0d34bb8b82f0a0c35ae4a4c33db4ae648d11dff5cb59a081b517c" name="ad9e026c06c5b0d34bb8b82f0a0c35ae4a4c33db4ae648d11dff5cb59a081b517c"></a>VpnEnable_VPN_Connected&#160;</td><td class="fielddoc"><p>VPN_Connected. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad9e026c06c5b0d34bb8b82f0a0c35ae4aa2d137d3b8b4a0c30b027620f093f670" name="ad9e026c06c5b0d34bb8b82f0a0c35ae4aa2d137d3b8b4a0c30b027620f093f670"></a>VpnEnable_VPN_Error&#160;</td><td class="fielddoc"><p>VPN_Error. </p>
+</td></tr>
 </table>
 
 </div>
@@ -248,27 +551,39 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum for representing signal values for the WiFi_AP_Status signal. </p>
+<p>This enum maps each value in the signal's value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</p>
+<dl class="section note"><dt>Note</dt><dd>Ensure the signal values are aligned with the data type and expected range of the signal. </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3" name="a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3"></a>WiFi_AP_Status_Enable&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d" name="a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d"></a>WiFi_AP_Status_Disable&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0dfaaec7a9710a611afee9a79657d4b8afe5cab6293e618c2645852dbbeba66ea" name="a0dfaaec7a9710a611afee9a79657d4b8afe5cab6293e618c2645852dbbeba66ea"></a>WiFi_AP_Status_WiFi_Ap_Disconnected&#160;</td><td class="fielddoc"><p>WiFi_Ap_Disconnected. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0dfaaec7a9710a611afee9a79657d4b8af5bbea2d1323b30787a1211c231415c9" name="a0dfaaec7a9710a611afee9a79657d4b8af5bbea2d1323b30787a1211c231415c9"></a>WiFi_AP_Status_WiFi_Ap_Connected&#160;</td><td class="fielddoc"><p>WiFi_Ap_Connected. </p>
+</td></tr>
 </table>
 
 </div>
 </div>
-<a id="a77bd5871fc8e207867631f7b6e753a0c" name="a77bd5871fc8e207867631f7b6e753a0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77bd5871fc8e207867631f7b6e753a0c">&#9670;&#160;</a></span>WiFiEnable_enum</h2>
+<a id="ad00d3bb37c1d69ea203ae4019a832403" name="ad00d3bb37c1d69ea203ae4019a832403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad00d3bb37c1d69ea203ae4019a832403">&#9670;&#160;</a></span>WiFi_ST_Status_enum</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a77bd5871fc8e207867631f7b6e753a0c">WiFiEnable_enum</a></td>
+          <td class="memname">enum <a class="el" href="#ad00d3bb37c1d69ea203ae4019a832403">WiFi_ST_Status_enum</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum for representing signal values for the WiFi_ST_Status signal. </p>
+<p>This enum maps each value in the signal's value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-readable names for each value.</p>
+<dl class="section note"><dt>Note</dt><dd>Ensure the signal values are aligned with the data type and expected range of the signal. </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e" name="a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e"></a>WiFiEnable_Enable&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e" name="a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e"></a>WiFiEnable_Disable&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad00d3bb37c1d69ea203ae4019a832403a44309aca0fa4d4cae66c68c991cfe25f" name="ad00d3bb37c1d69ea203ae4019a832403a44309aca0fa4d4cae66c68c991cfe25f"></a>WiFi_ST_Status_WiFi_Ap_Disconnected&#160;</td><td class="fielddoc"><p>WiFi_Ap_Disconnected. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad00d3bb37c1d69ea203ae4019a832403a535d52df00b0815ec4b6a8912a8a0d99" name="ad00d3bb37c1d69ea203ae4019a832403a535d52df00b0815ec4b6a8912a8a0d99"></a>WiFi_ST_Status_WiFi_Ap_Connected&#160;</td><td class="fielddoc"><p>WiFi_Ap_Connected. </p>
+</td></tr>
 </table>
 
 </div>
@@ -289,6 +604,33 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates the signal table for the specified CAN message. </p>
+<p>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance that contains the CAN message.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Creates the signal table for the specified CAN message.</p>
+<p>This function is used to read CAN data and store it in the <a class="el" href="struct_dbc_struct.html">DbcStruct</a>. It parses the data and converts physical values to raw CAN signal values based on the scaling factors and offsets defined in the <a class="el" href="struct_dbc_struct.html">DbcStruct</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_data</td><td>Pointer to the received CAN data to be parsed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>CAN message ID for identifying which message to parse. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> where parsed data will be stored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Creates the signal table for a specified CAN message in the <a class="el" href="struct_dbc_struct.html">DbcStruct</a>.</p>
+<p>This function initializes the signal table for a specific message within the <a class="el" href="struct_dbc_struct.html">DbcStruct</a>. Each signal is set to 0 initially, preparing it for further use.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> containing the CAN message and signals. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="acce29ea481884412fe82fde8cf8a3c73" name="acce29ea481884412fe82fde8cf8a3c73"></a>
@@ -306,22 +648,66 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates the signal table for the specified CAN message. </p>
+<p>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance that contains the CAN message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a3f4346eef40e3f6e0856a015bed8da2d" name="a3f4346eef40e3f6e0856a015bed8da2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f4346eef40e3f6e0856a015bed8da2d">&#9670;&#160;</a></span>CreateTable_Battery_Voltages()</h2>
+<a id="a688095370440ce4b3816d2b712ed5b3b" name="a688095370440ce4b3816d2b712ed5b3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688095370440ce4b3816d2b712ed5b3b">&#9670;&#160;</a></span>CreateTable_Battery_Voltages_1()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CreateTable_Battery_Voltages </td>
+          <td class="memname">void CreateTable_Battery_Voltages_1 </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *</td>          <td class="paramname"><span class="paramname"><em>dbc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates the signal table for the specified CAN message. </p>
+<p>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance that contains the CAN message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a106990c5a8b489af5f21a3fa6f32d45c" name="a106990c5a8b489af5f21a3fa6f32d45c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a106990c5a8b489af5f21a3fa6f32d45c">&#9670;&#160;</a></span>CreateTable_Battery_Voltages_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CreateTable_Battery_Voltages_2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *</td>          <td class="paramname"><span class="paramname"><em>dbc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates the signal table for the specified CAN message. </p>
+<p>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance that contains the CAN message. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -340,6 +726,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates the signal table for the specified CAN message. </p>
+<p>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance that contains the CAN message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="add5678661f9e8fc392ab35a8369f8487" name="add5678661f9e8fc392ab35a8369f8487"></a>
@@ -351,37 +746,112 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void D2cc_Lib_Init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *</td>          <td class="paramname"><span class="paramname"><em>st</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *</td>          <td class="paramname"><span class="paramname"><em>dbc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> for CAN message processing. </p>
+<p>This function should be called before using the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> to ensure that all message structures are properly initialized. It sets up necessary memory and configurations.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">st</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance that will be initialized.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Initializes the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> for CAN message processing.</p>
+<p>This function initializes the necessary fields in the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> based on the provided DBC messages. The signals' physical factors and offsets are set accordingly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance to be initialized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a1fc4968809341ee415d413feb9db80cb" name="a1fc4968809341ee415d413feb9db80cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fc4968809341ee415d413feb9db80cb">&#9670;&#160;</a></span>ReadParse()</h2>
+<a id="a265d29c5e976cf3716af95ecf2f7a49a" name="a265d29c5e976cf3716af95ecf2f7a49a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a265d29c5e976cf3716af95ecf2f7a49a">&#9670;&#160;</a></span>PHYS_TO_RAW()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ReadParse </td>
+          <td class="memname">uint32_t PHYS_TO_RAW </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>rx_data</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>phys_value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="struct_phys___value__t.html">Phys_Value_t</a> *</td>          <td class="paramname"><span class="paramname"><em>phys_struct</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Converts a physical value to its corresponding raw CAN value. </p>
+<p>This function takes a physical value and applies the scaling factor and offset specified in the <code><a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a></code> structure to convert it to the raw CAN signal value. The raw value can then be transmitted in a CAN message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">phys_value</td><td>The physical value to be converted. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">phys_struct</td><td>Pointer to the <code><a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a></code> structure containing scaling and offset information.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding raw CAN value.</dd></dl>
+<p>Converts a physical value to its corresponding raw CAN value.</p>
+<p>This function converts a physical value (e.g., temperature) into a raw CAN signal value based on the scaling factor and offset stored in the <a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a> structure.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">phys_value</td><td>The physical value to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">phys_struct</td><td>Pointer to the <a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a> structure containing scaling factor and offset.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding raw CAN signal value. </dd></dl>
+
+</div>
+</div>
+<a id="a3e00cecaf49f0e30f493be28bf2334bc" name="a3e00cecaf49f0e30f493be28bf2334bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e00cecaf49f0e30f493be28bf2334bc">&#9670;&#160;</a></span>RAW_TO_PHYS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t RAW_TO_PHYS </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>raw_value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_phys___value__t.html">Phys_Value_t</a> *</td>          <td class="paramname"><span class="paramname"><em>phys_struct</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a raw CAN value to its corresponding physical value. </p>
+<p>This function takes a raw CAN value and applies the scaling factor and offset specified in the <code><a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a></code> structure to convert it to the physical signal value. The physical value represents the actual measured or calculated value of the signal.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">raw_value</td><td>The raw CAN signal value to be converted. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">phys_struct</td><td>Pointer to the <code><a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a></code> structure containing scaling and offset information.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding physical value.</dd></dl>
+<p>Converts a raw CAN value to its corresponding physical value.</p>
+<p>This function converts a raw CAN signal value to its corresponding physical value based on the scaling factor and offset stored in the <a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a> structure.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">raw_value</td><td>The raw CAN signal value to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">phys_struct</td><td>Pointer to the <a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a> structure containing scaling factor and offset.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding physical value. </dd></dl>
 
 </div>
 </div>

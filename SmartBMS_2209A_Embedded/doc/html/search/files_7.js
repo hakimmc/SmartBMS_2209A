@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['uart_2ec_0',['Uart.c',['../_uart_8c.html',1,'']]],
-  ['uart_2eh_1',['Uart.h',['../_uart_8h.html',1,'']]]
+  ['wifi_2ec_0',['Wifi.c',['../_wifi_8c.html',1,'']]],
+  ['wifi_2eh_1',['Wifi.h',['../_wifi_8h.html',1,'']]]
 ];

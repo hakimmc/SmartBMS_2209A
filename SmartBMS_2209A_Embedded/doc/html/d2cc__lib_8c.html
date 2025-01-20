@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="78184751.png"/></td>
   <td id="projectalign">
    <div id="projectname">SmartBMS_2209A<span id="projectnumber">&#160;v1.0.0</span>
    </div>
@@ -108,24 +109,44 @@ $(function(){initNavTree('d2cc__lib_8c.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">d2cc_lib.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Source file for the D2CC library.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="d2cc__lib_8h_source.html">d2cc_lib.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae78f43f4aca692c377c75bc182baee88" id="r_ae78f43f4aca692c377c75bc182baee88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae78f43f4aca692c377c75bc182baee88">D2cc_Lib_Init</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:ae78f43f4aca692c377c75bc182baee88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> with values from the parsed DBC file.  <br /></td></tr>
 <tr class="separator:ae78f43f4aca692c377c75bc182baee88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5597b44f3f49cc3c016533bfa7a9374" id="r_ae5597b44f3f49cc3c016533bfa7a9374"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5597b44f3f49cc3c016533bfa7a9374">ReadParse</a> (uint8_t *rx_data, uint32_t id, <a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
-<tr class="separator:ae5597b44f3f49cc3c016533bfa7a9374"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a53ba345e601b7539ad8b1d3a60becf" id="r_a1a53ba345e601b7539ad8b1d3a60becf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a53ba345e601b7539ad8b1d3a60becf">CreateTable_Battery_Messages</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:a1a53ba345e601b7539ad8b1d3a60becf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads and parses CAN data into the <a class="el" href="struct_dbc_struct.html">DbcStruct</a>.  <br /></td></tr>
 <tr class="separator:a1a53ba345e601b7539ad8b1d3a60becf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce29ea481884412fe82fde8cf8a3c73" id="r_acce29ea481884412fe82fde8cf8a3c73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acce29ea481884412fe82fde8cf8a3c73">CreateTable_Battery_Temperatures</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:acce29ea481884412fe82fde8cf8a3c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the signal table for the specified CAN message.  <br /></td></tr>
 <tr class="separator:acce29ea481884412fe82fde8cf8a3c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f4346eef40e3f6e0856a015bed8da2d" id="r_a3f4346eef40e3f6e0856a015bed8da2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f4346eef40e3f6e0856a015bed8da2d">CreateTable_Battery_Voltages</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
-<tr class="separator:a3f4346eef40e3f6e0856a015bed8da2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688095370440ce4b3816d2b712ed5b3b" id="r_a688095370440ce4b3816d2b712ed5b3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a688095370440ce4b3816d2b712ed5b3b">CreateTable_Battery_Voltages_1</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:a688095370440ce4b3816d2b712ed5b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the signal table for the specified CAN message.  <br /></td></tr>
+<tr class="separator:a688095370440ce4b3816d2b712ed5b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a106990c5a8b489af5f21a3fa6f32d45c" id="r_a106990c5a8b489af5f21a3fa6f32d45c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a106990c5a8b489af5f21a3fa6f32d45c">CreateTable_Battery_Voltages_2</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:a106990c5a8b489af5f21a3fa6f32d45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the signal table for the specified CAN message.  <br /></td></tr>
+<tr class="separator:a106990c5a8b489af5f21a3fa6f32d45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a8f6f06284c77bd13fc93c18115fd53" id="r_a3a8f6f06284c77bd13fc93c18115fd53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a8f6f06284c77bd13fc93c18115fd53">CreateTable_Can_Main</a> (<a class="el" href="struct_dbc_struct.html">DbcStruct</a> *dbc)</td></tr>
+<tr class="memdesc:a3a8f6f06284c77bd13fc93c18115fd53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the signal table for the specified CAN message.  <br /></td></tr>
 <tr class="separator:a3a8f6f06284c77bd13fc93c18115fd53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a265d29c5e976cf3716af95ecf2f7a49a" id="r_a265d29c5e976cf3716af95ecf2f7a49a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a265d29c5e976cf3716af95ecf2f7a49a">PHYS_TO_RAW</a> (int phys_value, <a class="el" href="struct_phys___value__t.html">Phys_Value_t</a> *phys_struct)</td></tr>
+<tr class="memdesc:a265d29c5e976cf3716af95ecf2f7a49a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a physical value to a raw CAN signal value.  <br /></td></tr>
+<tr class="separator:a265d29c5e976cf3716af95ecf2f7a49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e00cecaf49f0e30f493be28bf2334bc" id="r_a3e00cecaf49f0e30f493be28bf2334bc"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e00cecaf49f0e30f493be28bf2334bc">RAW_TO_PHYS</a> (int raw_value, <a class="el" href="struct_phys___value__t.html">Phys_Value_t</a> *phys_struct)</td></tr>
+<tr class="memdesc:a3e00cecaf49f0e30f493be28bf2334bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a raw CAN signal value to a physical value.  <br /></td></tr>
+<tr class="separator:a3e00cecaf49f0e30f493be28bf2334bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Source file for the D2CC library. </p>
+<dl class="section date"><dt>Date</dt><dd>2025-01-19 </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>hakimmc </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://www.linkedin.com/in/abdulhakim-calgin/">https://www.linkedin.com/in/abdulhakim-calgin/</a> </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a1a53ba345e601b7539ad8b1d3a60becf" name="a1a53ba345e601b7539ad8b1d3a60becf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a53ba345e601b7539ad8b1d3a60becf">&#9670;&#160;</a></span>CreateTable_Battery_Messages()</h2>
 
@@ -140,6 +161,26 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reads and parses CAN data into the <a class="el" href="struct_dbc_struct.html">DbcStruct</a>. </p>
+<p>Creates the signal table for the specified CAN message.</p>
+<p>This function is used to read CAN data and store it in the <a class="el" href="struct_dbc_struct.html">DbcStruct</a>. It parses the data and converts physical values to raw CAN signal values based on the scaling factors and offsets defined in the <a class="el" href="struct_dbc_struct.html">DbcStruct</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_data</td><td>Pointer to the received CAN data to be parsed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>CAN message ID for identifying which message to parse. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> where parsed data will be stored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Creates the signal table for a specified CAN message in the <a class="el" href="struct_dbc_struct.html">DbcStruct</a>.</p>
+<p>This function initializes the signal table for a specific message within the <a class="el" href="struct_dbc_struct.html">DbcStruct</a>. Each signal is set to 0 initially, preparing it for further use.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> containing the CAN message and signals. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -158,22 +199,66 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates the signal table for the specified CAN message. </p>
+<p>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance that contains the CAN message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a3f4346eef40e3f6e0856a015bed8da2d" name="a3f4346eef40e3f6e0856a015bed8da2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f4346eef40e3f6e0856a015bed8da2d">&#9670;&#160;</a></span>CreateTable_Battery_Voltages()</h2>
+<a id="a688095370440ce4b3816d2b712ed5b3b" name="a688095370440ce4b3816d2b712ed5b3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688095370440ce4b3816d2b712ed5b3b">&#9670;&#160;</a></span>CreateTable_Battery_Voltages_1()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CreateTable_Battery_Voltages </td>
+          <td class="memname">void CreateTable_Battery_Voltages_1 </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *</td>          <td class="paramname"><span class="paramname"><em>dbc</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates the signal table for the specified CAN message. </p>
+<p>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance that contains the CAN message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a106990c5a8b489af5f21a3fa6f32d45c" name="a106990c5a8b489af5f21a3fa6f32d45c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a106990c5a8b489af5f21a3fa6f32d45c">&#9670;&#160;</a></span>CreateTable_Battery_Voltages_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CreateTable_Battery_Voltages_2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *</td>          <td class="paramname"><span class="paramname"><em>dbc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates the signal table for the specified CAN message. </p>
+<p>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance that contains the CAN message. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -192,6 +277,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates the signal table for the specified CAN message. </p>
+<p>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance that contains the CAN message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae78f43f4aca692c377c75bc182baee88" name="ae78f43f4aca692c377c75bc182baee88"></a>
@@ -209,31 +303,81 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> with values from the parsed DBC file. </p>
+<p>Initializes the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> for CAN message processing.</p>
+<p>This function initializes the necessary fields in the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> based on the provided DBC messages. The signals' physical factors and offsets are set accordingly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbc</td><td>Pointer to the <a class="el" href="struct_dbc_struct.html">DbcStruct</a> instance to be initialized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ae5597b44f3f49cc3c016533bfa7a9374" name="ae5597b44f3f49cc3c016533bfa7a9374"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5597b44f3f49cc3c016533bfa7a9374">&#9670;&#160;</a></span>ReadParse()</h2>
+<a id="a265d29c5e976cf3716af95ecf2f7a49a" name="a265d29c5e976cf3716af95ecf2f7a49a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a265d29c5e976cf3716af95ecf2f7a49a">&#9670;&#160;</a></span>PHYS_TO_RAW()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ReadParse </td>
+          <td class="memname">uint32_t PHYS_TO_RAW </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>rx_data</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>phys_value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_dbc_struct.html">DbcStruct</a> *</td>          <td class="paramname"><span class="paramname"><em>dbc</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="struct_phys___value__t.html">Phys_Value_t</a> *</td>          <td class="paramname"><span class="paramname"><em>phys_struct</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Converts a physical value to a raw CAN signal value. </p>
+<p>Converts a physical value to its corresponding raw CAN value.</p>
+<p>This function converts a physical value (e.g., temperature) into a raw CAN signal value based on the scaling factor and offset stored in the <a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a> structure.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">phys_value</td><td>The physical value to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">phys_struct</td><td>Pointer to the <a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a> structure containing scaling factor and offset.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding raw CAN signal value. </dd></dl>
+
+</div>
+</div>
+<a id="a3e00cecaf49f0e30f493be28bf2334bc" name="a3e00cecaf49f0e30f493be28bf2334bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e00cecaf49f0e30f493be28bf2334bc">&#9670;&#160;</a></span>RAW_TO_PHYS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t RAW_TO_PHYS </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>raw_value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_phys___value__t.html">Phys_Value_t</a> *</td>          <td class="paramname"><span class="paramname"><em>phys_struct</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a raw CAN signal value to a physical value. </p>
+<p>Converts a raw CAN value to its corresponding physical value.</p>
+<p>This function converts a raw CAN signal value to its corresponding physical value based on the scaling factor and offset stored in the <a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a> structure.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">raw_value</td><td>The raw CAN signal value to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">phys_struct</td><td>Pointer to the <a class="el" href="struct_phys___value__t.html" title="factor, offset and value variable structer for CAN messages structure for message.">Phys_Value_t</a> structure containing scaling factor and offset.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding physical value. </dd></dl>
 
 </div>
 </div>

@@ -46,22 +46,6 @@ include/Can.h \- CAN communication interface for ESP32\&.
 .br
 .RI "Tag for logging CAN-related messages\&. "
 .ti -1c
-.RI "#define \fBCan_Main_ID\fP   0x100"
-.br
-.RI "CAN ID for main messages\&. "
-.ti -1c
-.RI "#define \fBBattery_Messages_ID\fP   0x101"
-.br
-.RI "CAN ID for battery messages\&. "
-.ti -1c
-.RI "#define \fBCan_Battery_Voltages_ID\fP   0x102"
-.br
-.RI "CAN ID for battery voltage messages\&. "
-.ti -1c
-.RI "#define \fBCan_Battery_Temperatures_ID\fP   0x103"
-.br
-.RI "CAN ID for battery temperature messages\&. "
-.ti -1c
 .RI "#define \fBCAN_DELAY\fP   250"
 .br
 .RI "Delay in milliseconds for CAN tasks\&. "
@@ -99,26 +83,10 @@ hakimmc
 
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define Battery_Messages_ID   0x101"
-
-.PP
-CAN ID for battery messages\&. 
-.SS "#define Can_Battery_Temperatures_ID   0x103"
-
-.PP
-CAN ID for battery temperature messages\&. 
-.SS "#define Can_Battery_Voltages_ID   0x102"
-
-.PP
-CAN ID for battery voltage messages\&. 
 .SS "#define CAN_DELAY   250"
 
 .PP
 Delay in milliseconds for CAN tasks\&. 
-.SS "#define Can_Main_ID   0x100"
-
-.PP
-CAN ID for main messages\&. 
 .SS "#define CAN_TAG   'CAN_MASTER'"
 
 .PP

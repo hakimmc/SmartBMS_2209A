@@ -1,5 +1,5 @@
 \doxysection{src/\+Wifi.c File Reference}
-\label{_wifi_8c}\index{src/Wifi.c@{src/Wifi.c}}
+\hypertarget{_wifi_8c}{}\label{_wifi_8c}\index{src/Wifi.c@{src/Wifi.c}}
 
 
 Functions for initializing and managing Wi-\/\+Fi connectivity in AP (Access Point) and STA (Station) modes.  
@@ -9,9 +9,9 @@ Functions for initializing and managing Wi-\/\+Fi connectivity in AP (Access Poi
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \textbf{ event\+\_\+handler} (void $\ast$arg, esp\+\_\+event\+\_\+base\+\_\+t event\+\_\+base, int32\+\_\+t event\+\_\+id, void $\ast$event\+\_\+data)
+void \mbox{\hyperlink{_wifi_8c_a729c8b3e4ebc79d753bd4887f2b25412}{event\+\_\+handler}} (void \texorpdfstring{$\ast$}{*}arg, esp\+\_\+event\+\_\+base\+\_\+t event\+\_\+base, int32\+\_\+t event\+\_\+id, void \texorpdfstring{$\ast$}{*}event\+\_\+data)
 \begin{DoxyCompactList}\small\item\em Event handler for Wi-\/\+Fi and IP events. \end{DoxyCompactList}\item 
-void \textbf{ wifi\+\_\+init\+\_\+ap\+\_\+sta} (void)
+void \mbox{\hyperlink{_wifi_8c_a13bb3ba68519d8aa7c2a72cf22dc2b21}{wifi\+\_\+init\+\_\+ap\+\_\+sta}} (void)
 \begin{DoxyCompactList}\small\item\em Initializes Wi-\/\+Fi in both Access Point (AP) and Station (STA) modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -27,15 +27,17 @@ hakimmc
 
 
 \doxysubsection{Function Documentation}
-\index{Wifi.c@{Wifi.c}!event\_handler@{event\_handler}}
+\Hypertarget{_wifi_8c_a729c8b3e4ebc79d753bd4887f2b25412}\index{Wifi.c@{Wifi.c}!event\_handler@{event\_handler}}
 \index{event\_handler@{event\_handler}!Wifi.c@{Wifi.c}}
-\doxysubsubsection{event\_handler()}
-{\footnotesize\ttfamily \label{_wifi_8c_ab89f8a7d7357e4fb0e466836024c7f9c} 
-static void event\+\_\+handler (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg}{, }\item[{esp\+\_\+event\+\_\+base\+\_\+t}]{event\+\_\+base}{, }\item[{int32\+\_\+t}]{event\+\_\+id}{, }\item[{void $\ast$}]{event\+\_\+data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\doxysubsubsection{\texorpdfstring{event\_handler()}{event\_handler()}}
+{\footnotesize\ttfamily \label{_wifi_8c_a729c8b3e4ebc79d753bd4887f2b25412} 
+void event\+\_\+handler (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg}{, }\item[{esp\+\_\+event\+\_\+base\+\_\+t}]{event\+\_\+base}{, }\item[{int32\+\_\+t}]{event\+\_\+id}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{event\+\_\+data}{}\end{DoxyParamCaption})}
 
 
 
 Event handler for Wi-\/\+Fi and IP events. 
+
+Handles Wi-\/\+Fi events.
 
 This function handles Wi-\/\+Fi and IP events, such as Wi-\/\+Fi connection status changes and obtaining an IP address. It also manages retry logic for Wi-\/\+Fi connection attempts.
 
@@ -50,15 +52,15 @@ This function handles Wi-\/\+Fi and IP events, such as Wi-\/\+Fi connection stat
 {\em event\+\_\+data} & Event data associated with the event. \\
 \hline
 \end{DoxyParams}
-$<$ Start the Wi-\/\+Fi connection process.
+\texorpdfstring{$<$}{<} Start the Wi-\/\+Fi connection process.
 
-$<$ Retry the connection.
+\texorpdfstring{$<$}{<} Retry the connection.
 
-$<$ Log obtained IP address.
+\texorpdfstring{$<$}{<} Log obtained IP address.
 
-$<$ Reset retry count.\index{Wifi.c@{Wifi.c}!wifi\_init\_ap\_sta@{wifi\_init\_ap\_sta}}
+\texorpdfstring{$<$}{<} Reset retry count.\Hypertarget{_wifi_8c_a13bb3ba68519d8aa7c2a72cf22dc2b21}\index{Wifi.c@{Wifi.c}!wifi\_init\_ap\_sta@{wifi\_init\_ap\_sta}}
 \index{wifi\_init\_ap\_sta@{wifi\_init\_ap\_sta}!Wifi.c@{Wifi.c}}
-\doxysubsubsection{wifi\_init\_ap\_sta()}
+\doxysubsubsection{\texorpdfstring{wifi\_init\_ap\_sta()}{wifi\_init\_ap\_sta()}}
 {\footnotesize\ttfamily \label{_wifi_8c_a13bb3ba68519d8aa7c2a72cf22dc2b21} 
 void wifi\+\_\+init\+\_\+ap\+\_\+sta (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
@@ -73,36 +75,36 @@ This function initializes the Wi-\/\+Fi stack, configures the Wi-\/\+Fi interfac
 \begin{DoxyNote}{Note}
 This function configures the ESP32 in dual mode (AP and STA) and connects to a Wi-\/\+Fi network if {\ttfamily WIFI\+\_\+\+CONNECT} is defined. 
 \end{DoxyNote}
-$<$ Initialize network interface.
+\texorpdfstring{$<$}{<} Initialize network interface.
 
-$<$ Create the default event loop.
+\texorpdfstring{$<$}{<} Create the default event loop.
 
-$<$ Create the default Wi-\/\+Fi AP (Access Point) interface.
+\texorpdfstring{$<$}{<} Create the default Wi-\/\+Fi AP (Access Point) interface.
 
-$<$ Default Wi-\/\+Fi configuration.
+\texorpdfstring{$<$}{<} Default Wi-\/\+Fi configuration.
 
-$<$ Initialize Wi-\/\+Fi driver with the default configuration.
+\texorpdfstring{$<$}{<} Initialize Wi-\/\+Fi driver with the default configuration.
 
-$<$ Register Wi-\/\+Fi event handler.
+\texorpdfstring{$<$}{<} Register Wi-\/\+Fi event handler.
 
-$<$ Register IP event handler.
+\texorpdfstring{$<$}{<} Register IP event handler.
 
-$<$ AP SSID.
+\texorpdfstring{$<$}{<} AP SSID.
 
-$<$ AP password.
+\texorpdfstring{$<$}{<} AP password.
 
-$<$ Length of SSID.
+\texorpdfstring{$<$}{<} Length of SSID.
 
-$<$ AP channel.
+\texorpdfstring{$<$}{<} AP channel.
 
-$<$ Max connections to the AP.
+\texorpdfstring{$<$}{<} Max connections to the AP.
 
-$<$ WPA/\+WPA2 PSK authentication.
+\texorpdfstring{$<$}{<} WPA/\+WPA2 PSK authentication.
 
-$<$ Set Wi-\/\+Fi mode to AP only.
+\texorpdfstring{$<$}{<} Set Wi-\/\+Fi mode to AP only.
 
-$<$ Set AP configuration.
+\texorpdfstring{$<$}{<} Set AP configuration.
 
-$<$ Start the Wi-\/\+Fi driver.
+\texorpdfstring{$<$}{<} Start the Wi-\/\+Fi driver.
 
-$<$ Log completion of Wi-\/\+Fi initialization.
+\texorpdfstring{$<$}{<} Log completion of Wi-\/\+Fi initialization.

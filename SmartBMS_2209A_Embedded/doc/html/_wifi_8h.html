@@ -31,6 +31,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="78184751.png"/></td>
   <td id="projectalign">
    <div id="projectname">SmartBMS_2209A<span id="projectnumber">&#160;v1.0.0</span>
    </div>
@@ -171,9 +172,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab89f8a7d7357e4fb0e466836024c7f9c" id="r_ab89f8a7d7357e4fb0e466836024c7f9c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab89f8a7d7357e4fb0e466836024c7f9c">event_handler</a> (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)</td></tr>
-<tr class="memdesc:ab89f8a7d7357e4fb0e466836024c7f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles Wi-Fi events.  <br /></td></tr>
-<tr class="separator:ab89f8a7d7357e4fb0e466836024c7f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a729c8b3e4ebc79d753bd4887f2b25412" id="r_a729c8b3e4ebc79d753bd4887f2b25412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a729c8b3e4ebc79d753bd4887f2b25412">event_handler</a> (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)</td></tr>
+<tr class="memdesc:a729c8b3e4ebc79d753bd4887f2b25412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles Wi-Fi events.  <br /></td></tr>
+<tr class="separator:a729c8b3e4ebc79d753bd4887f2b25412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13bb3ba68519d8aa7c2a72cf22dc2b21" id="r_a13bb3ba68519d8aa7c2a72cf22dc2b21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13bb3ba68519d8aa7c2a72cf22dc2b21">wifi_init_ap_sta</a> (void)</td></tr>
 <tr class="memdesc:a13bb3ba68519d8aa7c2a72cf22dc2b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the Wi-Fi in AP+STA mode.  <br /></td></tr>
 <tr class="separator:a13bb3ba68519d8aa7c2a72cf22dc2b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -376,17 +377,14 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab89f8a7d7357e4fb0e466836024c7f9c" name="ab89f8a7d7357e4fb0e466836024c7f9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab89f8a7d7357e4fb0e466836024c7f9c">&#9670;&#160;</a></span>event_handler()</h2>
+<a id="a729c8b3e4ebc79d753bd4887f2b25412" name="a729c8b3e4ebc79d753bd4887f2b25412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a729c8b3e4ebc79d753bd4887f2b25412">&#9670;&#160;</a></span>event_handler()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void event_handler </td>
+          <td class="memname">void event_handler </td>
           <td>(</td>
           <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>, </td>
         </tr>
@@ -406,11 +404,6 @@ Functions</h2></td></tr>
           <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>event_data</em></span>&#160;)</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Handles Wi-Fi events. </p>
@@ -420,10 +413,25 @@ Functions</h2></td></tr>
     <tr><td class="paramname">arg</td><td>User-provided argument (optional). </td></tr>
     <tr><td class="paramname">event_base</td><td>Event base that identifies the event type. </td></tr>
     <tr><td class="paramname">event_id</td><td>Event ID specifying the exact event. </td></tr>
-    <tr><td class="paramname">event_data</td><td>Additional data associated with the event (optional). </td></tr>
+    <tr><td class="paramname">event_data</td><td>Additional data associated with the event (optional).</td></tr>
   </table>
   </dd>
 </dl>
+<p>Handles Wi-Fi events.</p>
+<p>This function handles Wi-Fi and IP events, such as Wi-Fi connection status changes and obtaining an IP address. It also manages retry logic for Wi-Fi connection attempts.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>Pointer to additional arguments (unused). </td></tr>
+    <tr><td class="paramname">event_base</td><td>The event base (WIFI_EVENT or IP_EVENT). </td></tr>
+    <tr><td class="paramname">event_id</td><td>The event ID (such as WIFI_EVENT_STA_START). </td></tr>
+    <tr><td class="paramname">event_data</td><td>Event data associated with the event. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Start the Wi-Fi connection process.</p>
+<p>&lt; Retry the connection.</p>
+<p>&lt; Log obtained IP address.</p>
+<p>&lt; Reset retry count.</p>
 
 </div>
 </div>

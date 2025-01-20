@@ -34,35 +34,62 @@ NS_ :
 BS_:
 
 BU_: SMARTBMS BatteryChemistryValues
-VAL_TABLE_ NetworkStatus 3 "WiFi_ok_AP_ok" 2 "WiFi_nok_AP_ok" 1 "WiFi_ok_AP_nok" 0 "WiFi_nok_AP_nok" ;
-VAL_TABLE_ VpnStatus 1 "Disable" 0 "Enable" ;
-VAL_TABLE_ WiFiStatus 1 "Disable" 0 "Enable" ;
-VAL_TABLE_ CanBusStatus 1 "Disable" 0 "Enable" ;
-VAL_TABLE_ TcpStatus 2 "Connected" 1 "Online" 0 "Offline" ;
-VAL_TABLE_ BatteryChem 1 "NMC" 0 "LFP" ;
+VAL_TABLE_ WiFiStatus 1 "WiFi_St_Connected" 0 "WiFi_St_Disconnected" ;
 
 
-BO_ 259 Battery_Temperatures: 8 Vector__XXX
+BO_ 259 Battery_Voltages_2: 8 Vector__XXX
+ SG_ BatteryVoltage_16 : 56|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_15 : 48|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_14 : 40|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_13 : 32|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_12 : 24|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_11 : 16|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_10 : 8|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_9 : 0|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
 
-BO_ 258 Battery_Voltages: 8 Vector__XXX
+BO_ 260 Battery_Temperatures: 8 Vector__XXX
+ SG_ Battery_Temp_AUX7 : 56|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ Battery_Temp_AUX6 : 48|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ Battery_Temp_AUX5 : 40|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ Battery_Temp_AUX4 : 32|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ Battery_Temp_AUX3 : 24|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ Battery_Temp_AUX2 : 16|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ Battery_Temp_AUX1 : 8|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ Battery_Temp_AUX0 : 0|8@1+ (1,0) [0|255] "C" Vector__XXX
+
+BO_ 258 Battery_Voltages_1: 8 Vector__XXX
+ SG_ BatteryVoltage_8 : 56|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_7 : 48|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_6 : 40|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_5 : 32|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_4 : 24|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_3 : 16|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_2 : 8|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
+ SG_ BatteryVoltage_1 : 0|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
 
 BO_ 257 Battery_Messages: 8 Vector__XXX
-
-BO_ 256 Can_Main: 8 Vector__XXX
- SG_ TcpClientCount : 56|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WiFi_AP_Status : 53|2@1+ (1,0) [0|0] "" Vector__XXX
- SG_ VpnEnable : 52|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ TcpEnable : 50|2@1+ (1,0) [0|3] "" Vector__XXX
- SG_ WiFiEnable : 49|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ CanBusEnable : 48|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ SwVersionBugfix : 44|4@1+ (1,0) [0|3] "" Vector__XXX
- SG_ SwVersionMinor : 42|2@1+ (1,0) [0|3] "" Vector__XXX
- SG_ SwVersionMajor : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BatterySOC : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OCV_Voltages : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Battery_Count : 4|4@1+ (1,1) [1|16] "" Vector__XXX
  SG_ BatteryBalance_MinTemp : 32|8@1+ (1,-100) [-100|155] "C" Vector__XXX
  SG_ BatteryBalance_MaxTemp : 24|8@1+ (1,0) [0|255] "C" Vector__XXX
  SG_ BatteryBalance_MinVoltage : 16|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
  SG_ BatteryBalance_MaxVoltage : 8|8@1+ (10,2000) [2000|4550] "V" Vector__XXX
- SG_ BatteryChemistry : 7|1@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ BatteryChemistry : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 256 Can_Main: 8 Vector__XXX
+ SG_ WiFi_ST_IP_Address : 40|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ WiFi_AP_IP_Adrress : 24|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved_1 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ WiFi_ST_Status : 21|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VpnEnable : 19|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TcpClientCount : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ WiFi_AP_Status : 7|1@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TcpEnable : 17|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CanBusEnable : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SwVersionBugfix : 60|4@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SwVersionMinor : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SwVersionMajor : 56|2@1+ (1,0) [0|3] "" Vector__XXX
  SG_ AliveCounter : 0|7@1+ (1,0) [0|127] "" Vector__XXX
 
 
@@ -71,10 +98,10 @@ BA_DEF_  "MultiplexExtEnabled" ENUM  "No","Yes";
 BA_DEF_  "BusType" STRING ;
 BA_DEF_DEF_  "MultiplexExtEnabled" "No";
 BA_DEF_DEF_  "BusType" "CAN";
-VAL_ 256 WiFi_AP_Status 1 "Disable" 0 "Enable" ;
-VAL_ 256 VpnEnable 1 "Disable" 0 "Enable" ;
-VAL_ 256 TcpEnable 2 "Connected" 1 "Online" 0 "Offline" ;
-VAL_ 256 WiFiEnable 1 "Disable" 0 "Enable" ;
-VAL_ 256 CanBusEnable 1 "Disable" 0 "Enable" ;
-VAL_ 256 BatteryChemistry 1 "NMC" 0 "LFP" ;
+VAL_ 257 BatteryChemistry 14 "Ag_Zn" 13 "VRLA" 12 "Zn_MnO2" 11 "Na_ion" 10 "Li_S" 9 "Zn_Air" 8 "PbA" 7 "NiCd" 6 "NiMH" 5 "LTO" 4 "LMO" 3 "LCO" 2 "NCA" 1 "NMC" 0 "LFP" ;
+VAL_ 256 WiFi_ST_Status 1 "WiFi_Ap_Connected" 0 "WiFi_Ap_Disconnected" ;
+VAL_ 256 VpnEnable 3 "VPN_Error" 2 "VPN_Connected" 1 "VPN_Online" 0 "VPN_Offline" ;
+VAL_ 256 WiFi_AP_Status 1 "WiFi_Ap_Connected" 0 "WiFi_Ap_Disconnected" ;
+VAL_ 256 TcpEnable 3 "TCP_Error" 2 "TCP_Connected" 1 "TCP_Online" 0 "TCP_Offline" ;
+VAL_ 256 CanBusEnable 1 "CAN_Driver_Enabled" 0 "CAN_Driver_Disabled" ;
 

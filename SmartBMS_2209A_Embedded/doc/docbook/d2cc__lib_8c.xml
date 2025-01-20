@@ -2,54 +2,401 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_d2cc__lib_8c" xml:lang="en-US">
 <title>src/d2cc_lib.c File Reference</title>
 <indexterm><primary>src/d2cc_lib.c</primary></indexterm>
+<para>
+
+<para>Source file for the D2CC library. </para>
+ 
+</para>
 <programlisting linenumbering="unnumbered">#include &quot;d2cc_lib.h&quot;<?linebreak?></programlisting><simplesect>
     <title>Functions    </title>
         <itemizedlist>
             <listitem><para>void <link linkend="_d2cc__lib_8c_1ae78f43f4aca692c377c75bc182baee88">D2cc_Lib_Init</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
-</listitem>
-            <listitem><para>void <link linkend="_d2cc__lib_8c_1ae5597b44f3f49cc3c016533bfa7a9374">ReadParse</link> (uint8_t *rx_data, uint32_t id, <link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Initializes the <link linkend="_struct_dbc_struct">DbcStruct</link> with values from the parsed DBC file. </para>
 </listitem>
             <listitem><para>void <link linkend="_d2cc__lib_8c_1a1a53ba345e601b7539ad8b1d3a60becf">CreateTable_Battery_Messages</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Reads and parses CAN data into the <link linkend="_struct_dbc_struct">DbcStruct</link>. </para>
 </listitem>
             <listitem><para>void <link linkend="_d2cc__lib_8c_1acce29ea481884412fe82fde8cf8a3c73">CreateTable_Battery_Temperatures</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Creates the signal table for the specified CAN message. </para>
 </listitem>
-            <listitem><para>void <link linkend="_d2cc__lib_8c_1a3f4346eef40e3f6e0856a015bed8da2d">CreateTable_Battery_Voltages</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+            <listitem><para>void <link linkend="_d2cc__lib_8c_1a688095370440ce4b3816d2b712ed5b3b">CreateTable_Battery_Voltages_1</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_d2cc__lib_8c_1a106990c5a8b489af5f21a3fa6f32d45c">CreateTable_Battery_Voltages_2</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Creates the signal table for the specified CAN message. </para>
 </listitem>
             <listitem><para>void <link linkend="_d2cc__lib_8c_1a3a8f6f06284c77bd13fc93c18115fd53">CreateTable_Can_Main</link> (<link linkend="_struct_dbc_struct">DbcStruct</link> *dbc)</para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_d2cc__lib_8c_1a265d29c5e976cf3716af95ecf2f7a49a">PHYS_TO_RAW</link> (int phys_value, <link linkend="_struct_phys___value__t">Phys_Value_t</link> *phys_struct)</para>
+
+<para>Converts a physical value to a raw CAN signal value. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_d2cc__lib_8c_1a3e00cecaf49f0e30f493be28bf2334bc">RAW_TO_PHYS</link> (int raw_value, <link linkend="_struct_phys___value__t">Phys_Value_t</link> *phys_struct)</para>
+
+<para>Converts a raw CAN signal value to a physical value. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Source file for the D2CC library. </para>
+
+<para><formalpara><title>Date</title>
+
+<para>2025-01-19 </para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>hakimmc </para>
+</formalpara>
+<formalpara><title>See also</title>
+
+<para><link xlink:href="https://www.linkedin.com/in/abdulhakim-calgin/">https://www.linkedin.com/in/abdulhakim-calgin/</link> </para>
+</formalpara>
+</para>
+</section>
 <section>
 <title>Function Documentation</title>
 <anchor xml:id="_d2cc__lib_8c_1a1a53ba345e601b7539ad8b1d3a60becf"/><section>
     <title>CreateTable_Battery_Messages()</title>
 <indexterm><primary>CreateTable_Battery_Messages</primary><secondary>d2cc_lib.c</secondary></indexterm>
 <indexterm><primary>d2cc_lib.c</primary><secondary>CreateTable_Battery_Messages</secondary></indexterm>
-<para><computeroutput>void CreateTable_Battery_Messages (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<para><computeroutput>void CreateTable_Battery_Messages (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Reads and parses CAN data into the <link linkend="_struct_dbc_struct">DbcStruct</link>. </para>
+</para>
+
+<para>Creates the signal table for the specified CAN message.</para>
+
+<para>This function is used to read CAN data and store it in the <link linkend="_struct_dbc_struct">DbcStruct</link>. It parses the data and converts physical values to raw CAN signal values based on the scaling factors and offsets defined in the <link linkend="_struct_dbc_struct">DbcStruct</link>.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>rx_data</entry><entry>
+<para>Pointer to the received CAN data to be parsed. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>CAN message ID for identifying which message to parse. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> where parsed data will be stored.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Creates the signal table for a specified CAN message in the <link linkend="_struct_dbc_struct">DbcStruct</link>.</para>
+
+<para>This function initializes the signal table for a specific message within the <link linkend="_struct_dbc_struct">DbcStruct</link>. Each signal is set to 0 initially, preparing it for further use.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> containing the CAN message and signals. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
 <anchor xml:id="_d2cc__lib_8c_1acce29ea481884412fe82fde8cf8a3c73"/><section>
     <title>CreateTable_Battery_Temperatures()</title>
 <indexterm><primary>CreateTable_Battery_Temperatures</primary><secondary>d2cc_lib.c</secondary></indexterm>
 <indexterm><primary>d2cc_lib.c</primary><secondary>CreateTable_Battery_Temperatures</secondary></indexterm>
-<para><computeroutput>void CreateTable_Battery_Temperatures (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
-<anchor xml:id="_d2cc__lib_8c_1a3f4346eef40e3f6e0856a015bed8da2d"/><section>
-    <title>CreateTable_Battery_Voltages()</title>
-<indexterm><primary>CreateTable_Battery_Voltages</primary><secondary>d2cc_lib.c</secondary></indexterm>
-<indexterm><primary>d2cc_lib.c</primary><secondary>CreateTable_Battery_Voltages</secondary></indexterm>
-<para><computeroutput>void CreateTable_Battery_Voltages (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<para><computeroutput>void CreateTable_Battery_Temperatures (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</para>
+
+<para>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance that contains the CAN message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_d2cc__lib_8c_1a688095370440ce4b3816d2b712ed5b3b"/><section>
+    <title>CreateTable_Battery_Voltages_1()</title>
+<indexterm><primary>CreateTable_Battery_Voltages_1</primary><secondary>d2cc_lib.c</secondary></indexterm>
+<indexterm><primary>d2cc_lib.c</primary><secondary>CreateTable_Battery_Voltages_1</secondary></indexterm>
+<para><computeroutput>void CreateTable_Battery_Voltages_1 (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</para>
+
+<para>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance that contains the CAN message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_d2cc__lib_8c_1a106990c5a8b489af5f21a3fa6f32d45c"/><section>
+    <title>CreateTable_Battery_Voltages_2()</title>
+<indexterm><primary>CreateTable_Battery_Voltages_2</primary><secondary>d2cc_lib.c</secondary></indexterm>
+<indexterm><primary>d2cc_lib.c</primary><secondary>CreateTable_Battery_Voltages_2</secondary></indexterm>
+<para><computeroutput>void CreateTable_Battery_Voltages_2 (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</para>
+
+<para>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance that contains the CAN message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
 <anchor xml:id="_d2cc__lib_8c_1a3a8f6f06284c77bd13fc93c18115fd53"/><section>
     <title>CreateTable_Can_Main()</title>
 <indexterm><primary>CreateTable_Can_Main</primary><secondary>d2cc_lib.c</secondary></indexterm>
 <indexterm><primary>d2cc_lib.c</primary><secondary>CreateTable_Can_Main</secondary></indexterm>
-<para><computeroutput>void CreateTable_Can_Main (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<para><computeroutput>void CreateTable_Can_Main (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Creates the signal table for the specified CAN message. </para>
+</para>
+
+<para>This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance that contains the CAN message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
 <anchor xml:id="_d2cc__lib_8c_1ae78f43f4aca692c377c75bc182baee88"/><section>
     <title>D2cc_Lib_Init()</title>
 <indexterm><primary>D2cc_Lib_Init</primary><secondary>d2cc_lib.c</secondary></indexterm>
 <indexterm><primary>d2cc_lib.c</primary><secondary>D2cc_Lib_Init</secondary></indexterm>
-<para><computeroutput>void D2cc_Lib_Init (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
-<anchor xml:id="_d2cc__lib_8c_1ae5597b44f3f49cc3c016533bfa7a9374"/><section>
-    <title>ReadParse()</title>
-<indexterm><primary>ReadParse</primary><secondary>d2cc_lib.c</secondary></indexterm>
-<indexterm><primary>d2cc_lib.c</primary><secondary>ReadParse</secondary></indexterm>
-<para><computeroutput>void ReadParse (uint8_t * rx_data, uint32_t id, <link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para></section>
+<para><computeroutput>void D2cc_Lib_Init (<link linkend="_struct_dbc_struct">DbcStruct</link> * dbc)</computeroutput></para><para>
+
+<para>Initializes the <link linkend="_struct_dbc_struct">DbcStruct</link> with values from the parsed DBC file. </para>
+</para>
+
+<para>Initializes the <link linkend="_struct_dbc_struct">DbcStruct</link> for CAN message processing.</para>
+
+<para>This function initializes the necessary fields in the <link linkend="_struct_dbc_struct">DbcStruct</link> based on the provided DBC messages. The signals&apos; physical factors and offsets are set accordingly.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>dbc</entry><entry>
+<para>Pointer to the <link linkend="_struct_dbc_struct">DbcStruct</link> instance to be initialized. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_d2cc__lib_8c_1a265d29c5e976cf3716af95ecf2f7a49a"/><section>
+    <title>PHYS_TO_RAW()</title>
+<indexterm><primary>PHYS_TO_RAW</primary><secondary>d2cc_lib.c</secondary></indexterm>
+<indexterm><primary>d2cc_lib.c</primary><secondary>PHYS_TO_RAW</secondary></indexterm>
+<para><computeroutput>uint32_t PHYS_TO_RAW (int phys_value, <link linkend="_struct_phys___value__t">Phys_Value_t</link> * phys_struct)</computeroutput></para><para>
+
+<para>Converts a physical value to a raw CAN signal value. </para>
+</para>
+
+<para>Converts a physical value to its corresponding raw CAN value.</para>
+
+<para>This function converts a physical value (e.g., temperature) into a raw CAN signal value based on the scaling factor and offset stored in the <link linkend="_struct_phys___value__t">Phys_Value_t</link> structure.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>phys_value</entry><entry>
+<para>The physical value to convert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>phys_struct</entry><entry>
+<para>Pointer to the <link linkend="_struct_phys___value__t">Phys_Value_t</link> structure containing scaling factor and offset.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding raw CAN signal value. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_d2cc__lib_8c_1a3e00cecaf49f0e30f493be28bf2334bc"/><section>
+    <title>RAW_TO_PHYS()</title>
+<indexterm><primary>RAW_TO_PHYS</primary><secondary>d2cc_lib.c</secondary></indexterm>
+<indexterm><primary>d2cc_lib.c</primary><secondary>RAW_TO_PHYS</secondary></indexterm>
+<para><computeroutput>uint32_t RAW_TO_PHYS (int raw_value, <link linkend="_struct_phys___value__t">Phys_Value_t</link> * phys_struct)</computeroutput></para><para>
+
+<para>Converts a raw CAN signal value to a physical value. </para>
+</para>
+
+<para>Converts a raw CAN value to its corresponding physical value.</para>
+
+<para>This function converts a raw CAN signal value to its corresponding physical value based on the scaling factor and offset stored in the <link linkend="_struct_phys___value__t">Phys_Value_t</link> structure.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>raw_value</entry><entry>
+<para>The raw CAN signal value to convert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>phys_struct</entry><entry>
+<para>Pointer to the <link linkend="_struct_phys___value__t">Phys_Value_t</link> structure containing scaling factor and offset.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding physical value. </para>
+</formalpara>
+</para>
+</section>
 </section>
 </section>

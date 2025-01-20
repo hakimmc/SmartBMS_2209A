@@ -1,194 +1,652 @@
 \doxysection{include/d2cc\+\_\+lib.h File Reference}
-\label{d2cc__lib_8h}\index{include/d2cc\_lib.h@{include/d2cc\_lib.h}}
+\hypertarget{d2cc__lib_8h}{}\label{d2cc__lib_8h}\index{include/d2cc\_lib.h@{include/d2cc\_lib.h}}
+
+
+Header file for the D2\+CC library.  
+
+
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \textbf{ Dbc\+Struct}
+struct \mbox{\hyperlink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em factor, offset and value variable structer for CAN messages structure for message. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{d2cc__lib_8h_ab46f9642beab36ac6b8624c11f4f5ed4}{Battery\+\_\+\+Messages\+\_\+\+ID}}~257
+\begin{DoxyCompactList}\small\item\em CAN ID for Battery\+\_\+\+Messages messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{d2cc__lib_8h_a28bfa34179cef8b6929e0b63798779cf}{Battery\+\_\+\+Messages\+\_\+\+DLC}}~8
+\begin{DoxyCompactList}\small\item\em CAN DLC for Battery\+\_\+\+Messages messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{d2cc__lib_8h_a4071ff4cd81d3b62ffb3be85fc1c4760}{Battery\+\_\+\+Temperatures\+\_\+\+ID}}~260
+\begin{DoxyCompactList}\small\item\em CAN ID for Battery\+\_\+\+Temperatures messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{d2cc__lib_8h_a12a5aca21c3b9316e0b20fac4557a16a}{Battery\+\_\+\+Temperatures\+\_\+\+DLC}}~8
+\begin{DoxyCompactList}\small\item\em CAN DLC for Battery\+\_\+\+Temperatures messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{d2cc__lib_8h_a38e80dd1e9f8cdf9735b54d79f2fdda9}{Battery\+\_\+\+Voltages\+\_\+1\+\_\+\+ID}}~258
+\begin{DoxyCompactList}\small\item\em CAN ID for Battery\+\_\+\+Voltages\+\_\+1 messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{d2cc__lib_8h_a58897864bf48b89b9777036c39420cef}{Battery\+\_\+\+Voltages\+\_\+1\+\_\+\+DLC}}~8
+\begin{DoxyCompactList}\small\item\em CAN DLC for Battery\+\_\+\+Voltages\+\_\+1 messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{d2cc__lib_8h_accc8765d8f8608052fd7ee753fd3793e}{Battery\+\_\+\+Voltages\+\_\+2\+\_\+\+ID}}~259
+\begin{DoxyCompactList}\small\item\em CAN ID for Battery\+\_\+\+Voltages\+\_\+2 messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{d2cc__lib_8h_a8c310afe9a8df00d32a008b5f06dbc16}{Battery\+\_\+\+Voltages\+\_\+2\+\_\+\+DLC}}~8
+\begin{DoxyCompactList}\small\item\em CAN DLC for Battery\+\_\+\+Voltages\+\_\+2 messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{d2cc__lib_8h_afd4f58c1a509cc8343774f0ca05c9061}{Can\+\_\+\+Main\+\_\+\+ID}}~256
+\begin{DoxyCompactList}\small\item\em CAN ID for Can\+\_\+\+Main messages. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{d2cc__lib_8h_abbb4c67f416eee84ceda3de370c5beb3}{Can\+\_\+\+Main\+\_\+\+DLC}}~8
+\begin{DoxyCompactList}\small\item\em CAN DLC for Can\+\_\+\+Main messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \textbf{ Battery\+Chemistry\+\_\+enum} \{ \textbf{ Battery\+Chemistry\+\_\+\+LFP}
-, \textbf{ Battery\+Chemistry\+\_\+\+NMC}
+enum \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57}{Battery\+Chemistry\+\_\+enum}} \{ \newline
+\mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a}{Battery\+Chemistry\+\_\+\+LFP}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1}{Battery\+Chemistry\+\_\+\+NMC}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a7415cd345a1e7b72e1624827e217e3eb}{Battery\+Chemistry\+\_\+\+NCA}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a9abf08acf06432de7e4778b98f7c991c}{Battery\+Chemistry\+\_\+\+LCO}}
+, \newline
+\mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a3f7034da36f6d3f4430dfcdf0ddbc3d4}{Battery\+Chemistry\+\_\+\+LMO}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57ae9e1ed89a38e259c90612e49d5cb61e7}{Battery\+Chemistry\+\_\+\+LTO}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a7f7b968440395ea30f74ba35b4632e2f}{Battery\+Chemistry\+\_\+\+Ni\+MH}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a4b4da73677657ab62ffafa3ad528b9f8}{Battery\+Chemistry\+\_\+\+Ni\+Cd}}
+, \newline
+\mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a760bbb5f2aecf1f32c05d8b0ec81b3d6}{Battery\+Chemistry\+\_\+\+PbA}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57ab2e5d34668a702fc90922affc9136f15}{Battery\+Chemistry\+\_\+\+Zn\+\_\+\+Air}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a584ffb461e323eea6fea389640269bfe}{Battery\+Chemistry\+\_\+\+Li\+\_\+S}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8a4cb8943fb8cdac21435ece19ff15c7}{Battery\+Chemistry\+\_\+\+Na\+\_\+ion}}
+, \newline
+\mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57aab4d599e3d5d32058a15da6f4026745d}{Battery\+Chemistry\+\_\+\+Zn\+\_\+\+Mn\+O2}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57ac9151876352044c97912ec6514a9a4fe}{Battery\+Chemistry\+\_\+\+VRLA}}
+, \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57abf59a4ff67310168ecf6a8268f77318d}{Battery\+Chemistry\+\_\+\+Ag\+\_\+\+Zn}}
  \}
-\item 
-enum \textbf{ Can\+Bus\+Enable\+\_\+enum} \{ \textbf{ Can\+Bus\+Enable\+\_\+\+Enable}
-, \textbf{ Can\+Bus\+Enable\+\_\+\+Disable}
+\begin{DoxyCompactList}\small\item\em Enum for representing signal values for the Battery\+Chemistry signal. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8}{Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8afe5cab6293e618c2645852dbbeba66ea}{Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Wi\+Fi\+\_\+\+Ap\+\_\+\+Disconnected}}
+, \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8af5bbea2d1323b30787a1211c231415c9}{Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Wi\+Fi\+\_\+\+Ap\+\_\+\+Connected}}
  \}
-\item 
-enum \textbf{ Wi\+Fi\+Enable\+\_\+enum} \{ \textbf{ Wi\+Fi\+Enable\+\_\+\+Enable}
-, \textbf{ Wi\+Fi\+Enable\+\_\+\+Disable}
+\begin{DoxyCompactList}\small\item\em Enum for representing signal values for the Wi\+Fi\+\_\+\+AP\+\_\+\+Status signal. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4}{Can\+Bus\+Enable\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4afa23dab3ead685cbb6a195bdf72360b5}{Can\+Bus\+Enable\+\_\+\+CAN\+\_\+\+Driver\+\_\+\+Disabled}}
+, \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4a35888e8b36dc817a47cfba29797623dd}{Can\+Bus\+Enable\+\_\+\+CAN\+\_\+\+Driver\+\_\+\+Enabled}}
  \}
-\item 
-enum \textbf{ Tcp\+Enable\+\_\+enum} \{ \textbf{ Tcp\+Enable\+\_\+\+Offline}
-, \textbf{ Tcp\+Enable\+\_\+\+Online}
-, \textbf{ Tcp\+Enable\+\_\+\+Connected}
+\begin{DoxyCompactList}\small\item\em Enum for representing signal values for the Can\+Bus\+Enable signal. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789e}{Tcp\+Enable\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea8564b39d66be59e1e5a2e0c4f3a9049a}{Tcp\+Enable\+\_\+\+TCP\+\_\+\+Offline}}
+, \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea44850b21528bd0c90f2fe51bef8c6972}{Tcp\+Enable\+\_\+\+TCP\+\_\+\+Online}}
+, \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea597ff09266346fb6ab08f2af9f0a37b0}{Tcp\+Enable\+\_\+\+TCP\+\_\+\+Connected}}
+, \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea6b4f18872cbdf486c5e126b3d80dbd39}{Tcp\+Enable\+\_\+\+TCP\+\_\+\+Error}}
  \}
-\item 
-enum \textbf{ Vpn\+Enable\+\_\+enum} \{ \textbf{ Vpn\+Enable\+\_\+\+Enable}
-, \textbf{ Vpn\+Enable\+\_\+\+Disable}
+\begin{DoxyCompactList}\small\item\em Enum for representing signal values for the Tcp\+Enable signal. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4}{Vpn\+Enable\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a05dd6a8c727c4612861d57dc58978f58}{Vpn\+Enable\+\_\+\+VPN\+\_\+\+Offline}}
+, \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a16247ec944ba6e93575031f602f58eb5}{Vpn\+Enable\+\_\+\+VPN\+\_\+\+Online}}
+, \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a4c33db4ae648d11dff5cb59a081b517c}{Vpn\+Enable\+\_\+\+VPN\+\_\+\+Connected}}
+, \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4aa2d137d3b8b4a0c30b027620f093f670}{Vpn\+Enable\+\_\+\+VPN\+\_\+\+Error}}
  \}
-\item 
-enum \textbf{ Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+enum} \{ \textbf{ Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Enable}
-, \textbf{ Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Disable}
+\begin{DoxyCompactList}\small\item\em Enum for representing signal values for the Vpn\+Enable signal. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{d2cc__lib_8h_ad00d3bb37c1d69ea203ae4019a832403}{Wi\+Fi\+\_\+\+ST\+\_\+\+Status\+\_\+enum}} \{ \mbox{\hyperlink{d2cc__lib_8h_ad00d3bb37c1d69ea203ae4019a832403a44309aca0fa4d4cae66c68c991cfe25f}{Wi\+Fi\+\_\+\+ST\+\_\+\+Status\+\_\+\+Wi\+Fi\+\_\+\+Ap\+\_\+\+Disconnected}}
+, \mbox{\hyperlink{d2cc__lib_8h_ad00d3bb37c1d69ea203ae4019a832403a535d52df00b0815ec4b6a8912a8a0d99}{Wi\+Fi\+\_\+\+ST\+\_\+\+Status\+\_\+\+Wi\+Fi\+\_\+\+Ap\+\_\+\+Connected}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enum for representing signal values for the Wi\+Fi\+\_\+\+ST\+\_\+\+Status signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ D2cc\+\_\+\+Lib\+\_\+\+Init} (\textbf{ Dbc\+Struct} $\ast$st)
-\item 
-void \textbf{ Read\+Parse} (uint8\+\_\+t $\ast$rx\+\_\+data, uint32\+\_\+t id, \textbf{ Dbc\+Struct} $\ast$st)
-\item 
-void \textbf{ Create\+Table\+\_\+\+Battery\+\_\+\+Messages} (\textbf{ Dbc\+Struct} $\ast$dbc)
-\item 
-void \textbf{ Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures} (\textbf{ Dbc\+Struct} $\ast$dbc)
-\item 
-void \textbf{ Create\+Table\+\_\+\+Battery\+\_\+\+Voltages} (\textbf{ Dbc\+Struct} $\ast$dbc)
-\item 
-void \textbf{ Create\+Table\+\_\+\+Can\+\_\+\+Main} (\textbf{ Dbc\+Struct} $\ast$dbc)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{d2cc__lib_8h_add5678661f9e8fc392ab35a8369f8487}{D2cc\+\_\+\+Lib\+\_\+\+Init}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}st)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{struct_dbc_struct}{Dbc\+Struct} for CAN message processing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{d2cc__lib_8h_a1a53ba345e601b7539ad8b1d3a60becf}{Create\+Table\+\_\+\+Battery\+\_\+\+Messages}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Creates the signal table for the specified CAN message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{d2cc__lib_8h_acce29ea481884412fe82fde8cf8a3c73}{Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Creates the signal table for the specified CAN message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{d2cc__lib_8h_a688095370440ce4b3816d2b712ed5b3b}{Create\+Table\+\_\+\+Battery\+\_\+\+Voltages\+\_\+1}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Creates the signal table for the specified CAN message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{d2cc__lib_8h_a106990c5a8b489af5f21a3fa6f32d45c}{Create\+Table\+\_\+\+Battery\+\_\+\+Voltages\+\_\+2}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Creates the signal table for the specified CAN message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{d2cc__lib_8h_a3a8f6f06284c77bd13fc93c18115fd53}{Create\+Table\+\_\+\+Can\+\_\+\+Main}} (\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}dbc)
+\begin{DoxyCompactList}\small\item\em Creates the signal table for the specified CAN message. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{d2cc__lib_8h_a265d29c5e976cf3716af95ecf2f7a49a}{PHYS\+\_\+\+TO\+\_\+\+RAW}} (int phys\+\_\+value, \mbox{\hyperlink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}phys\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Converts a physical value to its corresponding raw CAN value. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{d2cc__lib_8h_a3e00cecaf49f0e30f493be28bf2334bc}{RAW\+\_\+\+TO\+\_\+\+PHYS}} (int raw\+\_\+value, \mbox{\hyperlink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}phys\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Converts a raw CAN value to its corresponding physical value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the D2\+CC library. 
+
+\begin{DoxyDate}{Date}
+2025-\/01-\/19 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+hakimmc 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.linkedin.com/in/abdulhakim-calgin/}{\texttt{ https\+://www.\+linkedin.\+com/in/abdulhakim-\/calgin/}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{d2cc__lib_8h_a28bfa34179cef8b6929e0b63798779cf}\index{d2cc\_lib.h@{d2cc\_lib.h}!Battery\_Messages\_DLC@{Battery\_Messages\_DLC}}
+\index{Battery\_Messages\_DLC@{Battery\_Messages\_DLC}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{Battery\_Messages\_DLC}{Battery\_Messages\_DLC}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_a28bfa34179cef8b6929e0b63798779cf} 
+\#define Battery\+\_\+\+Messages\+\_\+\+DLC~8}
+
+
+
+CAN DLC for Battery\+\_\+\+Messages messages. 
+
+\Hypertarget{d2cc__lib_8h_ab46f9642beab36ac6b8624c11f4f5ed4}\index{d2cc\_lib.h@{d2cc\_lib.h}!Battery\_Messages\_ID@{Battery\_Messages\_ID}}
+\index{Battery\_Messages\_ID@{Battery\_Messages\_ID}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{Battery\_Messages\_ID}{Battery\_Messages\_ID}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_ab46f9642beab36ac6b8624c11f4f5ed4} 
+\#define Battery\+\_\+\+Messages\+\_\+\+ID~257}
+
+
+
+CAN ID for Battery\+\_\+\+Messages messages. 
+
+\Hypertarget{d2cc__lib_8h_a12a5aca21c3b9316e0b20fac4557a16a}\index{d2cc\_lib.h@{d2cc\_lib.h}!Battery\_Temperatures\_DLC@{Battery\_Temperatures\_DLC}}
+\index{Battery\_Temperatures\_DLC@{Battery\_Temperatures\_DLC}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{Battery\_Temperatures\_DLC}{Battery\_Temperatures\_DLC}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_a12a5aca21c3b9316e0b20fac4557a16a} 
+\#define Battery\+\_\+\+Temperatures\+\_\+\+DLC~8}
+
+
+
+CAN DLC for Battery\+\_\+\+Temperatures messages. 
+
+\Hypertarget{d2cc__lib_8h_a4071ff4cd81d3b62ffb3be85fc1c4760}\index{d2cc\_lib.h@{d2cc\_lib.h}!Battery\_Temperatures\_ID@{Battery\_Temperatures\_ID}}
+\index{Battery\_Temperatures\_ID@{Battery\_Temperatures\_ID}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{Battery\_Temperatures\_ID}{Battery\_Temperatures\_ID}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_a4071ff4cd81d3b62ffb3be85fc1c4760} 
+\#define Battery\+\_\+\+Temperatures\+\_\+\+ID~260}
+
+
+
+CAN ID for Battery\+\_\+\+Temperatures messages. 
+
+\Hypertarget{d2cc__lib_8h_a58897864bf48b89b9777036c39420cef}\index{d2cc\_lib.h@{d2cc\_lib.h}!Battery\_Voltages\_1\_DLC@{Battery\_Voltages\_1\_DLC}}
+\index{Battery\_Voltages\_1\_DLC@{Battery\_Voltages\_1\_DLC}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{Battery\_Voltages\_1\_DLC}{Battery\_Voltages\_1\_DLC}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_a58897864bf48b89b9777036c39420cef} 
+\#define Battery\+\_\+\+Voltages\+\_\+1\+\_\+\+DLC~8}
+
+
+
+CAN DLC for Battery\+\_\+\+Voltages\+\_\+1 messages. 
+
+\Hypertarget{d2cc__lib_8h_a38e80dd1e9f8cdf9735b54d79f2fdda9}\index{d2cc\_lib.h@{d2cc\_lib.h}!Battery\_Voltages\_1\_ID@{Battery\_Voltages\_1\_ID}}
+\index{Battery\_Voltages\_1\_ID@{Battery\_Voltages\_1\_ID}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{Battery\_Voltages\_1\_ID}{Battery\_Voltages\_1\_ID}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_a38e80dd1e9f8cdf9735b54d79f2fdda9} 
+\#define Battery\+\_\+\+Voltages\+\_\+1\+\_\+\+ID~258}
+
+
+
+CAN ID for Battery\+\_\+\+Voltages\+\_\+1 messages. 
+
+\Hypertarget{d2cc__lib_8h_a8c310afe9a8df00d32a008b5f06dbc16}\index{d2cc\_lib.h@{d2cc\_lib.h}!Battery\_Voltages\_2\_DLC@{Battery\_Voltages\_2\_DLC}}
+\index{Battery\_Voltages\_2\_DLC@{Battery\_Voltages\_2\_DLC}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{Battery\_Voltages\_2\_DLC}{Battery\_Voltages\_2\_DLC}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_a8c310afe9a8df00d32a008b5f06dbc16} 
+\#define Battery\+\_\+\+Voltages\+\_\+2\+\_\+\+DLC~8}
+
+
+
+CAN DLC for Battery\+\_\+\+Voltages\+\_\+2 messages. 
+
+\Hypertarget{d2cc__lib_8h_accc8765d8f8608052fd7ee753fd3793e}\index{d2cc\_lib.h@{d2cc\_lib.h}!Battery\_Voltages\_2\_ID@{Battery\_Voltages\_2\_ID}}
+\index{Battery\_Voltages\_2\_ID@{Battery\_Voltages\_2\_ID}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{Battery\_Voltages\_2\_ID}{Battery\_Voltages\_2\_ID}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_accc8765d8f8608052fd7ee753fd3793e} 
+\#define Battery\+\_\+\+Voltages\+\_\+2\+\_\+\+ID~259}
+
+
+
+CAN ID for Battery\+\_\+\+Voltages\+\_\+2 messages. 
+
+\Hypertarget{d2cc__lib_8h_abbb4c67f416eee84ceda3de370c5beb3}\index{d2cc\_lib.h@{d2cc\_lib.h}!Can\_Main\_DLC@{Can\_Main\_DLC}}
+\index{Can\_Main\_DLC@{Can\_Main\_DLC}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{Can\_Main\_DLC}{Can\_Main\_DLC}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_abbb4c67f416eee84ceda3de370c5beb3} 
+\#define Can\+\_\+\+Main\+\_\+\+DLC~8}
+
+
+
+CAN DLC for Can\+\_\+\+Main messages. 
+
+\Hypertarget{d2cc__lib_8h_afd4f58c1a509cc8343774f0ca05c9061}\index{d2cc\_lib.h@{d2cc\_lib.h}!Can\_Main\_ID@{Can\_Main\_ID}}
+\index{Can\_Main\_ID@{Can\_Main\_ID}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{Can\_Main\_ID}{Can\_Main\_ID}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_afd4f58c1a509cc8343774f0ca05c9061} 
+\#define Can\+\_\+\+Main\+\_\+\+ID~256}
+
+
+
+CAN ID for Can\+\_\+\+Main messages. 
+
 
 
 \doxysubsection{Enumeration Type Documentation}
-\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_enum@{BatteryChemistry\_enum}}
+\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_enum@{BatteryChemistry\_enum}}
 \index{BatteryChemistry\_enum@{BatteryChemistry\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{BatteryChemistry\_enum}
+\doxysubsubsection{\texorpdfstring{BatteryChemistry\_enum}{BatteryChemistry\_enum}}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57} 
-enum \textbf{ Battery\+Chemistry\+\_\+enum}}
+enum \mbox{\hyperlink{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57}{Battery\+Chemistry\+\_\+enum}}}
 
+
+
+Enum for representing signal values for the Battery\+Chemistry signal. 
+
+This enum maps each value in the signal\textquotesingle{}s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-\/readable names for each value.
+
+\begin{DoxyNote}{Note}
+Ensure the signal values are aligned with the data type and expected range of the signal. 
+\end{DoxyNote}
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_LFP@{BatteryChemistry\_LFP}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_LFP@{BatteryChemistry\_LFP}}}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a} 
-Battery\+Chemistry\+\_\+\+LFP&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_LFP@{BatteryChemistry\_LFP}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_LFP@{BatteryChemistry\_LFP}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a669f1e42938b2399b8d99c0f0dfbc09a} 
+Battery\+Chemistry\+\_\+\+LFP&LFP. \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_NMC@{BatteryChemistry\_NMC}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_NMC@{BatteryChemistry\_NMC}}}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1} 
-Battery\+Chemistry\+\_\+\+NMC&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_NMC@{BatteryChemistry\_NMC}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_NMC@{BatteryChemistry\_NMC}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8f79eb3546d408ceb8f103914fc221d1} 
+Battery\+Chemistry\+\_\+\+NMC&NMC. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_NCA@{BatteryChemistry\_NCA}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_NCA@{BatteryChemistry\_NCA}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a7415cd345a1e7b72e1624827e217e3eb}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a7415cd345a1e7b72e1624827e217e3eb} 
+Battery\+Chemistry\+\_\+\+NCA&NCA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_LCO@{BatteryChemistry\_LCO}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_LCO@{BatteryChemistry\_LCO}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a9abf08acf06432de7e4778b98f7c991c}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a9abf08acf06432de7e4778b98f7c991c} 
+Battery\+Chemistry\+\_\+\+LCO&LCO. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_LMO@{BatteryChemistry\_LMO}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_LMO@{BatteryChemistry\_LMO}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a3f7034da36f6d3f4430dfcdf0ddbc3d4}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a3f7034da36f6d3f4430dfcdf0ddbc3d4} 
+Battery\+Chemistry\+\_\+\+LMO&LMO. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_LTO@{BatteryChemistry\_LTO}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_LTO@{BatteryChemistry\_LTO}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57ae9e1ed89a38e259c90612e49d5cb61e7}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57ae9e1ed89a38e259c90612e49d5cb61e7} 
+Battery\+Chemistry\+\_\+\+LTO&LTO. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_NiMH@{BatteryChemistry\_NiMH}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_NiMH@{BatteryChemistry\_NiMH}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a7f7b968440395ea30f74ba35b4632e2f}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a7f7b968440395ea30f74ba35b4632e2f} 
+Battery\+Chemistry\+\_\+\+Ni\+MH&Ni\+MH. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_NiCd@{BatteryChemistry\_NiCd}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_NiCd@{BatteryChemistry\_NiCd}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a4b4da73677657ab62ffafa3ad528b9f8}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a4b4da73677657ab62ffafa3ad528b9f8} 
+Battery\+Chemistry\+\_\+\+Ni\+Cd&Ni\+Cd. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_PbA@{BatteryChemistry\_PbA}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_PbA@{BatteryChemistry\_PbA}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a760bbb5f2aecf1f32c05d8b0ec81b3d6}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a760bbb5f2aecf1f32c05d8b0ec81b3d6} 
+Battery\+Chemistry\+\_\+\+PbA&PbA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_Zn\_Air@{BatteryChemistry\_Zn\_Air}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_Zn\_Air@{BatteryChemistry\_Zn\_Air}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57ab2e5d34668a702fc90922affc9136f15}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57ab2e5d34668a702fc90922affc9136f15} 
+Battery\+Chemistry\+\_\+\+Zn\+\_\+\+Air&Zn\+\_\+\+Air. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_Li\_S@{BatteryChemistry\_Li\_S}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_Li\_S@{BatteryChemistry\_Li\_S}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a584ffb461e323eea6fea389640269bfe}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a584ffb461e323eea6fea389640269bfe} 
+Battery\+Chemistry\+\_\+\+Li\+\_\+S&Li\+\_\+S. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_Na\_ion@{BatteryChemistry\_Na\_ion}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_Na\_ion@{BatteryChemistry\_Na\_ion}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8a4cb8943fb8cdac21435ece19ff15c7}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57a8a4cb8943fb8cdac21435ece19ff15c7} 
+Battery\+Chemistry\+\_\+\+Na\+\_\+ion&Na\+\_\+ion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_Zn\_MnO2@{BatteryChemistry\_Zn\_MnO2}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_Zn\_MnO2@{BatteryChemistry\_Zn\_MnO2}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57aab4d599e3d5d32058a15da6f4026745d}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57aab4d599e3d5d32058a15da6f4026745d} 
+Battery\+Chemistry\+\_\+\+Zn\+\_\+\+Mn\+O2&Zn\+\_\+\+Mn\+O2. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_VRLA@{BatteryChemistry\_VRLA}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_VRLA@{BatteryChemistry\_VRLA}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57ac9151876352044c97912ec6514a9a4fe}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57ac9151876352044c97912ec6514a9a4fe} 
+Battery\+Chemistry\+\_\+\+VRLA&VRLA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BatteryChemistry\_Ag\_Zn@{BatteryChemistry\_Ag\_Zn}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!BatteryChemistry\_Ag\_Zn@{BatteryChemistry\_Ag\_Zn}}}\Hypertarget{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57abf59a4ff67310168ecf6a8268f77318d}\label{d2cc__lib_8h_abc354ec37af201f0ebb8f4bde71ddd57abf59a4ff67310168ecf6a8268f77318d} 
+Battery\+Chemistry\+\_\+\+Ag\+\_\+\+Zn&Ag\+\_\+\+Zn. \\
 \hline
 
 \end{DoxyEnumFields}
-\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_enum@{CanBusEnable\_enum}}
+\Hypertarget{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4}\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_enum@{CanBusEnable\_enum}}
 \index{CanBusEnable\_enum@{CanBusEnable\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{CanBusEnable\_enum}
+\doxysubsubsection{\texorpdfstring{CanBusEnable\_enum}{CanBusEnable\_enum}}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4} 
-enum \textbf{ Can\+Bus\+Enable\+\_\+enum}}
+enum \mbox{\hyperlink{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4}{Can\+Bus\+Enable\+\_\+enum}}}
 
+
+
+Enum for representing signal values for the Can\+Bus\+Enable signal. 
+
+This enum maps each value in the signal\textquotesingle{}s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-\/readable names for each value.
+
+\begin{DoxyNote}{Note}
+Ensure the signal values are aligned with the data type and expected range of the signal. 
+\end{DoxyNote}
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CanBusEnable\_Enable@{CanBusEnable\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_Enable@{CanBusEnable\_Enable}}}\label{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4a611a6e61744e43b2c5fd200a950740e5} 
-Can\+Bus\+Enable\+\_\+\+Enable&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CanBusEnable\_CAN\_Driver\_Disabled@{CanBusEnable\_CAN\_Driver\_Disabled}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_CAN\_Driver\_Disabled@{CanBusEnable\_CAN\_Driver\_Disabled}}}\Hypertarget{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4afa23dab3ead685cbb6a195bdf72360b5}\label{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4afa23dab3ead685cbb6a195bdf72360b5} 
+Can\+Bus\+Enable\+\_\+\+CAN\+\_\+\+Driver\+\_\+\+Disabled&CAN\+\_\+\+Driver\+\_\+\+Disabled. \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CanBusEnable\_Disable@{CanBusEnable\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_Disable@{CanBusEnable\_Disable}}}\label{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4ac7106e205ad35c07907daa0d17317df3} 
-Can\+Bus\+Enable\+\_\+\+Disable&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CanBusEnable\_CAN\_Driver\_Enabled@{CanBusEnable\_CAN\_Driver\_Enabled}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!CanBusEnable\_CAN\_Driver\_Enabled@{CanBusEnable\_CAN\_Driver\_Enabled}}}\Hypertarget{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4a35888e8b36dc817a47cfba29797623dd}\label{d2cc__lib_8h_a5d95e9716ce91a56d20fe3c984f060d4a35888e8b36dc817a47cfba29797623dd} 
+Can\+Bus\+Enable\+\_\+\+CAN\+\_\+\+Driver\+\_\+\+Enabled&CAN\+\_\+\+Driver\+\_\+\+Enabled. \\
 \hline
 
 \end{DoxyEnumFields}
-\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_enum@{TcpEnable\_enum}}
+\Hypertarget{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789e}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_enum@{TcpEnable\_enum}}
 \index{TcpEnable\_enum@{TcpEnable\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{TcpEnable\_enum}
+\doxysubsubsection{\texorpdfstring{TcpEnable\_enum}{TcpEnable\_enum}}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789e} 
-enum \textbf{ Tcp\+Enable\+\_\+enum}}
+enum \mbox{\hyperlink{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789e}{Tcp\+Enable\+\_\+enum}}}
 
+
+
+Enum for representing signal values for the Tcp\+Enable signal. 
+
+This enum maps each value in the signal\textquotesingle{}s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-\/readable names for each value.
+
+\begin{DoxyNote}{Note}
+Ensure the signal values are aligned with the data type and expected range of the signal. 
+\end{DoxyNote}
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_Offline@{TcpEnable\_Offline}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_Offline@{TcpEnable\_Offline}}}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea4d752f35e537204ce6b8066dabaef83d} 
-Tcp\+Enable\+\_\+\+Offline&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_TCP\_Offline@{TcpEnable\_TCP\_Offline}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_TCP\_Offline@{TcpEnable\_TCP\_Offline}}}\Hypertarget{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea8564b39d66be59e1e5a2e0c4f3a9049a}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea8564b39d66be59e1e5a2e0c4f3a9049a} 
+Tcp\+Enable\+\_\+\+TCP\+\_\+\+Offline&TCP\+\_\+\+Offline. \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_Online@{TcpEnable\_Online}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_Online@{TcpEnable\_Online}}}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789eafe661337c828ac32ca15ed8293ea6d4a} 
-Tcp\+Enable\+\_\+\+Online&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_TCP\_Online@{TcpEnable\_TCP\_Online}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_TCP\_Online@{TcpEnable\_TCP\_Online}}}\Hypertarget{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea44850b21528bd0c90f2fe51bef8c6972}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea44850b21528bd0c90f2fe51bef8c6972} 
+Tcp\+Enable\+\_\+\+TCP\+\_\+\+Online&TCP\+\_\+\+Online. \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_Connected@{TcpEnable\_Connected}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_Connected@{TcpEnable\_Connected}}}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea699af9b774b62dba5eeeea0c38676475} 
-Tcp\+Enable\+\_\+\+Connected&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_TCP\_Connected@{TcpEnable\_TCP\_Connected}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_TCP\_Connected@{TcpEnable\_TCP\_Connected}}}\Hypertarget{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea597ff09266346fb6ab08f2af9f0a37b0}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea597ff09266346fb6ab08f2af9f0a37b0} 
+Tcp\+Enable\+\_\+\+TCP\+\_\+\+Connected&TCP\+\_\+\+Connected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TcpEnable\_TCP\_Error@{TcpEnable\_TCP\_Error}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!TcpEnable\_TCP\_Error@{TcpEnable\_TCP\_Error}}}\Hypertarget{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea6b4f18872cbdf486c5e126b3d80dbd39}\label{d2cc__lib_8h_a4dcf3e762a96610c3ecfc09dbc3b789ea6b4f18872cbdf486c5e126b3d80dbd39} 
+Tcp\+Enable\+\_\+\+TCP\+\_\+\+Error&TCP\+\_\+\+Error. \\
 \hline
 
 \end{DoxyEnumFields}
-\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_enum@{VpnEnable\_enum}}
+\Hypertarget{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_enum@{VpnEnable\_enum}}
 \index{VpnEnable\_enum@{VpnEnable\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{VpnEnable\_enum}
+\doxysubsubsection{\texorpdfstring{VpnEnable\_enum}{VpnEnable\_enum}}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4} 
-enum \textbf{ Vpn\+Enable\+\_\+enum}}
+enum \mbox{\hyperlink{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4}{Vpn\+Enable\+\_\+enum}}}
 
+
+
+Enum for representing signal values for the Vpn\+Enable signal. 
+
+This enum maps each value in the signal\textquotesingle{}s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-\/readable names for each value.
+
+\begin{DoxyNote}{Note}
+Ensure the signal values are aligned with the data type and expected range of the signal. 
+\end{DoxyNote}
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{VpnEnable\_Enable@{VpnEnable\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_Enable@{VpnEnable\_Enable}}}\label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4aecebb00ed58dbfbcd52a3bd3098ecbb7} 
-Vpn\+Enable\+\_\+\+Enable&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VpnEnable\_VPN\_Offline@{VpnEnable\_VPN\_Offline}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_VPN\_Offline@{VpnEnable\_VPN\_Offline}}}\Hypertarget{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a05dd6a8c727c4612861d57dc58978f58}\label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a05dd6a8c727c4612861d57dc58978f58} 
+Vpn\+Enable\+\_\+\+VPN\+\_\+\+Offline&VPN\+\_\+\+Offline. \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{VpnEnable\_Disable@{VpnEnable\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_Disable@{VpnEnable\_Disable}}}\label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a8a99743f4a839ed4a089fb9f6d1e824b} 
-Vpn\+Enable\+\_\+\+Disable&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VpnEnable\_VPN\_Online@{VpnEnable\_VPN\_Online}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_VPN\_Online@{VpnEnable\_VPN\_Online}}}\Hypertarget{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a16247ec944ba6e93575031f602f58eb5}\label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a16247ec944ba6e93575031f602f58eb5} 
+Vpn\+Enable\+\_\+\+VPN\+\_\+\+Online&VPN\+\_\+\+Online. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VpnEnable\_VPN\_Connected@{VpnEnable\_VPN\_Connected}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_VPN\_Connected@{VpnEnable\_VPN\_Connected}}}\Hypertarget{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a4c33db4ae648d11dff5cb59a081b517c}\label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4a4c33db4ae648d11dff5cb59a081b517c} 
+Vpn\+Enable\+\_\+\+VPN\+\_\+\+Connected&VPN\+\_\+\+Connected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VpnEnable\_VPN\_Error@{VpnEnable\_VPN\_Error}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!VpnEnable\_VPN\_Error@{VpnEnable\_VPN\_Error}}}\Hypertarget{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4aa2d137d3b8b4a0c30b027620f093f670}\label{d2cc__lib_8h_ad9e026c06c5b0d34bb8b82f0a0c35ae4aa2d137d3b8b4a0c30b027620f093f670} 
+Vpn\+Enable\+\_\+\+VPN\+\_\+\+Error&VPN\+\_\+\+Error. \\
 \hline
 
 \end{DoxyEnumFields}
-\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_enum@{WiFi\_AP\_Status\_enum}}
+\Hypertarget{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_enum@{WiFi\_AP\_Status\_enum}}
 \index{WiFi\_AP\_Status\_enum@{WiFi\_AP\_Status\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{WiFi\_AP\_Status\_enum}
+\doxysubsubsection{\texorpdfstring{WiFi\_AP\_Status\_enum}{WiFi\_AP\_Status\_enum}}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8} 
-enum \textbf{ Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+enum}}
+enum \mbox{\hyperlink{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8}{Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+enum}}}
 
+
+
+Enum for representing signal values for the Wi\+Fi\+\_\+\+AP\+\_\+\+Status signal. 
+
+This enum maps each value in the signal\textquotesingle{}s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-\/readable names for each value.
+
+\begin{DoxyNote}{Note}
+Ensure the signal values are aligned with the data type and expected range of the signal. 
+\end{DoxyNote}
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFi\_AP\_Status\_Enable@{WiFi\_AP\_Status\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_Enable@{WiFi\_AP\_Status\_Enable}}}\label{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8aec9f371f4def61dee2241f7d3e64eba3} 
-Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Enable&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFi\_AP\_Status\_WiFi\_Ap\_Disconnected@{WiFi\_AP\_Status\_WiFi\_Ap\_Disconnected}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_WiFi\_Ap\_Disconnected@{WiFi\_AP\_Status\_WiFi\_Ap\_Disconnected}}}\Hypertarget{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8afe5cab6293e618c2645852dbbeba66ea}\label{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8afe5cab6293e618c2645852dbbeba66ea} 
+Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Wi\+Fi\+\_\+\+Ap\+\_\+\+Disconnected&Wi\+Fi\+\_\+\+Ap\+\_\+\+Disconnected. \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFi\_AP\_Status\_Disable@{WiFi\_AP\_Status\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_Disable@{WiFi\_AP\_Status\_Disable}}}\label{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8a76ce23676fa77e947023735ed933705d} 
-Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Disable&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFi\_AP\_Status\_WiFi\_Ap\_Connected@{WiFi\_AP\_Status\_WiFi\_Ap\_Connected}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_AP\_Status\_WiFi\_Ap\_Connected@{WiFi\_AP\_Status\_WiFi\_Ap\_Connected}}}\Hypertarget{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8af5bbea2d1323b30787a1211c231415c9}\label{d2cc__lib_8h_a0dfaaec7a9710a611afee9a79657d4b8af5bbea2d1323b30787a1211c231415c9} 
+Wi\+Fi\+\_\+\+AP\+\_\+\+Status\+\_\+\+Wi\+Fi\+\_\+\+Ap\+\_\+\+Connected&Wi\+Fi\+\_\+\+Ap\+\_\+\+Connected. \\
 \hline
 
 \end{DoxyEnumFields}
-\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFiEnable\_enum@{WiFiEnable\_enum}}
-\index{WiFiEnable\_enum@{WiFiEnable\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{WiFiEnable\_enum}
-{\footnotesize\ttfamily \label{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0c} 
-enum \textbf{ Wi\+Fi\+Enable\+\_\+enum}}
+\Hypertarget{d2cc__lib_8h_ad00d3bb37c1d69ea203ae4019a832403}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_ST\_Status\_enum@{WiFi\_ST\_Status\_enum}}
+\index{WiFi\_ST\_Status\_enum@{WiFi\_ST\_Status\_enum}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{WiFi\_ST\_Status\_enum}{WiFi\_ST\_Status\_enum}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_ad00d3bb37c1d69ea203ae4019a832403} 
+enum \mbox{\hyperlink{d2cc__lib_8h_ad00d3bb37c1d69ea203ae4019a832403}{Wi\+Fi\+\_\+\+ST\+\_\+\+Status\+\_\+enum}}}
 
+
+
+Enum for representing signal values for the Wi\+Fi\+\_\+\+ST\+\_\+\+Status signal. 
+
+This enum maps each value in the signal\textquotesingle{}s value table to a corresponding identifier. It is used to interpret the raw data received from the CAN bus and provides human-\/readable names for each value.
+
+\begin{DoxyNote}{Note}
+Ensure the signal values are aligned with the data type and expected range of the signal. 
+\end{DoxyNote}
 \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFiEnable\_Enable@{WiFiEnable\_Enable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFiEnable\_Enable@{WiFiEnable\_Enable}}}\label{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0ca6640ece02d01e5af868adbc5ca7b090e} 
-Wi\+Fi\+Enable\+\_\+\+Enable&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFi\_ST\_Status\_WiFi\_Ap\_Disconnected@{WiFi\_ST\_Status\_WiFi\_Ap\_Disconnected}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_ST\_Status\_WiFi\_Ap\_Disconnected@{WiFi\_ST\_Status\_WiFi\_Ap\_Disconnected}}}\Hypertarget{d2cc__lib_8h_ad00d3bb37c1d69ea203ae4019a832403a44309aca0fa4d4cae66c68c991cfe25f}\label{d2cc__lib_8h_ad00d3bb37c1d69ea203ae4019a832403a44309aca0fa4d4cae66c68c991cfe25f} 
+Wi\+Fi\+\_\+\+ST\+\_\+\+Status\+\_\+\+Wi\+Fi\+\_\+\+Ap\+\_\+\+Disconnected&Wi\+Fi\+\_\+\+Ap\+\_\+\+Disconnected. \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFiEnable\_Disable@{WiFiEnable\_Disable}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFiEnable\_Disable@{WiFiEnable\_Disable}}}\label{d2cc__lib_8h_a77bd5871fc8e207867631f7b6e753a0caf57ded23cd67af1273764c3a8551707e} 
-Wi\+Fi\+Enable\+\_\+\+Disable&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WiFi\_ST\_Status\_WiFi\_Ap\_Connected@{WiFi\_ST\_Status\_WiFi\_Ap\_Connected}!d2cc\_lib.h@{d2cc\_lib.h}}\index{d2cc\_lib.h@{d2cc\_lib.h}!WiFi\_ST\_Status\_WiFi\_Ap\_Connected@{WiFi\_ST\_Status\_WiFi\_Ap\_Connected}}}\Hypertarget{d2cc__lib_8h_ad00d3bb37c1d69ea203ae4019a832403a535d52df00b0815ec4b6a8912a8a0d99}\label{d2cc__lib_8h_ad00d3bb37c1d69ea203ae4019a832403a535d52df00b0815ec4b6a8912a8a0d99} 
+Wi\+Fi\+\_\+\+ST\+\_\+\+Status\+\_\+\+Wi\+Fi\+\_\+\+Ap\+\_\+\+Connected&Wi\+Fi\+\_\+\+Ap\+\_\+\+Connected. \\
 \hline
 
 \end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
-\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Messages@{CreateTable\_Battery\_Messages}}
+\Hypertarget{d2cc__lib_8h_a1a53ba345e601b7539ad8b1d3a60becf}\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Messages@{CreateTable\_Battery\_Messages}}
 \index{CreateTable\_Battery\_Messages@{CreateTable\_Battery\_Messages}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{CreateTable\_Battery\_Messages()}
+\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Messages()}{CreateTable\_Battery\_Messages()}}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a1a53ba345e601b7539ad8b1d3a60becf} 
-void Create\+Table\+\_\+\+Battery\+\_\+\+Messages (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
+void Create\+Table\+\_\+\+Battery\+\_\+\+Messages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
 
-\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Temperatures@{CreateTable\_Battery\_Temperatures}}
+
+
+Creates the signal table for the specified CAN message. 
+
+This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance that contains the CAN message.\\
+\hline
+\end{DoxyParams}
+Creates the signal table for the specified CAN message.
+
+This function is used to read CAN data and store it in the \doxylink{struct_dbc_struct}{Dbc\+Struct}. It parses the data and converts physical values to raw CAN signal values based on the scaling factors and offsets defined in the \doxylink{struct_dbc_struct}{Dbc\+Struct}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rx\+\_\+data} & Pointer to the received CAN data to be parsed. \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & CAN message ID for identifying which message to parse. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} where parsed data will be stored.\\
+\hline
+\end{DoxyParams}
+Creates the signal table for a specified CAN message in the \doxylink{struct_dbc_struct}{Dbc\+Struct}.
+
+This function initializes the signal table for a specific message within the \doxylink{struct_dbc_struct}{Dbc\+Struct}. Each signal is set to 0 initially, preparing it for further use.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} containing the CAN message and signals. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8h_acce29ea481884412fe82fde8cf8a3c73}\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Temperatures@{CreateTable\_Battery\_Temperatures}}
 \index{CreateTable\_Battery\_Temperatures@{CreateTable\_Battery\_Temperatures}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{CreateTable\_Battery\_Temperatures()}
+\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Temperatures()}{CreateTable\_Battery\_Temperatures()}}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_acce29ea481884412fe82fde8cf8a3c73} 
-void Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
+void Create\+Table\+\_\+\+Battery\+\_\+\+Temperatures (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
 
-\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Voltages@{CreateTable\_Battery\_Voltages}}
-\index{CreateTable\_Battery\_Voltages@{CreateTable\_Battery\_Voltages}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{CreateTable\_Battery\_Voltages()}
-{\footnotesize\ttfamily \label{d2cc__lib_8h_a3f4346eef40e3f6e0856a015bed8da2d} 
-void Create\+Table\+\_\+\+Battery\+\_\+\+Voltages (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
 
-\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Can\_Main@{CreateTable\_Can\_Main}}
+
+Creates the signal table for the specified CAN message. 
+
+This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance that contains the CAN message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8h_a688095370440ce4b3816d2b712ed5b3b}\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Voltages\_1@{CreateTable\_Battery\_Voltages\_1}}
+\index{CreateTable\_Battery\_Voltages\_1@{CreateTable\_Battery\_Voltages\_1}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Voltages\_1()}{CreateTable\_Battery\_Voltages\_1()}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_a688095370440ce4b3816d2b712ed5b3b} 
+void Create\+Table\+\_\+\+Battery\+\_\+\+Voltages\+\_\+1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
+
+
+
+Creates the signal table for the specified CAN message. 
+
+This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance that contains the CAN message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8h_a106990c5a8b489af5f21a3fa6f32d45c}\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Battery\_Voltages\_2@{CreateTable\_Battery\_Voltages\_2}}
+\index{CreateTable\_Battery\_Voltages\_2@{CreateTable\_Battery\_Voltages\_2}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{CreateTable\_Battery\_Voltages\_2()}{CreateTable\_Battery\_Voltages\_2()}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_a106990c5a8b489af5f21a3fa6f32d45c} 
+void Create\+Table\+\_\+\+Battery\+\_\+\+Voltages\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
+
+
+
+Creates the signal table for the specified CAN message. 
+
+This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance that contains the CAN message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8h_a3a8f6f06284c77bd13fc93c18115fd53}\index{d2cc\_lib.h@{d2cc\_lib.h}!CreateTable\_Can\_Main@{CreateTable\_Can\_Main}}
 \index{CreateTable\_Can\_Main@{CreateTable\_Can\_Main}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{CreateTable\_Can\_Main()}
+\doxysubsubsection{\texorpdfstring{CreateTable\_Can\_Main()}{CreateTable\_Can\_Main()}}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_a3a8f6f06284c77bd13fc93c18115fd53} 
-void Create\+Table\+\_\+\+Can\+\_\+\+Main (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{dbc}{}\end{DoxyParamCaption})}
+void Create\+Table\+\_\+\+Can\+\_\+\+Main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
 
-\index{d2cc\_lib.h@{d2cc\_lib.h}!D2cc\_Lib\_Init@{D2cc\_Lib\_Init}}
+
+
+Creates the signal table for the specified CAN message. 
+
+This function initializes the signal table for the given CAN message. It organizes and prepares the signals in the message to be ready for processing or encoding.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance that contains the CAN message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8h_add5678661f9e8fc392ab35a8369f8487}\index{d2cc\_lib.h@{d2cc\_lib.h}!D2cc\_Lib\_Init@{D2cc\_Lib\_Init}}
 \index{D2cc\_Lib\_Init@{D2cc\_Lib\_Init}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{D2cc\_Lib\_Init()}
+\doxysubsubsection{\texorpdfstring{D2cc\_Lib\_Init()}{D2cc\_Lib\_Init()}}
 {\footnotesize\ttfamily \label{d2cc__lib_8h_add5678661f9e8fc392ab35a8369f8487} 
-void D2cc\+\_\+\+Lib\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\textbf{ Dbc\+Struct} $\ast$}]{st}{}\end{DoxyParamCaption})}
+void D2cc\+\_\+\+Lib\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dbc_struct}{Dbc\+Struct}} \texorpdfstring{$\ast$}{*}}]{dbc}{}\end{DoxyParamCaption})}
 
-\index{d2cc\_lib.h@{d2cc\_lib.h}!ReadParse@{ReadParse}}
-\index{ReadParse@{ReadParse}!d2cc\_lib.h@{d2cc\_lib.h}}
-\doxysubsubsection{ReadParse()}
-{\footnotesize\ttfamily \label{d2cc__lib_8h_a1fc4968809341ee415d413feb9db80cb} 
-void Read\+Parse (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+data}{, }\item[{uint32\+\_\+t}]{id}{, }\item[{\textbf{ Dbc\+Struct} $\ast$}]{st}{}\end{DoxyParamCaption})}
 
+
+Initializes the \doxylink{struct_dbc_struct}{Dbc\+Struct} for CAN message processing. 
+
+This function should be called before using the \doxylink{struct_dbc_struct}{Dbc\+Struct} to ensure that all message structures are properly initialized. It sets up necessary memory and configurations.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em st} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance that will be initialized.\\
+\hline
+\end{DoxyParams}
+Initializes the \doxylink{struct_dbc_struct}{Dbc\+Struct} for CAN message processing.
+
+This function initializes the necessary fields in the \doxylink{struct_dbc_struct}{Dbc\+Struct} based on the provided DBC messages. The signals\textquotesingle{} physical factors and offsets are set accordingly.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dbc} & Pointer to the \doxylink{struct_dbc_struct}{Dbc\+Struct} instance to be initialized. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{d2cc__lib_8h_a265d29c5e976cf3716af95ecf2f7a49a}\index{d2cc\_lib.h@{d2cc\_lib.h}!PHYS\_TO\_RAW@{PHYS\_TO\_RAW}}
+\index{PHYS\_TO\_RAW@{PHYS\_TO\_RAW}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{PHYS\_TO\_RAW()}{PHYS\_TO\_RAW()}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_a265d29c5e976cf3716af95ecf2f7a49a} 
+uint32\+\_\+t PHYS\+\_\+\+TO\+\_\+\+RAW (\begin{DoxyParamCaption}\item[{int}]{phys\+\_\+value}{, }\item[{\mbox{\hyperlink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{phys\+\_\+struct}{}\end{DoxyParamCaption})}
+
+
+
+Converts a physical value to its corresponding raw CAN value. 
+
+This function takes a physical value and applies the scaling factor and offset specified in the {\ttfamily \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} structure to convert it to the raw CAN signal value. The raw value can then be transmitted in a CAN message.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em phys\+\_\+value} & The physical value to be converted. \\
+\hline
+\mbox{\texttt{ in}}  & {\em phys\+\_\+struct} & Pointer to the {\ttfamily \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} structure containing scaling and offset information.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding raw CAN value.
+\end{DoxyReturn}
+Converts a physical value to its corresponding raw CAN value.
+
+This function converts a physical value (e.\+g., temperature) into a raw CAN signal value based on the scaling factor and offset stored in the \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t} structure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em phys\+\_\+value} & The physical value to convert. \\
+\hline
+\mbox{\texttt{ in}}  & {\em phys\+\_\+struct} & Pointer to the \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t} structure containing scaling factor and offset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding raw CAN signal value. 
+\end{DoxyReturn}
+\Hypertarget{d2cc__lib_8h_a3e00cecaf49f0e30f493be28bf2334bc}\index{d2cc\_lib.h@{d2cc\_lib.h}!RAW\_TO\_PHYS@{RAW\_TO\_PHYS}}
+\index{RAW\_TO\_PHYS@{RAW\_TO\_PHYS}!d2cc\_lib.h@{d2cc\_lib.h}}
+\doxysubsubsection{\texorpdfstring{RAW\_TO\_PHYS()}{RAW\_TO\_PHYS()}}
+{\footnotesize\ttfamily \label{d2cc__lib_8h_a3e00cecaf49f0e30f493be28bf2334bc} 
+uint32\+\_\+t RAW\+\_\+\+TO\+\_\+\+PHYS (\begin{DoxyParamCaption}\item[{int}]{raw\+\_\+value}{, }\item[{\mbox{\hyperlink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{phys\+\_\+struct}{}\end{DoxyParamCaption})}
+
+
+
+Converts a raw CAN value to its corresponding physical value. 
+
+This function takes a raw CAN value and applies the scaling factor and offset specified in the {\ttfamily \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} structure to convert it to the physical signal value. The physical value represents the actual measured or calculated value of the signal.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em raw\+\_\+value} & The raw CAN signal value to be converted. \\
+\hline
+\mbox{\texttt{ in}}  & {\em phys\+\_\+struct} & Pointer to the {\ttfamily \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t}} structure containing scaling and offset information.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding physical value.
+\end{DoxyReturn}
+Converts a raw CAN value to its corresponding physical value.
+
+This function converts a raw CAN signal value to its corresponding physical value based on the scaling factor and offset stored in the \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t} structure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em raw\+\_\+value} & The raw CAN signal value to convert. \\
+\hline
+\mbox{\texttt{ in}}  & {\em phys\+\_\+struct} & Pointer to the \doxylink{struct_phys___value__t}{Phys\+\_\+\+Value\+\_\+t} structure containing scaling factor and offset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding physical value. 
+\end{DoxyReturn}

@@ -14,7 +14,7 @@ src/Wifi.c \- Functions for initializing and managing Wi-Fi connectivity in AP (
 
 .in +1c
 .ti -1c
-.RI "static void \fBevent_handler\fP (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)"
+.RI "void \fBevent_handler\fP (void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)"
 .br
 .RI "Event handler for Wi-Fi and IP events\&. "
 .ti -1c
@@ -41,10 +41,13 @@ hakimmc
 
 .SH "Function Documentation"
 .PP 
-.SS "static void event_handler (void * arg, esp_event_base_t event_base, int32_t event_id, void * event_data)\fR [static]\fP"
+.SS "void event_handler (void * arg, esp_event_base_t event_base, int32_t event_id, void * event_data)"
 
 .PP
-Event handler for Wi-Fi and IP events\&. This function handles Wi-Fi and IP events, such as Wi-Fi connection status changes and obtaining an IP address\&. It also manages retry logic for Wi-Fi connection attempts\&.
+Event handler for Wi-Fi and IP events\&. Handles Wi-Fi events\&.
+
+.PP
+This function handles Wi-Fi and IP events, such as Wi-Fi connection status changes and obtaining an IP address\&. It also manages retry logic for Wi-Fi connection attempts\&.
 
 .PP
 \fBParameters\fP

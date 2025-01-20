@@ -9,9 +9,13 @@
 #include "driver/gpio.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "d2cc_lib.h"
 
 /** @brief GPIO pin used for the LED. */
 #define LED_PIN 13
+
+/** @brief Extern from main; Structure to hold CAN message data. */
+extern DbcStruct maindbc_struct;
 
 /**
  * @brief Initializes the specified GPIO pin as an output.
@@ -46,8 +50,15 @@ void led_init(void* pvParameter)
     while (1)
     {
         gpio_set_level(LED_PIN, 1); /**< Turn the LED on. */
-        vTaskDelay(pdMS_TO_TICKS(500)); /**< Delay for 500 ms. */
+        vTaskDelay(pdMS_TO_TICKS(100)); /**< Delay for 500 ms. */
         gpio_set_level(LED_PIN, 0); /**< Turn the LED off. */
-        vTaskDelay(pdMS_TO_TICKS(500)); /**< Delay for 500 ms. */
+        vTaskDelay(pdMS_TO_TICKS(100)); /**< Delay for 500 ms. */
+
+        if(maindbc_struct.Can_Main.Signal.AliveCounter == 127){
+            maindbc_struct.Can_Main.Signal.AliveCounter = 0;
+        }
+        maindbc_struct.Can_Main.Signal.AliveCounter++;
+        /**< Alive Counter. */
+
     }
 }

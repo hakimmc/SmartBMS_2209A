@@ -248,10 +248,24 @@
 <para>Structure to hold CAN message data. </para>
         </briefdescription>
         <detaileddescription>
+<para>Extern from main; Structure to hold CAN message data. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="src/main.c" line="16" column="11" bodyfile="src/main.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a9e7b00854cffece2f2025a20b30f4860" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref> *</type>
+        <definition>DbcStruct* struct_of_comm</definition>
+        <argsstring></argsstring>
+        <name>struct_of_comm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main.c" line="17" column="18" bodyfile="src/Can.c" bodystart="12" bodyend="-1" declfile="src/main.c" declline="17" declcolumn="18"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -269,7 +283,7 @@
         <inbodydescription>
 <para>&lt; Print &quot;helloworld&quot; for testing.</para>
         </inbodydescription>
-        <location file="src/main.c" line="24" column="6" bodyfile="src/main.c" bodystart="24" bodyend="42"/>
+        <location file="src/main.c" line="25" column="6" bodyfile="src/main.c" bodystart="25" bodyend="53"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -293,26 +307,37 @@
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bq76pl455_8h" kindref="compound">Bq76pl455.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/><ref refid="_can_8c_1adabf6670e12fa284be00ec7af178f57d" kindref="member">maindbc_struct</ref>;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1abce06be17fc37d675118a678a8100a36" kindref="member">app_main</ref>()</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nhelloworld\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>NVS<sp/>for<sp/>persistent<sp/>storage</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>nvs_flash_init();<sp/><sp/></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>TCP<sp/>server</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_tcp_server_8h_1a13ddbecdfd3a974bad6c7ff356cb4674" kindref="member">Tcp_Init</ref>();<sp/><sp/></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>CAN<sp/>communication<sp/>task</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>xTaskCreate(<ref refid="_can_8h_1a99ef09684458d26b79a4185bc0af934b" kindref="member">CanReporter</ref>,<sp/></highlight><highlight class="stringliteral">&quot;CanTask&quot;</highlight><highlight class="normal">,<sp/>4096,<sp/><sp/>NULL,<sp/>(UBaseType_t)2,<sp/>NULL);<sp/><sp/></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>LED<sp/>toggle<sp/>task</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>xTaskCreate(<ref refid="_led_task_init_8h_1a1f53ce317fca339ddc6588adb1a457e4" kindref="member">led_init</ref>,<sp/></highlight><highlight class="stringliteral">&quot;ToggleTask&quot;</highlight><highlight class="normal">,<sp/>4096,<sp/><sp/>NULL,<sp/>(UBaseType_t)3,<sp/>NULL);<sp/><sp/></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>BQ76PL455<sp/>task<sp/>to<sp/>manage<sp/>battery<sp/>data</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>xTaskCreate(<ref refid="_bq76pl455_8h_1afce328763ae545228a5fe77ba53296da" kindref="member">BQ_Start</ref>,<sp/></highlight><highlight class="stringliteral">&quot;BqTask&quot;</highlight><highlight class="normal">,<sp/>4096,<sp/><sp/>NULL,<sp/>(UBaseType_t)4,<sp/>NULL);<sp/><sp/></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_dbc_struct" kindref="compound">DbcStruct</ref><sp/>*<ref refid="_can_8c_1a9e7b00854cffece2f2025a20b30f4860" kindref="member">struct_of_comm</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1abce06be17fc37d675118a678a8100a36" kindref="member">app_main</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\nhelloworld\n&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>CAN<sp/>messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_can_8c_1a9e7b00854cffece2f2025a20b30f4860" kindref="member">struct_of_comm</ref><sp/>=<sp/>&amp;<ref refid="_can_8c_1adabf6670e12fa284be00ec7af178f57d" kindref="member">maindbc_struct</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2cc__lib_8h_1add5678661f9e8fc392ab35a8369f8487" kindref="member">D2cc_Lib_Init</ref>(<ref refid="_can_8c_1a9e7b00854cffece2f2025a20b30f4860" kindref="member">struct_of_comm</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2cc__lib_8h_1a3a8f6f06284c77bd13fc93c18115fd53" kindref="member">CreateTable_Can_Main</ref>(<ref refid="_can_8c_1a9e7b00854cffece2f2025a20b30f4860" kindref="member">struct_of_comm</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2cc__lib_8h_1a1a53ba345e601b7539ad8b1d3a60becf" kindref="member">CreateTable_Battery_Messages</ref>(<ref refid="_can_8c_1a9e7b00854cffece2f2025a20b30f4860" kindref="member">struct_of_comm</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2cc__lib_8h_1a688095370440ce4b3816d2b712ed5b3b" kindref="member">CreateTable_Battery_Voltages_1</ref>(<ref refid="_can_8c_1a9e7b00854cffece2f2025a20b30f4860" kindref="member">struct_of_comm</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2cc__lib_8h_1a106990c5a8b489af5f21a3fa6f32d45c" kindref="member">CreateTable_Battery_Voltages_2</ref>(<ref refid="_can_8c_1a9e7b00854cffece2f2025a20b30f4860" kindref="member">struct_of_comm</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2cc__lib_8h_1acce29ea481884412fe82fde8cf8a3c73" kindref="member">CreateTable_Battery_Temperatures</ref>(<ref refid="_can_8c_1a9e7b00854cffece2f2025a20b30f4860" kindref="member">struct_of_comm</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>NVS<sp/>for<sp/>persistent<sp/>storage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>nvs_flash_init();<sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>TCP<sp/>server</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_tcp_server_8h_1a13ddbecdfd3a974bad6c7ff356cb4674" kindref="member">Tcp_Init</ref>();<sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>CAN<sp/>communication<sp/>task</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>xTaskCreate(<ref refid="_can_8h_1a99ef09684458d26b79a4185bc0af934b" kindref="member">CanReporter</ref>,<sp/></highlight><highlight class="stringliteral">&quot;CanTask&quot;</highlight><highlight class="normal">,<sp/>4096,<sp/><sp/>NULL,<sp/>(UBaseType_t)2,<sp/>NULL);<sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>LED<sp/>toggle<sp/>task</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>xTaskCreate(<ref refid="_led_task_init_8h_1a1f53ce317fca339ddc6588adb1a457e4" kindref="member">led_init</ref>,<sp/></highlight><highlight class="stringliteral">&quot;ToggleTask&quot;</highlight><highlight class="normal">,<sp/>4096,<sp/><sp/>NULL,<sp/>(UBaseType_t)3,<sp/>NULL);<sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>BQ76PL455<sp/>task<sp/>to<sp/>manage<sp/>battery<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>xTaskCreate(<ref refid="_bq76pl455_8h_1afce328763ae545228a5fe77ba53296da" kindref="member">BQ_Start</ref>,<sp/></highlight><highlight class="stringliteral">&quot;BqTask&quot;</highlight><highlight class="normal">,<sp/>4096,<sp/><sp/>NULL,<sp/>(UBaseType_t)4,<sp/>NULL);<sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/main.c"/>
   </compounddef>

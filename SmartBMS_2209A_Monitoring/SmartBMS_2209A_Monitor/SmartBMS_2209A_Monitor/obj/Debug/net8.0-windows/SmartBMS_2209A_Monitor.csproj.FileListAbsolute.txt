@@ -38,3 +38,6 @@ C:\Users\fvzdr\OneDrive\Belgeler\Github\SmartBMS_2209A\SmartBMS_2209A_Monitoring
 C:\Users\fvzdr\OneDrive\Belgeler\Github\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\obj\Debug\net8.0-windows\SmartBMS_2209A_Monitor.monitor_form.resources
 C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\obj\Debug\net8.0-windows\SmartBMS_2209A_Monitor.login.resources
 C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\obj\Debug\net8.0-windows\SmartBMS_2209A_Monitor.monitor_form.resources
+C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\obj\Debug\net8.0-windows\SmartBMS_2209A_Monitor.csproj.AssemblyReference.cache
+C:\Users\acalg\OneDrive\Belgeler\GitHub\SmartBMS_2209A\SmartBMS_2209A_Monitoring\SmartBMS_2209A_Monitor\SmartBMS_2209A_Monitor\obj\Debug\net8.0-windows\SmartBMS_2209A_Monitor.csproj.CopyComplete
