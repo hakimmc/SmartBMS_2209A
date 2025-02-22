@@ -10,6 +10,7 @@
 
 extern DbcStruct maindbc_struct;
 DbcStruct *struct_of_comm;
+extern SemaphoreHandle_t DataControlSemaphore;
 
 /**
  * @brief Initializes the CAN (TWAI) driver with the specified configurations.
@@ -71,22 +72,31 @@ void CanReporter(void* pvParameter)
     Can_Init(gconf, tconf, fconf);
     maindbc_struct.Can_Main.Signal.CanBusEnable = CanBusEnable_CAN_Driver_Enabled;
     while (1) {
+        if(xSemaphoreTake(DataControlSemaphore,portMAX_DELAY))
+        {
+            if(maindbc_struct.Can_Main.Signal.AliveCounter == 127){
+                maindbc_struct.Can_Main.Signal.AliveCounter = 0;
+            }
+            maindbc_struct.Can_Main.Signal.AliveCounter+=1;
+            /**< Alive Counter. */
+            if (Can_Transmit(Can_Main, struct_of_comm->Can_Main.Data) != ESP_OK) tx_error=1;
+            if (Can_Transmit(Battery_Messages, struct_of_comm->Battery_Messages.Data) != ESP_OK) tx_error=1;
+            if (Can_Transmit(Battery_Voltages_1, struct_of_comm->Battery_Voltages_1.Data) != ESP_OK) tx_error=1;
+            if (Can_Transmit(Battery_Voltages_2, struct_of_comm->Battery_Voltages_2.Data) != ESP_OK) tx_error=1;
+            if (Can_Transmit(Battery_Temperatures, struct_of_comm->Battery_Temperatures.Data) != ESP_OK) tx_error=1;
 
-        if (Can_Transmit(Can_Main, struct_of_comm->Can_Main.Data) != ESP_OK) tx_error=1;
-        if (Can_Transmit(Battery_Messages, struct_of_comm->Battery_Messages.Data) != ESP_OK) tx_error=1;
-        if (Can_Transmit(Battery_Voltages_1, struct_of_comm->Battery_Voltages_1.Data) != ESP_OK) tx_error=1;
-        if (Can_Transmit(Battery_Voltages_2, struct_of_comm->Battery_Voltages_2.Data) != ESP_OK) tx_error=1;
-        if (Can_Transmit(Battery_Temperatures, struct_of_comm->Battery_Temperatures.Data) != ESP_OK) tx_error=1;
+            vTaskDelay(pdMS_TO_TICKS(CAN_DELAY));
 
-        vTaskDelay(pdMS_TO_TICKS(CAN_DELAY));
-
-        if(tx_error){
-            maindbc_struct.Can_Main.Signal.CanBusEnable = CanBusEnable_CAN_Driver_Disabled;
-            twai_stop();
-            twai_driver_uninstall();
-            Can_Init(gconf, tconf, fconf);
-            tx_error=0;
-            maindbc_struct.Can_Main.Signal.CanBusEnable = CanBusEnable_CAN_Driver_Enabled;
+            if(tx_error){
+                maindbc_struct.Can_Main.Signal.CanBusEnable = CanBusEnable_CAN_Driver_Disabled;
+                twai_stop();
+                twai_driver_uninstall();
+                Can_Init(gconf, tconf, fconf);
+                tx_error=0;
+                maindbc_struct.Can_Main.Signal.CanBusEnable = CanBusEnable_CAN_Driver_Enabled;
+            }
+            xSemaphoreGive(DataControlSemaphore);
+            vTaskDelay(10);
         }
     }
 }

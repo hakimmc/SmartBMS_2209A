@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "tcpserver.h": "c",
+        "task.h": "c",
+        "d2cc_lib.h": "c",
+        "ledtaskinit.h": "c",
+        "gpio.h": "c"
+    },
+    "idf.portWin": "COM14"
+}

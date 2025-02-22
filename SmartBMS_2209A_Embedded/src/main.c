@@ -16,6 +16,9 @@
 DbcStruct maindbc_struct;
 extern DbcStruct *struct_of_comm;
 
+/** @brief Semaphore for Control of Can and Tcp data */
+SemaphoreHandle_t DataControlSemaphore;
+
 /**
  * @brief Application entry point.
  * 
@@ -28,6 +31,7 @@ void app_main()
     
     // Initialize CAN messages
     struct_of_comm = &maindbc_struct;
+    DataControlSemaphore = xSemaphoreCreateBinary();
 
     D2cc_Lib_Init(struct_of_comm);
     CreateTable_Can_Main(struct_of_comm);
@@ -36,8 +40,15 @@ void app_main()
     CreateTable_Battery_Voltages_2(struct_of_comm);
     CreateTable_Battery_Temperatures(struct_of_comm);
 
+    //binary semaphore gave
+    xSemaphoreGive(DataControlSemaphore);
+
     // Initialize NVS for persistent storage
     nvs_flash_init();  
+
+    // Led Init
+    gpio_init(LED_PIN);
+    gpio_set_level(LED_PIN,1);
     
     // Initialize TCP server
     Tcp_Init();  
@@ -46,7 +57,7 @@ void app_main()
     xTaskCreate(CanReporter, "CanTask", 4096,  NULL, (UBaseType_t)2, NULL);  
     
     // Create LED toggle task
-    xTaskCreate(led_init, "ToggleTask", 4096,  NULL, (UBaseType_t)3, NULL);  
+    //xTaskCreate(led_init, "ToggleTask", 4096,  NULL, (UBaseType_t)3, NULL);  
     
     // Create BQ76PL455 task to manage battery data
     xTaskCreate(BQ_Start, "BqTask", 4096,  NULL, (UBaseType_t)4, NULL);  

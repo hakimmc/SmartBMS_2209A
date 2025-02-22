@@ -8,10 +8,13 @@
 #include "TcpServer.h"
 #include "Wifi.h"
 #include "d2cc_lib.h"
+#include "driver/gpio.h"
+#include "LedTaskInit.h"
 
 /** @brief Structure to hold CAN message data. */
 extern DbcStruct maindbc_struct;
 extern DbcStruct *struct_of_comm;
+extern SemaphoreHandle_t DataControlSemaphore;
 
 #define TCP_TAG "TCP_SERVER" /**< Tag for logging */
 
@@ -19,6 +22,9 @@ extern DbcStruct *struct_of_comm;
 char* GUI_USER = "root";
 /** @brief Password for GUI authentication */
 char* GUI_PASS = "otto";
+
+/** @brief Led status value */
+uint32_t led_status  = 1;
 
 /**
  * @brief Creates and starts a TCP server to listen for client connections.
@@ -112,7 +118,7 @@ void Handle_Client(void* args)
 
     while (1) {
         switch (state) {
-            case 0: {
+            case 0:
                 len = receive_data(sock, rx_buffer, sizeof(rx_buffer) - 1, &timeout_counter, max_timeout);
                 if (len == -2) {
                     state = 4;
@@ -143,9 +149,8 @@ void Handle_Client(void* args)
                     else state = 3;
                 }
                 break;
-            }
 
-            case 1: {
+            case 1:
                 len = receive_data(sock, rx_buffer, sizeof(rx_buffer) - 1, &timeout_counter, max_timeout);
                 if (len == -2) {
                     state = 4;
@@ -174,17 +179,23 @@ void Handle_Client(void* args)
                     }
                 }
                 break;
-            }
 
-            case 2: {
+            case 2:
                 len = receive_data(sock, rx_buffer, sizeof(rx_buffer) - 1, &timeout_counter, max_timeout);
-                if (len != -2 || len != -1) {
+                if(len != -2 || len != -1) {
                     rx_buffer[len] = '\0';
                     if (!memcmp(rx_buffer, "data", 4)) {
                         //send(sock, "OK", 2, 0); full data
                         char jsonString[2048];
-                        ConvertToJson(struct_of_comm, jsonString);
-                        send(sock, jsonString, strlen(jsonString), 0);
+                        if(xSemaphoreTake(DataControlSemaphore,portMAX_DELAY))
+                        {
+                            ConvertToJson(struct_of_comm, jsonString);
+                            send(sock, jsonString, strlen(jsonString), 0);
+                            xSemaphoreGive(DataControlSemaphore);
+                            vTaskDelay(10);
+                            gpio_set_level(LED_PIN, led_status); /**< Turn the LED to led_status. */
+                            led_status = led_status==1?0:1;
+                        }
                     }
                     else if (!memcmp(rx_buffer, "exit", 4)) {
                         state = 3;
@@ -193,9 +204,8 @@ void Handle_Client(void* args)
                     //memset(, 0, sizeof(rx_buffer));
                 }
                 break;
-            }
 
-            case 3: {
+            case 3:
                 send(sock, "ER", 2, 0);
                 maindbc_struct.Can_Main.Signal.TcpClientCount--;
                 if(maindbc_struct.Can_Main.Signal.TcpClientCount == 0){
@@ -204,9 +214,8 @@ void Handle_Client(void* args)
                 close(sock);
                 vTaskDelete(NULL);
                 break;
-            }
 
-            case 4: {
+            case 4:
                 send(sock, "TO", 2, 0);
                 maindbc_struct.Can_Main.Signal.TcpClientCount--;
                 if(maindbc_struct.Can_Main.Signal.TcpClientCount == 0){
@@ -215,7 +224,6 @@ void Handle_Client(void* args)
                 close(sock);
                 vTaskDelete(NULL);
                 break;
-            }
         }
     }
     close(sock);

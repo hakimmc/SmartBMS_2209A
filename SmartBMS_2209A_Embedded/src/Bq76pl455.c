@@ -45,9 +45,10 @@ void BQ_Test() {
  * @param args Task-specific arguments (optional).
  */
 void BQ_Start(void *args) {
-    BQ_Uart_Init(BQ_UART_PORT, 115200, 256, BQ_TX, BQ_RX);
+    BQ_Uart_Init(BQ_UART_PORT, 250000, 256, BQ_TX, BQ_RX);
 
-    uint8_t data[] = {'h', 'e', 'l', 'o'};
+    //uint8_t data[] = {'h', 'e', 'l', 'o'};
+    uint8_t data[] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
 
     while (1) {
         if (BQ_Uart_Transmit(BQ_UART_PORT, data, sizeof(data))) {

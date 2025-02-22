@@ -33,12 +33,13 @@ namespace SmartBMS_2209A_Monitor
         {
             try
             {
-                string readString = string.Empty;
-                byte[] rx = new byte[2048];
-                while (readString.Length == 0 && !exit)
+                while (!exit)
                 {
+                    string readString = string.Empty;
+                    byte[] rx = new byte[2048];
                     feedback = false;
                     bms_class.WriteTcpClient(bms_class.stream, "data");
+                    Thread.Sleep(100);
                     bms_class.stream.Read(rx, 0, rx.Length);
                     readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
                     if (readString.Length < 50) continue;
@@ -46,32 +47,20 @@ namespace SmartBMS_2209A_Monitor
                     Replace_Datas(readString);
                     Array.Clear(rx, 0, rx.Length);
                     readString = string.Empty;
-                    Thread.Sleep(5000);
-
+                    Thread.Sleep(100);
+                    feedback = true;
                 }
+
             }
             catch
             {
-                
+
             }
         }
 
         private void monitor_form_FormClosing(object sender, FormClosingEventArgs e)
         {
-            exit = true;
-            string readString = string.Empty;
-            byte[] rx = new byte[2];
-            while (true)
-            {
-                bms_class.WriteTcpClient(bms_class.stream, "exit");
-                bms_class.stream.Read(rx, 0, rx.Length);
-                readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
-                MessageBox.Show("BMS Closed Connection!");
-                if (readString == "ER")
-                {
-                    Environment.Exit(0);
-                }
-            }
+
         }
 
         public void Replace_Datas(string json_data)
@@ -84,7 +73,7 @@ namespace SmartBMS_2209A_Monitor
             {
                 case 0:
                     batteryimg.Image = Resources._000;
-                        break;
+                    break;
                 case 1:
                     batteryimg.Image = Resources._001;
                     break;
@@ -132,12 +121,12 @@ namespace SmartBMS_2209A_Monitor
                     (root.Battery_Voltages_2.BatteryVoltage_14 * 10) + 2000 +
                     (root.Battery_Voltages_2.BatteryVoltage_15 * 10) + 2000 +
                     (root.Battery_Voltages_2.BatteryVoltage_16 * 10) + 2000;
-            summvoltage.Text = $"Sum Voltage : {Convert.ToDouble(summbat)/1000} V";
+            summvoltage.Text = $"Sum Voltage : {Convert.ToDouble(summbat) / 1000} V";
             temperature.Text = $"Temperature : {root.Battery_Temperatures.Battery_Temp_AUX0} °C";
             batchem.Text = $"Battery Chemistry : {GetBatteryChemistryName(root.Battery_Messages.BatteryChemistry)}";
-            batcount.Text = $"Battery Count : {root.Battery_Messages.Battery_Count+1}";
-            batterymaxv.Text = $"Battery Max V : {Convert.ToDouble(((root.Battery_Messages.BatteryBalance_MaxVoltage*10)+2000))/1000} V";
-            batteryminv.Text = $"Battery Min V : {Convert.ToDouble(((root.Battery_Messages.BatteryBalance_MinVoltage * 10) + 2000))/1000} V";
+            batcount.Text = $"Battery Count : {root.Battery_Messages.Battery_Count + 1}";
+            batterymaxv.Text = $"Battery Max V : {Convert.ToDouble(((root.Battery_Messages.BatteryBalance_MaxVoltage * 10) + 2000)) / 1000} V";
+            batteryminv.Text = $"Battery Min V : {Convert.ToDouble(((root.Battery_Messages.BatteryBalance_MinVoltage * 10) + 2000)) / 1000} V";
             batterymaxtemp.Text = $"Battery Max Temp : {root.Battery_Messages.BatteryBalance_MaxTemp} °C";
             batterymintemp.Text = $"Battery Max Temp : {((root.Battery_Messages.BatteryBalance_MinTemp * 1) - 100)} °C";
             sw_version.Text = $"Software Version : {root.Can_Main.SwVersionMajor}.{root.Can_Main.SwVersionMinor}.{root.Can_Main.SwVersionBugfix}";
@@ -212,5 +201,23 @@ namespace SmartBMS_2209A_Monitor
             }
         }
 
+        private void monitor_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            exit = true;
+            string readString = string.Empty;
+            byte[] rx = new byte[2];
+            while (!feedback) ;
+            while (true)
+            {
+                bms_class.WriteTcpClient(bms_class.stream, "exit");
+                bms_class.stream.Read(rx, 0, rx.Length);
+                readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
+                MessageBox.Show("BMS Closed Connection!");
+                if (readString == "ER")
+                {
+                    Environment.Exit(0);
+                }
+            }
+        }
     }
 }

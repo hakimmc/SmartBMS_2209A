@@ -755,6 +755,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SMART BMS";
             FormClosing += monitor_form_FormClosing;
+            FormClosed += monitor_form_FormClosed;
             Load += monitor_form_Load;
             ((System.ComponentModel.ISupportInitialize)batteryimg).EndInit();
             tabControl1.ResumeLayout(false);

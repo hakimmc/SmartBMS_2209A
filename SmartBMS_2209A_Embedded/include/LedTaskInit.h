@@ -14,6 +14,9 @@
 
 #include "stdint.h"
 
+/** @brief GPIO pin used for the LED. */
+#define LED_PIN 13
+
 /**
  * @brief Initializes a GPIO pin for LED control.
  *
