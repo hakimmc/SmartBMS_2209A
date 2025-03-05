@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableDelayedExpansion
 set RULE_NAME=OTTOMOTIVE_BMS
-set PORT_NUMBER=5156
+set PORT_NUMBER=5166
 
 :: Check Is Rule Exist
 netsh advfirewall firewall show rule name="%RULE_NAME%" > nul 2>&1
