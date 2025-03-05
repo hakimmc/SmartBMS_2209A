@@ -8,8 +8,7 @@
 #include "TcpServer.h"
 #include "Wifi.h"
 #include "d2cc_lib.h"
-#include "driver/gpio.h"
-#include "LedTaskInit.h"
+#include "gpio.h"
 
 /** @brief Structure to hold CAN message data. */
 extern DbcStruct maindbc_struct;

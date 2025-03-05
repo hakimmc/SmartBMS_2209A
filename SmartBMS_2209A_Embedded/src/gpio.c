@@ -1,18 +1,11 @@
 /**
- * @file LedTaskInit.c
+ * @file gpio.c
  * @brief Implementation of LED blinking task using ESP32 GPIO.
  * @date 18 December 2024
  * @author hakimmc
  */
 
-#include "LedTaskInit.h"
-#include "driver/gpio.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "d2cc_lib.h"
-
-/** @brief Extern from main; Structure to hold CAN message data. */
-extern DbcStruct maindbc_struct;
+#include "gpio.h"
 
 /**
  * @brief Initializes the specified GPIO pin as an output.

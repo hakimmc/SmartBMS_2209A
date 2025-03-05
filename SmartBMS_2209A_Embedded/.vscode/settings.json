@@ -4,7 +4,10 @@
         "task.h": "c",
         "d2cc_lib.h": "c",
         "ledtaskinit.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "bq76pl455.h": "c",
+        "cstddef": "c",
+        "freertos.h": "c"
     },
     "idf.portWin": "COM14"
 }

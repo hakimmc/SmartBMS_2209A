@@ -492,7 +492,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "",
+    "plot_directory": "schematics/",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -505,6 +505,26 @@
     [
       "aeaf566f-9798-402e-8e34-1d8fbd711fff",
       ""
+    ],
+    [
+      "f3dda22a-3d37-48ce-9006-41af42ca6c37",
+      "BQ76PL455"
+    ],
+    [
+      "1cabb71f-da27-4de5-937b-8609ab9f24d2",
+      "Connector"
+    ],
+    [
+      "b93afe3d-d4ff-4c2f-b92b-756cf4e97a62",
+      "BalanceMosfets"
+    ],
+    [
+      "e680bf73-7bb0-46a2-913f-c6fd26ab0ff4",
+      "DCDC_Converter"
+    ],
+    [
+      "594d3c72-a392-4a36-8632-5dac35a8d4da",
+      "MCU"
     ]
   ],
   "text_variables": {}

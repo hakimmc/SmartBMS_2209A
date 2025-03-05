@@ -1,5 +1,5 @@
 /**
- * @file LedTaskInit.h
+ * @file gpio.h
  * @brief LED initialization and control tasks for ESP32.
  *
  * This header file provides declarations for initializing GPIO pins and
@@ -13,6 +13,9 @@
 #define INCLUDE_LEDTASKINIT_H_
 
 #include "stdint.h"
+#include "driver/gpio.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
 /** @brief GPIO pin used for the LED. */
 #define LED_PIN 13
