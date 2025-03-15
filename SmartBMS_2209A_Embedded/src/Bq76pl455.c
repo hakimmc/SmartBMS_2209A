@@ -91,7 +91,7 @@ uint8_t BQ_Read_DevAddr_Reg() {
     uint8_t Read_Id_Message[] = {0x89, 0x01, 0x00, 0x0A, 0x00, 0xDA, 0x83};
     Uart_Transmit(BQ_UART_PORT, Read_Id_Message, 7);
     uint8_t rx_data[4];
-    while(BQ_Uart_Receive(BQ_UART_PORT,rx_data,4,1000) != 4 && Check_CRC16(rx_data,4) != true);
+    while(BQ_Uart_Receive(BQ_UART_PORT,rx_data,4,1000) && Check_CRC16(rx_data,4) != true);
     return rx_data[1];
 }
 
