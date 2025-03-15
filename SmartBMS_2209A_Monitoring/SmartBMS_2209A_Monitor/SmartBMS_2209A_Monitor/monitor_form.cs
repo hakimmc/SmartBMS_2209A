@@ -26,6 +26,7 @@ namespace SmartBMS_2209A_Monitor
             tabControl1.TabPages[1].Text = "Multiple Battery Page";
             Thread th = new Thread(Read_Tcp);
             th.Start();
+            data_pull_timer.Enabled = true;
         }
         bool exit = false;
         bool feedback = false;
@@ -33,13 +34,13 @@ namespace SmartBMS_2209A_Monitor
         {
             try
             {
+                string readString = string.Empty;
+                byte[] rx = new byte[2048];
                 while (!exit)
                 {
-                    string readString = string.Empty;
-                    byte[] rx = new byte[2048];
                     feedback = false;
-                    bms_class.WriteTcpClient(bms_class.stream, "data");
-                    Thread.Sleep(100);
+                    /*bms_class.WriteTcpClient(bms_class.stream, "data");
+                    Thread.Sleep(100);*/
                     bms_class.stream.Read(rx, 0, rx.Length);
                     readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
                     if (readString.Length < 50) continue;
@@ -56,11 +57,6 @@ namespace SmartBMS_2209A_Monitor
             {
 
             }
-        }
-
-        private void monitor_form_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
         }
 
         public void Replace_Datas(string json_data)
@@ -206,18 +202,39 @@ namespace SmartBMS_2209A_Monitor
             exit = true;
             string readString = string.Empty;
             byte[] rx = new byte[2];
-            while (!feedback) ;
+            data_pull_timer.Enabled = false;
+            Thread.Sleep(200);
+            //while (!feedback) ;
             while (true)
             {
-                bms_class.WriteTcpClient(bms_class.stream, "exit");
-                bms_class.stream.Read(rx, 0, rx.Length);
-                readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
-                MessageBox.Show("BMS Closed Connection!");
-                if (readString == "ER")
+                try
                 {
+                    bms_class.WriteTcpClient(bms_class.stream, "exit");
+                    bms_class.stream.Read(rx, 0, rx.Length);
+                    readString = Encoding.UTF8.GetString(rx, 0, rx.Length);
+                    if (readString == "ER")
+                    {
+                        bms_class.stream.Close();
+                        Environment.Exit(0);
+                    }
+                }
+                catch
+                {
+                    bms_class.stream.Close();
                     Environment.Exit(0);
                 }
+
             }
+        }
+
+        private void data_pull_timer_Tick(object sender, EventArgs e)
+        {
+            if(exit)
+            {
+                data_pull_timer.Enabled = false;
+                return;
+            }
+            bms_class.WriteTcpClient(bms_class.stream, "data");
         }
     }
 }

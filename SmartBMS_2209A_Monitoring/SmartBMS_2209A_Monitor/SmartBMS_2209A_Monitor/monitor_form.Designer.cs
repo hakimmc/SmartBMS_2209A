@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             batteryimg = new PictureBox();
             summvoltage = new Label();
             tabControl1 = new TabControl();
@@ -94,6 +95,7 @@
             temperature = new Label();
             soc = new Label();
             tabPage2 = new TabPage();
+            data_pull_timer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)batteryimg).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -745,6 +747,10 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             // 
+            // data_pull_timer
+            // 
+            data_pull_timer.Tick += data_pull_timer_Tick;
+            // 
             // monitor_form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -754,7 +760,6 @@
             Name = "monitor_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SMART BMS";
-            FormClosing += monitor_form_FormClosing;
             FormClosed += monitor_form_FormClosed;
             Load += monitor_form_Load;
             ((System.ComponentModel.ISupportInitialize)batteryimg).EndInit();
@@ -836,5 +841,6 @@
         private Label label3;
         private TextBox b1;
         private Label alivecounter;
+        private System.Windows.Forms.Timer data_pull_timer;
     }
 }
