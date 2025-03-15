@@ -21,13 +21,17 @@ void BQ_Start(void *args) {
     /** @brief BQ76PL455 Uart Init (250k baud) */
     BQ_Uart_Init(BQ_UART_PORT, 250000, 256, BQ_TX, BQ_RX);
     gpio_init(BQ_WAKEUP);
+    BQ_ShutDown();
+    vTaskDelay(pdMS_TO_TICKS(10));
     BQ_WakeUp();
-    uint8_t Dev_Addr = BQ_Read_DevAddr_Reg();
-    uint8_t data[] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
-    
+    //uint8_t Dev_Addr = BQ_Read_DevAddr_Reg();
+    //printf("BQ Dev Address : %d");
+    //uint8_t data[] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+    uint8_t data[] = {'H','E','L','L','O'};
     while (1) {
         if (BQ_Uart_Transmit(BQ_UART_PORT, data, sizeof(data))) {
             printf("Data sent\n");
+            if(BQ_Uart_Receive(BQ_UART_PORT, data, 5, 1000)) printf("Data received\n");
         } else {
             printf("Data send failed\n");
         }
@@ -211,6 +215,13 @@ void BQ_WakeUp(){
 }
 
 /**
+ * @brief Shutdown BQ76PL455A-Q1.
+ */
+void BQ_ShutDown(){
+    gpio_set_level(BQ_WAKEUP, 0);
+}
+
+/**
  * @brief Receives data via UART.
  * 
  * This function receives data from the UART port and stores it in the provided buffer.
@@ -224,5 +235,5 @@ void BQ_WakeUp(){
  */
 int BQ_Uart_Receive(uint8_t uart_pin, uint8_t* data, uint8_t data_length, uint32_t timeout)
 {
-    return uart_read_bytes(uart_pin, data, data_length, timeout); /**< Reads data from UART into buffer. */
+    return uart_read_bytes(uart_pin, data, data_length, pdMS_TO_TICKS(timeout)) == ESP_OK ? 1 : 0; /**< Reads data from UART into buffer. */
 }

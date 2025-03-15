@@ -31,7 +31,7 @@ typedef enum{
  * @def BQ_UART_PORT
  * @brief UART port used for communication with the BQ76PL455A-Q1.
  */
-#define BQ_UART_PORT    UART_NUM_1
+#define BQ_UART_PORT    UART_NUM_2
 
 /**
  * @def BQ_TX
@@ -135,6 +135,11 @@ uint8_t BQ_Uart_Transmit(uint8_t uart_pin, uint8_t *data, uint8_t data_length);
  * @brief Waking up BQ76PL455A-Q1.
  */
 void BQ_WakeUp();
+
+/**
+ * @brief Shutdown BQ76PL455A-Q1.
+ */
+void BQ_ShutDown();
 
 /**
  * @brief Receives data via UART.

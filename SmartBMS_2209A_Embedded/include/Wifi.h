@@ -46,7 +46,7 @@
  * @brief Define this macro to enable Wi-Fi station connection.
  * Comment it out to disable the Wi-Fi station functionality.
  */
-#define WIFI_CONNECT
+//#define WIFI_CONNECT
 
 /** 
  * @def AP_SSID
@@ -72,6 +72,18 @@
  */
 #define MAX_RETRY      5
 
+/** 
+ * @def ESP32_AP_CHANNEL
+ * @brief Channel for the Access Point.
+ */
+#define ESP32_AP_CHANNEL        3             
+
+/** 
+ * @def ESP32_MAX_CONN
+ * @brief Maximum number of simultaneous connections to the Access Point.
+ */
+#define ESP32_MAX_CONN          3
+
 #ifdef WIFI_CONNECT
     /** 
      * @def WIFI_SSID
@@ -91,17 +103,6 @@
      */
     #define WIFI_TIMEOUT_MS 10000
 
-    /** 
-     * @def ESP32_AP_CHANNEL
-     * @brief Channel for the Access Point.
-     */
-    #define ESP32_AP_CHANNEL        3             
-
-    /** 
-     * @def ESP32_MAX_CONN
-     * @brief Maximum number of simultaneous connections to the Access Point.
-     */
-    #define ESP32_MAX_CONN          3
 #endif
 
 /**

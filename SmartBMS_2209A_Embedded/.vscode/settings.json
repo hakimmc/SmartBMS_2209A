@@ -7,7 +7,8 @@
         "gpio.h": "c",
         "bq76pl455.h": "c",
         "cstddef": "c",
-        "freertos.h": "c"
+        "freertos.h": "c",
+        "wifi.h": "c"
     },
     "idf.portWin": "COM14"
 }

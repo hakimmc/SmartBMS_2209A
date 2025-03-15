@@ -23,9 +23,13 @@ extern SemaphoreHandle_t DataControlSemaphore;
 uint8_t Can_Init(twai_general_config_t can_gpio_config, twai_timing_config_t can_time_config, twai_filter_config_t can_filter_config)
 {
     ESP_ERROR_CHECK(twai_driver_install(&can_gpio_config, &can_time_config, &can_filter_config));
+    #ifdef PRINTFDEBUG
     ESP_LOGI(CAN_TAG, "Driver installed");
+    #endif
     ESP_ERROR_CHECK(twai_start());
+    #ifdef PRINTFDEBUG
     ESP_LOGI(CAN_TAG, "Driver started");
+    #endif
     return 1;
 }
 
